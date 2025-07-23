@@ -57,10 +57,15 @@ const determineTier = (userPerformance: string, standards: any, event: string): 
 export const generateMatches = (gradeLevel: string, event: string, personalBest: string, gender: string): SchoolMatch[] => {
   const matches: SchoolMatch[] = [];
   
+  console.log(`=== GENERATING MATCHES ===`);
+  console.log(`Event: ${event}, Personal Best: ${personalBest}, Gender: ${gender}`);
+  
   schoolStandards.forEach(school => {
     const standards = gender === "male" ? school.maleStandards : school.femaleStandards;
-    console.log(`School: ${school.schoolName}, Gender: ${gender}, Standards for ${event}:`, standards[event]);
+    console.log(`\n--- ${school.schoolName} ---`);
+    console.log(`Standards for ${event}:`, standards[event]);
     const tier = determineTier(personalBest, standards, event);
+    console.log(`Tier result: ${tier}`);
     
     if (tier) {
       matches.push({
