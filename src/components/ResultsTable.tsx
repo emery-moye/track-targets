@@ -21,16 +21,19 @@ interface ResultsTableProps {
 export const ResultsTable = ({ results }: ResultsTableProps) => {
   const [divisionFilter, setDivisionFilter] = useState("all");
   const [conferenceFilter, setConferenceFilter] = useState("all");
+  const [tierFilter, setTierFilter] = useState("all");
   const [selectedSchool, setSelectedSchool] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const divisions = [...new Set(results.map(r => r.division))];
   const conferences = [...new Set(results.map(r => r.conference))];
+  const tiers = ["target", "recruit", "walkon"];
 
   const filteredResults = results.filter(result => {
     const divMatch = divisionFilter === "all" || result.division === divisionFilter;
     const confMatch = conferenceFilter === "all" || result.conference === conferenceFilter;
-    return divMatch && confMatch;
+    const tierMatch = tierFilter === "all" || result.tier === tierFilter;
+    return divMatch && confMatch && tierMatch;
   });
 
   const handleSchoolClick = (schoolMatch: SchoolMatch) => {
@@ -77,6 +80,20 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
               <SelectItem value="all">All Conferences</SelectItem>
               {conferences.map(conf => (
                 <SelectItem key={conf} value={conf}>{conf}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          
+          <Select value={tierFilter} onValueChange={setTierFilter}>
+            <SelectTrigger className="w-32">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Tiers</SelectItem>
+              {tiers.map(tier => (
+                <SelectItem key={tier} value={tier}>
+                  {tier.charAt(0).toUpperCase() + tier.slice(1)}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
