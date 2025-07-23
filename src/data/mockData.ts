@@ -32,8 +32,12 @@ const determineTier = (userPerformance: string, standards: any, event: string): 
   const recruitValue = parsePerformance(standards[event].recruit, event);
   const walkonValue = parsePerformance(standards[event].walkon, event);
   
+  console.log(`Event: ${event}, User: ${userPerformance} (${userValue}), Target: ${standards[event].target} (${targetValue}), Recruit: ${standards[event].recruit} (${recruitValue}), Walk-on: ${standards[event].walkon} (${walkonValue})`);
+  
   // For track events (time-based), lower is better
   const isTimeBased = event.includes('m') && !event.includes('Jump') && !event.includes('Put') && !event.includes('Throw') && !event.includes('Discus') && !event.includes('Hammer') && !event.includes('Javelin');
+  
+  console.log(`Is time based: ${isTimeBased}`);
   
   if (isTimeBased) {
     if (userValue <= targetValue) return "target";
