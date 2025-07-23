@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { SearchForm } from "@/components/SearchForm";
+import { ResultsTable, SchoolMatch } from "@/components/ResultsTable";
+import { generateMatches } from "@/data/mockData";
 
 const Index = () => {
+  const [results, setResults] = useState<SchoolMatch[]>([]);
+  const [hasSearched, setHasSearched] = useState(false);
+
+  const handleSearch = (data: { gradeLevel: string; event: string; personalBest: string }) => {
+    const matches = generateMatches(data.gradeLevel, data.event, data.personalBest);
+    setResults(matches);
+    setHasSearched(true);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <main className="container mx-auto px-6 py-8">
+        <SearchForm onSearch={handleSearch} />
+        
+        {hasSearched && (
+          <ResultsTable results={results} />
+        )}
+      </main>
     </div>
   );
 };
