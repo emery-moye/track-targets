@@ -45,6 +45,7 @@ const determineTier = (userPerformance: string, standards: any, event: string): 
     if (userValue <= walkonValue) return "walkon";
   } else {
     // For field events (distance/height), higher is better
+    // Check from highest tier to lowest
     if (userValue >= targetValue) return "target";
     if (userValue >= recruitValue) return "recruit";
     if (userValue >= walkonValue) return "walkon";
