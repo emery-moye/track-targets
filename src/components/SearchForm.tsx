@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search } from "lucide-react";
 
 interface SearchFormProps {
-  onSearch: (data: { gradeLevel: string; event: string; personalBest: string }) => void;
+  onSearch: (data: { gradeLevel: string; event: string; personalBest: string; gender: string }) => void;
 }
 
 const gradeOptions = [
@@ -17,6 +17,11 @@ const gradeOptions = [
   "College Sophomore",
   "College Junior",
   "College Senior"
+];
+
+const genderOptions = [
+  "Male",
+  "Female"
 ];
 
 const eventOptions = [
@@ -46,6 +51,7 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
   const [gradeLevel, setGradeLevel] = useState("");
   const [event, setEvent] = useState("");
   const [personalBest, setPersonalBest] = useState("");
+  const [gender, setGender] = useState("");
   const [error, setError] = useState("");
 
   const validatePersonalBest = (value: string) => {
@@ -57,7 +63,7 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!gradeLevel || !event || !personalBest) {
+    if (!gradeLevel || !event || !personalBest || !gender) {
       setError("Please fill in all fields");
       return;
     }
@@ -68,13 +74,13 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
     }
     
     setError("");
-    onSearch({ gradeLevel, event, personalBest });
+    onSearch({ gradeLevel, event, personalBest, gender });
   };
 
   return (
     <div className="bg-card rounded-xl shadow-lg p-6 mb-8">
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
             <Select value={gradeLevel} onValueChange={setGradeLevel}>
               <SelectTrigger className="h-12 focus:ring-primary focus:border-primary">
@@ -113,6 +119,21 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
               onChange={(e) => setPersonalBest(e.target.value)}
               className="h-12 focus:ring-primary focus:border-primary"
             />
+          </div>
+          
+          <div>
+            <Select value={gender} onValueChange={setGender}>
+              <SelectTrigger className="h-12 focus:ring-primary focus:border-primary">
+                <SelectValue placeholder="Select Gender" />
+              </SelectTrigger>
+              <SelectContent>
+                {genderOptions.map((genderOption) => (
+                  <SelectItem key={genderOption} value={genderOption}>
+                    {genderOption}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
         </div>
         

@@ -70,7 +70,7 @@ export const mockSchools: SchoolMatch[] = [
 ];
 
 // Mock matching logic - in a real app this would be more sophisticated
-export const generateMatches = (gradeLevel: string, event: string, personalBest: string): SchoolMatch[] => {
+export const generateMatches = (gradeLevel: string, event: string, personalBest: string, gender: string): SchoolMatch[] => {
   // Simple mock logic - just return a subset based on event type
   const eventCategory = getEventCategory(event);
   

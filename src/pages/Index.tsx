@@ -8,8 +8,8 @@ const Index = () => {
   const [results, setResults] = useState<SchoolMatch[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
 
-  const handleSearch = (data: { gradeLevel: string; event: string; personalBest: string }) => {
-    const matches = generateMatches(data.gradeLevel, data.event, data.personalBest);
+  const handleSearch = (data: { gradeLevel: string; event: string; personalBest: string; gender: string }) => {
+    const matches = generateMatches(data.gradeLevel, data.event, data.personalBest, data.gender);
     setResults(matches);
     setHasSearched(true);
   };
