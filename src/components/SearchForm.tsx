@@ -20,8 +20,8 @@ const gradeOptions = [
 ];
 
 const genderOptions = [
-  "Male",
-  "Female"
+  "Men's",
+  "Women's"
 ];
 
 const eventOptions = [
