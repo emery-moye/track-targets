@@ -2,6 +2,8 @@ import { useState } from "react";
 import { TierBadge, TierType } from "./TierBadge";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { SchoolDetailsModal } from "./SchoolDetailsModal";
+import { findSchoolStandards } from "@/data/schoolStandards";
 
 export interface SchoolMatch {
   id: string;
@@ -19,6 +21,8 @@ interface ResultsTableProps {
 export const ResultsTable = ({ results }: ResultsTableProps) => {
   const [divisionFilter, setDivisionFilter] = useState("all");
   const [conferenceFilter, setConferenceFilter] = useState("all");
+  const [selectedSchool, setSelectedSchool] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const divisions = [...new Set(results.map(r => r.division))];
   const conferences = [...new Set(results.map(r => r.conference))];
@@ -28,6 +32,14 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
     const confMatch = conferenceFilter === "all" || result.conference === conferenceFilter;
     return divMatch && confMatch;
   });
+
+  const handleSchoolClick = (schoolMatch: SchoolMatch) => {
+    const schoolStandards = findSchoolStandards(schoolMatch.schoolName);
+    if (schoolStandards) {
+      setSelectedSchool(schoolStandards);
+      setIsModalOpen(true);
+    }
+  };
 
   if (results.length === 0) {
     return (
@@ -86,6 +98,7 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
               <tr 
                 key={result.id}
                 className="border-b hover:bg-muted/30 hover:shadow-md transition-all duration-200 cursor-pointer"
+                onClick={() => handleSchoolClick(result)}
               >
                 <td className="p-4">
                   <span className="font-bold text-foreground">{result.schoolName}</span>
@@ -112,6 +125,12 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
           <p className="text-muted-foreground">No schools match your current filters</p>
         </div>
       )}
+      
+      <SchoolDetailsModal
+        school={selectedSchool}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };
