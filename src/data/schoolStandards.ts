@@ -3225,9 +3225,9 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "185'0\"", recruit: "175'0\"", walkon: "165'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.30", recruit: "12.45", walkon: "12.60" },
-      "200m": { target: "25.50", recruit: "25.75", walkon: "26.00" },
-      "400m": { target: "57.85", recruit: "58.55", walkon: "59.25" },
+      "100m": { target: "11.99", recruit: "12.30", walkon: "12.50" },
+      "200m": { target: "24.50", recruit: "25.00", walkon: "25.30" },
+      "400m": { target: "56.50", recruit: "57.50", walkon: "58.00" },
       "800m": { target: "2:15.00", recruit: "2:17.00", walkon: "2:19.00" },
       "1500m": { target: "4:40.00", recruit: "4:43.00", walkon: "4:48.00" },
       "Mile": { target: "5:05.00", recruit: "5:08.00", walkon: "5:12.00" },
@@ -3270,9 +3270,9 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "190'0\"", recruit: "180'0\"", walkon: "170'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.40", recruit: "12.55", walkon: "12.70" },
-      "200m": { target: "25.70", recruit: "25.95", walkon: "26.20" },
-      "400m": { target: "58.35", recruit: "59.05", walkon: "59.75" },
+      "100m": { target: "12.05", recruit: "12.35", walkon: "12.55" },
+      "200m": { target: "24.60", recruit: "25.10", walkon: "25.40" },
+      "400m": { target: "56.70", recruit: "57.70", walkon: "58.20" },
       "800m": { target: "2:17.00", recruit: "2:19.00", walkon: "2:21.00" },
       "1500m": { target: "4:45.00", recruit: "4:48.00", walkon: "4:53.00" },
       "Mile": { target: "5:10.00", recruit: "5:13.00", walkon: "5:17.00" },
@@ -3315,9 +3315,9 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "185'0\"", recruit: "175'0\"", walkon: "165'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.50", recruit: "12.65", walkon: "12.80" },
-      "200m": { target: "25.90", recruit: "26.15", walkon: "26.40" },
-      "400m": { target: "58.85", recruit: "59.55", walkon: "60.25" },
+      "100m": { target: "12.10", recruit: "12.40", walkon: "12.60" },
+      "200m": { target: "24.70", recruit: "25.20", walkon: "25.50" },
+      "400m": { target: "56.90", recruit: "57.90", walkon: "58.40" },
       "800m": { target: "2:19.00", recruit: "2:21.00", walkon: "2:23.00" },
       "1500m": { target: "4:50.00", recruit: "4:53.00", walkon: "4:58.00" },
       "Mile": { target: "5:15.00", recruit: "5:18.00", walkon: "5:22.00" },
@@ -3360,9 +3360,9 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "185'0\"", recruit: "175'0\"", walkon: "165'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.50", recruit: "12.65", walkon: "12.80" },
-      "200m": { target: "25.90", recruit: "26.15", walkon: "26.40" },
-      "400m": { target: "58.85", recruit: "59.55", walkon: "60.25" },
+      "100m": { target: "12.10", recruit: "12.40", walkon: "12.60" },
+      "200m": { target: "24.70", recruit: "25.20", walkon: "25.50" },
+      "400m": { target: "56.90", recruit: "57.90", walkon: "58.40" },
       "800m": { target: "2:19.00", recruit: "2:21.00", walkon: "2:23.00" },
       "1500m": { target: "4:50.00", recruit: "4:53.00", walkon: "4:58.00" },
       "Mile": { target: "5:15.00", recruit: "5:18.00", walkon: "5:22.00" },
@@ -3405,9 +3405,9 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "185'0\"", recruit: "175'0\"", walkon: "165'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.50", recruit: "12.65", walkon: "12.80" },
-      "200m": { target: "25.90", recruit: "26.15", walkon: "26.40" },
-      "400m": { target: "58.85", recruit: "59.55", walkon: "60.25" },
+      "100m": { target: "12.10", recruit: "12.40", walkon: "12.60" },
+      "200m": { target: "24.70", recruit: "25.20", walkon: "25.50" },
+      "400m": { target: "56.90", recruit: "57.90", walkon: "58.40" },
       "800m": { target: "2:19.00", recruit: "2:21.00", walkon: "2:23.00" },
       "1500m": { target: "4:50.00", recruit: "4:53.00", walkon: "4:58.00" },
       "Mile": { target: "5:15.00", recruit: "5:18.00", walkon: "5:22.00" },
@@ -3450,9 +3450,9 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "185'0\"", recruit: "175'0\"", walkon: "165'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.60", recruit: "12.75", walkon: "12.90" },
-      "200m": { target: "26.10", recruit: "26.35", walkon: "26.60" },
-      "400m": { target: "59.35", recruit: "60.05", walkon: "60.75" },
+      "100m": { target: "12.20", recruit: "12.40", walkon: "12.70" },
+      "200m": { target: "24.90", recruit: "25.40", walkon: "25.70" },
+      "400m": { target: "57.30", recruit: "58.30", walkon: "58.80" },
       "800m": { target: "2:21.00", recruit: "2:23.00", walkon: "2:25.00" },
       "1500m": { target: "4:55.00", recruit: "4:58.00", walkon: "5:03.00" },
       "Mile": { target: "5:20.00", recruit: "5:23.00", walkon: "5:27.00" },
@@ -3495,9 +3495,9 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "185'0\"", recruit: "175'0\"", walkon: "165'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.50", recruit: "12.65", walkon: "12.80" },
-      "200m": { target: "25.90", recruit: "26.15", walkon: "26.40" },
-      "400m": { target: "58.85", recruit: "59.55", walkon: "60.25" },
+      "100m": { target: "12.10", recruit: "12.40", walkon: "12.60" },
+      "200m": { target: "24.70", recruit: "25.20", walkon: "25.50" },
+      "400m": { target: "56.90", recruit: "57.90", walkon: "58.40" },
       "800m": { target: "2:19.00", recruit: "2:21.00", walkon: "2:23.00" },
       "1500m": { target: "4:50.00", recruit: "4:53.00", walkon: "4:58.00" },
       "Mile": { target: "5:15.00", recruit: "5:18.00", walkon: "5:22.00" },
