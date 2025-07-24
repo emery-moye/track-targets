@@ -396,7 +396,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "9",
     schoolName: "University of Dayton",
     division: "D1",
-    conference: "Atlantic 10",
+    conference: "A10",
     state: "OH",
     maleStandards: {},
     femaleStandards: {
@@ -424,7 +424,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "10",
     schoolName: "George Mason University",
     division: "D1",
-    conference: "Atlantic 10",
+    conference: "A10",
     state: "VA",
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.70", walkon: "10.85" },
@@ -471,7 +471,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "11",
     schoolName: "VCU",
     division: "D1",
-    conference: "Atlantic 10",
+    conference: "A10",
     state: "VA",
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.40", walkon: "10.60" },
