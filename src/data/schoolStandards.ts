@@ -3656,7 +3656,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "63",
+    id: "71",
     schoolName: "Monmouth University",
     division: "D1",
     conference: "CAA",
@@ -3703,7 +3703,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "64",
+    id: "72",
     schoolName: "College of William & Mary",
     division: "D1",
     conference: "CAA",
@@ -3750,7 +3750,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "65",
+    id: "73",
     schoolName: "Northeastern University",
     division: "D1",
     conference: "CAA",
@@ -3797,7 +3797,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "66",
+    id: "74",
     schoolName: "Campbell University",
     division: "D1",
     conference: "CAA",
