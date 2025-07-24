@@ -1763,6 +1763,34 @@ export const schoolStandards: SchoolStandards[] = [
       "Hammer": { target: "180'0\"", recruit: "170'0\"", walkon: "140'0\"" },
       "Javelin": { target: "160'0\"", recruit: "150'0\"", walkon: "140'0\"" }
     }
+  },
+  {
+    id: "39",
+    schoolName: "Northwestern University",
+    division: "D1",
+    conference: "Big Ten",
+    state: "IL",
+    maleStandards: {},
+    femaleStandards: {
+      "100m": { target: "11.65", recruit: "11.95", walkon: "12.25" },
+      "200m": { target: "23.75", recruit: "24.25", walkon: "24.75" },
+      "400m": { target: "54.10", recruit: "55.60", walkon: "57.10" },
+      "800m": { target: "2:07.00", recruit: "2:11.00", walkon: "2:16.00" },
+      "1500m": { target: "4:24.00", recruit: "4:34.00", walkon: "4:44.00" },
+      "Mile": { target: "4:49.00", recruit: "4:59.00", walkon: "5:09.00" },
+      "5000m": { target: "16:45.00", recruit: "17:15.00", walkon: "17:45.00" },
+      "10000m": { target: "34:35.00", recruit: "35:35.00", walkon: "36:35.00" },
+      "100m Hurdles": { target: "13.35", recruit: "13.75", walkon: "14.15" },
+      "400m Hurdles": { target: "59.80", recruit: "61.80", walkon: "63.80" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "12'3\"", recruit: "11'3\"", walkon: "10'3\"" },
+      "Long Jump": { target: "19'3\"", recruit: "18'3\"", walkon: "17'3\"" },
+      "Triple Jump": { target: "40'6\"", recruit: "38'6\"", walkon: "36'6\"" },
+      "Shot Put": { target: "45'6\"", recruit: "40'6\"", walkon: "35'6\"" },
+      "Discus": { target: "150'0\"", recruit: "135'0\"", walkon: "120'0\"" },
+      "Hammer": { target: "170'0\"", recruit: "150'0\"", walkon: "130'0\"" },
+      "Javelin": { target: "150'0\"", recruit: "135'0\"", walkon: "120'0\"" }
+    }
   }
 ];
 
