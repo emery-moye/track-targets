@@ -3692,14 +3692,14 @@ export const schoolStandards: SchoolStandards[] = [
       "10000m": { target: "36:00.00", recruit: "37:00.00", walkon: "38:00.00" },
       "100m Hurdles": { target: "13.80", recruit: "14.20", walkon: "14.60" },
       "400m Hurdles": { target: "61.00", recruit: "63.00", walkon: "65.00" },
-      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
-      "Pole Vault": { target: "11'6\"", recruit: "10'6\"", walkon: "9'6\"" },
-      "Long Jump": { target: "18'6\"", recruit: "17'9\"", walkon: "17'0\"" },
-      "Triple Jump": { target: "38'0\"", recruit: "36'0\"", walkon: "34'0\"" },
-      "Shot Put": { target: "42'0\"", recruit: "38'0\"", walkon: "34'0\"" },
+      "High Jump": { target: "5'5.5\"", recruit: "5'4\"", walkon: "5'2\"" },
+      "Pole Vault": { target: "12'3\"", recruit: "11'8\"", walkon: "11'4\"" },
+      "Long Jump": { target: "19'0\"", recruit: "18'3\"", walkon: "17'6\"" },
+      "Triple Jump": { target: "39'0\"", recruit: "37'0\"", walkon: "35'0\"" },
+      "Shot Put": { target: "44'0\"", recruit: "40'0\"", walkon: "36'0\"" },
       "Discus": { target: "140'0\"", recruit: "125'0\"", walkon: "110'0\"" },
       "Hammer": { target: "155'0\"", recruit: "140'0\"", walkon: "125'0\"" },
-      "Javelin": { target: "135'0\"", recruit: "120'0\"", walkon: "105'0\"" }
+      "Javelin": { target: "138'0\"", recruit: "123'0\"", walkon: "108'0\"" }
     }
   },
   {
