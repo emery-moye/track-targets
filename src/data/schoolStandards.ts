@@ -4211,7 +4211,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.75", recruit: "12.05", walkon: "12.35" },
       "200m": { target: "24.20", recruit: "24.60", walkon: "25.00" },
-      "400m": { target: "55.00", recruit: "56.50", walkon: "58.00" },
+      "400m": { target: "55.00", recruit: "55.90", walkon: "58.00" },
       "800m": { target: "2:12.00", recruit: "2:17.00", walkon: "2:22.00" },
       "1500m": { target: "4:32.00", recruit: "4:42.00", walkon: "4:52.00" },
       "Mile": { target: "4:56.00", recruit: "5:06.00", walkon: "5:16.00" },
@@ -4261,7 +4261,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.60", recruit: "11.90", walkon: "12.50" },
       "200m": { target: "24.00", recruit: "24.50", walkon: "26.00" },
-      "400m": { target: "53.80", recruit: "56.00", walkon: "59.00" },
+      "400m": { target: "53.80", recruit: "55.90", walkon: "59.00" },
       "800m": { target: "2:10.0", recruit: "2:12.0", walkon: "2:18.0" },
       "1500m": { target: "4:50.0", recruit: "5:05.0", walkon: "5:25.0" },
       "Mile": { target: "18:00.0", recruit: "18:30.0", walkon: "19:50.0" },
@@ -4310,7 +4310,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.80", recruit: "12.10", walkon: "12.40" },
       "200m": { target: "24.20", recruit: "24.60", walkon: "25.00" },
-      "400m": { target: "55.00", recruit: "56.50", walkon: "58.00" },
+      "400m": { target: "55.00", recruit: "55.90", walkon: "58.00" },
       "800m": { target: "2:12.00", recruit: "2:17.00", walkon: "2:22.00" },
       "1500m": { target: "4:35.00", recruit: "4:45.00", walkon: "4:55.00" },
       "Mile": { target: "4:59.00", recruit: "5:09.00", walkon: "5:19.00" },
@@ -4357,7 +4357,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "12.00", recruit: "12.30", walkon: "12.60" },
       "200m": { target: "24.60", recruit: "25.00", walkon: "25.40" },
-      "400m": { target: "56.00", recruit: "57.50", walkon: "59.00" },
+      "400m": { target: "56.00", recruit: "55.90", walkon: "59.00" },
       "800m": { target: "2:18.00", recruit: "2:23.00", walkon: "2:28.00" },
       "1500m": { target: "4:45.00", recruit: "4:55.00", walkon: "5:05.00" },
       "Mile": { target: "5:09.00", recruit: "5:19.00", walkon: "5:29.00" },
@@ -4404,7 +4404,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.90", recruit: "12.20", walkon: "12.50" },
       "200m": { target: "24.40", recruit: "24.80", walkon: "25.20" },
-      "400m": { target: "55.50", recruit: "57.00", walkon: "58.50" },
+      "400m": { target: "55.50", recruit: "55.90", walkon: "58.50" },
       "800m": { target: "2:15.00", recruit: "2:20.00", walkon: "2:25.00" },
       "1500m": { target: "4:40.00", recruit: "4:50.00", walkon: "5:00.00" },
       "Mile": { target: "5:04.00", recruit: "5:14.00", walkon: "5:24.00" },
@@ -4453,7 +4453,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.75", recruit: "12.05", walkon: "12.65" },
       "200m": { target: "24.20", recruit: "24.70", walkon: "26.20" },
-      "400m": { target: "54.20", recruit: "56.40", walkon: "59.40" },
+      "400m": { target: "54.20", recruit: "55.90", walkon: "59.40" },
       "800m": { target: "2:12.0", recruit: "2:14.0", walkon: "2:20.0" },
       "1500m": { target: "4:55.0", recruit: "5:10.0", walkon: "5:30.0" },
       "Mile": { target: "18:15.0", recruit: "18:45.0", walkon: "20:05.0" },
@@ -4505,7 +4505,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.80", recruit: "12.10", walkon: "12.70" },
       "200m": { target: "24.30", recruit: "24.80", walkon: "26.30" },
-      "400m": { target: "54.40", recruit: "56.60", walkon: "59.60" },
+      "400m": { target: "54.40", recruit: "55.90", walkon: "59.60" },
       "800m": { target: "2:13.0", recruit: "2:15.0", walkon: "2:21.0" },
       "1500m": { target: "4:58.0", recruit: "5:13.0", walkon: "5:33.0" },
       "Mile": { target: "18:30.0", recruit: "19:00.0", walkon: "20:20.0" },
@@ -4535,7 +4535,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.65", recruit: "11.95", walkon: "12.55" },
       "200m": { target: "24.05", recruit: "24.55", walkon: "26.05" },
-      "400m": { target: "53.90", recruit: "56.10", walkon: "59.10" },
+      "400m": { target: "53.90", recruit: "55.90", walkon: "59.10" },
       "800m": { target: "2:10.5", recruit: "2:12.5", walkon: "2:18.5" },
       "1500m": { target: "4:52.0", recruit: "5:07.0", walkon: "5:27.0" },
       "Mile": { target: "18:05.0", recruit: "18:35.0", walkon: "19:55.0" },
@@ -4565,7 +4565,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.70", recruit: "12.00", walkon: "12.60" },
       "200m": { target: "24.15", recruit: "24.65", walkon: "26.15" },
-      "400m": { target: "54.10", recruit: "56.30", walkon: "59.30" },
+      "400m": { target: "54.10", recruit: "55.90", walkon: "59.30" },
       "800m": { target: "2:11.5", recruit: "2:13.5", walkon: "2:19.5" },
       "1500m": { target: "4:54.0", recruit: "5:09.0", walkon: "5:29.0" },
       "Mile": { target: "18:20.0", recruit: "18:50.0", walkon: "20:10.0" },
@@ -4595,7 +4595,7 @@ export const schoolStandards: SchoolStandards[] = [
     femaleStandards: {
       "100m": { target: "11.68", recruit: "11.98", walkon: "12.58" },
       "200m": { target: "24.12", recruit: "24.62", walkon: "26.12" },
-      "400m": { target: "54.05", recruit: "56.25", walkon: "59.25" },
+      "400m": { target: "54.05", recruit: "55.90", walkon: "59.25" },
       "800m": { target: "2:11.0", recruit: "2:13.0", walkon: "2:19.0" },
       "1500m": { target: "4:53.0", recruit: "5:08.0", walkon: "5:28.0" },
       "Mile": { target: "18:15.0", recruit: "18:45.0", walkon: "20:05.0" },
