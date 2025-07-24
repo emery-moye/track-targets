@@ -160,7 +160,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "4",
     schoolName: "University of Oregon",
     division: "D1",
-    conference: "Big 12",
+    conference: "Big Ten",
     state: "OR",
     maleStandards: {
       "100m": { target: "10.05", recruit: "10.35", walkon: "10.65" },
