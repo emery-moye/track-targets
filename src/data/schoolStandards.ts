@@ -3515,7 +3515,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "48",
+    id: "60",
     schoolName: "North Carolina A&T",
     division: "D1",
     conference: "CAA",
@@ -3562,7 +3562,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "49",
+    id: "61",
     schoolName: "Hampton University",
     division: "D1",
     conference: "CAA",
@@ -3609,7 +3609,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "50",
+    id: "62",
     schoolName: "University of North Carolina Wilmington",
     division: "D1",
     conference: "CAA",
@@ -3656,7 +3656,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "51",
+    id: "63",
     schoolName: "Monmouth University",
     division: "D1",
     conference: "CAA",
@@ -3703,7 +3703,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "52",
+    id: "64",
     schoolName: "College of William & Mary",
     division: "D1",
     conference: "CAA",
@@ -3750,7 +3750,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "53",
+    id: "65",
     schoolName: "Northeastern University",
     division: "D1",
     conference: "CAA",
@@ -3797,7 +3797,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "54",
+    id: "66",
     schoolName: "Campbell University",
     division: "D1",
     conference: "CAA",
@@ -3844,7 +3844,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "55",
+    id: "67",
     schoolName: "Stony Brook University",
     division: "D1",
     conference: "CAA",
@@ -3891,7 +3891,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "56",
+    id: "68",
     schoolName: "Hofstra University",
     division: "D1",
     conference: "CAA",
@@ -3938,7 +3938,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "57",
+    id: "69",
     schoolName: "College of Charleston",
     division: "D1",
     conference: "CAA",
@@ -3985,7 +3985,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "58",
+    id: "70",
     schoolName: "University of Delaware",
     division: "D1",
     conference: "CAA",
