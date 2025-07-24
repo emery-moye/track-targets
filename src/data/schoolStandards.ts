@@ -1042,9 +1042,9 @@ export const schoolStandards: SchoolStandards[] = [
     state: "VA",
     maleStandards: {},
     femaleStandards: {
-      "100m": { target: "11.55", recruit: "11.40", walkon: "11.70" },
-      "200m": { target: "23.50", recruit: "23.70", walkon: "24.10" },
-      "400m": { target: "53.00", recruit: "54.00", walkon: "55.40" },
+      "100m": { target: "10.95", recruit: "11.40", walkon: "11.70" },
+      "200m": { target: "22.90", recruit: "23.70", walkon: "24.10" },
+      "400m": { target: "51.75", recruit: "54.00", walkon: "55.40" },
       "800m": { target: "1:58.00", recruit: "2:06.00", walkon: "2:10.00" },
       "1500m": { target: "4:05.00", recruit: "4:18.00", walkon: "4:28.00" },
       "Mile": { target: "4:30.00", recruit: "4:43.00", walkon: "4:53.00" },
