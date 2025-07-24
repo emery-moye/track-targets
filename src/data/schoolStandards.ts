@@ -2409,7 +2409,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "53",
     schoolName: "University of Pittsburgh",
     division: "D1",
-    conference: "TEST_ACC",
+    conference: "ACC",
     state: "PA",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45", walkon: "10.75" },
@@ -2620,7 +2620,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "58",
     schoolName: "Syracuse University",
     division: "D1",
-    conference: "TEST_ACC",
+    conference: "ACC",
     state: "NY",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45", walkon: "10.75" },
@@ -3565,7 +3565,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "61",
     schoolName: "Hampton University",
     division: "D1",
-    conference: "TEST_CAA",
+    conference: "CAA",
     state: "VA",
     maleStandards: {
       "100m": { target: "10.45", recruit: "10.65", walkon: "10.85" },
@@ -3706,7 +3706,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "64",
     schoolName: "College of William & Mary",
     division: "D1",
-    conference: "TEST_CAA",
+    conference: "CAA",
     state: "VA",
     maleStandards: {
       "100m": { target: "10.60", recruit: "10.80", walkon: "11.00" },
@@ -3894,7 +3894,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "68",
     schoolName: "Hofstra University",
     division: "D1",
-    conference: "TEST_CAA",
+    conference: "CAA",
     state: "NY",
     maleStandards: {
       "100m": { target: "10.48", recruit: "10.68", walkon: "10.88" },
@@ -3941,7 +3941,7 @@ export const schoolStandards: SchoolStandards[] = [
     id: "69",
     schoolName: "College of Charleston",
     division: "D1",
-    conference: "TEST_CAA",
+    conference: "CAA",
     state: "SC",
     maleStandards: {
       "100m": { target: "N/A", recruit: "N/A", walkon: "N/A" },
