@@ -3797,7 +3797,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "75",
+    id: "76",
     schoolName: "Campbell University",
     division: "D1",
     conference: "CAA",
