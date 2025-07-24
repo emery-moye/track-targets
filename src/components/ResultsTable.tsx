@@ -43,6 +43,10 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
     
     return divMatch && confMatch && tierMatch;
   });
+  
+  console.log(`Total results: ${results.length}, Filtered results: ${filteredResults.length}`);
+  console.log('Conference filter:', conferenceFilter);
+  console.log('Filtered results:', filteredResults.map(r => ({ name: r.schoolName, conf: r.conference })));
 
   const handleSchoolClick = (schoolMatch: SchoolMatch) => {
     const schoolStandards = findSchoolStandards(schoolMatch.schoolName);
