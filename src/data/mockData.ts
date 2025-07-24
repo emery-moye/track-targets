@@ -62,20 +62,22 @@ export const generateMatches = (gradeLevel: string, event: string, personalBest:
   
   schoolStandards.forEach(school => {
     const standards = gender === "Men's" ? school.maleStandards : school.femaleStandards;
-    console.log(`\n--- ${school.schoolName} ---`);
+    console.log(`\n--- ${school.schoolName} (ID: ${school.id}, Conference: ${school.conference}) ---`);
     console.log(`Standards for ${event}:`, standards[event]);
     const tier = determineTier(personalBest, standards, event);
     console.log(`Tier result: ${tier}`);
     
     if (tier) {
-      matches.push({
+      const match = {
         id: school.id,
         schoolName: school.schoolName,
         division: school.division,
         conference: school.conference,
         state: school.state,
         tier
-      });
+      };
+      console.log(`Adding match:`, match);
+      matches.push(match);
     }
   });
   
