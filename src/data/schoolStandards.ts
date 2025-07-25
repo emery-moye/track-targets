@@ -837,13 +837,13 @@ export const schoolStandards: SchoolStandards[] = [
       "100m Hurdles": { target: "13.20", recruit: "13.60", walkon: "14.00" },
       "400m Hurdles": { target: "58.20", recruit: "60.20", walkon: "62.20" },
       "High Jump": { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" },
-      "Pole Vault": { target: "12'9\"", recruit: "11'9\"", walkon: "10'9\"" },
+      "Pole Vault": { target: "13'0\"", recruit: "12'0\"", walkon: "11'6\"" },
       "Long Jump": { target: "19'9\"", recruit: "18'9\"", walkon: "17'9\"" },
       "Triple Jump": { target: "41'0\"", recruit: "39'0\"", walkon: "37'0\"" },
-      "Shot Put": { target: "45'0\"", recruit: "40'0\"", walkon: "35'0\"" },
+      "Shot Put": { target: "45'6\"", recruit: "40'6\"", walkon: "35'0\"" },
       "Discus": { target: "148'0\"", recruit: "133'0\"", walkon: "118'0\"" },
       "Hammer": { target: "168'0\"", recruit: "148'0\"", walkon: "128'0\"" },
-      "Javelin": { target: "148'0\"", recruit: "133'0\"", walkon: "118'0\"" }
+      "Javelin": { target: "150'0\"", recruit: "135'0\"", walkon: "118'0\"" }
     }
   },
   {
@@ -3834,13 +3834,13 @@ export const schoolStandards: SchoolStandards[] = [
       "100m Hurdles": { target: "13.30", recruit: "13.70", walkon: "14.10" },
       "400m Hurdles": { target: "58.50", recruit: "60.50", walkon: "62.50" },
       "High Jump": { target: "5'5\"", recruit: "5'3\"", walkon: "5'1\"" },
-      "Pole Vault": { target: "12'6\"", recruit: "11'6\"", walkon: "10'6\"" },
+      "Pole Vault": { target: "12'9\"", recruit: "11'9\"", walkon: "11'6\"" },
       "Long Jump": { target: "19'6\"", recruit: "18'6\"", walkon: "17'6\"" },
       "Triple Jump": { target: "40'9\"", recruit: "38'9\"", walkon: "36'9\"" },
-      "Shot Put": { target: "44'6\"", recruit: "39'6\"", walkon: "34'6\"" },
+      "Shot Put": { target: "45'0\"", recruit: "40'0\"", walkon: "34'6\"" },
       "Discus": { target: "147'0\"", recruit: "132'0\"", walkon: "117'0\"" },
       "Hammer": { target: "167'0\"", recruit: "147'0\"", walkon: "127'0\"" },
-      "Javelin": { target: "147'0\"", recruit: "132'0\"", walkon: "117'0\"" }
+      "Javelin": { target: "149'0\"", recruit: "134'0\"", walkon: "117'0\"" }
     }
   },
   {
