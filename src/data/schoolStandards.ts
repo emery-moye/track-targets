@@ -5221,6 +5221,91 @@ export const schoolStandards: SchoolStandards[] = [
       "Hammer": { target: "186'0\"", recruit: "181'0\"", walkon: "156'0\"" },
       "Javelin": { target: "156'0\"", recruit: "151'0\"", walkon: "131'0\"" }
     }
+  },
+  // Big 12 Women's Only Teams
+  {
+    id: "west-virginia-university",
+    schoolName: "West Virginia University",
+    division: "D1",
+    conference: "Big 12",
+    state: "WV",
+    maleStandards: {},
+    femaleStandards: {
+      "100m": { target: "11.63", recruit: "11.73", walkon: "11.93" },
+      "200m": { target: "24.05", recruit: "24.15", walkon: "24.80" },
+      "400m": { target: "54.38", recruit: "54.58", walkon: "55.28" },
+      "800m": { target: "2:04.50", recruit: "2:06.50", walkon: "2:10.50" },
+      "1500m": { target: "4:19.00", recruit: "4:24.00", walkon: "4:36.00" },
+      "Mile": { target: "4:41.00", recruit: "4:43.00", walkon: "4:59.00" },
+      "5000m": { target: "16:18.00", recruit: "16:38.00", walkon: "17:13.00" },
+      "10000m": { target: "33:35.00", recruit: "34:05.00", walkon: "35:25.00" },
+      "100m Hurdles": { target: "13.74", recruit: "13.84", walkon: "14.34" },
+      "400m Hurdles": { target: "60.38", recruit: "60.58", walkon: "63.08" },
+      "High Jump": { target: "5'9\"", recruit: "5'8\"", walkon: "5'6\"" },
+      "Pole Vault": { target: "13'2\"", recruit: "12'11\"", walkon: "12'5\"" },
+      "Long Jump": { target: "19'6\"", recruit: "19'3\"", walkon: "18'10\"" },
+      "Triple Jump": { target: "41'2\"", recruit: "40'11\"", walkon: "39'11\"" },
+      "Shot Put": { target: "49'1\"", recruit: "48'1\"", walkon: "43'1\"" },
+      "Discus": { target: "165'0\"", recruit: "160'0\"", walkon: "140'0\"" },
+      "Hammer": { target: "185'0\"", recruit: "180'0\"", walkon: "155'0\"" },
+      "Javelin": { target: "155'0\"", recruit: "150'0\"", walkon: "130'0\"" }
+    }
+  },
+  {
+    id: "university-of-utah",
+    schoolName: "University of Utah",
+    division: "D1",
+    conference: "Big 12",
+    state: "UT",
+    maleStandards: {},
+    femaleStandards: {
+      "100m": { target: "11.65", recruit: "11.75", walkon: "11.95" },
+      "200m": { target: "24.08", recruit: "24.18", walkon: "24.83" },
+      "400m": { target: "54.42", recruit: "54.62", walkon: "55.32" },
+      "800m": { target: "2:05.00", recruit: "2:07.00", walkon: "2:11.00" },
+      "1500m": { target: "4:20.00", recruit: "4:25.00", walkon: "4:37.00" },
+      "Mile": { target: "4:42.00", recruit: "4:44.00", walkon: "5:00.00" },
+      "5000m": { target: "16:20.00", recruit: "16:40.00", walkon: "17:15.00" },
+      "10000m": { target: "33:40.00", recruit: "34:10.00", walkon: "35:30.00" },
+      "100m Hurdles": { target: "13.76", recruit: "13.86", walkon: "14.36" },
+      "400m Hurdles": { target: "60.45", recruit: "60.65", walkon: "63.15" },
+      "High Jump": { target: "5'8\"", recruit: "5'7\"", walkon: "5'5\"" },
+      "Pole Vault": { target: "13'1\"", recruit: "12'10\"", walkon: "12'4\"" },
+      "Long Jump": { target: "19'4\"", recruit: "19'1\"", walkon: "18'8\"" },
+      "Triple Jump": { target: "41'0\"", recruit: "40'9\"", walkon: "39'9\"" },
+      "Shot Put": { target: "48'11\"", recruit: "47'11\"", walkon: "42'11\"" },
+      "Discus": { target: "164'0\"", recruit: "159'0\"", walkon: "139'0\"" },
+      "Hammer": { target: "184'0\"", recruit: "179'0\"", walkon: "154'0\"" },
+      "Javelin": { target: "154'0\"", recruit: "149'0\"", walkon: "129'0\"" }
+    }
+  },
+  {
+    id: "university-of-central-florida",
+    schoolName: "University of Central Florida",
+    division: "D1",
+    conference: "Big 12",
+    state: "FL",
+    maleStandards: {},
+    femaleStandards: {
+      "100m": { target: "11.67", recruit: "11.77", walkon: "11.97" },
+      "200m": { target: "24.12", recruit: "24.22", walkon: "24.87" },
+      "400m": { target: "54.48", recruit: "54.68", walkon: "55.38" },
+      "800m": { target: "2:05.50", recruit: "2:07.50", walkon: "2:11.50" },
+      "1500m": { target: "4:21.00", recruit: "4:26.00", walkon: "4:38.00" },
+      "Mile": { target: "4:43.00", recruit: "4:45.00", walkon: "5:01.00" },
+      "5000m": { target: "16:22.00", recruit: "16:42.00", walkon: "17:17.00" },
+      "10000m": { target: "33:45.00", recruit: "34:15.00", walkon: "35:35.00" },
+      "100m Hurdles": { target: "13.78", recruit: "13.88", walkon: "14.38" },
+      "400m Hurdles": { target: "60.52", recruit: "60.72", walkon: "63.22" },
+      "High Jump": { target: "5'7\"", recruit: "5'6\"", walkon: "5'4\"" },
+      "Pole Vault": { target: "13'0\"", recruit: "12'9\"", walkon: "12'3\"" },
+      "Long Jump": { target: "19'2\"", recruit: "18'11\"", walkon: "18'6\"" },
+      "Triple Jump": { target: "40'10\"", recruit: "40'7\"", walkon: "39'7\"" },
+      "Shot Put": { target: "48'9\"", recruit: "47'9\"", walkon: "42'9\"" },
+      "Discus": { target: "163'0\"", recruit: "158'0\"", walkon: "138'0\"" },
+      "Hammer": { target: "183'0\"", recruit: "178'0\"", walkon: "153'0\"" },
+      "Javelin": { target: "153'0\"", recruit: "148'0\"", walkon: "128'0\"" }
+    }
   }
 ];
 
