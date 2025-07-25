@@ -712,7 +712,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "A10",
     state: "NY",
     maleStandards: {
-      "100m": { target: "10.45", recruit: "10.85", walkon: "11.15" },
+      "100m": { target: "10.70", recruit: "10.99", walkon: "11.15" },
       "200m": { target: "21.50", recruit: "22.20", walkon: "22.70" },
       "400m": { target: "48.20", recruit: "49.10", walkon: "50.50" },
       "800m": { target: "1:50.00", recruit: "1:55.00", walkon: "1:57.00" },
@@ -722,7 +722,7 @@ export const schoolStandards: SchoolStandards[] = [
       "10000m": { target: "31:45.00", recruit: "31:50.00", walkon: "31:55.00" },
       "110m Hurdles": { target: "14.05", recruit: "14.65", walkon: "15.30" },
       "400m Hurdles": { target: "53.20", recruit: "55.20", walkon: "56.70" },
-      "High Jump": { target: "6'8\"", recruit: "6'6\"", walkon: "6'3\"" },
+      "High Jump": { target: "6'7\"", recruit: "6'5\"", walkon: "6'3\"" },
       "Pole Vault": { target: "15'4\"", recruit: "14'9\"", walkon: "13'9\"" },
       "Long Jump": { target: "23'6\"", recruit: "23'0\"", walkon: "22'9\"" },
       "Triple Jump": { target: "47'3\"", recruit: "45'6\"", walkon: "45'2\"" },
