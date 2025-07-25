@@ -5481,7 +5481,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "64'0\"", recruit: "59'0\"", walkon: "53'0\"" },
       "Discus": { target: "205'0\"", recruit: "175'0\"", walkon: "150'0\"" },
       "Hammer": { target: "205'0\"", recruit: "185'0\"", walkon: "160'0\"" },
-      "Javelin": { target: "218'0\"", recruit: "185'0\"", walkon: "170'0\"" }
+      "Javelin": { target: "218'0\"", recruit: "188'0\"", walkon: "181'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.35", recruit: "11.55", walkon: "11.75" },
@@ -5575,7 +5575,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "62'0\"", recruit: "57'0\"", walkon: "51'0\"" },
       "Discus": { target: "198'0\"", recruit: "168'0\"", walkon: "143'0\"" },
       "Hammer": { target: "198'0\"", recruit: "178'0\"", walkon: "153'0\"" },
-      "Javelin": { target: "210'0\"", recruit: "178'0\"", walkon: "163'0\"" }
+      "Javelin": { target: "210'0\"", recruit: "188'0\"", walkon: "181'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.43", recruit: "11.63", walkon: "11.83" },
@@ -5669,7 +5669,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "61'0\"", recruit: "56'0\"", walkon: "50'0\"" },
       "Discus": { target: "195'0\"", recruit: "165'0\"", walkon: "140'0\"" },
       "Hammer": { target: "195'0\"", recruit: "175'0\"", walkon: "150'0\"" },
-      "Javelin": { target: "207'0\"", recruit: "175'0\"", walkon: "160'0\"" }
+      "Javelin": { target: "207'0\"", recruit: "188'0\"", walkon: "181'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.42", recruit: "11.62", walkon: "11.82" },
@@ -5716,7 +5716,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "60'0\"", recruit: "55'0\"", walkon: "49'0\"" },
       "Discus": { target: "192'0\"", recruit: "162'0\"", walkon: "137'0\"" },
       "Hammer": { target: "192'0\"", recruit: "172'0\"", walkon: "147'0\"" },
-      "Javelin": { target: "204'0\"", recruit: "172'0\"", walkon: "157'0\"" }
+      "Javelin": { target: "204'0\"", recruit: "188'0\"", walkon: "181'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.48", recruit: "11.68", walkon: "11.88" },
