@@ -1102,7 +1102,7 @@ export const schoolStandards: SchoolStandards[] = [
       "High Jump": { target: "5'9\"", recruit: "5'7\"", walkon: "5'5\"" },
       "Pole Vault": { target: "13'6\"", recruit: "12'6\"", walkon: "11'6\"" },
       "Long Jump": { target: "20'6\"", recruit: "19'6\"", walkon: "18'6\"" },
-      "Triple Jump": { target: "43'0\"", recruit: "41'0\"", walkon: "39'0\"" },
+      "Triple Jump": { target: "50'3\"", recruit: "48'3\"", walkon: "46'3\"" },
       "Shot Put": { target: "52'0\"", recruit: "47'0\"", walkon: "42'0\"" },
       "Discus": { target: "165'0\"", recruit: "150'0\"", walkon: "135'0\"" },
       "Hammer": { target: "185'0\"", recruit: "165'0\"", walkon: "145'0\"" },
@@ -2044,10 +2044,10 @@ export const schoolStandards: SchoolStandards[] = [
       "Mile": { target: "4:18.00", recruit: "4:22.00", walkon: "4:26.00" },
       "5000m": { target: "15:00.00", recruit: "15:20.00", walkon: "15:35.00" },
       "10000m": { target: "31:15.00", recruit: "31:40.00", walkon: "32:05.00" },
-      "110m Hurdles": { target: "14.30", recruit: "14.60", walkon: "14.85" },
+      "110m Hurdles": { target: "13.90", recruit: "14.20", walkon: "14.40" },
       "400m Hurdles": { target: "54.50", recruit: "56.00", walkon: "57.50" },
       "High Jump": { target: "6'6\"", recruit: "6'4\"", walkon: "6'2\"" },
-      "Pole Vault": { target: "12'6\"", recruit: "11'6\"", walkon: "10'6\"" },
+      "Pole Vault": { target: "16'6\"", recruit: "15'9\"", walkon: "14'9\"" },
       "Long Jump": { target: "23'0\"", recruit: "22'3\"", walkon: "21'6\"" },
       "Triple Jump": { target: "40'0\"", recruit: "38'0\"", walkon: "36'0\"" },
       "Shot Put": { target: "45'0\"", recruit: "40'0\"", walkon: "35'0\"" },
@@ -2064,12 +2064,12 @@ export const schoolStandards: SchoolStandards[] = [
       "Mile": { target: "4:50.50", recruit: "5:02.50", walkon: "5:12.50" },
       "5000m": { target: "16:53.00", recruit: "17:33.00", walkon: "18:03.00" },
       "10000m": { target: "35:03.00", recruit: "36:03.00", walkon: "37:03.00" },
-      "100m Hurdles": { target: "14.03", recruit: "14.53", walkon: "14.93" },
+      "100m Hurdles": { target: "13.80", recruit: "14.20", walkon: "14.50" },
       "400m Hurdles": { target: "60.60", recruit: "63.10", walkon: "65.60" },
       "High Jump": { target: "5'6.5\"", recruit: "5'4.5\"", walkon: "5'2.5\"" },
-      "Pole Vault": { target: "12'1\"", recruit: "11'1\"", walkon: "10'1\"" },
-      "Long Jump": { target: "19'1\"", recruit: "18'1\"", walkon: "17'1\"" },
-      "Triple Jump": { target: "39'3\"", recruit: "37'3\"", walkon: "35'3\"" },
+      "Pole Vault": { target: "12'9\"", recruit: "11'9\"", walkon: "10'9\"" },
+      "Long Jump": { target: "19'9\"", recruit: "18'9\"", walkon: "17'9\"" },
+      "Triple Jump": { target: "40'3\"", recruit: "38'3\"", walkon: "36'3\"" },
       "Shot Put": { target: "44'6\"", recruit: "39'6\"", walkon: "34'6\"" },
       "Discus": { target: "144'0\"", recruit: "129'0\"", walkon: "114'0\"" },
       "Hammer": { target: "154'0\"", recruit: "134'0\"", walkon: "114'0\"" },
@@ -3245,7 +3245,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "75",
+    id: "108",
     schoolName: "Stonehill College",
     division: "D1",
     conference: "NEC",
@@ -3515,7 +3515,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "60",
+    id: "99",
     schoolName: "North Carolina A&T",
     division: "D1",
     conference: "CAA",
@@ -3562,7 +3562,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "61",
+    id: "100",
     schoolName: "Hampton University",
     division: "D1",
     conference: "CAA",
@@ -3609,7 +3609,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "62",
+    id: "101",
     schoolName: "University of North Carolina Wilmington",
     division: "D1",
     conference: "CAA",
@@ -3891,7 +3891,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "68",
+    id: "103",
     schoolName: "Hofstra University",
     division: "D1",
     conference: "CAA",
@@ -3938,7 +3938,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "69",
+    id: "104",
     schoolName: "College of Charleston",
     division: "D1",
     conference: "CAA",
@@ -5308,7 +5308,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "75",
+    id: "105",
     schoolName: "Temple University",
     division: "D1",
     conference: "American",
@@ -5336,7 +5336,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "76",
+    id: "106",
     schoolName: "University of Alabama at Birmingham",
     division: "D1",
     conference: "American",
@@ -5364,7 +5364,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "77",
+    id: "107",
     schoolName: "University of North Texas",
     division: "D1",
     conference: "American",
@@ -5411,7 +5411,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "78",
+    id: "109",
     schoolName: "University of South Florida",
     division: "D1",
     conference: "American",
@@ -5458,7 +5458,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "79",
+    id: "110",
     schoolName: "Wichita State University",
     division: "D1",
     conference: "American",
@@ -5505,7 +5505,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "80",
+    id: "111",
     schoolName: "University of Charlotte",
     division: "D1",
     conference: "American",
@@ -5552,7 +5552,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "81",
+    id: "112",
     schoolName: "East Carolina University",
     division: "D1",
     conference: "American",
@@ -5599,7 +5599,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "82",
+    id: "113",
     schoolName: "Rice University",
     division: "D1",
     conference: "American",
@@ -5646,7 +5646,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "83",
+    id: "114",
     schoolName: "Florida Atlantic University",
     division: "D1",
     conference: "American",
@@ -5693,7 +5693,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "84",
+    id: "115",
     schoolName: "University of Memphis",
     division: "D1",
     conference: "American",
@@ -5740,7 +5740,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "85",
+    id: "116",
     schoolName: "Tulane University",
     division: "D1",
     conference: "American",
@@ -5787,7 +5787,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "86",
+    id: "117",
     schoolName: "University of Tulsa",
     division: "D1",
     conference: "American",
@@ -5834,7 +5834,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "87",
+    id: "118",
     schoolName: "University of Texas at San Antonio",
     division: "D1",
     conference: "American",
@@ -5881,7 +5881,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "88",
+    id: "119",
     schoolName: "Rider University",
     division: "D1",
     conference: "MAAC",
@@ -5926,7 +5926,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "89",
+    id: "120",
     schoolName: "Mount Saint Mary's University",
     division: "D1",
     conference: "MAAC",
@@ -5939,12 +5939,12 @@ export const schoolStandards: SchoolStandards[] = [
       "1500m": { target: "4:06.00", recruit: "4:08.00", walkon: "4:10.00" },
       "Mile": { target: "4:20.00", recruit: "4:22.00", walkon: "4:26.00" },
       "5000m": { target: "15:25.00", recruit: "15:40.00", walkon: "15:50.00" },
-      "110m Hurdles": { target: "14.20", recruit: "14.40", walkon: "14.70" },
+      "110m Hurdles": { target: "13.85", recruit: "14.15", walkon: "14.35" },
       "400m Hurdles": { target: "54.50", recruit: "55.50", walkon: "56.50" },
       "High Jump": { target: "6'6\"", recruit: "6'4\"", walkon: "6'2\"" },
-      "Pole Vault": { target: "14'0\"", recruit: "13'6\"", walkon: "13'0\"" },
-      "Long Jump": { target: "23'0\"", recruit: "22'3\"", walkon: "21'9\"" },
-      "Triple Jump": { target: "46'0\"", recruit: "44'6\"", walkon: "43'0\"" },
+      "Pole Vault": { target: "16'0\"", recruit: "15'3\"", walkon: "14'3\"" },
+      "Long Jump": { target: "24'6\"", recruit: "24'0\"", walkon: "23'6\"" },
+      "Triple Jump": { target: "49'6\"", recruit: "47'6\"", walkon: "45'6\"" },
       "Shot Put": { target: "56'0\"", recruit: "52'0\"", walkon: "48'0\"" },
       "Discus": { target: "170'0\"", recruit: "160'0\"", walkon: "145'0\"" },
       "Hammer": { target: "175'0\"", recruit: "165'0\"", walkon: "155'0\"" },
@@ -5971,7 +5971,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "90",
+    id: "121",
     schoolName: "Manhattan College",
     division: "D1",
     conference: "MAAC",
@@ -6016,7 +6016,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "91",
+    id: "122",
     schoolName: "Merrimack College",
     division: "D1",
     conference: "MAAC",
@@ -6061,7 +6061,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "92",
+    id: "123",
     schoolName: "Iona University",
     division: "D1",
     conference: "MAAC",
@@ -6106,7 +6106,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "93",
+    id: "124",
     schoolName: "Sacred Heart University",
     division: "D1",
     conference: "MAAC",
@@ -6151,7 +6151,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "94",
+    id: "125",
     schoolName: "Marist College",
     division: "D1",
     conference: "MAAC",
@@ -6196,7 +6196,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "95",
+    id: "126",
     schoolName: "Siena College",
     division: "D1",
     conference: "MAAC",
@@ -6241,7 +6241,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "96",
+    id: "127",
     schoolName: "Saint Peter's University",
     division: "D1",
     conference: "MAAC",
@@ -6286,7 +6286,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "97",
+    id: "128",
     schoolName: "Canisius University",
     division: "D1",
     conference: "MAAC",
