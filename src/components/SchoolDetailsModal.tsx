@@ -13,39 +13,50 @@ interface SchoolDetailsModalProps {
 export const SchoolDetailsModal = ({ school, isOpen, onClose }: SchoolDetailsModalProps) => {
   if (!school) return null;
 
-  const renderStandardsTable = (standards: Record<string, any>, title: string) => (
-    <div className="space-y-4">
-      <h4 className="font-semibold text-lg">{title} Standards</h4>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="border-b">
-              <th className="text-left p-3 font-semibold">Event</th>
-              <th className="text-left p-3 font-semibold">
-                <TierBadge tier="target" /> Target
-              </th>
-              <th className="text-left p-3 font-semibold">
-                <TierBadge tier="recruit" /> Recruit
-              </th>
-              <th className="text-left p-3 font-semibold">
-                <TierBadge tier="walkon" /> Walk-On
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {Object.entries(standards).map(([event, eventStandards]) => (
-              <tr key={event} className="border-b hover:bg-muted/30">
-                <td className="p-3 font-medium">{event}</td>
-                <td className="p-3 text-target">{eventStandards.target}</td>
-                <td className="p-3 text-recruit">{eventStandards.recruit}</td>
-                <td className="p-3 text-walkon">{eventStandards.walkon}</td>
+  const renderStandardsTable = (standards: Record<string, any> | undefined, title: string) => {
+    if (!standards) {
+      return (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-lg">{title} Standards</h4>
+          <p className="text-muted-foreground">No standards available for this gender.</p>
+        </div>
+      );
+    }
+
+    return (
+      <div className="space-y-4">
+        <h4 className="font-semibold text-lg">{title} Standards</h4>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b">
+                <th className="text-left p-3 font-semibold">Event</th>
+                <th className="text-left p-3 font-semibold">
+                  <TierBadge tier="target" /> Target
+                </th>
+                <th className="text-left p-3 font-semibold">
+                  <TierBadge tier="recruit" /> Recruit
+                </th>
+                <th className="text-left p-3 font-semibold">
+                  <TierBadge tier="walkon" /> Walk-On
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {Object.entries(standards).map(([event, eventStandards]) => (
+                <tr key={event} className="border-b hover:bg-muted/30">
+                  <td className="p-3 font-medium">{event}</td>
+                  <td className="p-3 text-target">{eventStandards.target}</td>
+                  <td className="p-3 text-recruit">{eventStandards.recruit}</td>
+                  <td className="p-3 text-walkon">{eventStandards.walkon}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
