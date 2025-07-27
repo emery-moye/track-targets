@@ -6753,6 +6753,53 @@ export const schoolStandards: SchoolStandards[] = [
       "Hammer": { target: "147'6\"", recruit: "127'6\"", walkon: "107'6\"" },
       "Javelin": { target: "137'6\"", recruit: "122'6\"", walkon: "107'6\"" }
     }
+  },
+  {
+    id: "700",
+    schoolName: "Dartmouth College",
+    division: "D1",
+    conference: "Ivy League",
+    state: "NH",
+    maleStandards: {
+      "100m": { target: "10.65", recruit: "10.75", walkon: "10.95" },
+      "200m": { target: "21.45", recruit: "21.65", walkon: "22.05" },
+      "400m": { target: "47.80", recruit: "48.20", walkon: "49.50" },
+      "800m": { target: "1:52.00", recruit: "1:53.00", walkon: "1:55.00" },
+      "1500m": { target: "3:52.00", recruit: "3:56.00", walkon: "4:00.00" },
+      "Mile": { target: "4:08.00", recruit: "4:13.00", walkon: "4:17.00" },
+      "5000m": { target: "8:20.00", recruit: "8:34.00", walkon: "8:40.00" },
+      "10000m": { target: "17:45.00", recruit: "18:20.00", walkon: "19:00.00" },
+      "110m Hurdles": { target: "14.25", recruit: "14.35", walkon: "14.70" },
+      "400m Hurdles": { target: "53.75", recruit: "54.25", walkon: "55.50" },
+      "High Jump": { target: "6'8\"", recruit: "6'7\"", walkon: "6'5\"" },
+      "Pole Vault": { target: "15'8\"", recruit: "15'5\"", walkon: "14'10\"" },
+      "Long Jump": { target: "23'4\"", recruit: "23'0\"", walkon: "22'4\"" },
+      "Triple Jump": { target: "47'6\"", recruit: "47'0\"", walkon: "45'6\"" },
+      "Shot Put": { target: "58'0\"", recruit: "57'0\"", walkon: "53'0\"" },
+      "Discus": { target: "178'0\"", recruit: "175'0\"", walkon: "155'0\"" },
+      "Hammer": { target: "188'0\"", recruit: "185'0\"", walkon: "165'0\"" },
+      "Javelin": { target: "188'0\"", recruit: "185'0\"", walkon: "165'0\"" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.00", recruit: "12.10", walkon: "12.35" },
+      "200m": { target: "24.50", recruit: "24.70", walkon: "25.50" },
+      "400m": { target: "55.50", recruit: "56.00", walkon: "57.40" },
+      "800m": { target: "2:11.00", recruit: "2:12.00", walkon: "2:14.00" },
+      "1500m": { target: "4:35.00", recruit: "4:40.00", walkon: "4:45.00" },
+      "Mile": { target: "4:53.00", recruit: "4:58.00", walkon: "5:06.00" },
+      "5000m": { target: "9:55.00", recruit: "10:05.00", walkon: "10:25.00" },
+      "10000m": { target: "21:30.00", recruit: "22:00.00", walkon: "23:00.00" },
+      "100m Hurdles": { target: "14.15", recruit: "14.25", walkon: "14.75" },
+      "400m Hurdles": { target: "43.00", recruit: "43.50", walkon: "45.50" },
+      "High Jump": { target: "5'7\"", recruit: "5'6\"", walkon: "5'4\"" },
+      "Pole Vault": { target: "12'8\"", recruit: "12'6\"", walkon: "12'0\"" },
+      "Long Jump": { target: "19'4\"", recruit: "19'0\"", walkon: "18'0\"" },
+      "Triple Jump": { target: "39'4\"", recruit: "39'0\"", walkon: "38'0\"" },
+      "Shot Put": { target: "43'6\"", recruit: "43'0\"", walkon: "40'0\"" },
+      "Discus": { target: "148'0\"", recruit: "145'0\"", walkon: "130'0\"" },
+      "Hammer": { target: "158'0\"", recruit: "155'0\"", walkon: "135'0\"" },
+      "Javelin": { target: "138'0\"", recruit: "135'0\"", walkon: "120'0\"" }
+    }
   }
 ];
 
