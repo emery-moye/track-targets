@@ -10,7 +10,7 @@ export interface SchoolStandards {
   division: string;
   conference: string;
   state: string;
-  maleStandards: Record<string, EventStandards>;
+  maleStandards?: Record<string, EventStandards>;
   femaleStandards: Record<string, EventStandards>;
 }
 
@@ -7549,32 +7549,6 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "WAC",
     state: "WA",
-    maleStandards: {
-      "100m": { target: "10.65", recruit: "10.71", walkon: "10.83" },
-      "200m": { target: "21.12", recruit: "21.62", walkon: "21.89" },
-      "400m": { target: "47.25", recruit: "48.00", walkon: "48.65" },
-      "800m": { target: "1:52.50", recruit: "1:54.75", walkon: "1:56.10" },
-      "1500m": { target: "4:02.50", recruit: "4:05.80", walkon: "4:09.00" },
-      "1600m": { target: "4:20.50", recruit: "4:23.00", walkon: "4:26.50" },
-      "Mile": { target: "4:22.50", recruit: "4:25.30", walkon: "4:28.80" },
-      "3000m": { target: "8:50.00", recruit: "8:56.50", walkon: "9:03.50" },
-      "5000m": { target: "9:25.00", recruit: "9:32.50", walkon: "9:39.50" },
-      "2 Mile": { target: "9:30.00", recruit: "9:37.50", walkon: "9:44.50" },
-      "10000m": { target: "15:35.00", recruit: "15:53.00", walkon: "16:04.50" },
-      "110m Hurdles": { target: "14.52", recruit: "14.78", walkon: "14.98" },
-      "300m Hurdles": { target: "38.50", recruit: "39.10", walkon: "39.65" },
-      "400m Hurdles": { target: "53.50", recruit: "53.95", walkon: "54.75" },
-      "2000m Steeplechase": { target: "6:10.00", recruit: "6:15.50", walkon: "6:21.50" },
-      "3000m Steeplechase": { target: "9:25.00", recruit: "9:39.50", walkon: "9:48.50" },
-      "High Jump": { target: "6'6\"", recruit: "6'5\"", walkon: "6'4\"" },
-      "Pole Vault": { target: "15'9\"", recruit: "15'3\"", walkon: "14'9\"" },
-      "Long Jump": { target: "22'9\"", recruit: "22'3\"", walkon: "21'8\"" },
-      "Triple Jump": { target: "46'9\"", recruit: "46'3\"", walkon: "45'1\"" },
-      "Shot Put": { target: "51'9\"", recruit: "51'3\"", walkon: "48'9\"" },
-      "Discus": { target: "149'0\"", recruit: "144'0\"", walkon: "138'0\"" },
-      "Hammer": { target: "161'0\"", recruit: "156'0\"", walkon: "148'0\"" },
-      "Javelin": { target: "188'0\"", recruit: "183'0\"", walkon: "174'0\"" }
-    },
     femaleStandards: {
       "100m": { target: "12.02", recruit: "12.15", walkon: "12.37" },
       "200m": { target: "24.75", recruit: "25.05", walkon: "25.50" },
@@ -7882,26 +7856,6 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ASUN",
     state: "TN",
-    maleStandards: {
-      "100m": { target: "10.36", recruit: "10.41", walkon: "10.56" },
-      "200m": { target: "20.97", recruit: "21.22", walkon: "21.52" },
-      "400m": { target: "47.32", recruit: "47.82", walkon: "48.32" },
-      "800m": { target: "1:50.30", recruit: "1:51.80", walkon: "1:53.80" },
-      "1500m": { target: "3:48.00", recruit: "3:50.50", walkon: "3:53.00" },
-      "Mile": { target: "4:07.00", recruit: "4:10.00", walkon: "4:13.00" },
-      "5000m": { target: "14:25.00", recruit: "14:40.00", walkon: "14:55.00" },
-      "10000m": { target: "30:15.00", recruit: "30:45.00", walkon: "31:15.00" },
-      "110m Hurdles": { target: "13.85", recruit: "14.05", walkon: "14.25" },
-      "400m Hurdles": { target: "52.80", recruit: "53.50", walkon: "54.20" },
-      "High Jump": { target: "6'10\"", recruit: "6'7\"", walkon: "6'4\"" },
-      "Pole Vault": { target: "16'8\"", recruit: "16'0\"", walkon: "15'4\"" },
-      "Long Jump": { target: "24'9\"", recruit: "24'0\"", walkon: "23'3\"" },
-      "Triple Jump": { target: "50'6\"", recruit: "49'3\"", walkon: "48'0\"" },
-      "Shot Put": { target: "55'6\"", recruit: "53'3\"", walkon: "51'0\"" },
-      "Discus": { target: "172'0\"", recruit: "165'0\"", walkon: "158'0\"" },
-      "Hammer": { target: "190'0\"", recruit: "182'0\"", walkon: "174'0\"" },
-      "Javelin": { target: "205'0\"", recruit: "195'0\"", walkon: "185'0\"" }
-    },
     femaleStandards: {
       "100m": { target: "11.70", recruit: "11.85", walkon: "12.00" },
       "200m": { target: "24.15", recruit: "24.40", walkon: "24.65" },
@@ -7929,26 +7883,6 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ASUN",
     state: "FL",
-    maleStandards: {
-      "100m": { target: "10.34", recruit: "10.39", walkon: "10.54" },
-      "200m": { target: "20.93", recruit: "21.18", walkon: "21.48" },
-      "400m": { target: "47.20", recruit: "47.70", walkon: "48.20" },
-      "800m": { target: "1:49.80", recruit: "1:51.30", walkon: "1:53.30" },
-      "1500m": { target: "3:47.50", recruit: "3:50.00", walkon: "3:52.50" },
-      "Mile": { target: "4:06.50", recruit: "4:09.50", walkon: "4:12.50" },
-      "5000m": { target: "14:22.00", recruit: "14:37.00", walkon: "14:52.00" },
-      "10000m": { target: "30:10.00", recruit: "30:40.00", walkon: "31:10.00" },
-      "110m Hurdles": { target: "13.82", recruit: "14.02", walkon: "14.22" },
-      "400m Hurdles": { target: "52.70", recruit: "53.40", walkon: "54.10" },
-      "High Jump": { target: "6'11\"", recruit: "6'8\"", walkon: "6'5\"" },
-      "Pole Vault": { target: "16'9\"", recruit: "16'1\"", walkon: "15'5\"" },
-      "Long Jump": { target: "24'10\"", recruit: "24'1\"", walkon: "23'4\"" },
-      "Triple Jump": { target: "50'8\"", recruit: "49'5\"", walkon: "48'2\"" },
-      "Shot Put": { target: "55'9\"", recruit: "53'6\"", walkon: "51'3\"" },
-      "Discus": { target: "173'0\"", recruit: "166'0\"", walkon: "159'0\"" },
-      "Hammer": { target: "192'0\"", recruit: "184'0\"", walkon: "176'0\"" },
-      "Javelin": { target: "207'0\"", recruit: "197'0\"", walkon: "187'0\"" }
-    },
     femaleStandards: {
       "100m": { target: "11.68", recruit: "11.83", walkon: "11.98" },
       "200m": { target: "24.12", recruit: "24.37", walkon: "24.62" },
