@@ -7,7 +7,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <h1 className="text-3xl font-bold text-primary flex items-center">
-              <img src="/lovable-uploads/7e28bf6a-3ac4-489c-8c75-609b71b60312.png" alt="Track Targets Logo" className="h-8 w-8 mr-2" />
+              <img src="/lovable-uploads/7e28bf6a-3ac4-489c-8c75-609b71b60312.png" alt="Track Targets Logo" className="h-12 w-12 mr-3" />
               Track Targets
             </h1>
           </div>
