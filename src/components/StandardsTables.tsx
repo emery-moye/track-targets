@@ -61,7 +61,7 @@ export const StandardsTables = () => {
     <div className="w-full flex flex-col lg:flex-row gap-6 mb-8">
       <Card className="flex-1">
         <CardHeader>
-          <CardTitle className="text-center">Men's D1 Standards</CardTitle>
+          <CardTitle className="text-center">Women's D1 Standards</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
@@ -74,7 +74,7 @@ export const StandardsTables = () => {
                 </tr>
               </thead>
               <tbody>
-                {mensStandards.map((standard, index) => (
+                {womensStandards.map((standard, index) => (
                   <tr key={index} className={index % 2 === 0 ? "bg-muted/50" : ""}>
                     <td className="py-2 px-3">{standard.event}</td>
                     <td className="text-center py-2 px-3">{standard.d1Top}</td>
@@ -89,7 +89,7 @@ export const StandardsTables = () => {
 
       <Card className="flex-1">
         <CardHeader>
-          <CardTitle className="text-center">Women's D1 Standards</CardTitle>
+          <CardTitle className="text-center">Men's D1 Standards</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
@@ -102,7 +102,7 @@ export const StandardsTables = () => {
                 </tr>
               </thead>
               <tbody>
-                {womensStandards.map((standard, index) => (
+                {mensStandards.map((standard, index) => (
                   <tr key={index} className={index % 2 === 0 ? "bg-muted/50" : ""}>
                     <td className="py-2 px-3">{standard.event}</td>
                     <td className="text-center py-2 px-3">{standard.d1Top}</td>
