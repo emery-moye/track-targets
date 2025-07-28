@@ -8735,7 +8735,7 @@ export const schoolStandards: SchoolStandards[] = [
       "110m Hurdles": { target: "14.02", recruit: "14.27", walkon: "14.67" },
       "300m Hurdles": { target: "36.78", recruit: "37.83", walkon: "38.33" },
       "400m Hurdles": { target: "51.55", recruit: "52.55", walkon: "54.55" },
-      "High Jump": { target: "6'10.5\"", recruit: "6'9.5\"", walkon: "6'6.5\"" },
+      "High Jump": { target: "6'10\"", recruit: "6'9\"", walkon: "6'6\"" },
       "Long Jump": { target: "23'11\"", recruit: "23'4\"", walkon: "22'9\"" },
       "Triple Jump": { target: "50'4\"", recruit: "49'4\"", walkon: "48'4\"" }
     },
@@ -8751,7 +8751,7 @@ export const schoolStandards: SchoolStandards[] = [
       "100m Hurdles": { target: "14.07", recruit: "14.52", walkon: "14.77" },
       "300m Hurdles": { target: "43.28", recruit: "43.78", walkon: "45.03" },
       "400m Hurdles": { target: "59.78", recruit: "1:00.28", walkon: "1:02.53" },
-      "High Jump": { target: "5'10.5\"", recruit: "5'9.5\"", walkon: "5'6.5\"" },
+      "High Jump": { target: "5'10\"", recruit: "5'9\"", walkon: "5'6\"" },
       "Long Jump": { target: "19'5\"", recruit: "18'11\"", walkon: "17'11\"" },
       "Triple Jump": { target: "39'11\"", recruit: "38'11\"", walkon: "36'11\"" }
     }
@@ -8774,7 +8774,7 @@ export const schoolStandards: SchoolStandards[] = [
       "110m Hurdles": { target: "13.92", recruit: "14.17", walkon: "14.57" },
       "300m Hurdles": { target: "36.55", recruit: "37.60", walkon: "38.10" },
       "400m Hurdles": { target: "51.10", recruit: "52.10", walkon: "54.10" },
-      "High Jump": { target: "6'11.5\"", recruit: "6'10.5\"", walkon: "6'7.5\"" },
+      "High Jump": { target: "6'11\"", recruit: "6'10\"", walkon: "6'7\"" },
       "Long Jump": { target: "24'3\"", recruit: "23'8\"", walkon: "23'1\"" },
       "Triple Jump": { target: "50'9\"", recruit: "49'9\"", walkon: "48'9\"" }
     },
