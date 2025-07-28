@@ -16,7 +16,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16">
       <Header />
       
       <main className="container mx-auto px-6 py-8">
@@ -36,6 +36,14 @@ const Index = () => {
           <ResultsTable results={results} />
         )}
       </main>
+      
+      <footer className="fixed bottom-0 left-0 right-0 bg-background border-t border-border py-3 px-6">
+        <div className="container mx-auto text-center">
+          <p className="text-sm text-muted-foreground">
+            Contact Information: <a href="mailto:tracktargets@gmail.com" className="text-primary hover:underline">tracktargets@gmail.com</a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
