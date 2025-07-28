@@ -22,15 +22,15 @@ const Index = () => {
       <main className="container mx-auto px-6 py-8">
         <SearchForm onSearch={handleSearch} />
         
-        <StandardsTables />
-        
-        <div className="text-center text-sm text-muted-foreground mb-8 max-w-4xl mx-auto">
+        <div className="text-center text-lg text-foreground mb-8 max-w-4xl mx-auto font-medium">
           <p>
             School standards are calculated using TFRRS and other statistics, while some come directly from school's websites. 
             Below are general recruitment standards for Division one track and field. If you need help with your recruitment 
             journey email us at: <a href="mailto:tracktargets@gmail.com" className="text-primary hover:underline">tracktargets@gmail.com</a>
           </p>
         </div>
+        
+        <StandardsTables />
         
         {hasSearched && (
           <ResultsTable results={results} />
