@@ -3800,7 +3800,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "63",
+    id: "mac_kent_state",
     schoolName: "Kent State University",
     division: "D1",
     conference: "MAC",
@@ -3847,7 +3847,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "64",
+    id: "mac_buffalo",
     schoolName: "University at Buffalo",
     division: "D1",
     conference: "MAC",
@@ -3894,7 +3894,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "65",
+    id: "mac_miami_oh",
     schoolName: "Miami University (OH)",
     division: "D1",
     conference: "MAC",
@@ -3941,7 +3941,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "66",
+    id: "mac_eastern_michigan",
     schoolName: "Eastern Michigan University",
     division: "D1",
     conference: "MAC",
@@ -3988,7 +3988,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "67",
+    id: "mac_bowling_green",
     schoolName: "Bowling Green State University",
     division: "D1",
     conference: "MAC",
@@ -4828,7 +4828,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "67",
+    id: "caa_stony_brook",
     schoolName: "Stony Brook University",
     division: "D1",
     conference: "CAA",
@@ -8601,7 +8601,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "63",
+    id: "asun_central_arkansas",
     schoolName: "University of Central Arkansas",
     division: "D1",
     conference: "ASUN",
@@ -8640,7 +8640,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "64",
+    id: "asun_lipscomb",
     schoolName: "Lipscomb University",
     division: "D1",
     conference: "ASUN",
@@ -8679,7 +8679,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "65",
+    id: "asun_west_georgia",
     schoolName: "University of West Georgia",
     division: "D1",
     conference: "ASUN",
@@ -8718,7 +8718,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "66",
+    id: "asun_eastern_kentucky",
     schoolName: "Eastern Kentucky University",
     division: "D1",
     conference: "ASUN",
@@ -8757,7 +8757,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "67",
+    id: "asun_queens_charlotte",
     schoolName: "Queens University of Charlotte",
     division: "D1",
     conference: "ASUN",
