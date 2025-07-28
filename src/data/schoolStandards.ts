@@ -8709,6 +8709,62 @@ export const schoolStandards: SchoolStandards[] = [
       "Hammer": { target: "165'0\"", recruit: "160'0\"", walkon: "155'0\"" },
       "Pentathlon": { target: "3450", recruit: "3250", walkon: "3050" }
     }
+  },
+  {
+    id: "socon_mercer",
+    schoolName: "Mercer University",
+    division: "D1",
+    conference: "SoCon",
+    state: "GA",
+    femaleStandards: {
+      "100m": { target: "12.25", recruit: "12.55", walkon: "12.85" },
+      "200m": { target: "24.90", recruit: "25.40", walkon: "25.90" },
+      "400m": { target: "56.80", recruit: "58.30", walkon: "59.80" },
+      "800m": { target: "2:19.00", recruit: "2:23.00", walkon: "2:27.00" },
+      "1500m": { target: "4:48.00", recruit: "4:58.00", walkon: "5:08.00" },
+      "Mile": { target: "5:13.00", recruit: "5:28.00", walkon: "5:43.00" },
+      "5000m": { target: "17:50.00", recruit: "18:35.00", walkon: "19:20.00" },
+      "10000m": { target: "37:15.00", recruit: "38:45.00", walkon: "40:15.00" },
+      "100m Hurdles": { target: "14.60", recruit: "15.10", walkon: "15.60" },
+      "400m Hurdles": { target: "63.00", recruit: "65.00", walkon: "67.00" },
+      "High Jump": { target: "5'5\"", recruit: "5'3\"", walkon: "5'1\"" },
+      "Pole Vault": { target: "11'9\"", recruit: "11'3\"", walkon: "10'3\"" },
+      "Long Jump": { target: "19'3\"", recruit: "18'3\"", walkon: "17'3\"" },
+      "Triple Jump": { target: "38'6\"", recruit: "36'6\"", walkon: "34'6\"" },
+      "Shot Put": { target: "42'6\"", recruit: "39'6\"", walkon: "36'6\"" },
+      "Discus": { target: "138'0\"", recruit: "128'0\"", walkon: "118'0\"" },
+      "Hammer": { target: "153'0\"", recruit: "143'0\"", walkon: "133'0\"" },
+      "Javelin": { target: "138'0\"", recruit: "128'0\"", walkon: "118'0\"" },
+      "Heptathlon": { target: "4750", recruit: "4350", walkon: "3950" }
+    }
+  },
+  {
+    id: "socon_chattanooga",
+    schoolName: "University of Tennessee at Chattanooga",
+    division: "D1",
+    conference: "SoCon",
+    state: "TN",
+    femaleStandards: {
+      "100m": { target: "12.22", recruit: "12.52", walkon: "12.82" },
+      "200m": { target: "24.85", recruit: "25.35", walkon: "25.85" },
+      "400m": { target: "56.70", recruit: "58.20", walkon: "59.70" },
+      "800m": { target: "2:18.50", recruit: "2:22.50", walkon: "2:26.50" },
+      "1500m": { target: "4:47.00", recruit: "4:57.00", walkon: "5:07.00" },
+      "Mile": { target: "5:12.00", recruit: "5:27.00", walkon: "5:42.00" },
+      "5000m": { target: "17:48.00", recruit: "18:33.00", walkon: "19:18.00" },
+      "10000m": { target: "37:10.00", recruit: "38:40.00", walkon: "40:10.00" },
+      "100m Hurdles": { target: "14.55", recruit: "15.05", walkon: "15.55" },
+      "400m Hurdles": { target: "62.80", recruit: "64.80", walkon: "66.80" },
+      "High Jump": { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" },
+      "Pole Vault": { target: "12'0\"", recruit: "11'6\"", walkon: "10'6\"" },
+      "Long Jump": { target: "19'4\"", recruit: "18'4\"", walkon: "17'4\"" },
+      "Triple Jump": { target: "38'9\"", recruit: "36'9\"", walkon: "34'9\"" },
+      "Shot Put": { target: "42'9\"", recruit: "39'9\"", walkon: "36'9\"" },
+      "Discus": { target: "139'0\"", recruit: "129'0\"", walkon: "119'0\"" },
+      "Hammer": { target: "154'0\"", recruit: "144'0\"", walkon: "134'0\"" },
+      "Javelin": { target: "139'0\"", recruit: "129'0\"", walkon: "119'0\"" },
+      "Heptathlon": { target: "4780", recruit: "4380", walkon: "3980" }
+    }
   }
 ];
 
