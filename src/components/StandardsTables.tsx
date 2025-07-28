@@ -61,7 +61,7 @@ export const StandardsTables = () => {
     <div className="w-full flex flex-col lg:flex-row gap-6 mb-8">
       <Card className="flex-1">
         <CardHeader>
-          <CardTitle className="text-center">Women's D1 Standards</CardTitle>
+          <CardTitle className="text-center">Men's D1 Standards</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
@@ -89,7 +89,7 @@ export const StandardsTables = () => {
 
       <Card className="flex-1">
         <CardHeader>
-          <CardTitle className="text-center">Men's D1 Standards</CardTitle>
+          <CardTitle className="text-center">Women's D1 Standards</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
