@@ -59,8 +59,8 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
     // Allow formats like: 10.5, 10.50, 1:23.45 for running events
     // Allow formats like: 6', 6'6, 6'6", 22'6", 10'5.5" for field events
     const timePattern = /^(\d+:)?\d+(\.\d+)?$/; // Running events
-    // Field events: handle both straight quotes (') and curly quotes (')
-    const fieldPattern = /^\d+[''](\d+(\.\d+)?[""]?)?$/; // Straight AND curly quotes
+    // Field events: accept BOTH straight quotes (6'6") AND curly quotes (6'6")
+    const fieldPattern = /^\d+[''](\d+(\.\d+)?[""]?)?$/; // Both straight AND curly quotes
     return timePattern.test(value.trim()) || fieldPattern.test(value.trim());
   };
 
