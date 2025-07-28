@@ -59,7 +59,8 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
     // Allow formats like: 10.5, 10.50, 1:23.45 for running events
     // Allow formats like: 6', 6'6, 6'6", 22'6", 10'5.5" for field events
     const timePattern = /^(\d+:)?\d+(\.\d+)?$/; // Running events
-    const fieldPattern = /^\d+['ʼ'](\d+(\.\d+)?)?[""]?$/; // Field events - feet required, inches optional, closing quote optional
+    // Field events: feet + apostrophe, then optionally inches (with optional decimal), then optionally closing quote
+    const fieldPattern = /^\d+['ʼ'](\d+(\.\d+)?[""]?)?$/; // Handles all field event formats including mobile quotes
     return timePattern.test(value.trim()) || fieldPattern.test(value.trim());
   };
 
