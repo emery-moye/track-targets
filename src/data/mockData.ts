@@ -9,10 +9,16 @@ const parsePerformance = (performance: string, event: string): number => {
     return parseInt(minutes) * 60 + parseFloat(seconds);
   }
   
-  // Handle distance formats (remove quotes and feet/inches)
-  if (performance.includes("'") || performance.includes('"')) {
-    const feetMatch = performance.match(/(\d+)'/);
-    const inchMatch = performance.match(/(\d+)"/);
+  // Handle distance formats - support both straight and curly quotes
+  const straightApostrophe = "'";
+  const curlyApostrophe = "\u2019";
+  const straightQuote = '"';
+  const curlyQuote = "\u201D";
+  if (performance.includes(straightApostrophe) || performance.includes(straightQuote) || 
+      performance.includes(curlyApostrophe) || performance.includes(curlyQuote)) {
+    // Match both straight and curly quotes for feet and inches
+    const feetMatch = performance.match(/(\d+)[\u0027\u2019]/);
+    const inchMatch = performance.match(/(\d+)[\u0022\u201D]/);
     const feet = feetMatch ? parseInt(feetMatch[1]) : 0;
     const inches = inchMatch ? parseInt(inchMatch[1]) : 0;
     return feet * 12 + inches; // Convert to total inches
