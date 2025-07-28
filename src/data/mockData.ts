@@ -63,10 +63,13 @@ export const generateMatches = (gradeLevel: string, event: string, personalBest:
   schoolStandards.forEach(school => {
     const standards = gender === "Men's" ? school.maleStandards : school.femaleStandards;
     console.log(`\n--- ${school.schoolName} (ID: ${school.id}, Conference: ${school.conference}) ---`);
+    console.log(`Standards object:`, standards);
+    console.log(`Has standards:`, !!standards);
+    console.log(`Has event standards:`, standards && !!standards[event]);
     
-    // Skip if standards don't exist for this gender
+    // Skip if standards don't exist for this gender or specific event
     if (!standards || !standards[event]) {
-      console.log(`No standards for ${event} in ${gender} category`);
+      console.log(`No standards for ${event} in ${gender} category - SKIPPING`);
       return;
     }
     
