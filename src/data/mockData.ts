@@ -63,6 +63,13 @@ export const generateMatches = (gradeLevel: string, event: string, personalBest:
   schoolStandards.forEach(school => {
     const standards = gender === "Men's" ? school.maleStandards : school.femaleStandards;
     console.log(`\n--- ${school.schoolName} (ID: ${school.id}, Conference: ${school.conference}) ---`);
+    
+    // Skip if standards don't exist for this gender
+    if (!standards || !standards[event]) {
+      console.log(`No standards for ${event} in ${gender} category`);
+      return;
+    }
+    
     console.log(`Standards for ${event}:`, standards[event]);
     const tier = determineTier(personalBest, standards, event);
     console.log(`Tier result: ${tier}`);
