@@ -8115,7 +8115,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "94",
+    id: "wac_utah_valley",
     schoolName: "Utah Valley University",
     division: "D1",
     conference: "WAC",
@@ -8174,7 +8174,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "95",
+    id: "wac_grand_canyon",
     schoolName: "Grand Canyon University",
     division: "D1",
     conference: "WAC",
@@ -8410,7 +8410,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "99",
+    id: "wac_southern_utah",
     schoolName: "Southern Utah University",
     division: "D1",
     conference: "WAC",
@@ -8469,7 +8469,7 @@ export const schoolStandards: SchoolStandards[] = [
     }
   },
   {
-    id: "100",
+    id: "wac_cal_baptist",
     schoolName: "California Baptist University",
     division: "D1",
     conference: "WAC",
