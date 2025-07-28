@@ -56,9 +56,11 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
   const [error, setError] = useState("");
 
   const validatePersonalBest = (value: string) => {
-    // Allow formats like: 10.5, 10.50, 10'5", 10'5.5", 1:23.45
-    const timePattern = /^(\d+:)?\d+(\.\d+)?$|^\d+'(\d+(\.\d+)?")?$/;
-    return timePattern.test(value.trim());
+    // Allow formats like: 10.5, 10.50, 1:23.45 for running events
+    // Allow formats like: 10'5", 10'5.5", 6'6" for field events
+    const timePattern = /^(\d+:)?\d+(\.\d+)?$/; // Running events
+    const fieldPattern = /^\d+'(\d+(\.\d+)?")?$/; // Field events with feet/inches
+    return timePattern.test(value.trim()) || fieldPattern.test(value.trim());
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -70,7 +72,7 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
     }
     
     if (!validatePersonalBest(personalBest)) {
-      setError("Please enter a valid time (e.g., 10.5, 1:23.45, 10'5\")");
+      setError("Please enter a valid time (e.g., 10.5, 1:23.45, 6'6\")");
       return;
     }
     
@@ -115,7 +117,7 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
           <div>
             <Input
               type="text"
-              placeholder="Personal Best (e.g., 10.5, 1:23.45)"
+              placeholder="Personal Best (e.g., 10.5, 1:23.45, 6'6&quot;)"
               value={personalBest}
               onChange={(e) => setPersonalBest(e.target.value)}
               className="h-12 focus:ring-primary focus:border-primary"
