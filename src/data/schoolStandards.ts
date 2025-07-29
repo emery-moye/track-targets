@@ -15,6 +15,54 @@ export interface SchoolStandards {
 }
 
 export const schoolStandards: SchoolStandards[] = [
+  // MEAC Conference Schools (D1)
+  {
+    id: "meac_norfolk_state",
+    schoolName: "Norfolk State University",
+    division: "D1",
+    conference: "MEAC",
+    state: "VA",
+    maleStandards: {
+      "100m": { target: "10.55", recruit: "10.65", walkon: "10.75" },
+      "200m": { target: "21.35", recruit: "21.47", walkon: "21.60" },
+      "400m": { target: "47.90", recruit: "48.25", walkon: "48.60" },
+      "800m": { target: "1:53.0", recruit: "1:54.25", walkon: "1:55.5" },
+      "1600m": { target: "4:15.0", recruit: "4:17.5", walkon: "4:25.0" },
+      "3200m": { target: "9:20.5", recruit: "9:35.25", walkon: "9:50.0" },
+      "110m Hurdles": { target: "14.05", recruit: "14.20", walkon: "14.35" },
+      "300m Hurdles": { target: "37.30", recruit: "37.90", walkon: "38.50" },
+      "400m Hurdles": { target: "52.50", recruit: "53.00", walkon: "53.50" },
+      "High Jump": { target: "6'9\"", recruit: "6'6\"", walkon: "6'4\"" },
+      "Pole Vault": { target: "15'0\"", recruit: "14'3\"", walkon: "13'0\"" },
+      "Long Jump": { target: "24'2\"", recruit: "23'0\"", walkon: "21'8\"" },
+      "Triple Jump": { target: "48'5\"", recruit: "47'9\"", walkon: "47'2\"" },
+      "Shot Put": { target: "58'0\"", recruit: "56'6\"", walkon: "55'0\"" },
+      "Discus": { target: "165'0\"", recruit: "157'6\"", walkon: "150'0\"" },
+      "Javelin": { target: "155'0\"", recruit: "149'0\"", walkon: "145'0\"" }
+    },
+    femaleStandards: {
+      "100m": { target: "11.9", recruit: "12.1", walkon: "12.3" },
+      "200m": { target: "24.4", recruit: "24.8", walkon: "25.2" },
+      "400m": { target: "56.0", recruit: "57.0", walkon: "58.0" },
+      "800m": { target: "2:13", recruit: "2:16", walkon: "2:19" },
+      "1600m": { target: "5:20", recruit: "5:28", walkon: "5:36" },
+      "3200m": { target: "19:15", recruit: "19:45", walkon: "20:15" },
+      "5000m": { target: "19:15", recruit: "19:45", walkon: "20:15" },
+      "55m": { target: "7.00", recruit: "7.15", walkon: "7.30" },
+      "55m Hurdles": { target: "8.20", recruit: "8.40", walkon: "8.60" },
+      "100m Hurdles": { target: "14.10", recruit: "14.40", walkon: "14.70" },
+      "300m Hurdles": { target: "40.00", recruit: "41.00", walkon: "42.00" },
+      "400m Hurdles": { target: "1:02.0", recruit: "1:04.0", walkon: "1:06.0" },
+      "High Jump": { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" },
+      "Pole Vault": { target: "9'0\"", recruit: "8'6\"", walkon: "8'0\"" },
+      "Long Jump": { target: "18'7\"", recruit: "18'0\"", walkon: "17'6\"" },
+      "Triple Jump": { target: "40'0\"", recruit: "38'6\"", walkon: "37'0\"" },
+      "Shot Put": { target: "43'0\"", recruit: "41'0\"", walkon: "39'0\"" },
+      "Discus": { target: "125'0\"", recruit: "120'0\"", walkon: "115'0\"" },
+      "Javelin": { target: "120'0\"", recruit: "115'0\"", walkon: "110'0\"" },
+      "Heptathlon": { target: "4200", recruit: "4000", walkon: "3800" }
+    }
+  },
   // PSAC Conference Schools (D2)
   {
     id: "psac_slippery_rock",
