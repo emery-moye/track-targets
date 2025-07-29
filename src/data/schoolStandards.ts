@@ -392,6 +392,54 @@ export const schoolStandards: SchoolStandards[] = [
       "Heptathlon": { target: "4050", recruit: "3850", walkon: "3650" }
     }
   },
+  // Conference USA (CUSA) Schools (D1)
+  {
+    id: "cusa_liberty",
+    schoolName: "Liberty University",
+    division: "D1",
+    conference: "CUSA",
+    state: "VA",
+    maleStandards: {
+      "100m": { target: "10.25", recruit: "10.30", walkon: "10.60" },
+      "200m": { target: "20.85", recruit: "20.90", walkon: "21.40" },
+      "400m": { target: "46.40", recruit: "46.50", walkon: "48.50" },
+      "800m": { target: "1:50.40", recruit: "1:50.70", walkon: "1:54.00" },
+      "1600m": { target: "4:07.50", recruit: "4:08.00", walkon: "4:15.00" },
+      "3200m": { target: "9:02.50", recruit: "9:03.00", walkon: "9:15.00" },
+      "110m Hurdles": { target: "14.15", recruit: "14.20", walkon: "14.60" },
+      "300m Hurdles": { target: "37.40", recruit: "37.50", walkon: "39.40" },
+      "400m Hurdles": { target: "52.70", recruit: "52.80", walkon: "55.40" },
+      "High Jump": { target: "6'11\"", recruit: "6'10\"", walkon: "6'6\"" },
+      "Pole Vault": { target: "16'9\"", recruit: "16'6\"", walkon: "15'9\"" },
+      "Long Jump": { target: "23'11\"", recruit: "23'8\"", walkon: "23'0\"" },
+      "Triple Jump": { target: "49'3\"", recruit: "49'0\"", walkon: "46'0\"" },
+      "Shot Put": { target: "60'6\"", recruit: "60'0\"", walkon: "56'0\"" },
+      "Discus": { target: "182'0\"", recruit: "180'0\"", walkon: "170'0\"" },
+      "Javelin": { target: "207'0\"", recruit: "205'0\"", walkon: "190'0\"" },
+      "Hammer": { target: "192'0\"", recruit: "190'0\"", walkon: "175'0\"" },
+      "Decathlon": { target: "7100", recruit: "7000", walkon: "6200" }
+    },
+    femaleStandards: {
+      "100m": { target: "11.95", recruit: "12.00", walkon: "12.40" },
+      "200m": { target: "23.95", recruit: "24.00", walkon: "24.50" },
+      "400m": { target: "55.90", recruit: "56.00", walkon: "57.50" },
+      "800m": { target: "2:09.50", recruit: "2:10.00", walkon: "2:19.00" },
+      "1600m": { target: "4:51.50", recruit: "4:52.00", walkon: "5:10.00" },
+      "3200m": { target: "10:34.50", recruit: "10:35.00", walkon: "10:55.00" },
+      "100m Hurdles": { target: "14.15", recruit: "14.20", walkon: "14.60" },
+      "300m Hurdles": { target: "43.40", recruit: "43.50", walkon: "45.00" },
+      "400m Hurdles": { target: "61.10", recruit: "61.20", walkon: "63.00" },
+      "High Jump": { target: "5'9\"", recruit: "5'8\"", walkon: "5'5\"" },
+      "Pole Vault": { target: "13'3\"", recruit: "13'0\"", walkon: "12'6\"" },
+      "Long Jump": { target: "19'3\"", recruit: "19'0\"", walkon: "18'0\"" },
+      "Triple Jump": { target: "39'3\"", recruit: "39'0\"", walkon: "36'6\"" },
+      "Shot Put": { target: "44'6\"", recruit: "44'0\"", walkon: "41'0\"" },
+      "Discus": { target: "147'0\"", recruit: "145'0\"", walkon: "130'0\"" },
+      "Javelin": { target: "137'0\"", recruit: "135'0\"", walkon: "125'0\"" },
+      "Hammer": { target: "177'0\"", recruit: "175'0\"", walkon: "155'0\"" },
+      "Heptathlon": { target: "4800", recruit: "4750", walkon: "4300" }
+    }
+  },
   // PSAC Conference Schools (D2)
   {
     id: "psac_slippery_rock",
