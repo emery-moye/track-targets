@@ -11812,7 +11812,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "SAC",
     state: "NC",
     maleStandards: {
-      "100m": { target: "10.80", recruit: "10.90", walkon: "11.00" },
+      "100m": { target: "10.65", recruit: "10.75", walkon: "10.85" },
       "200m": { target: "21.10", recruit: "21.70", walkon: "22.10" },
       "400m": { target: "47.40", recruit: "48.20", walkon: "48.80" },
       "800m": { target: "1:51.50", recruit: "1:54.00", walkon: "1:56.50" },
@@ -11855,7 +11855,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "SAC",
     state: "TN",
     maleStandards: {
-      "100m": { target: "10.82", recruit: "10.92", walkon: "11.02" },
+      "100m": { target: "10.67", recruit: "10.77", walkon: "10.87" },
       "200m": { target: "21.15", recruit: "21.75", walkon: "22.15" },
       "400m": { target: "47.50", recruit: "48.30", walkon: "48.90" },
       "800m": { target: "1:52.00", recruit: "1:54.50", walkon: "1:57.00" },
@@ -11898,7 +11898,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "SAC",
     state: "NC",
     maleStandards: {
-      "100m": { target: "10.78", recruit: "10.88", walkon: "10.98" },
+      "100m": { target: "10.63", recruit: "10.73", walkon: "10.83" },
       "200m": { target: "21.05", recruit: "21.65", walkon: "22.05" },
       "400m": { target: "47.30", recruit: "48.10", walkon: "48.70" },
       "800m": { target: "1:51.00", recruit: "1:53.50", walkon: "1:56.00" },
