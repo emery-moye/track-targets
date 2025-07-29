@@ -15,6 +15,60 @@ export interface SchoolStandards {
 }
 
 export const schoolStandards: SchoolStandards[] = [
+  // Big East Conference Schools
+  {
+    id: "bigeast_uconn",
+    schoolName: "University of Connecticut",
+    division: "D1",
+    conference: "Big East",
+    state: "CT",
+    maleStandards: {
+      "100m": { target: "10.40", recruit: "10.60", walkon: "10.80" },
+      "200m": { target: "21.00", recruit: "21.40", walkon: "21.80" },
+      "400m": { target: "46.50", recruit: "47.50", walkon: "48.50" },
+      "800m": { target: "1:48.00", recruit: "1:51.00", walkon: "1:54.00" },
+      "1500m": { target: "3:48.00", recruit: "3:54.00", walkon: "4:00.00" },
+      "Mile": { target: "4:08.00", recruit: "4:16.00", walkon: "4:24.00" },
+      "3000m": { target: "8:20.00", recruit: "8:35.00", walkon: "8:50.00" },
+      "5000m": { target: "14:30.00", recruit: "15:00.00", walkon: "15:30.00" },
+      "10000m": { target: "30:00.00", recruit: "31:00.00", walkon: "32:00.00" },
+      "110m Hurdles": { target: "13.80", recruit: "14.20", walkon: "14.60" },
+      "400m Hurdles": { target: "52.00", recruit: "53.50", walkon: "55.00" },
+      "3000m Steeplechase": { target: "9:00.00", recruit: "9:20.00", walkon: "9:40.00" },
+      "High Jump": { target: "6'10\"", recruit: "6'6\"", walkon: "6'2\"" },
+      "Pole Vault": { target: "16'6\"", recruit: "15'6\"", walkon: "14'6\"" },
+      "Long Jump": { target: "24'6\"", recruit: "23'0\"", walkon: "21'6\"" },
+      "Triple Jump": { target: "50'0\"", recruit: "47'0\"", walkon: "44'0\"" },
+      "Shot Put": { target: "55'0\"", recruit: "50'0\"", walkon: "45'0\"" },
+      "Discus": { target: "165'0\"", recruit: "150'0\"", walkon: "135'0\"" },
+      "Hammer": { target: "180'0\"", recruit: "165'0\"", walkon: "150'0\"" },
+      "Javelin": { target: "200'0\"", recruit: "180'0\"", walkon: "160'0\"" },
+      "Decathlon": { target: "6800", recruit: "6200", walkon: "5600" }
+    },
+    femaleStandards: {
+      "100m": { target: "11.70", recruit: "12.00", walkon: "12.30" },
+      "200m": { target: "23.70", recruit: "24.30", walkon: "24.90" },
+      "400m": { target: "54.00", recruit: "55.50", walkon: "57.00" },
+      "800m": { target: "2:08.00", recruit: "2:12.00", walkon: "2:16.00" },
+      "1500m": { target: "4:25.00", recruit: "4:35.00", walkon: "4:45.00" },
+      "Mile": { target: "4:48.00", recruit: "5:00.00", walkon: "5:12.00" },
+      "3000m": { target: "10:00.00", recruit: "10:20.00", walkon: "10:40.00" },
+      "5000m": { target: "16:45.00", recruit: "17:30.00", walkon: "18:15.00" },
+      "10000m": { target: "35:00.00", recruit: "36:30.00", walkon: "38:00.00" },
+      "100m Hurdles": { target: "13.50", recruit: "14.00", walkon: "14.50" },
+      "400m Hurdles": { target: "59.00", recruit: "61.00", walkon: "63.00" },
+      "3000m Steeplechase": { target: "10:30.00", recruit: "11:00.00", walkon: "11:30.00" },
+      "High Jump": { target: "5'8\"", recruit: "5'4\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "12'6\"", recruit: "11'6\"", walkon: "10'6\"" },
+      "Long Jump": { target: "20'0\"", recruit: "18'6\"", walkon: "17'0\"" },
+      "Triple Jump": { target: "40'0\"", recruit: "37'0\"", walkon: "34'0\"" },
+      "Shot Put": { target: "46'0\"", recruit: "41'0\"", walkon: "36'0\"" },
+      "Discus": { target: "150'0\"", recruit: "135'0\"", walkon: "120'0\"" },
+      "Hammer": { target: "165'0\"", recruit: "150'0\"", walkon: "135'0\"" },
+      "Javelin": { target: "145'0\"", recruit: "130'0\"", walkon: "115'0\"" },
+      "Heptathlon": { target: "5200", recruit: "4600", walkon: "4000" }
+    }
+  },
   // Southern Conference Schools
   {
     id: "socon_wofford",
