@@ -15,6 +15,52 @@ export interface SchoolStandards {
 }
 
 export const schoolStandards: SchoolStandards[] = [
+  // NESCAC Conference Schools
+  {
+    id: "nescac_tufts",
+    schoolName: "Tufts University",
+    division: "D3",
+    conference: "NESCAC",
+    state: "MA",
+    maleStandards: {
+      "100m": { target: "10.70", recruit: "10.85", walkon: "11.00" },
+      "200m": { target: "21.80", recruit: "22.20", walkon: "22.60" },
+      "400m": { target: "48.50", recruit: "49.00", walkon: "49.50" },
+      "800m": { target: "1:52.00", recruit: "1:54.50", walkon: "1:57.00" },
+      "1600m": { target: "4:15", recruit: "4:19", walkon: "4:23" },
+      "3200m": { target: "9:10", recruit: "9:20", walkon: "9:30" },
+      "5000m": { target: "15:10", recruit: "15:20", walkon: "15:30" },
+      "110m Hurdles": { target: "14.50", recruit: "14.70", walkon: "14.90" },
+      "300m Hurdles": { target: "38.50", recruit: "39.00", walkon: "39.50" },
+      "400m Hurdles": { target: "54.50", recruit: "55.00", walkon: "55.50" },
+      "High Jump": { target: "6'7\"", recruit: "6'5\"", walkon: "6'3\"" },
+      "Pole Vault": { target: "15'0\"", recruit: "14'6\"", walkon: "14'0\"" },
+      "Long Jump": { target: "22'6\"", recruit: "21'8\"", walkon: "21'0\"" },
+      "Triple Jump": { target: "46'6\"", recruit: "45'0\"", walkon: "43'6\"" },
+      "Shot Put": { target: "52'0\"", recruit: "50'0\"", walkon: "48'0\"" },
+      "Discus": { target: "160'0\"", recruit: "155'0\"", walkon: "150'0\"" },
+      "Javelin": { target: "185'0\"", recruit: "180'0\"", walkon: "175'0\"" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.00", recruit: "12.20", walkon: "12.40" },
+      "200m": { target: "24.80", recruit: "25.30", walkon: "25.80" },
+      "400m": { target: "57.50", recruit: "58.50", walkon: "59.50" },
+      "800m": { target: "2:12", recruit: "2:15", walkon: "2:18" },
+      "1600m": { target: "4:58", recruit: "5:05", walkon: "5:12" },
+      "3200m": { target: "10:45", recruit: "11:00", walkon: "11:15" },
+      "5000m": { target: "17:45", recruit: "18:15", walkon: "18:45" },
+      "100m Hurdles": { target: "14.50", recruit: "14.80", walkon: "15.10" },
+      "300m Hurdles": { target: "44.50", recruit: "45.50", walkon: "46.50" },
+      "400m Hurdles": { target: "63.50", recruit: "64.50", walkon: "65.50" },
+      "High Jump": { target: "5'7\"", recruit: "5'5\"", walkon: "5'3\"" },
+      "Pole Vault": { target: "12'0\"", recruit: "11'8\"", walkon: "11'4\"" },
+      "Long Jump": { target: "18'6\"", recruit: "17'10\"", walkon: "17'2\"" },
+      "Triple Jump": { target: "38'6\"", recruit: "37'6\"", walkon: "36'6\"" },
+      "Shot Put": { target: "40'0\"", recruit: "38'6\"", walkon: "37'0\"" },
+      "Discus": { target: "130'0\"", recruit: "125'0\"", walkon: "120'0\"" },
+      "Javelin": { target: "125'0\"", recruit: "120'0\"", walkon: "115'0\"" }
+    }
+  },
   // Big East Conference Schools
   {
     id: "bigeast_uconn",
