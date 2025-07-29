@@ -38,7 +38,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Triple Jump": { target: "48'5\"", recruit: "47'9\"", walkon: "47'2\"" },
       "Shot Put": { target: "58'0\"", recruit: "56'6\"", walkon: "55'0\"" },
       "Discus": { target: "165'0\"", recruit: "157'6\"", walkon: "150'0\"" },
-      "Javelin": { target: "155'0\"", recruit: "149'0\"", walkon: "145'0\"" }
+      "Javelin": { target: "180'0\"", recruit: "175'0\"", walkon: "170'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.9", recruit: "12.1", walkon: "12.3" },
@@ -59,7 +59,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Triple Jump": { target: "40'0\"", recruit: "38'6\"", walkon: "37'0\"" },
       "Shot Put": { target: "43'0\"", recruit: "41'0\"", walkon: "39'0\"" },
       "Discus": { target: "125'0\"", recruit: "120'0\"", walkon: "115'0\"" },
-      "Javelin": { target: "120'0\"", recruit: "115'0\"", walkon: "110'0\"" },
+      "Javelin": { target: "135'0\"", recruit: "130'0\"", walkon: "125'0\"" },
       "Heptathlon": { target: "4200", recruit: "4000", walkon: "3800" }
     }
   },
