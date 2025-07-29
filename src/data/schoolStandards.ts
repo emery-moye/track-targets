@@ -15,6 +15,50 @@ export interface SchoolStandards {
 }
 
 export const schoolStandards: SchoolStandards[] = [
+  // PSAC Conference Schools (D2)
+  {
+    id: "psac_slippery_rock",
+    schoolName: "Slippery Rock University",
+    division: "D2",
+    conference: "PSAC",
+    state: "PA",
+    maleStandards: {
+      "100m": { target: "10.90", recruit: "11.00", walkon: "11.10" },
+      "200m": { target: "22.20", recruit: "22.40", walkon: "22.60" },
+      "400m": { target: "50.20", recruit: "50.50", walkon: "50.80" },
+      "800m": { target: "1:59.00", recruit: "2:01.00", walkon: "2:03.00" },
+      "1600m": { target: "4:30.00", recruit: "4:32.00", walkon: "4:40.00" },
+      "3200m": { target: "10:00.00", recruit: "10:05.00", walkon: "10:15.00" },
+      "5000m": { target: "16:30", recruit: "16:45", walkon: "17:10" },
+      "110m Hurdles": { target: "15.40", recruit: "15.60", walkon: "15.80" },
+      "300m Hurdles": { target: "39.70", recruit: "40.00", walkon: "40.50" },
+      "High Jump": { target: "6'4\"", recruit: "6'2\"", walkon: "6'1\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "14'3\"", walkon: "14'0\"" },
+      "Long Jump": { target: "22'6\"", recruit: "22'0\"", walkon: "21'6\"" },
+      "Triple Jump": { target: "45'0\"", recruit: "44'3\"", walkon: "43'9\"" },
+      "Shot Put": { target: "54'0\"", recruit: "53'0\"", walkon: "51'0\"" },
+      "Discus": { target: "160'0\"", recruit: "155'0\"", walkon: "150'0\"" },
+      "Javelin": { target: "175'0\"", recruit: "170'0\"", walkon: "160'0\"" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.60", recruit: "12.80", walkon: "12.90" },
+      "200m": { target: "26.40", recruit: "26.70", walkon: "27.00" },
+      "400m": { target: "59.00", recruit: "1:00.00", walkon: "1:01.00" },
+      "800m": { target: "2:26.00", recruit: "2:28.00", walkon: "2:30.00" },
+      "1600m": { target: "5:32.00", recruit: "5:35.00", walkon: "5:45.00" },
+      "3200m": { target: "12:10.00", recruit: "12:15.00", walkon: "12:30.00" },
+      "5000m": { target: "20:15", recruit: "20:30", walkon: "21:00" },
+      "100m Hurdles": { target: "15.80", recruit: "16.00", walkon: "16.30" },
+      "300m Hurdles": { target: "47.20", recruit: "47.50", walkon: "48.00" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'6\"", recruit: "11'3\"", walkon: "10'9\"" },
+      "Long Jump": { target: "17'9\"", recruit: "17'6\"", walkon: "17'3\"" },
+      "Triple Jump": { target: "36'0\"", recruit: "35'6\"", walkon: "35'0\"" },
+      "Shot Put": { target: "39'0\"", recruit: "38'0\"", walkon: "36'0\"" },
+      "Discus": { target: "120'0\"", recruit: "115'0\"", walkon: "105'0\"" },
+      "Javelin": { target: "120'0\"", recruit: "115'0\"", walkon: "105'0\"" }
+    }
+  },
   // NESCAC Conference Schools
   {
     id: "nescac_tufts",
