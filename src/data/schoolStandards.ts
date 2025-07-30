@@ -10781,6 +10781,62 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "144'0\"", recruit: "134'0\"", walkon: "124'0\"" }
     }
   },
+  {
+    id: "cusa_jacksonville_state",
+    schoolName: "Jacksonville State University",
+    division: "D1",
+    conference: "CUSA",
+    state: "AL",
+    femaleStandards: {
+      "100m": { target: "12.10", recruit: "12.40", walkon: "12.70" },
+      "200m": { target: "24.50", recruit: "25.00", walkon: "25.50" },
+      "400m": { target: "55.50", recruit: "57.00", walkon: "58.50" },
+      "800m": { target: "2:15.00", recruit: "2:19.00", walkon: "2:23.00" },
+      "1500m": { target: "4:38.00", recruit: "4:48.00", walkon: "4:58.00" },
+      "Mile": { target: "5:03.00", recruit: "5:18.00", walkon: "5:33.00" },
+      "5000m": { target: "17:30.00", recruit: "18:15.00", walkon: "19:00.00" },
+      "10000m": { target: "36:20.00", recruit: "37:50.00", walkon: "39:20.00" },
+      "100m Hurdles": { target: "14.20", recruit: "14.70", walkon: "15.20" },
+      "400m Hurdles": { target: "61.00", recruit: "63.00", walkon: "65.00" },
+      "High Jump": { target: "5'8\"", recruit: "5'6\"", walkon: "5'4\"" },
+      "Pole Vault": { target: "12'6\"", recruit: "12'0\"", walkon: "11'0\"" },
+      "Long Jump": { target: "20'0\"", recruit: "19'0\"", walkon: "18'0\"" },
+      "Triple Jump": { target: "40'0\"", recruit: "38'0\"", walkon: "36'0\"" },
+      "Shot Put": { target: "44'0\"", recruit: "41'0\"", walkon: "38'0\"" },
+      "Discus": { target: "144'0\"", recruit: "134'0\"", walkon: "124'0\"" },
+      "Hammer": { target: "159'0\"", recruit: "149'0\"", walkon: "139'0\"" },
+      "Javelin": { target: "144'0\"", recruit: "134'0\"", walkon: "124'0\"" },
+      "Heptathlon": { target: "4900", recruit: "4500", walkon: "4100" }
+    }
+  },
+  {
+    id: "cusa_new_mexico_state",
+    schoolName: "New Mexico State University",
+    division: "D1",
+    conference: "CUSA",
+    state: "NM",
+    femaleStandards: {
+      "100m": { target: "12.20", recruit: "12.50", walkon: "12.80" },
+      "200m": { target: "24.80", recruit: "25.30", walkon: "25.80" },
+      "400m": { target: "56.00", recruit: "57.50", walkon: "59.00" },
+      "800m": { target: "2:17.00", recruit: "2:21.00", walkon: "2:25.00" },
+      "1500m": { target: "4:42.00", recruit: "4:52.00", walkon: "5:02.00" },
+      "Mile": { target: "5:07.00", recruit: "5:22.00", walkon: "5:37.00" },
+      "5000m": { target: "17:40.00", recruit: "18:25.00", walkon: "19:10.00" },
+      "10000m": { target: "36:45.00", recruit: "38:15.00", walkon: "39:45.00" },
+      "100m Hurdles": { target: "14.40", recruit: "14.90", walkon: "15.40" },
+      "400m Hurdles": { target: "62.00", recruit: "64.00", walkon: "66.00" },
+      "High Jump": { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" },
+      "Pole Vault": { target: "12'0\"", recruit: "11'6\"", walkon: "10'6\"" },
+      "Long Jump": { target: "19'6\"", recruit: "18'6\"", walkon: "17'6\"" },
+      "Triple Jump": { target: "39'0\"", recruit: "37'0\"", walkon: "35'0\"" },
+      "Shot Put": { target: "43'0\"", recruit: "40'0\"", walkon: "37'0\"" },
+      "Discus": { target: "140'0\"", recruit: "130'0\"", walkon: "120'0\"" },
+      "Hammer": { target: "155'0\"", recruit: "145'0\"", walkon: "135'0\"" },
+      "Javelin": { target: "140'0\"", recruit: "130'0\"", walkon: "120'0\"" },
+      "Heptathlon": { target: "4800", recruit: "4400", walkon: "4000" }
+    }
+  },
 
   // NESCAC Conference Schools
   {
