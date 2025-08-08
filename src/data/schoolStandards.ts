@@ -13323,6 +13323,72 @@ export const schoolStandards: SchoolStandards[] = [
       "Hammer": { target: "156'0\"", recruit: "151'0\"", walkon: "143'4\"" },
       "Javelin": { target: "136'0\"", recruit: "131'0\"", walkon: "124'3\"" }
     }
+  },
+  {
+    id: "ccaa_sonoma_state",
+    schoolName: "Sonoma State",
+    division: "D2",
+    conference: "CCAA",
+    state: "CA",
+    femaleStandards: {
+      "100m": { target: "11.88", recruit: "12.01", walkon: "12.21" },
+      "200m": { target: "24.35", recruit: "24.65", walkon: "25.10" },
+      "400m": { target: "55.20", recruit: "55.65", walkon: "56.85" },
+      "800m": { target: "2:07.20", recruit: "2:09.20", walkon: "2:21.20" },
+      "1500m": { target: "4:45.50", recruit: "4:48.50", walkon: "4:53.80" },
+      "1600m": { target: "5:04.50", recruit: "5:08.00", walkon: "5:13.80" },
+      "Mile": { target: "5:08.50", recruit: "5:11.00", walkon: "5:16.20" },
+      "3000m": { target: "10:22.00", recruit: "10:31.00", walkon: "10:42.50" },
+      "5000m": { target: "11:17.00", recruit: "11:23.50", walkon: "11:25.50" },
+      "2 Mile": { target: "11:12.00", recruit: "11:19.00", walkon: "11:31.50" },
+      "10000m": { target: "18:07.00", recruit: "18:13.50", walkon: "18:34.50" },
+      "100m Hurdles": { target: "14.10", recruit: "14.32", walkon: "14.62" },
+      "300m Hurdles": { target: "43.20", recruit: "43.50", walkon: "44.45" },
+      "400m Hurdles": { target: "1:00.70", recruit: "1:01.35", walkon: "1:02.70" },
+      "2000m Steeplechase": { target: "7:02.00", recruit: "7:08.50", walkon: "7:19.50" },
+      "3000m Steeplechase": { target: "11:07.00", recruit: "11:13.50", walkon: "11:29.50" },
+      "High Jump": { target: "5'8\"", recruit: "5'7\"", walkon: "5'5.50\"" },
+      "Pole Vault": { target: "13'0\"", recruit: "12'6\"", walkon: "12'1.75\"" },
+      "Long Jump": { target: "19'0\"", recruit: "18'7.50\"", walkon: "18'2.50\"" },
+      "Triple Jump": { target: "39'0\"", recruit: "38'4\"", walkon: "37'6\"" },
+      "Shot Put": { target: "44'3\"", recruit: "43'3\"", walkon: "41'3\"" },
+      "Discus": { target: "141'0\"", recruit: "136'0\"", walkon: "132'6\"" },
+      "Hammer": { target: "156'0\"", recruit: "151'0\"", walkon: "143'4\"" },
+      "Javelin": { target: "136'0\"", recruit: "131'0\"", walkon: "124'3\"" }
+    }
+  },
+  {
+    id: "ccaa_csusb",
+    schoolName: "Cal State San Bernardino",
+    division: "D2",
+    conference: "CCAA",
+    state: "CA",
+    femaleStandards: {
+      "100m": { target: "11.88", recruit: "12.01", walkon: "12.21" },
+      "200m": { target: "24.35", recruit: "24.65", walkon: "25.10" },
+      "400m": { target: "55.20", recruit: "55.65", walkon: "56.85" },
+      "800m": { target: "2:07.20", recruit: "2:09.20", walkon: "2:21.20" },
+      "1500m": { target: "4:45.50", recruit: "4:48.50", walkon: "4:53.80" },
+      "1600m": { target: "5:04.50", recruit: "5:08.00", walkon: "5:13.80" },
+      "Mile": { target: "5:08.50", recruit: "5:11.00", walkon: "5:16.20" },
+      "3000m": { target: "10:22.00", recruit: "10:31.00", walkon: "10:42.50" },
+      "5000m": { target: "11:17.00", recruit: "11:23.50", walkon: "11:25.50" },
+      "2 Mile": { target: "11:12.00", recruit: "11:19.00", walkon: "11:31.50" },
+      "10000m": { target: "18:07.00", recruit: "18:13.50", walkon: "18:34.50" },
+      "100m Hurdles": { target: "14.10", recruit: "14.32", walkon: "14.62" },
+      "300m Hurdles": { target: "43.20", recruit: "43.50", walkon: "44.45" },
+      "400m Hurdles": { target: "1:00.70", recruit: "1:01.35", walkon: "1:02.70" },
+      "2000m Steeplechase": { target: "7:02.00", recruit: "7:08.50", walkon: "7:19.50" },
+      "3000m Steeplechase": { target: "11:07.00", recruit: "11:13.50", walkon: "11:29.50" },
+      "High Jump": { target: "5'8\"", recruit: "5'7\"", walkon: "5'5.50\"" },
+      "Pole Vault": { target: "13'0\"", recruit: "12'6\"", walkon: "12'1.75\"" },
+      "Long Jump": { target: "19'0\"", recruit: "18'7.50\"", walkon: "18'2.50\"" },
+      "Triple Jump": { target: "39'0\"", recruit: "38'4\"", walkon: "37'6\"" },
+      "Shot Put": { target: "44'3\"", recruit: "43'3\"", walkon: "41'3\"" },
+      "Discus": { target: "141'0\"", recruit: "136'0\"", walkon: "132'6\"" },
+      "Hammer": { target: "156'0\"", recruit: "151'0\"", walkon: "143'4\"" },
+      "Javelin": { target: "136'0\"", recruit: "131'0\"", walkon: "124'3\"" }
+    }
   }
 ];
 
