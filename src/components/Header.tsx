@@ -7,13 +7,12 @@ export const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <button 
-              onClick={() => window.location.reload()} 
-              className="text-3xl font-bold text-primary flex items-center hover:opacity-80 transition-opacity"
+            <Link 
+              to="/" 
+              className="hover:opacity-80 transition-opacity"
             >
-              <img src="/lovable-uploads/7e28bf6a-3ac4-489c-8c75-609b71b60312.png" alt="Track Targets Logo" className="h-12 w-12 mr-3" />
-              Track Targets
-            </button>
+              <img src="/lovable-uploads/4ca0176f-3dba-455d-b5ef-eeb16d0fab1e.png" alt="PR Preferred Recruit Logo" className="h-12" />
+            </Link>
           </div>
           
           <div className="flex-1 max-w-md mx-8">

@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Track Targets Theme - Bright Orange Palette */
+    /* PR Preferred Recruit Theme - Purple Palette */
     --background: 0 0% 96%; /* Light Gray #F5F5F5 */
     --foreground: 0 0% 12%; /* Deep Charcoal #1F1F1F */
 
@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 12%;
 
-    --primary: 25 100% 50%; /* Bright Orange #FF6B00 */
+    --primary: 258 100% 60%; /* Purple #6F42C1 */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 94%; /* Light input background */
@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 0 0% 90%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 25 100% 50%; /* Same as primary for consistency */
+    --accent: 258 100% 60%; /* Same as primary for consistency */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 4 90% 58%; /* Soft Red for Walk-On */
@@ -35,7 +35,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 85%;
     --input: 0 0% 94%;
-    --ring: 25 100% 50%; /* Orange focus ring */
+    --ring: 258 100% 60%; /* Purple focus ring */
 
     /* Tier Colors */
     --tier-target: 122 39% 49%; /* Bright Green #4CAF50 */
@@ -72,7 +72,7 @@ All colors MUST be HSL.
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 25 100% 50%;
+    --primary: 258 100% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 15%;
@@ -81,7 +81,7 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 25 100% 50%;
+    --accent: 258 100% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 4 90% 58%;
@@ -89,7 +89,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 25 100% 50%;
+    --ring: 258 100% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
