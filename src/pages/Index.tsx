@@ -80,6 +80,15 @@ const Index = () => {
               >
                 <img src="/lovable-uploads/82c35b69-d949-4123-bc13-1914a86a4454.png" alt="TikTok" className="w-8 h-8" />
               </a>
+              <a
+                href="https://www.youtube.com/@thepreferredrecruit/videos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 hover:opacity-80 transition-opacity"
+                aria-label="Subscribe to our YouTube channel"
+              >
+                <img src="/lovable-uploads/e6f73d11-1cba-49c6-8fc5-fa310e18e051.png" alt="YouTube" className="w-8 h-8" />
+              </a>
             </div>
           </div>
         </div>
