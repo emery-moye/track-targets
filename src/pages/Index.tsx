@@ -4,6 +4,7 @@ import { SearchForm } from "@/components/SearchForm";
 import { ResultsTable, SchoolMatch } from "@/components/ResultsTable";
 import { StandardsTables } from "@/components/StandardsTables";
 import { generateMatches } from "@/data/mockData";
+import { Instagram, Music } from "lucide-react";
 
 const Index = () => {
   const [results, setResults] = useState<SchoolMatch[]>([]);
@@ -32,7 +33,7 @@ const Index = () => {
                 The Preferred Recruit is an elite athlete recruitment agency specializing in track and field. We guarantee direct contact with Division1 athletes and their coaches, leveraging a unique referral-based strategy to maximize recruitment success.
               </p>
               <p>
-                <a href="https://www.thepreferredrecruit.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline">
+                <a href="https://start.thepreferredrecruit.com/home-page317375" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline">
                   Click here to learn more about our services
                 </a>
               </p>
@@ -48,15 +49,38 @@ const Index = () => {
       </main>
       
       <footer className="fixed bottom-0 left-0 right-0 bg-background border-t border-border py-4 px-6">
-        <div className="container mx-auto text-center">
-          <a 
-            href="https://calendly.com/ryanapsearl/1-on-1-with-ryan?month=2025-08&week=2025-08-10" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-2 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-          >
-            Book a Call
-          </a>
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center gap-4">
+            <a 
+              href="https://calendly.com/ryanapsearl/1-on-1-with-ryan?month=2025-08&week=2025-08-10" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-2 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
+            >
+              Book a Call
+            </a>
+            
+            <div className="flex items-center gap-2">
+              <a
+                href="https://www.instagram.com/preferredrecruit/?next=%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@preferredrecruit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on TikTok"
+              >
+                <Music size={20} />
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
