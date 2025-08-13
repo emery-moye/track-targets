@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SchoolDetailsModal } from "./SchoolDetailsModal";
 import { findSchoolStandards } from "@/data/schoolStandards";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export interface SchoolMatch {
   id: string;
@@ -24,6 +25,7 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
   const [tierFilter, setTierFilter] = useState("all");
   const [selectedSchool, setSelectedSchool] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const divisions = [...new Set(results.map(r => r.division))];
   const conferences = [...new Set(results.map(r => r.conference))];
@@ -105,9 +107,19 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
           <thead className="bg-muted/50">
             <tr>
               <th className="text-left p-4 font-semibold">School</th>
-              <th className="text-left p-4 font-semibold">Division</th>
-              <th className="text-left p-4 font-semibold">Conference</th>
-              <th className="text-left p-4 font-semibold">Match Tier</th>
+              {isMobile ? (
+                <>
+                  <th className="text-left p-4 font-semibold">Match Tier</th>
+                  <th className="text-left p-4 font-semibold">Division</th>
+                  <th className="text-left p-4 font-semibold">Conference</th>
+                </>
+              ) : (
+                <>
+                  <th className="text-left p-4 font-semibold">Division</th>
+                  <th className="text-left p-4 font-semibold">Conference</th>
+                  <th className="text-left p-4 font-semibold">Match Tier</th>
+                </>
+              )}
             </tr>
           </thead>
           <tbody>
@@ -120,17 +132,35 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
                 <td className="p-4">
                   <span className="font-bold text-foreground">{result.schoolName}</span>
                 </td>
-                <td className="p-4">
-                  <Badge variant="outline" className="text-muted-foreground">
-                    {result.division}
-                  </Badge>
-                </td>
-                <td className="p-4">
-                  <span className="text-sm text-muted-foreground">{result.conference}</span>
-                </td>
-                <td className="p-4">
-                  <TierBadge tier={result.tier} />
-                </td>
+                {isMobile ? (
+                  <>
+                    <td className="p-4">
+                      <TierBadge tier={result.tier} />
+                    </td>
+                    <td className="p-4">
+                      <Badge variant="outline" className="text-muted-foreground">
+                        {result.division}
+                      </Badge>
+                    </td>
+                    <td className="p-4">
+                      <span className="text-sm text-muted-foreground">{result.conference}</span>
+                    </td>
+                  </>
+                ) : (
+                  <>
+                    <td className="p-4">
+                      <Badge variant="outline" className="text-muted-foreground">
+                        {result.division}
+                      </Badge>
+                    </td>
+                    <td className="p-4">
+                      <span className="text-sm text-muted-foreground">{result.conference}</span>
+                    </td>
+                    <td className="p-4">
+                      <TierBadge tier={result.tier} />
+                    </td>
+                  </>
+                )}
               </tr>
             ))}
           </tbody>
