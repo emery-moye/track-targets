@@ -16252,7 +16252,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.85", walkon: "11.15" },
       "200m": { target: "22.20", recruit: "22.60", walkon: "23.00" },
-      "400m": { target: "49.80", recruit: "50.40", walkon: "51.00" },
+      "400m": { target: "48.00", recruit: "49.30", walkon: "51.00" },
       "800m": { target: "1:51.00", recruit: "1:53.50", walkon: "1:56.00" },
       "1500m": { target: "3:56.00", recruit: "4:01.00", walkon: "4:06.00" },
       "Mile": { target: "4:16.00", recruit: "4:21.00", walkon: "4:26.00" },
@@ -16282,7 +16282,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.75", recruit: "11.05", walkon: "11.30" },
       "200m": { target: "22.60", recruit: "22.95", walkon: "23.25" },
-      "400m": { target: "50.40", recruit: "50.90", walkon: "51.40" },
+      "400m": { target: "48.60", recruit: "49.80", walkon: "51.40" },
       "800m": { target: "1:54.00", recruit: "1:56.00", walkon: "1:58.00" },
       "1500m": { target: "4:04.00", recruit: "4:08.00", walkon: "4:11.00" },
       "Mile": { target: "4:24.00", recruit: "4:28.00", walkon: "4:31.00" },
@@ -16312,7 +16312,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.75", recruit: "11.05", walkon: "11.30" },
       "200m": { target: "22.60", recruit: "22.95", walkon: "23.25" },
-      "400m": { target: "50.40", recruit: "50.90", walkon: "51.40" },
+      "400m": { target: "48.60", recruit: "49.80", walkon: "51.40" },
       "800m": { target: "1:54.00", recruit: "1:56.00", walkon: "1:58.00" },
       "1500m": { target: "4:04.00", recruit: "4:08.00", walkon: "4:11.00" },
       "Mile": { target: "4:24.00", recruit: "4:28.00", walkon: "4:31.00" },
@@ -16342,7 +16342,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.10", walkon: "11.30" },
       "200m": { target: "22.70", recruit: "23.00", walkon: "23.25" },
-      "400m": { target: "50.60", recruit: "51.00", walkon: "51.40" },
+      "400m": { target: "48.80", recruit: "49.90", walkon: "51.40" },
       "800m": { target: "1:55.00", recruit: "1:56.50", walkon: "1:58.00" },
       "1500m": { target: "4:06.00", recruit: "4:09.00", walkon: "4:11.00" },
       "Mile": { target: "4:26.00", recruit: "4:29.00", walkon: "4:31.00" },
@@ -16392,7 +16392,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.85", walkon: "11.15" },
       "200m": { target: "22.20", recruit: "22.60", walkon: "23.00" },
-      "400m": { target: "49.80", recruit: "50.40", walkon: "51.00" },
+      "400m": { target: "48.00", recruit: "49.30", walkon: "51.00" },
       "800m": { target: "1:51.00", recruit: "1:53.50", walkon: "1:56.00" },
       "1500m": { target: "3:56.00", recruit: "4:01.00", walkon: "4:06.00" },
       "Mile": { target: "4:16.00", recruit: "4:21.00", walkon: "4:26.00" },
@@ -16422,7 +16422,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.75", recruit: "11.05", walkon: "11.30" },
       "200m": { target: "22.60", recruit: "22.95", walkon: "23.25" },
-      "400m": { target: "50.40", recruit: "50.90", walkon: "51.40" },
+      "400m": { target: "48.60", recruit: "49.80", walkon: "51.40" },
       "800m": { target: "1:54.00", recruit: "1:56.00", walkon: "1:58.00" },
       "1500m": { target: "4:04.00", recruit: "4:08.00", walkon: "4:11.00" },
       "Mile": { target: "4:24.00", recruit: "4:28.00", walkon: "4:31.00" },
@@ -16452,7 +16452,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.10", walkon: "11.30" },
       "200m": { target: "22.70", recruit: "23.00", walkon: "23.25" },
-      "400m": { target: "50.60", recruit: "51.00", walkon: "51.40" },
+      "400m": { target: "48.80", recruit: "49.90", walkon: "51.40" },
       "800m": { target: "1:55.00", recruit: "1:56.50", walkon: "1:58.00" },
       "1500m": { target: "4:06.00", recruit: "4:09.00", walkon: "4:11.00" },
       "Mile": { target: "4:26.00", recruit: "4:29.00", walkon: "4:31.00" },
