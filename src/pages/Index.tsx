@@ -4,7 +4,8 @@ import { SearchForm } from "@/components/SearchForm";
 import { ResultsTable, SchoolMatch } from "@/components/ResultsTable";
 import { StandardsTables } from "@/components/StandardsTables";
 import { generateMatches } from "@/data/mockData";
-import { Instagram, Music } from "lucide-react";
+// import instagramLogo from "@/assets/instagram-logo.png";
+// import tiktokLogo from "@/assets/tiktok-logo.png";
 
 const Index = () => {
   const [results, setResults] = useState<SchoolMatch[]>([]);
@@ -65,19 +66,19 @@ const Index = () => {
                 href="https://www.instagram.com/preferredrecruit/?next=%2F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Follow us on Instagram"
               >
-                <Instagram size={20} />
+                <img src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" alt="Instagram" className="w-5 h-5" />
               </a>
               <a
                 href="https://www.tiktok.com/@preferredrecruit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Follow us on TikTok"
               >
-                <Music size={20} />
+                <img src="/lovable-uploads/82c35b69-d949-4123-bc13-1914a86a4454.png" alt="TikTok" className="w-5 h-5" />
               </a>
             </div>
           </div>
