@@ -2,7 +2,7 @@ Track Targets was made for High School athletes to easily connect their personal
 
 No longer Track Targets as it has been bought
 
-Track-Targets.com
+https://track-targets.com/ 
 
 ## What technologies are used for this project?
 
