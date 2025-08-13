@@ -16220,15 +16220,15 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Sunshine State Conference",
     state: "FL",
     femaleStandards: {
-      "100m": { target: "12.348", recruit: "12.7008", walkon: "12.936" },
-      "200m": { target: "25.389", recruit: "26.1144", walkon: "26.598" },
-      "400m": { target: "58.485", recruit: "60.156", walkon: "61.27" },
-      "800m": { target: "2:18.2", recruit: "2:22.1", walkon: "2:24.8" },
-      "1500m": { target: "4:43.7", recruit: "4:51.8", walkon: "4:57.2" },
-      "3000m": { target: "10:15.3", recruit: "10:32.9", walkon: "10:44.6" },
-      "5000m": { target: "17:50.8", recruit: "18:21.4", walkon: "18:41.8" },
-      "100m Hurdles": { target: "14.83", recruit: "15.25", walkon: "15.53" },
-      "400m Hurdles": { target: "1:05.2", recruit: "1:07.1", walkon: "1:08.3" }
+      "100m": { target: "12.20", recruit: "12.55", walkon: "12.80" },
+      "200m": { target: "25.15", recruit: "25.90", walkon: "26.40" },
+      "400m": { target: "57.80", recruit: "59.50", walkon: "60.80" },
+      "800m": { target: "2:16.5", recruit: "2:20.8", walkon: "2:23.5" },
+      "1500m": { target: "4:40.2", recruit: "4:48.5", walkon: "4:54.8" },
+      "3000m": { target: "10:08.0", recruit: "10:25.5", walkon: "10:38.0" },
+      "5000m": { target: "17:35.0", recruit: "18:05.0", walkon: "18:25.0" },
+      "100m Hurdles": { target: "14.65", recruit: "15.05", walkon: "15.35" },
+      "400m Hurdles": { target: "1:04.0", recruit: "1:06.2", walkon: "1:07.5" }
     }
   },
   {
@@ -16238,15 +16238,15 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Sunshine State Conference",
     state: "FL",
     femaleStandards: {
-      "100m": { target: "12.348", recruit: "12.7008", walkon: "12.936" },
-      "200m": { target: "25.389", recruit: "26.1144", walkon: "26.598" },
-      "400m": { target: "58.485", recruit: "60.156", walkon: "61.27" },
-      "800m": { target: "2:18.2", recruit: "2:22.1", walkon: "2:24.8" },
-      "1500m": { target: "4:43.7", recruit: "4:51.8", walkon: "4:57.2" },
-      "3000m": { target: "10:15.3", recruit: "10:32.9", walkon: "10:44.6" },
-      "5000m": { target: "17:50.8", recruit: "18:21.4", walkon: "18:41.8" },
-      "100m Hurdles": { target: "14.83", recruit: "15.25", walkon: "15.53" },
-      "400m Hurdles": { target: "1:05.2", recruit: "1:07.1", walkon: "1:08.3" }
+      "100m": { target: "12.20", recruit: "12.55", walkon: "12.80" },
+      "200m": { target: "25.15", recruit: "25.90", walkon: "26.40" },
+      "400m": { target: "57.80", recruit: "59.50", walkon: "60.80" },
+      "800m": { target: "2:16.5", recruit: "2:20.8", walkon: "2:23.5" },
+      "1500m": { target: "4:40.2", recruit: "4:48.5", walkon: "4:54.8" },
+      "3000m": { target: "10:08.0", recruit: "10:25.5", walkon: "10:38.0" },
+      "5000m": { target: "17:35.0", recruit: "18:05.0", walkon: "18:25.0" },
+      "100m Hurdles": { target: "14.65", recruit: "15.05", walkon: "15.35" },
+      "400m Hurdles": { target: "1:04.0", recruit: "1:06.2", walkon: "1:07.5" }
     }
   },
   {
@@ -16256,15 +16256,15 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Sunshine State Conference",
     state: "FL",
     femaleStandards: {
-      "100m": { target: "12.58", recruit: "12.85", walkon: "13.05" },
-      "200m": { target: "25.87", recruit: "26.35", walkon: "26.84" },
-      "400m": { target: "59.60", recruit: "61.15", walkon: "62.38" },
-      "800m": { target: "2:20.8", recruit: "2:24.1", walkon: "2:26.1" },
-      "1500m": { target: "4:49.1", recruit: "4:55.8", walkon: "4:59.9" },
-      "3000m": { target: "10:27.0", recruit: "10:38.7", walkon: "10:50.5" },
-      "5000m": { target: "18:11.2", recruit: "18:31.6", walkon: "18:52.0" },
-      "100m Hurdles": { target: "15.11", recruit: "15.39", walkon: "15.67" },
-      "400m Hurdles": { target: "1:06.4", recruit: "1:07.7", walkon: "1:08.9" }
+      "100m": { target: "12.45", recruit: "12.70", walkon: "12.95" },
+      "200m": { target: "25.65", recruit: "26.15", walkon: "26.65" },
+      "400m": { target: "59.20", recruit: "60.75", walkon: "62.00" },
+      "800m": { target: "2:19.5", recruit: "2:22.8", walkon: "2:25.0" },
+      "1500m": { target: "4:46.8", recruit: "4:53.5", walkon: "4:58.5" },
+      "3000m": { target: "10:22.0", recruit: "10:35.0", walkon: "10:48.0" },
+      "5000m": { target: "18:00.0", recruit: "18:25.0", walkon: "18:45.0" },
+      "100m Hurdles": { target: "15.00", recruit: "15.28", walkon: "15.56" },
+      "400m Hurdles": { target: "1:05.8", recruit: "1:07.2", walkon: "1:08.4" }
     }
   },
   {
@@ -16274,15 +16274,15 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Sunshine State Conference",
     state: "FL",
     femaleStandards: {
-      "100m": { target: "12.58", recruit: "12.85", walkon: "13.05" },
-      "200m": { target: "25.87", recruit: "26.35", walkon: "26.84" },
-      "400m": { target: "59.60", recruit: "61.15", walkon: "62.38" },
-      "800m": { target: "2:20.8", recruit: "2:24.1", walkon: "2:26.1" },
-      "1500m": { target: "4:49.1", recruit: "4:55.8", walkon: "4:59.9" },
-      "3000m": { target: "10:27.0", recruit: "10:38.7", walkon: "10:50.5" },
-      "5000m": { target: "18:11.2", recruit: "18:31.6", walkon: "18:52.0" },
-      "100m Hurdles": { target: "15.11", recruit: "15.39", walkon: "15.67" },
-      "400m Hurdles": { target: "1:06.4", recruit: "1:07.7", walkon: "1:08.9" }
+      "100m": { target: "12.45", recruit: "12.70", walkon: "12.95" },
+      "200m": { target: "25.65", recruit: "26.15", walkon: "26.65" },
+      "400m": { target: "59.20", recruit: "60.75", walkon: "62.00" },
+      "800m": { target: "2:19.5", recruit: "2:22.8", walkon: "2:25.0" },
+      "1500m": { target: "4:46.8", recruit: "4:53.5", walkon: "4:58.5" },
+      "3000m": { target: "10:22.0", recruit: "10:35.0", walkon: "10:48.0" },
+      "5000m": { target: "18:00.0", recruit: "18:25.0", walkon: "18:45.0" },
+      "100m Hurdles": { target: "15.00", recruit: "15.28", walkon: "15.56" },
+      "400m Hurdles": { target: "1:05.8", recruit: "1:07.2", walkon: "1:08.4" }
     }
   },
   {
@@ -16292,15 +16292,15 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Sunshine State Conference",
     state: "FL",
     femaleStandards: {
-      "100m": { target: "12.70", recruit: "12.93", walkon: "13.17" },
-      "200m": { target: "26.11", recruit: "26.56", walkon: "27.08" },
-      "400m": { target: "60.16", recruit: "61.83", walkon: "62.39" },
-      "800m": { target: "2:22.1", recruit: "2:25.4", walkon: "2:27.4" },
-      "1500m": { target: "4:51.8", recruit: "4:59.6", walkon: "5:02.6" },
-      "3000m": { target: "10:32.9", recruit: "10:44.6", walkon: "10:56.3" },
-      "5000m": { target: "18:21.4", recruit: "18:41.8", walkon: "19:02.2" },
-      "100m Hurdles": { target: "15.25", recruit: "15.53", walkon: "15.81" },
-      "400m Hurdles": { target: "1:07.1", recruit: "1:08.3", walkon: "1:09.6" }
+      "100m": { target: "12.55", recruit: "12.78", walkon: "13.00" },
+      "200m": { target: "25.85", recruit: "26.30", walkon: "26.75" },
+      "400m": { target: "59.75", recruit: "61.35", walkon: "62.15" },
+      "800m": { target: "2:20.8", recruit: "2:24.0", walkon: "2:26.2" },
+      "1500m": { target: "4:49.5", recruit: "4:57.0", walkon: "5:01.0" },
+      "3000m": { target: "10:28.0", recruit: "10:40.0", walkon: "10:52.0" },
+      "5000m": { target: "18:15.0", recruit: "18:35.0", walkon: "18:55.0" },
+      "100m Hurdles": { target: "15.15", recruit: "15.42", walkon: "15.70" },
+      "400m Hurdles": { target: "1:06.5", recruit: "1:07.8", walkon: "1:09.0" }
     }
   },
   {
@@ -16310,15 +16310,15 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Sunshine State Conference",
     state: "FL",
     femaleStandards: {
-      "100m": { target: "12.70", recruit: "12.93", walkon: "13.17" },
-      "200m": { target: "26.11", recruit: "26.56", walkon: "27.08" },
-      "400m": { target: "60.16", recruit: "61.83", walkon: "62.39" },
-      "800m": { target: "2:22.1", recruit: "2:25.4", walkon: "2:27.4" },
-      "1500m": { target: "4:51.8", recruit: "4:59.6", walkon: "5:02.6" },
-      "3000m": { target: "10:32.9", recruit: "10:44.6", walkon: "10:56.3" },
-      "5000m": { target: "18:21.4", recruit: "18:41.8", walkon: "19:02.2" },
-      "100m Hurdles": { target: "15.25", recruit: "15.53", walkon: "15.81" },
-      "400m Hurdles": { target: "1:07.1", recruit: "1:08.3", walkon: "1:09.6" }
+      "100m": { target: "12.55", recruit: "12.78", walkon: "13.00" },
+      "200m": { target: "25.85", recruit: "26.30", walkon: "26.75" },
+      "400m": { target: "59.75", recruit: "61.35", walkon: "62.15" },
+      "800m": { target: "2:20.8", recruit: "2:24.0", walkon: "2:26.2" },
+      "1500m": { target: "4:49.5", recruit: "4:57.0", walkon: "5:01.0" },
+      "3000m": { target: "10:28.0", recruit: "10:40.0", walkon: "10:52.0" },
+      "5000m": { target: "18:15.0", recruit: "18:35.0", walkon: "18:55.0" },
+      "100m Hurdles": { target: "15.15", recruit: "15.42", walkon: "15.70" },
+      "400m Hurdles": { target: "1:06.5", recruit: "1:07.8", walkon: "1:09.0" }
     }
   }
 ];
