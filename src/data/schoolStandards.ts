@@ -16222,7 +16222,7 @@ export const schoolStandards: SchoolStandards[] = [
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.85", walkon: "11.15" },
       "200m": { target: "22.20", recruit: "22.60", walkon: "23.00" },
-      "400m": { target: "49.80", recruit: "50.40", walkon: "51.00" },
+      "400m": { target: "48.00", recruit: "49.30", walkon: "51.50" },
       "800m": { target: "1:51.00", recruit: "1:53.50", walkon: "1:56.00" },
       "1500m": { target: "3:56.00", recruit: "4:01.00", walkon: "4:06.00" },
       "Mile": { target: "4:16.00", recruit: "4:21.00", walkon: "4:26.00" },
