@@ -43,7 +43,7 @@ const Index = () => {
             <StandardsTables />
             
             {/* Founders Background Section */}
-            <div className="mt-12 bg-card rounded-lg px-8 pb-8 border border-border">
+            <div className="mt-12 bg-card rounded-lg p-8 border border-border">
               <div className="flex items-center gap-3">
                 <h2 className="text-2xl font-bold text-foreground">Founders Background</h2>
                 <a
