@@ -16210,6 +16210,116 @@ export const schoolStandards: SchoolStandards[] = [
       "Hammer": { target: "125'0\"", recruit: "120'0\"", walkon: "115'0\"" },
       "Javelin": { target: "118'0\"", recruit: "115'0\"", walkon: "105'0\"" }
     }
+  },
+
+  // Sunshine State Conference Schools
+  {
+    id: "ssc_tampa",
+    schoolName: "University of Tampa",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    femaleStandards: {
+      "100m": { target: "12.348", recruit: "12.7008", walkon: "12.936" },
+      "200m": { target: "25.389", recruit: "26.1144", walkon: "26.598" },
+      "400m": { target: "58.485", recruit: "60.156", walkon: "61.27" },
+      "800m": { target: "2:18.2", recruit: "2:22.1", walkon: "2:24.8" },
+      "1500m": { target: "4:43.7", recruit: "4:51.8", walkon: "4:57.2" },
+      "3000m": { target: "10:15.3", recruit: "10:32.9", walkon: "10:44.6" },
+      "5000m": { target: "17:50.8", recruit: "18:21.4", walkon: "18:41.8" },
+      "100m Hurdles": { target: "14.83", recruit: "15.25", walkon: "15.53" },
+      "400m Hurdles": { target: "1:05.2", recruit: "1:07.1", walkon: "1:08.3" }
+    }
+  },
+  {
+    id: "ssc_embry_riddle",
+    schoolName: "Embry-Riddle Aeronautical University",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    femaleStandards: {
+      "100m": { target: "12.348", recruit: "12.7008", walkon: "12.936" },
+      "200m": { target: "25.389", recruit: "26.1144", walkon: "26.598" },
+      "400m": { target: "58.485", recruit: "60.156", walkon: "61.27" },
+      "800m": { target: "2:18.2", recruit: "2:22.1", walkon: "2:24.8" },
+      "1500m": { target: "4:43.7", recruit: "4:51.8", walkon: "4:57.2" },
+      "3000m": { target: "10:15.3", recruit: "10:32.9", walkon: "10:44.6" },
+      "5000m": { target: "17:50.8", recruit: "18:21.4", walkon: "18:41.8" },
+      "100m Hurdles": { target: "14.83", recruit: "15.25", walkon: "15.53" },
+      "400m Hurdles": { target: "1:05.2", recruit: "1:07.1", walkon: "1:08.3" }
+    }
+  },
+  {
+    id: "ssc_barry",
+    schoolName: "Barry University",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    femaleStandards: {
+      "100m": { target: "12.58", recruit: "12.85", walkon: "13.05" },
+      "200m": { target: "25.87", recruit: "26.35", walkon: "26.84" },
+      "400m": { target: "59.60", recruit: "61.15", walkon: "62.38" },
+      "800m": { target: "2:20.8", recruit: "2:24.1", walkon: "2:26.1" },
+      "1500m": { target: "4:49.1", recruit: "4:55.8", walkon: "4:59.9" },
+      "3000m": { target: "10:27.0", recruit: "10:38.7", walkon: "10:50.5" },
+      "5000m": { target: "18:11.2", recruit: "18:31.6", walkon: "18:52.0" },
+      "100m Hurdles": { target: "15.11", recruit: "15.39", walkon: "15.67" },
+      "400m Hurdles": { target: "1:06.4", recruit: "1:07.7", walkon: "1:08.9" }
+    }
+  },
+  {
+    id: "ssc_florida_tech",
+    schoolName: "Florida Institute of Technology",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    femaleStandards: {
+      "100m": { target: "12.58", recruit: "12.85", walkon: "13.05" },
+      "200m": { target: "25.87", recruit: "26.35", walkon: "26.84" },
+      "400m": { target: "59.60", recruit: "61.15", walkon: "62.38" },
+      "800m": { target: "2:20.8", recruit: "2:24.1", walkon: "2:26.1" },
+      "1500m": { target: "4:49.1", recruit: "4:55.8", walkon: "4:59.9" },
+      "3000m": { target: "10:27.0", recruit: "10:38.7", walkon: "10:50.5" },
+      "5000m": { target: "18:11.2", recruit: "18:31.6", walkon: "18:52.0" },
+      "100m Hurdles": { target: "15.11", recruit: "15.39", walkon: "15.67" },
+      "400m Hurdles": { target: "1:06.4", recruit: "1:07.7", walkon: "1:08.9" }
+    }
+  },
+  {
+    id: "ssc_lynn",
+    schoolName: "Lynn University",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    femaleStandards: {
+      "100m": { target: "12.70", recruit: "12.93", walkon: "13.17" },
+      "200m": { target: "26.11", recruit: "26.56", walkon: "27.08" },
+      "400m": { target: "60.16", recruit: "61.83", walkon: "62.39" },
+      "800m": { target: "2:22.1", recruit: "2:25.4", walkon: "2:27.4" },
+      "1500m": { target: "4:51.8", recruit: "4:59.6", walkon: "5:02.6" },
+      "3000m": { target: "10:32.9", recruit: "10:44.6", walkon: "10:56.3" },
+      "5000m": { target: "18:21.4", recruit: "18:41.8", walkon: "19:02.2" },
+      "100m Hurdles": { target: "15.25", recruit: "15.53", walkon: "15.81" },
+      "400m Hurdles": { target: "1:07.1", recruit: "1:08.3", walkon: "1:09.6" }
+    }
+  },
+  {
+    id: "ssc_saint_leo",
+    schoolName: "Saint Leo University",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    femaleStandards: {
+      "100m": { target: "12.70", recruit: "12.93", walkon: "13.17" },
+      "200m": { target: "26.11", recruit: "26.56", walkon: "27.08" },
+      "400m": { target: "60.16", recruit: "61.83", walkon: "62.39" },
+      "800m": { target: "2:22.1", recruit: "2:25.4", walkon: "2:27.4" },
+      "1500m": { target: "4:51.8", recruit: "4:59.6", walkon: "5:02.6" },
+      "3000m": { target: "10:32.9", recruit: "10:44.6", walkon: "10:56.3" },
+      "5000m": { target: "18:21.4", recruit: "18:41.8", walkon: "19:02.2" },
+      "100m Hurdles": { target: "15.25", recruit: "15.53", walkon: "15.81" },
+      "400m Hurdles": { target: "1:07.1", recruit: "1:08.3", walkon: "1:09.6" }
+    }
   }
 ];
 
