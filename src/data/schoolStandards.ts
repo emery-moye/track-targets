@@ -3037,7 +3037,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
       "Discus": { target: "180'0\"", recruit: "170'0\"", walkon: "160'0\"" },
       "Hammer": { target: "155'0\"", recruit: "140'0\"", walkon: "125'0\"" },
-      "Javelin": { target: "220'0\"", recruit: "205'0\"", walkon: "190'0\"" }
+      "Javelin": { target: "200'0\"", recruit: "180'0\"", walkon: "160'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.88", recruit: "12.23", walkon: "12.53" },
