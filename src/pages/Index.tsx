@@ -41,6 +41,38 @@ const Index = () => {
             </div>
             
             <StandardsTables />
+            
+            {/* Founders Background Section */}
+            <div className="mt-12 bg-card rounded-lg p-8 border border-border">
+              <div className="flex items-center gap-3 mb-6">
+                <h2 className="text-2xl font-bold text-foreground">Founders Background</h2>
+                <a
+                  href="https://www.instagram.com/ryansearl_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-1 hover:opacity-80 transition-opacity"
+                  aria-label="Follow Ryan on Instagram"
+                >
+                  <img src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" alt="Instagram" className="w-6 h-6" />
+                </a>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4">
+                  <p className="text-foreground leading-relaxed">
+                    "I'm Ryan Searl, a seasoned athlete with four years of Division I track and field experience. Having personally navigated both the transfer portal and the high school recruiting process, I founded this program out of a desire for the kind of guidance I wished I had during my high school years. Initially, I began by assisting friends, but soon realized the potential to expand this endeavor. This realization inspired me to develop a program that could support young athletes nationwide, helping them to realize their potential and make informed decisions about their athletic futures."
+                  </p>
+                </div>
+                
+                <div className="flex justify-center">
+                  <img 
+                    src="/lovable-uploads/f4fb138d-9552-4e08-ae81-fdd1e84b36fd.png" 
+                    alt="Ryan Searl - Track and Field Athlete" 
+                    className="rounded-lg shadow-lg max-w-full h-auto object-cover max-h-96"
+                  />
+                </div>
+              </div>
+            </div>
           </>
         )}
         
