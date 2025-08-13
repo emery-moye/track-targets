@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { searchSchools, SchoolStandards } from "@/data/schoolStandards";
 import { SchoolDetailsModal } from "./SchoolDetailsModal";
 
@@ -11,6 +11,7 @@ export const CollegeSearchBar = () => {
   const [selectedSchool, setSelectedSchool] = useState<SchoolStandards | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [isMobileExpanded, setIsMobileExpanded] = useState(false);
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
@@ -27,6 +28,7 @@ export const CollegeSearchBar = () => {
     setSelectedSchool(school);
     setIsModalOpen(true);
     setShowResults(false);
+    setIsMobileExpanded(false);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -35,50 +37,124 @@ export const CollegeSearchBar = () => {
     }
   };
 
+  const handleMobileToggle = () => {
+    setIsMobileExpanded(!isMobileExpanded);
+    if (!isMobileExpanded) {
+      setShowResults(false);
+    }
+  };
+
+  const handleMobileClose = () => {
+    setIsMobileExpanded(false);
+    setShowResults(false);
+    setSearchQuery("");
+  };
+
   return (
-    <div className="relative w-full max-w-md">
-      <div className="flex gap-2">
-        <Input
-          type="text"
-          placeholder="Search colleges..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyPress={handleKeyPress}
-          className="h-10"
-        />
-        <Button onClick={handleSearch} size="sm" className="h-10">
-          <Search className="h-4 w-4" />
-        </Button>
+    <>
+      {/* Desktop Search */}
+      <div className="hidden md:block relative w-full max-w-md">
+        <div className="flex gap-2">
+          <Input
+            type="text"
+            placeholder="Search colleges..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyPress={handleKeyPress}
+            className="h-10"
+          />
+          <Button onClick={handleSearch} size="sm" className="h-10">
+            <Search className="h-4 w-4" />
+          </Button>
+        </div>
+
+        {showResults && searchResults.length > 0 && (
+          <div className="absolute top-full left-0 right-0 mt-1 bg-card border rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+            {searchResults.map((school) => (
+              <div
+                key={school.id}
+                className="p-3 hover:bg-muted/30 cursor-pointer border-b last:border-b-0"
+                onClick={() => handleSchoolClick(school)}
+              >
+                <div className="font-medium">{school.schoolName}</div>
+                <div className="text-sm text-muted-foreground">
+                  {school.division} • {school.conference} • {school.state}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {showResults && searchResults.length === 0 && searchQuery.trim() && (
+          <div className="absolute top-full left-0 right-0 mt-1 bg-card border rounded-lg shadow-lg z-50 p-3">
+            <div className="text-sm text-muted-foreground">No schools found</div>
+          </div>
+        )}
       </div>
 
-      {showResults && searchResults.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-card border rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
-          {searchResults.map((school) => (
-            <div
-              key={school.id}
-              className="p-3 hover:bg-muted/30 cursor-pointer border-b last:border-b-0"
-              onClick={() => handleSchoolClick(school)}
-            >
-              <div className="font-medium">{school.schoolName}</div>
-              <div className="text-sm text-muted-foreground">
-                {school.division} • {school.conference} • {school.state}
-              </div>
+      {/* Mobile Search */}
+      <div className="md:hidden relative w-full">
+        {!isMobileExpanded ? (
+          <Button
+            onClick={handleMobileToggle}
+            variant="outline"
+            size="sm"
+            className="w-full justify-start text-muted-foreground h-10"
+          >
+            <Search className="h-4 w-4 mr-2" />
+            Search colleges...
+          </Button>
+        ) : (
+          <div className="fixed inset-0 bg-card z-50 p-4">
+            <div className="flex items-center gap-2 mb-4">
+              <Input
+                type="text"
+                placeholder="Search colleges..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleKeyPress}
+                className="h-10 flex-1"
+                autoFocus
+              />
+              <Button onClick={handleSearch} size="sm" className="h-10">
+                <Search className="h-4 w-4" />
+              </Button>
+              <Button onClick={handleMobileClose} variant="outline" size="sm" className="h-10">
+                <X className="h-4 w-4" />
+              </Button>
             </div>
-          ))}
-        </div>
-      )}
 
-      {showResults && searchResults.length === 0 && searchQuery.trim() && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-card border rounded-lg shadow-lg z-50 p-3">
-          <div className="text-sm text-muted-foreground">No schools found</div>
-        </div>
-      )}
+            {showResults && searchResults.length > 0 && (
+              <div className="bg-card border rounded-lg shadow-lg max-h-96 overflow-y-auto">
+                {searchResults.map((school) => (
+                  <div
+                    key={school.id}
+                    className="p-3 hover:bg-muted/30 cursor-pointer border-b last:border-b-0"
+                    onClick={() => handleSchoolClick(school)}
+                  >
+                    <div className="font-medium">{school.schoolName}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {school.division} • {school.conference} • {school.state}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {showResults && searchResults.length === 0 && searchQuery.trim() && (
+              <div className="bg-card border rounded-lg shadow-lg p-3">
+                <div className="text-sm text-muted-foreground">No schools found</div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
 
       <SchoolDetailsModal
         school={selectedSchool}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
-    </div>
+    </>
   );
 };

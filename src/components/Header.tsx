@@ -15,7 +15,13 @@ export const Header = () => {
             </Link>
           </div>
           
-          <div className="flex-1 max-w-md mx-8">
+          {/* Desktop Search - Hidden on mobile */}
+          <div className="hidden md:flex flex-1 max-w-md mx-8">
+            <CollegeSearchBar />
+          </div>
+          
+          {/* Mobile Search - Only visible on mobile */}
+          <div className="md:hidden flex-1 mx-4">
             <CollegeSearchBar />
           </div>
           
