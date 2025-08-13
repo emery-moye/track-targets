@@ -87,7 +87,7 @@ const Index = () => {
                 className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Subscribe to our YouTube channel"
               >
-                <img src="/lovable-uploads/e6f73d11-1cba-49c6-8fc5-fa310e18e051.png" alt="YouTube" className="w-8 h-8" />
+                <img src="/lovable-uploads/e6f73d11-1cba-49c6-8fc5-fa310e18e051.png" alt="YouTube" className="h-8 w-auto object-contain" />
               </a>
             </div>
           </div>
