@@ -3033,11 +3033,11 @@ export const schoolStandards: SchoolStandards[] = [
       "High Jump": { target: "6'6\"", recruit: "6'4\"", walkon: "6'2\"" },
       "Pole Vault": { target: "16'6\"", recruit: "15'9\"", walkon: "14'9\"" },
       "Long Jump": { target: "23'0\"", recruit: "22'3\"", walkon: "21'6\"" },
-      "Triple Jump": { target: "40'0\"", recruit: "38'0\"", walkon: "36'0\"" },
-      "Shot Put": { target: "45'0\"", recruit: "40'0\"", walkon: "35'0\"" },
-      "Discus": { target: "140'0\"", recruit: "125'0\"", walkon: "110'0\"" },
+      "Triple Jump": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
+      "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
+      "Discus": { target: "180'0\"", recruit: "170'0\"", walkon: "160'0\"" },
       "Hammer": { target: "155'0\"", recruit: "140'0\"", walkon: "125'0\"" },
-      "Javelin": { target: "160'0\"", recruit: "145'0\"", walkon: "130'0\"" }
+      "Javelin": { target: "220'0\"", recruit: "205'0\"", walkon: "190'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.88", recruit: "12.23", walkon: "12.53" },
