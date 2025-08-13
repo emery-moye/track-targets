@@ -16219,6 +16219,18 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "Sunshine State Conference",
     state: "FL",
+    maleStandards: {
+      "100m": { target: "10.70", recruit: "11.00", walkon: "11.30" },
+      "200m": { target: "22.50", recruit: "22.90", walkon: "23.25" },
+      "400m": { target: "50.80", recruit: "51.40", walkon: "52.00" },
+      "800m": { target: "1:55.00", recruit: "1:57.50", walkon: "2:00.00" },
+      "1500m": { target: "4:05.00", recruit: "4:10.00", walkon: "4:15.00" },
+      "Mile": { target: "4:25.00", recruit: "4:30.00", walkon: "4:35.00" },
+      "3000m": { target: "8:55.00", recruit: "9:06.00", walkon: "9:18.00" },
+      "5000m": { target: "15:35.00", recruit: "15:55.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "15.80", recruit: "16.25", walkon: "16.75" },
+      "400m Hurdles": { target: "57.50", recruit: "58.50", walkon: "59.50" }
+    },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.55", walkon: "12.80" },
       "200m": { target: "25.15", recruit: "25.90", walkon: "26.40" },
@@ -16237,6 +16249,18 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "Sunshine State Conference",
     state: "FL",
+    maleStandards: {
+      "100m": { target: "10.70", recruit: "11.00", walkon: "11.30" },
+      "200m": { target: "22.50", recruit: "22.90", walkon: "23.25" },
+      "400m": { target: "50.80", recruit: "51.40", walkon: "52.00" },
+      "800m": { target: "1:55.00", recruit: "1:57.50", walkon: "2:00.00" },
+      "1500m": { target: "4:05.00", recruit: "4:10.00", walkon: "4:15.00" },
+      "Mile": { target: "4:25.00", recruit: "4:30.00", walkon: "4:35.00" },
+      "3000m": { target: "8:55.00", recruit: "9:06.00", walkon: "9:18.00" },
+      "5000m": { target: "15:35.00", recruit: "15:55.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "15.80", recruit: "16.25", walkon: "16.75" },
+      "400m Hurdles": { target: "57.50", recruit: "58.50", walkon: "59.50" }
+    },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.55", walkon: "12.80" },
       "200m": { target: "25.15", recruit: "25.90", walkon: "26.40" },
@@ -16255,6 +16279,18 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "Sunshine State Conference",
     state: "FL",
+    maleStandards: {
+      "100m": { target: "10.75", recruit: "11.05", walkon: "11.30" },
+      "200m": { target: "22.60", recruit: "22.95", walkon: "23.25" },
+      "400m": { target: "51.00", recruit: "51.50", walkon: "52.00" },
+      "800m": { target: "1:56.00", recruit: "1:58.00", walkon: "2:00.00" },
+      "1500m": { target: "4:08.00", recruit: "4:12.00", walkon: "4:15.00" },
+      "Mile": { target: "4:28.00", recruit: "4:32.00", walkon: "4:35.00" },
+      "3000m": { target: "9:00.00", recruit: "9:09.00", walkon: "9:18.00" },
+      "5000m": { target: "15:45.00", recruit: "16:00.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "16.00", recruit: "16.35", walkon: "16.75" },
+      "400m Hurdles": { target: "58.00", recruit: "58.75", walkon: "59.50" }
+    },
     femaleStandards: {
       "100m": { target: "12.45", recruit: "12.70", walkon: "12.95" },
       "200m": { target: "25.65", recruit: "26.15", walkon: "26.65" },
@@ -16273,6 +16309,18 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "Sunshine State Conference",
     state: "FL",
+    maleStandards: {
+      "100m": { target: "10.75", recruit: "11.05", walkon: "11.30" },
+      "200m": { target: "22.60", recruit: "22.95", walkon: "23.25" },
+      "400m": { target: "51.00", recruit: "51.50", walkon: "52.00" },
+      "800m": { target: "1:56.00", recruit: "1:58.00", walkon: "2:00.00" },
+      "1500m": { target: "4:08.00", recruit: "4:12.00", walkon: "4:15.00" },
+      "Mile": { target: "4:28.00", recruit: "4:32.00", walkon: "4:35.00" },
+      "3000m": { target: "9:00.00", recruit: "9:09.00", walkon: "9:18.00" },
+      "5000m": { target: "15:45.00", recruit: "16:00.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "16.00", recruit: "16.35", walkon: "16.75" },
+      "400m Hurdles": { target: "58.00", recruit: "58.75", walkon: "59.50" }
+    },
     femaleStandards: {
       "100m": { target: "12.45", recruit: "12.70", walkon: "12.95" },
       "200m": { target: "25.65", recruit: "26.15", walkon: "26.65" },
@@ -16291,6 +16339,18 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "Sunshine State Conference",
     state: "FL",
+    maleStandards: {
+      "100m": { target: "10.80", recruit: "11.10", walkon: "11.30" },
+      "200m": { target: "22.70", recruit: "23.00", walkon: "23.25" },
+      "400m": { target: "51.20", recruit: "51.60", walkon: "52.00" },
+      "800m": { target: "1:57.00", recruit: "1:58.50", walkon: "2:00.00" },
+      "1500m": { target: "4:10.00", recruit: "4:13.00", walkon: "4:15.00" },
+      "Mile": { target: "4:30.00", recruit: "4:33.00", walkon: "4:35.00" },
+      "3000m": { target: "9:05.00", recruit: "9:12.00", walkon: "9:18.00" },
+      "5000m": { target: "15:50.00", recruit: "16:03.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "16.10", recruit: "16.40", walkon: "16.75" },
+      "400m Hurdles": { target: "58.20", recruit: "58.85", walkon: "59.50" }
+    },
     femaleStandards: {
       "100m": { target: "12.55", recruit: "12.78", walkon: "13.00" },
       "200m": { target: "25.85", recruit: "26.30", walkon: "26.75" },
@@ -16309,6 +16369,98 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "Sunshine State Conference",
     state: "FL",
+    femaleStandards: {
+      "100m": { target: "12.55", recruit: "12.78", walkon: "13.00" },
+      "200m": { target: "25.85", recruit: "26.30", walkon: "26.75" },
+      "400m": { target: "59.75", recruit: "61.35", walkon: "62.15" },
+      "800m": { target: "2:20.8", recruit: "2:24.0", walkon: "2:26.2" },
+      "1500m": { target: "4:49.5", recruit: "4:57.0", walkon: "5:01.0" },
+      "3000m": { target: "10:28.0", recruit: "10:40.0", walkon: "10:52.0" },
+      "5000m": { target: "18:15.0", recruit: "18:35.0", walkon: "18:55.0" },
+      "100m Hurdles": { target: "15.15", recruit: "15.42", walkon: "15.70" },
+      "400m Hurdles": { target: "1:06.5", recruit: "1:07.8", walkon: "1:09.0" }
+    }
+  },
+
+  // Additional Sunshine State Conference Schools
+  {
+    id: "ssc_florida_southern",
+    schoolName: "Florida Southern College",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    maleStandards: {
+      "100m": { target: "10.70", recruit: "11.00", walkon: "11.30" },
+      "200m": { target: "22.50", recruit: "22.90", walkon: "23.25" },
+      "400m": { target: "50.80", recruit: "51.40", walkon: "52.00" },
+      "800m": { target: "1:55.00", recruit: "1:57.50", walkon: "2:00.00" },
+      "1500m": { target: "4:05.00", recruit: "4:10.00", walkon: "4:15.00" },
+      "Mile": { target: "4:25.00", recruit: "4:30.00", walkon: "4:35.00" },
+      "3000m": { target: "8:55.00", recruit: "9:06.00", walkon: "9:18.00" },
+      "5000m": { target: "15:35.00", recruit: "15:55.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "15.80", recruit: "16.25", walkon: "16.75" },
+      "400m Hurdles": { target: "57.50", recruit: "58.50", walkon: "59.50" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.20", recruit: "12.55", walkon: "12.80" },
+      "200m": { target: "25.15", recruit: "25.90", walkon: "26.40" },
+      "400m": { target: "57.80", recruit: "59.50", walkon: "60.80" },
+      "800m": { target: "2:16.5", recruit: "2:20.8", walkon: "2:23.5" },
+      "1500m": { target: "4:40.2", recruit: "4:48.5", walkon: "4:54.8" },
+      "3000m": { target: "10:08.0", recruit: "10:25.5", walkon: "10:38.0" },
+      "5000m": { target: "17:35.0", recruit: "18:05.0", walkon: "18:25.0" },
+      "100m Hurdles": { target: "14.65", recruit: "15.05", walkon: "15.35" },
+      "400m Hurdles": { target: "1:04.0", recruit: "1:06.2", walkon: "1:07.5" }
+    }
+  },
+  {
+    id: "ssc_nova_southeastern",
+    schoolName: "Nova Southeastern University",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    maleStandards: {
+      "100m": { target: "10.75", recruit: "11.05", walkon: "11.30" },
+      "200m": { target: "22.60", recruit: "22.95", walkon: "23.25" },
+      "400m": { target: "51.00", recruit: "51.50", walkon: "52.00" },
+      "800m": { target: "1:56.00", recruit: "1:58.00", walkon: "2:00.00" },
+      "1500m": { target: "4:08.00", recruit: "4:12.00", walkon: "4:15.00" },
+      "Mile": { target: "4:28.00", recruit: "4:32.00", walkon: "4:35.00" },
+      "3000m": { target: "9:00.00", recruit: "9:09.00", walkon: "9:18.00" },
+      "5000m": { target: "15:45.00", recruit: "16:00.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "16.00", recruit: "16.35", walkon: "16.75" },
+      "400m Hurdles": { target: "58.00", recruit: "58.75", walkon: "59.50" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.45", recruit: "12.70", walkon: "12.95" },
+      "200m": { target: "25.65", recruit: "26.15", walkon: "26.65" },
+      "400m": { target: "59.20", recruit: "60.75", walkon: "62.00" },
+      "800m": { target: "2:19.5", recruit: "2:22.8", walkon: "2:25.0" },
+      "1500m": { target: "4:46.8", recruit: "4:53.5", walkon: "4:58.5" },
+      "3000m": { target: "10:22.0", recruit: "10:35.0", walkon: "10:48.0" },
+      "5000m": { target: "18:00.0", recruit: "18:25.0", walkon: "18:45.0" },
+      "100m Hurdles": { target: "15.00", recruit: "15.28", walkon: "15.56" },
+      "400m Hurdles": { target: "1:05.8", recruit: "1:07.2", walkon: "1:08.4" }
+    }
+  },
+  {
+    id: "ssc_palm_beach_atlantic",
+    schoolName: "Palm Beach Atlantic University",
+    division: "D2",
+    conference: "Sunshine State Conference",
+    state: "FL",
+    maleStandards: {
+      "100m": { target: "10.80", recruit: "11.10", walkon: "11.30" },
+      "200m": { target: "22.70", recruit: "23.00", walkon: "23.25" },
+      "400m": { target: "51.20", recruit: "51.60", walkon: "52.00" },
+      "800m": { target: "1:57.00", recruit: "1:58.50", walkon: "2:00.00" },
+      "1500m": { target: "4:10.00", recruit: "4:13.00", walkon: "4:15.00" },
+      "Mile": { target: "4:30.00", recruit: "4:33.00", walkon: "4:35.00" },
+      "3000m": { target: "9:05.00", recruit: "9:12.00", walkon: "9:18.00" },
+      "5000m": { target: "15:50.00", recruit: "16:03.00", walkon: "16:15.00" },
+      "110m Hurdles": { target: "16.10", recruit: "16.40", walkon: "16.75" },
+      "400m Hurdles": { target: "58.20", recruit: "58.85", walkon: "59.50" }
+    },
     femaleStandards: {
       "100m": { target: "12.55", recruit: "12.78", walkon: "13.00" },
       "200m": { target: "25.85", recruit: "26.30", walkon: "26.75" },
