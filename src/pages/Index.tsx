@@ -17,9 +17,14 @@ const Index = () => {
     setHasSearched(true);
   };
 
+  const handleReset = () => {
+    setResults([]);
+    setHasSearched(false);
+  };
+
   return (
     <div className="min-h-screen bg-background pb-16">
-      <Header />
+      <Header onReset={handleReset} />
       
       <main className="container mx-auto px-6 py-8">
         <SearchForm onSearch={handleSearch} />
