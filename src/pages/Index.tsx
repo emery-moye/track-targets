@@ -69,7 +69,7 @@ const Index = () => {
                 className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Follow us on Instagram"
               >
-                <img src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" alt="Instagram" className="w-5 h-5" />
+                <img src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" alt="Instagram" className="w-8 h-8" />
               </a>
               <a
                 href="https://www.tiktok.com/@preferredrecruit"
@@ -78,7 +78,7 @@ const Index = () => {
                 className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Follow us on TikTok"
               >
-                <img src="/lovable-uploads/82c35b69-d949-4123-bc13-1914a86a4454.png" alt="TikTok" className="w-5 h-5" />
+                <img src="/lovable-uploads/82c35b69-d949-4123-bc13-1914a86a4454.png" alt="TikTok" className="w-8 h-8" />
               </a>
             </div>
           </div>
