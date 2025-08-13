@@ -11,7 +11,7 @@ export const Header = () => {
               to="/" 
               className="hover:opacity-80 transition-opacity"
             >
-              <img src="/lovable-uploads/4ca0176f-3dba-455d-b5ef-eeb16d0fab1e.png" alt="PR Preferred Recruit Logo" className="h-12" />
+              <img src="/lovable-uploads/4ca0176f-3dba-455d-b5ef-eeb16d0fab1e.png" alt="PR Preferred Recruit Logo" className="h-16" />
             </Link>
           </div>
           

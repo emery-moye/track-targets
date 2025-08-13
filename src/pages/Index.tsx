@@ -41,11 +41,16 @@ const Index = () => {
         )}
       </main>
       
-      <footer className="fixed bottom-0 left-0 right-0 bg-background border-t border-border py-3 px-6">
+      <footer className="fixed bottom-0 left-0 right-0 bg-background border-t border-border py-4 px-6">
         <div className="container mx-auto text-center">
-          <p className="text-sm text-muted-foreground">
-            Contact Information: <a href="mailto:tracktargets@gmail.com" className="text-primary hover:underline">tracktargets@gmail.com</a>
-          </p>
+          <a 
+            href="https://calendly.com/ryanapsearl/1-on-1-with-ryan?month=2025-08&week=2025-08-10" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-2 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
+          >
+            Book a Call
+          </a>
         </div>
       </footer>
     </div>
