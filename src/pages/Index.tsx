@@ -32,7 +32,7 @@ const Index = () => {
                 The Preferred Recruit is an elite athlete recruitment agency specializing in track and field. We guarantee direct contact with Division1 athletes and their coaches, leveraging a unique referral-based strategy to maximize recruitment success.
               </p>
               <p>
-                <a href="https://www.thepreferredrecruit.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <a href="https://www.thepreferredrecruit.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline">
                   Click here to learn more about our services
                 </a>
               </p>
