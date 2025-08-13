@@ -44,7 +44,7 @@ const Index = () => {
             
             {/* Founders Background Section */}
             <div className="mt-12 bg-card rounded-lg p-8 border border-border">
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-4">
                 <h2 className="text-2xl font-bold text-foreground">Founders Background</h2>
                 <a
                   href="https://www.instagram.com/ryansearl_/"
@@ -53,14 +53,14 @@ const Index = () => {
                   className="p-1 hover:opacity-80 transition-opacity"
                   aria-label="Follow Ryan on Instagram"
                 >
-                  <img src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" alt="Instagram" className="w-6 h-6" />
+                  <img src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" alt="Instagram" className="w-8 h-8" />
                 </a>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-4">
+                <div>
                   <p className="text-foreground leading-relaxed">
-                    "I'm Ryan Searl, a seasoned athlete with four years of Division I track and field experience. Having personally navigated both the transfer portal and the high school recruiting process, I founded this program out of a desire for the kind of guidance I wished I had during my high school years. Initially, I began by assisting friends, but soon realized the potential to expand this endeavor. This realization inspired me to develop a program that could support young athletes nationwide, helping them to realize their potential and make informed decisions about their athletic futures."
+                    I'm Ryan Searl, a seasoned athlete with four years of Division I track and field experience. Having personally navigated both the transfer portal and the high school recruiting process, I founded this program out of a desire for the kind of guidance I wished I had during my high school years. Initially, I began by assisting friends, but soon realized the potential to expand this endeavor. This realization inspired me to develop a program that could support young athletes nationwide, helping them to realize their potential and make informed decisions about their athletic futures.
                   </p>
                 </div>
                 
