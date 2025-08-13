@@ -1898,10 +1898,10 @@ export const schoolStandards: SchoolStandards[] = [
       "Pole Vault": { target: "15'0\"", recruit: "14'3\"", walkon: "13'6\"" },
       "Long Jump": { target: "23'9\"", recruit: "23'0\"", walkon: "22'3\"" },
       "Triple Jump": { target: "46'6\"", recruit: "44'6\"", walkon: "42'6\"" },
-      "Shot Put": { target: "42'0\"", recruit: "37'0\"", walkon: "32'0\"" },
-      "Discus": { target: "125'0\"", recruit: "110'0\"", walkon: "95'0\"" },
+      "Shot Put": { target: "56'0\"", recruit: "52'0\"", walkon: "48'0\"" },
+      "Discus": { target: "170'0\"", recruit: "160'0\"", walkon: "150'0\"" },
       "Hammer": { target: "140'0\"", recruit: "125'0\"", walkon: "110'0\"" },
-      "Javelin": { target: "145'0\"", recruit: "130'0\"", walkon: "115'0\"" }
+      "Javelin": { target: "210'0\"", recruit: "195'0\"", walkon: "180'0\"" }
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.50", walkon: "12.80" },
@@ -1992,10 +1992,10 @@ export const schoolStandards: SchoolStandards[] = [
       "Pole Vault": { target: "15'3\"", recruit: "14'6\"", walkon: "13'9\"" },
       "Long Jump": { target: "23'9\"", recruit: "23'0\"", walkon: "22'3\"" },
       "Triple Jump": { target: "47'0\"", recruit: "45'0\"", walkon: "43'0\"" },
-      "Shot Put": { target: "44'0\"", recruit: "39'0\"", walkon: "34'0\"" },
-      "Discus": { target: "130'0\"", recruit: "115'0\"", walkon: "100'0\"" },
+      "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
+      "Discus": { target: "175'0\"", recruit: "165'0\"", walkon: "155'0\"" },
       "Hammer": { target: "145'0\"", recruit: "130'0\"", walkon: "115'0\"" },
-      "Javelin": { target: "150'0\"", recruit: "135'0\"", walkon: "120'0\"" }
+      "Javelin": { target: "215'0\"", recruit: "200'0\"", walkon: "185'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.90", recruit: "12.25", walkon: "12.55" },
@@ -2844,10 +2844,10 @@ export const schoolStandards: SchoolStandards[] = [
       "Pole Vault": { target: "15'3\"", recruit: "14'6\"", walkon: "13'9\"" },
       "Long Jump": { target: "23'9\"", recruit: "23'0\"", walkon: "22'3\"" },
       "Triple Jump": { target: "47'0\"", recruit: "45'0\"", walkon: "43'0\"" },
-      "Shot Put": { target: "43'0\"", recruit: "38'0\"", walkon: "33'0\"" },
-      "Discus": { target: "130'0\"", recruit: "115'0\"", walkon: "100'0\"" },
+      "Shot Put": { target: "57'0\"", recruit: "53'0\"", walkon: "49'0\"" },
+      "Discus": { target: "173'0\"", recruit: "163'0\"", walkon: "153'0\"" },
       "Hammer": { target: "145'0\"", recruit: "130'0\"", walkon: "115'0\"" },
-      "Javelin": { target: "150'0\"", recruit: "135'0\"", walkon: "120'0\"" }
+      "Javelin": { target: "213'0\"", recruit: "198'0\"", walkon: "183'0\"" }
     },
     femaleStandards: {
       "100m": { target: "12.00", recruit: "12.35", walkon: "12.65" },
@@ -2940,10 +2940,10 @@ export const schoolStandards: SchoolStandards[] = [
       "Pole Vault": { target: "15'8\"", recruit: "15'2\"", walkon: "14'6\"" },
       "Long Jump": { target: "24'3\"", recruit: "23'6\"", walkon: "22'9\"" },
       "Triple Jump": { target: "48'0\"", recruit: "46'0\"", walkon: "44'0\"" },
-      "Shot Put": { target: "42'6\"", recruit: "37'6\"", walkon: "32'6\"" },
-      "Discus": { target: "127'0\"", recruit: "112'0\"", walkon: "97'0\"" },
+      "Shot Put": { target: "56'6\"", recruit: "52'6\"", walkon: "48'6\"" },
+      "Discus": { target: "172'0\"", recruit: "162'0\"", walkon: "152'0\"" },
       "Hammer": { target: "142'0\"", recruit: "127'0\"", walkon: "112'0\"" },
-      "Javelin": { target: "147'0\"", recruit: "132'0\"", walkon: "117'0\"" }
+      "Javelin": { target: "212'0\"", recruit: "197'0\"", walkon: "182'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.98", recruit: "12.33", walkon: "12.63" },
@@ -2987,10 +2987,10 @@ export const schoolStandards: SchoolStandards[] = [
       "Pole Vault": { target: "15'0\"", recruit: "14'3\"", walkon: "13'6\"" },
       "Long Jump": { target: "23'6\"", recruit: "22'9\"", walkon: "22'0\"" },
       "Triple Jump": { target: "46'6\"", recruit: "44'6\"", walkon: "42'6\"" },
-      "Shot Put": { target: "41'0\"", recruit: "36'0\"", walkon: "31'0\"" },
-      "Discus": { target: "122'0\"", recruit: "107'0\"", walkon: "92'0\"" },
+      "Shot Put": { target: "55'0\"", recruit: "51'0\"", walkon: "47'0\"" },
+      "Discus": { target: "167'0\"", recruit: "157'0\"", walkon: "147'0\"" },
       "Hammer": { target: "137'0\"", recruit: "122'0\"", walkon: "107'0\"" },
-      "Javelin": { target: "142'0\"", recruit: "127'0\"", walkon: "112'0\"" }
+      "Javelin": { target: "207'0\"", recruit: "192'0\"", walkon: "177'0\"" }
     },
     femaleStandards: {
       "100m": { target: "12.05", recruit: "12.40", walkon: "12.70" },
@@ -3081,10 +3081,10 @@ export const schoolStandards: SchoolStandards[] = [
       "Pole Vault": { target: "15'0\"", recruit: "14'3\"", walkon: "13'6\"" },
       "Long Jump": { target: "23'9\"", recruit: "23'0\"", walkon: "22'3\"" },
       "Triple Jump": { target: "46'6\"", recruit: "44'6\"", walkon: "42'6\"" },
-      "Shot Put": { target: "42'0\"", recruit: "37'0\"", walkon: "32'0\"" },
-      "Discus": { target: "125'0\"", recruit: "110'0\"", walkon: "95'0\"" },
+      "Shot Put": { target: "56'0\"", recruit: "52'0\"", walkon: "48'0\"" },
+      "Discus": { target: "170'0\"", recruit: "160'0\"", walkon: "150'0\"" },
       "Hammer": { target: "140'0\"", recruit: "125'0\"", walkon: "110'0\"" },
-      "Javelin": { target: "145'0\"", recruit: "130'0\"", walkon: "115'0\"" }
+      "Javelin": { target: "210'0\"", recruit: "195'0\"", walkon: "180'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.92", recruit: "12.27", walkon: "12.57" },
