@@ -17232,6 +17232,62 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "145'0\"", recruit: "130'0\"", walkon: "120'0\"" },
       "Heptathlon": { target: "5000", recruit: "4400", walkon: "4000" }
     }
+  },
+  {
+    id: "ind_western_new_mexico",
+    schoolName: "Western New Mexico University",
+    division: "D2",
+    conference: "Rocky Mountain Athletic Conference",
+    state: "NM",
+    maleStandards: {
+      "100m": { target: "10.42", recruit: "10.77", walkon: "11.00" },
+      "200m": { target: "20.97", recruit: "21.57", walkon: "21.90" },
+      "400m": { target: "46.17", recruit: "47.67", walkon: "49.67" },
+      "800m": { target: "1:50.17", recruit: "1:52.67", walkon: "1:56.67" },
+      "1500m": { target: "4:06.17", recruit: "4:08.17", walkon: "4:15.17" },
+      "Mile": { target: "4:24.17", recruit: "4:26.17", walkon: "4:33.17" },
+      "5000m": { target: "9:00.17", recruit: "9:05.17", walkon: "9:17.17" },
+      "10000m": { target: "30:32.17", recruit: "31:02.17", walkon: "32:02.17" },
+      "110m Hurdles": { target: "14.27", recruit: "14.37", walkon: "14.77" },
+      "400m Hurdles": { target: "52.67", recruit: "52.97", walkon: "55.57" },
+      "High Jump": { target: "6'10\"", recruit: "6'8\"", walkon: "6'4\"" },
+      "Pole Vault": { target: "16'7\"", recruit: "16'4\"", walkon: "15'7\"" },
+      "Long Jump": { target: "23'10\"", recruit: "23'6\"", walkon: "22'10\"" },
+      "Triple Jump": { target: "49'4\"", recruit: "48'10\"", walkon: "45'10\"" },
+      "Shot Put": { target: "60'8\"", recruit: "59'8\"", walkon: "55'8\"" },
+      "Discus": { target: "184'8\"", recruit: "179'8\"", walkon: "169'8\"" },
+      "Hammer": { target: "194'8\"", recruit: "189'8\"", walkon: "179'8\"" },
+      "Javelin": { target: "209'8\"", recruit: "204'8\"", walkon: "189'8\"" }
+    },
+    femaleStandards: {}
+  },
+  {
+    id: "ind_midwestern_state",
+    schoolName: "Midwestern State University",
+    division: "D2",
+    conference: "Lone Star Conference",
+    state: "TX",
+    femaleStandards: {
+      "100m": { target: "12.00", recruit: "12.50", walkon: "12.80" },
+      "200m": { target: "24.50", recruit: "25.30", walkon: "25.80" },
+      "400m": { target: "55.80", recruit: "58.00", walkon: "59.50" },
+      "800m": { target: "2:16.00", recruit: "2:22.00", walkon: "2:26.00" },
+      "1500m": { target: "4:40.00", recruit: "4:55.00", walkon: "5:05.00" },
+      "Mile": { target: "5:05.00", recruit: "5:25.00", walkon: "5:40.00" },
+      "5000m": { target: "17:20.00", recruit: "18:30.00", walkon: "19:15.00" },
+      "10000m": { target: "36:30.00", recruit: "38:30.00", walkon: "40:00.00" },
+      "100m Hurdles": { target: "14.20", recruit: "15.00", walkon: "15.50" },
+      "400m Hurdles": { target: "61.50", recruit: "64.50", walkon: "66.50" },
+      "High Jump": { target: "5'8\"", recruit: "5'4\"", walkon: "5'2\"" },
+      "Pole Vault": { target: "12'6\"", recruit: "11'6\"", walkon: "10'6\"" },
+      "Long Jump": { target: "20'0\"", recruit: "18'6\"", walkon: "17'6\"" },
+      "Triple Jump": { target: "40'0\"", recruit: "37'0\"", walkon: "35'0\"" },
+      "Shot Put": { target: "44'0\"", recruit: "40'0\"", walkon: "37'0\"" },
+      "Discus": { target: "145'0\"", recruit: "130'0\"", walkon: "120'0\"" },
+      "Hammer": { target: "160'0\"", recruit: "145'0\"", walkon: "135'0\"" },
+      "Javelin": { target: "145'0\"", recruit: "130'0\"", walkon: "120'0\"" },
+      "Heptathlon": { target: "5000", recruit: "4400", walkon: "4000" }
+    }
   }
 ];
 
