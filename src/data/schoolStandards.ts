@@ -16482,8 +16482,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "KS",
     maleStandards: {
-      "100m": { target: "10.25", recruit: "10.30", walkon: "10.60" },
-      "200m": { target: "20.80", recruit: "20.90", walkon: "21.40" },
+      "100m": { target: "10.25", recruit: "10.45", walkon: "10.65" },
+      "200m": { target: "20.80", recruit: "21.45", walkon: "21.65" },
       "400m": { target: "46.00", recruit: "46.50", walkon: "48.50" },
       "800m": { target: "1:50.00", recruit: "1:50.70", walkon: "1:54.00" },
       "1500m": { target: "4:06.00", recruit: "4:08.00", walkon: "4:15.00" },
@@ -16502,8 +16502,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "210'0\"", recruit: "205'0\"", walkon: "190'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "11.95", recruit: "12.00", walkon: "12.40" },
-      "200m": { target: "23.90", recruit: "24.00", walkon: "24.50" },
+      "100m": { target: "11.95", recruit: "12.20", walkon: "12.60" },
+      "200m": { target: "23.90", recruit: "24.55", walkon: "24.90" },
       "400m": { target: "55.50", recruit: "56.00", walkon: "57.50" },
       "800m": { target: "2:09.00", recruit: "2:10.00", walkon: "2:19.00" },
       "1500m": { target: "4:50.00", recruit: "4:52.00", walkon: "5:10.00" },
@@ -16529,8 +16529,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "MO",
     maleStandards: {
-      "100m": { target: "10.25", recruit: "10.30", walkon: "10.60" },
-      "200m": { target: "20.80", recruit: "20.90", walkon: "21.40" },
+      "100m": { target: "10.25", recruit: "10.45", walkon: "10.65" },
+      "200m": { target: "20.80", recruit: "21.45", walkon: "21.65" },
       "400m": { target: "46.00", recruit: "46.50", walkon: "48.50" },
       "800m": { target: "1:50.00", recruit: "1:50.70", walkon: "1:54.00" },
       "1500m": { target: "4:06.00", recruit: "4:08.00", walkon: "4:15.00" },
@@ -16549,8 +16549,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "210'0\"", recruit: "205'0\"", walkon: "190'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "11.95", recruit: "12.00", walkon: "12.40" },
-      "200m": { target: "23.90", recruit: "24.00", walkon: "24.50" },
+      "100m": { target: "11.95", recruit: "12.20", walkon: "12.60" },
+      "200m": { target: "23.90", recruit: "24.55", walkon: "24.90" },
       "400m": { target: "55.50", recruit: "56.00", walkon: "57.50" },
       "800m": { target: "2:09.00", recruit: "2:10.00", walkon: "2:19.00" },
       "1500m": { target: "4:50.00", recruit: "4:52.00", walkon: "5:10.00" },
@@ -16576,8 +16576,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "KS",
     maleStandards: {
-      "100m": { target: "10.25", recruit: "10.30", walkon: "10.60" },
-      "200m": { target: "20.80", recruit: "20.90", walkon: "21.40" },
+      "100m": { target: "10.25", recruit: "10.45", walkon: "10.65" },
+      "200m": { target: "20.80", recruit: "21.45", walkon: "21.65" },
       "400m": { target: "46.00", recruit: "46.50", walkon: "48.50" },
       "800m": { target: "1:50.00", recruit: "1:50.70", walkon: "1:54.00" },
       "1500m": { target: "4:06.00", recruit: "4:08.00", walkon: "4:15.00" },
@@ -16596,8 +16596,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "210'0\"", recruit: "205'0\"", walkon: "190'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "11.95", recruit: "12.00", walkon: "12.40" },
-      "200m": { target: "23.90", recruit: "24.00", walkon: "24.50" },
+      "100m": { target: "11.95", recruit: "12.20", walkon: "12.60" },
+      "200m": { target: "23.90", recruit: "24.55", walkon: "24.90" },
       "400m": { target: "55.50", recruit: "56.00", walkon: "57.50" },
       "800m": { target: "2:09.00", recruit: "2:10.00", walkon: "2:19.00" },
       "1500m": { target: "4:50.00", recruit: "4:52.00", walkon: "5:10.00" },
@@ -16623,8 +16623,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "MO",
     maleStandards: {
-      "100m": { target: "10.42", recruit: "10.47", walkon: "10.77" },
-      "200m": { target: "20.97", recruit: "21.07", walkon: "21.57" },
+      "100m": { target: "10.42", recruit: "10.77", walkon: "11.00" },
+      "200m": { target: "20.97", recruit: "21.57", walkon: "21.90" },
       "400m": { target: "46.17", recruit: "46.67", walkon: "48.67" },
       "800m": { target: "1:50.17", recruit: "1:50.87", walkon: "1:54.17" },
       "1500m": { target: "4:06.17", recruit: "4:08.17", walkon: "4:15.17" },
@@ -16643,8 +16643,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "209'8\"", recruit: "204'8\"", walkon: "189'8\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.12", recruit: "12.17", walkon: "12.57" },
-      "200m": { target: "24.07", recruit: "24.17", walkon: "24.67" },
+      "100m": { target: "12.12", recruit: "12.42", walkon: "12.77" },
+      "200m": { target: "24.07", recruit: "24.72", walkon: "25.07" },
       "400m": { target: "55.67", recruit: "56.17", walkon: "57.67" },
       "800m": { target: "2:09.17", recruit: "2:10.17", walkon: "2:19.17" },
       "1500m": { target: "4:50.17", recruit: "4:52.17", walkon: "5:10.17" },
@@ -16670,8 +16670,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "KS",
     maleStandards: {
-      "100m": { target: "10.42", recruit: "10.47", walkon: "10.77" },
-      "200m": { target: "20.97", recruit: "21.07", walkon: "21.57" },
+      "100m": { target: "10.42", recruit: "10.77", walkon: "11.00" },
+      "200m": { target: "20.97", recruit: "21.57", walkon: "21.90" },
       "400m": { target: "46.17", recruit: "46.67", walkon: "48.67" },
       "800m": { target: "1:50.17", recruit: "1:50.87", walkon: "1:54.17" },
       "1500m": { target: "4:06.17", recruit: "4:08.17", walkon: "4:15.17" },
@@ -16690,8 +16690,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "209'8\"", recruit: "204'8\"", walkon: "189'8\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.12", recruit: "12.17", walkon: "12.57" },
-      "200m": { target: "24.07", recruit: "24.17", walkon: "24.67" },
+      "100m": { target: "12.12", recruit: "12.42", walkon: "12.77" },
+      "200m": { target: "24.07", recruit: "24.72", walkon: "25.07" },
       "400m": { target: "55.67", recruit: "56.17", walkon: "57.67" },
       "800m": { target: "2:09.17", recruit: "2:10.17", walkon: "2:19.17" },
       "1500m": { target: "4:50.17", recruit: "4:52.17", walkon: "5:10.17" },
@@ -16717,8 +16717,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "MO",
     maleStandards: {
-      "100m": { target: "10.42", recruit: "10.47", walkon: "10.77" },
-      "200m": { target: "20.97", recruit: "21.07", walkon: "21.57" },
+      "100m": { target: "10.42", recruit: "10.77", walkon: "11.00" },
+      "200m": { target: "20.97", recruit: "21.57", walkon: "21.90" },
       "400m": { target: "46.17", recruit: "46.67", walkon: "48.67" },
       "800m": { target: "1:50.17", recruit: "1:50.87", walkon: "1:54.17" },
       "1500m": { target: "4:06.17", recruit: "4:08.17", walkon: "4:15.17" },
@@ -16737,8 +16737,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "209'8\"", recruit: "204'8\"", walkon: "189'8\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.12", recruit: "12.17", walkon: "12.57" },
-      "200m": { target: "24.07", recruit: "24.17", walkon: "24.67" },
+      "100m": { target: "12.12", recruit: "12.42", walkon: "12.77" },
+      "200m": { target: "24.07", recruit: "24.72", walkon: "25.07" },
       "400m": { target: "55.67", recruit: "56.17", walkon: "57.67" },
       "800m": { target: "2:09.17", recruit: "2:10.17", walkon: "2:19.17" },
       "1500m": { target: "4:50.17", recruit: "4:52.17", walkon: "5:10.17" },
@@ -16764,8 +16764,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "NE",
     maleStandards: {
-      "100m": { target: "10.42", recruit: "10.47", walkon: "10.77" },
-      "200m": { target: "20.97", recruit: "21.07", walkon: "21.57" },
+      "100m": { target: "10.42", recruit: "10.77", walkon: "11.00" },
+      "200m": { target: "20.97", recruit: "21.57", walkon: "21.90" },
       "400m": { target: "46.17", recruit: "46.67", walkon: "48.67" },
       "800m": { target: "1:50.17", recruit: "1:50.87", walkon: "1:54.17" },
       "1500m": { target: "4:06.17", recruit: "4:08.17", walkon: "4:15.17" },
@@ -16784,8 +16784,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "209'8\"", recruit: "204'8\"", walkon: "189'8\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.12", recruit: "12.17", walkon: "12.57" },
-      "200m": { target: "24.07", recruit: "24.17", walkon: "24.67" },
+      "100m": { target: "12.12", recruit: "12.42", walkon: "12.77" },
+      "200m": { target: "24.07", recruit: "24.72", walkon: "25.07" },
       "400m": { target: "55.67", recruit: "56.17", walkon: "57.67" },
       "800m": { target: "2:09.17", recruit: "2:10.17", walkon: "2:19.17" },
       "1500m": { target: "4:50.17", recruit: "4:52.17", walkon: "5:10.17" },
@@ -16811,8 +16811,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "KS",
     maleStandards: {
-      "100m": { target: "10.42", recruit: "10.47", walkon: "10.77" },
-      "200m": { target: "20.97", recruit: "21.07", walkon: "21.57" },
+      "100m": { target: "10.42", recruit: "10.77", walkon: "11.00" },
+      "200m": { target: "20.97", recruit: "21.57", walkon: "21.90" },
       "400m": { target: "46.17", recruit: "46.67", walkon: "48.67" },
       "800m": { target: "1:50.17", recruit: "1:50.87", walkon: "1:54.17" },
       "1500m": { target: "4:06.17", recruit: "4:08.17", walkon: "4:15.17" },
@@ -16831,8 +16831,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "209'8\"", recruit: "204'8\"", walkon: "189'8\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.12", recruit: "12.17", walkon: "12.57" },
-      "200m": { target: "24.07", recruit: "24.17", walkon: "24.67" },
+      "100m": { target: "12.12", recruit: "12.42", walkon: "12.77" },
+      "200m": { target: "24.07", recruit: "24.72", walkon: "25.07" },
       "400m": { target: "55.67", recruit: "56.17", walkon: "57.67" },
       "800m": { target: "2:09.17", recruit: "2:10.17", walkon: "2:19.17" },
       "1500m": { target: "4:50.17", recruit: "4:52.17", walkon: "5:10.17" },
@@ -16858,8 +16858,8 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MIAA",
     state: "MO",
     maleStandards: {
-      "100m": { target: "10.42", recruit: "10.47", walkon: "10.77" },
-      "200m": { target: "20.97", recruit: "21.07", walkon: "21.57" },
+      "100m": { target: "10.42", recruit: "10.77", walkon: "11.00" },
+      "200m": { target: "20.97", recruit: "21.57", walkon: "21.90" },
       "400m": { target: "46.17", recruit: "46.67", walkon: "48.67" },
       "800m": { target: "1:50.17", recruit: "1:50.87", walkon: "1:54.17" },
       "1500m": { target: "4:06.17", recruit: "4:08.17", walkon: "4:15.17" },
@@ -16878,8 +16878,8 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "209'8\"", recruit: "204'8\"", walkon: "189'8\"" }
     },
     femaleStandards: {
-      "100m": { target: "12.12", recruit: "12.17", walkon: "12.57" },
-      "200m": { target: "24.07", recruit: "24.17", walkon: "24.67" },
+      "100m": { target: "12.12", recruit: "12.42", walkon: "12.77" },
+      "200m": { target: "24.07", recruit: "24.72", walkon: "25.07" },
       "400m": { target: "55.67", recruit: "56.17", walkon: "57.67" },
       "800m": { target: "2:09.17", recruit: "2:10.17", walkon: "2:19.17" },
       "1500m": { target: "4:50.17", recruit: "4:52.17", walkon: "5:10.17" },
