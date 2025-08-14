@@ -89,12 +89,12 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center gap-4">
             <a 
-              href="https://calendly.com/ryanapsearl/1-on-1-with-ryan?month=2025-08&week=2025-08-10" 
+              href="https://app.thepreferredrecruit.com/page_3tfle/?utm_source=PRstandards&utm_medium=web&utm_campaign=PR" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-2 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
             >
-              Book a Call
+              Apply Now
             </a>
             
             <div className="flex items-center gap-2">
