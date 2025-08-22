@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { SearchForm } from "@/components/SearchForm";
 import { ResultsTable, SchoolMatch } from "@/components/ResultsTable";
 import { generateMatches } from "@/data/mockData";
+import { Button } from "@/components/ui/button";
 // import instagramLogo from "@/assets/instagram-logo.png";
 // import tiktokLogo from "@/assets/tiktok-logo.png";
 
@@ -38,11 +39,11 @@ const Index = () => {
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Want Help With Your Recruitment Process?
               </h3>
-              <p>
-                <a href="https://start.thepreferredrecruit.com/home-page317375" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline text-lg">
+              <Button asChild variant="default" size="lg">
+                <a href="https://start.thepreferredrecruit.com/home-page317375" target="_blank" rel="noopener noreferrer">
                   Click here to learn more about our services
                 </a>
-              </p>
+              </Button>
             </div>
             
             {/* Founders Background Section */}
