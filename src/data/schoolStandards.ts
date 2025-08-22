@@ -17443,7 +17443,36 @@ export const schoolStandards: SchoolStandards[] = [
       "Heptathlon": { target: "4900", recruit: "4700", walkon: "4200" }
     }
   }
-];
+]; 
+
+// Tighten SEC 100m/200m recruit and walk-on standards (keep target unchanged)
+(() => {
+  const recruitDelta = 0.10; // seconds faster
+  const walkonDelta = 0.21;  // seconds faster
+  const tighten = (evt: EventStandards) => {
+    const t = parseFloat(evt.target);
+    let r = parseFloat(evt.recruit) - recruitDelta;
+    let w = parseFloat(evt.walkon) - walkonDelta;
+    if (!Number.isFinite(t) || !Number.isFinite(r) || !Number.isFinite(w)) return;
+    if (r <= t) r = parseFloat((t + 0.01).toFixed(2));
+    if (w <= r) w = parseFloat((r + 0.01).toFixed(2));
+    evt.recruit = r.toFixed(2);
+    evt.walkon = w.toFixed(2);
+  };
+
+  schoolStandards.forEach((s) => {
+    if (s.conference !== "SEC") return;
+    const applyGroup = (group?: Record<string, EventStandards>) => {
+      if (!group) return;
+      ["100m", "200m"].forEach((e) => {
+        const evt = group[e];
+        if (evt) tighten(evt);
+      });
+    };
+    applyGroup(s.maleStandards);
+    applyGroup(s.femaleStandards);
+  });
+})();
 
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
