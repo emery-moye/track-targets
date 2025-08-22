@@ -39,11 +39,14 @@ const Index = () => {
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Want Help With Your Recruitment Process?
               </h3>
-              <Button asChild variant="default" size="lg">
-                <a href="https://start.thepreferredrecruit.com/home-page317375" target="_blank" rel="noopener noreferrer">
-                  Click here to learn more about our services
-                </a>
-              </Button>
+              <a 
+                href="https://start.thepreferredrecruit.com/home-page317375" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-2 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
+              >
+                Click here to learn more about our services
+              </a>
             </div>
             
             {/* Founders Background Section */}
