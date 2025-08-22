@@ -147,9 +147,9 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
         
         <Button 
           type="submit" 
-          className="w-full md:w-auto px-8 h-12 rounded-xl shadow-lg hover:scale-105 transition-all duration-200"
+          className="w-full md:w-auto px-12 h-16 rounded-xl shadow-lg hover:scale-105 transition-all duration-200 text-lg font-semibold"
         >
-          <Search className="mr-2 h-4 w-4" />
+          <Search className="mr-3 h-5 w-5" />
           Search Colleges
         </Button>
       </form>
