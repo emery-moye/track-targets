@@ -17474,6 +17474,37 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Tighten Big Ten 100m/200m target, recruit, and walk-on standards
+(() => {
+  const targetDelta = 0.03; // seconds faster
+  const rrDelta = 0.09;     // seconds faster for recruit and walk-on
+  const tighten = (evt: EventStandards) => {
+    let t = parseFloat(evt.target) - targetDelta;
+    let r = parseFloat(evt.recruit) - rrDelta;
+    let w = parseFloat(evt.walkon) - rrDelta;
+    if (!Number.isFinite(t) || !Number.isFinite(r) || !Number.isFinite(w)) return;
+    // Ensure logical ordering: target < recruit < walk-on (time-based)
+    if (r <= t) r = parseFloat((t + 0.01).toFixed(2));
+    if (w <= r) w = parseFloat((r + 0.01).toFixed(2));
+    evt.target = t.toFixed(2);
+    evt.recruit = r.toFixed(2);
+    evt.walkon = w.toFixed(2);
+  };
+
+  schoolStandards.forEach((s) => {
+    if (s.conference !== "Big Ten") return;
+    const applyGroup = (group?: Record<string, EventStandards>) => {
+      if (!group) return;
+      ["100m", "200m"].forEach((e) => {
+        const evt = group[e];
+        if (evt) tighten(evt);
+      });
+    };
+    applyGroup(s.maleStandards);
+    applyGroup(s.femaleStandards);
+  });
+})();
+
 // Tighten ACC 100m/200m walk-on only (keep target and recruit unchanged)
 (() => {
   const walkonDelta = 0.21; // seconds faster
