@@ -35,17 +35,17 @@ const Index = () => {
         {!hasSearched && (
           <>
             <div className="text-center mb-8 max-w-2xl mx-auto">
-              <ul className="space-y-4 text-xl font-semibold text-foreground">
-                <li className="flex items-center justify-center gap-3">
-                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+              <ul className="space-y-4 text-xl font-semibold text-foreground text-left max-w-md mx-auto">
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
                   Higher Scholarship Chances
                 </li>
-                <li className="flex items-center justify-center gap-3">
-                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
                   80% more likely to get recruited
                 </li>
-                <li className="flex items-center justify-center gap-3">
-                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
                   100% success rate of getting kids into college
                 </li>
               </ul>
