@@ -17474,6 +17474,31 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Tighten ACC 100m/200m walk-on only (keep target and recruit unchanged)
+(() => {
+  const walkonDelta = 0.21; // seconds faster
+  const tighten = (evt: EventStandards) => {
+    const r = parseFloat(evt.recruit);
+    let w = parseFloat(evt.walkon) - walkonDelta;
+    if (!Number.isFinite(r) || !Number.isFinite(w)) return;
+    if (w <= r) w = parseFloat((r + 0.01).toFixed(2));
+    evt.walkon = w.toFixed(2);
+  };
+
+  schoolStandards.forEach((s) => {
+    if (s.conference !== "ACC") return;
+    const applyGroup = (group?: Record<string, EventStandards>) => {
+      if (!group) return;
+      ["100m", "200m"].forEach((e) => {
+        const evt = group[e];
+        if (evt) tighten(evt);
+      });
+    };
+    applyGroup(s.maleStandards);
+    applyGroup(s.femaleStandards);
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
