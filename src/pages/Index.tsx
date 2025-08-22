@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { SearchForm } from "@/components/SearchForm";
 import { ResultsTable, SchoolMatch } from "@/components/ResultsTable";
-import { StandardsTables } from "@/components/StandardsTables";
 import { generateMatches } from "@/data/mockData";
 // import instagramLogo from "@/assets/instagram-logo.png";
 // import tiktokLogo from "@/assets/tiktok-logo.png";
@@ -44,8 +43,6 @@ const Index = () => {
                 </a>
               </p>
             </div>
-            
-            <StandardsTables />
             
             {/* Founders Background Section */}
             <div className="mt-12 bg-card rounded-lg p-8 border border-border">
