@@ -30,15 +30,23 @@ const Index = () => {
         
         {!hasSearched && (
           <>
-            <div className="text-center text-lg text-foreground mb-8 max-w-4xl mx-auto font-medium space-y-4">
-              <p>
-                Only 1.9% of high school track and field athletes compete at the NCAA Division 1 level. Less than 7% of all high school track athletes will compete in any NCAA division. Athletes working with a recruitment agency are 5x more likely to be recruited by D1 programs. Athletes using recruitment services have a 90% higher chance of securing scholarship offers. 80% of athletes with a personalized recruitment strategy receive interest from multiple colleges.
-              </p>
-              <p>
-                The Preferred Recruit is an elite athlete recruitment agency specializing in track and field. We guarantee direct contact with Division1 athletes and their coaches, leveraging a unique referral-based strategy to maximize recruitment success.
-              </p>
-              <p>
-                <a href="https://start.thepreferredrecruit.com/home-page317375" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline">
+            <div className="text-center mb-8 max-w-2xl mx-auto">
+              <ul className="space-y-4 text-xl font-semibold text-foreground">
+                <li className="flex items-center justify-center gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  Higher Scholarship Chances
+                </li>
+                <li className="flex items-center justify-center gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  80% more likely to get recruited
+                </li>
+                <li className="flex items-center justify-center gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  100% success rate of getting kids into college
+                </li>
+              </ul>
+              <p className="mt-8">
+                <a href="https://start.thepreferredrecruit.com/home-page317375" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline text-lg">
                   Click here to learn more about our services
                 </a>
               </p>

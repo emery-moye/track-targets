@@ -26,7 +26,7 @@ export const Header = ({ onReset }: HeaderProps) => {
           </div>
           
           {/* Desktop Search - Hidden on mobile */}
-          <div className="hidden md:flex flex-1 max-w-md mx-8">
+          <div className="hidden md:flex flex-1 max-w-2xl mx-8 justify-center">
             <CollegeSearchBar />
           </div>
           

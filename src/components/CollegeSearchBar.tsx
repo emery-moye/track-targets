@@ -53,18 +53,18 @@ export const CollegeSearchBar = () => {
   return (
     <>
       {/* Desktop Search */}
-      <div className="hidden md:block relative w-full max-w-md">
-        <div className="flex gap-2">
+      <div className="hidden md:block relative w-full max-w-2xl mx-auto">
+        <div className="flex gap-3">
           <Input
             type="text"
             placeholder="Search colleges..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyPress={handleKeyPress}
-            className="h-10"
+            className="h-12 text-lg"
           />
-          <Button onClick={handleSearch} size="sm" className="h-10">
-            <Search className="h-4 w-4" />
+          <Button onClick={handleSearch} size="lg" className="h-12 px-6">
+            <Search className="h-5 w-5" />
           </Button>
         </div>
 
