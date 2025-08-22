@@ -100,7 +100,7 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
             </Select>
           </div>
           
-          <div className="flex flex-col gap-4">
+          <div>
             <Select value={event} onValueChange={setEvent}>
               <SelectTrigger className="h-12 focus:ring-primary focus:border-primary">
                 <SelectValue placeholder="Select Event" />
@@ -113,14 +113,6 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
                 ))}
               </SelectContent>
             </Select>
-            
-            <Button 
-              type="submit" 
-              className="px-8 h-16 rounded-xl shadow-lg hover:scale-105 transition-all duration-200 text-lg font-semibold"
-            >
-              <Search className="mr-3 h-5 w-5" />
-              Search Colleges
-            </Button>
           </div>
           
           <div>
@@ -147,6 +139,16 @@ export const SearchForm = ({ onSearch }: SearchFormProps) => {
               </SelectContent>
             </Select>
           </div>
+        </div>
+        
+        <div className="col-start-2 col-span-2 justify-self-center mt-4">
+          <Button 
+            type="submit" 
+            className="px-8 h-16 rounded-xl shadow-lg hover:scale-105 transition-all duration-200 text-lg font-semibold"
+          >
+            <Search className="mr-3 h-5 w-5" />
+            Search Colleges
+          </Button>
         </div>
         
         {error && (
