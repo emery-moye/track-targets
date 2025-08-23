@@ -17503,6 +17503,38 @@ export const schoolStandards: SchoolStandards[] = [
       femaleStandards: cloneGroup(ref.femaleStandards) as Record<string, EventStandards>
     });
   });
+
+  // Adjust Gulf South Conference standards - make high jump easier and 110m hurdles easier
+  schoolStandards.forEach((school) => {
+    if (school.conference === "Gulf South") {
+      // Make men's high jump easier by 3 inches each tier
+      if (school.maleStandards && school.maleStandards["High Jump"]) {
+        school.maleStandards["High Jump"] = {
+          target: "6'4\"",
+          recruit: "6'2\"", 
+          walkon: "6'0\""
+        };
+      }
+      
+      // Make women's high jump easier by 3 inches each tier
+      if (school.femaleStandards && school.femaleStandards["High Jump"]) {
+        school.femaleStandards["High Jump"] = {
+          target: "5'3\"",
+          recruit: "5'2\"",
+          walkon: "5'1\""
+        };
+      }
+      
+      // Make men's 110m hurdles easier
+      if (school.maleStandards && school.maleStandards["110m Hurdles"]) {
+        school.maleStandards["110m Hurdles"] = {
+          target: "14.65",
+          recruit: "14.95",
+          walkon: "15.50"
+        };
+      }
+    }
+  });
 })();
 
 // Northeast-10 Conference schools added using Slippery Rock standards
