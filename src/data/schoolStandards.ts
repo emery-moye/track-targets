@@ -17505,6 +17505,37 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Northeast-10 Conference schools added using Slippery Rock standards
+(() => {
+  const ref = schoolStandards.find((s) => s.schoolName === "Slippery Rock University");
+  if (!ref) return;
+
+  const cloneGroup = (g?: Record<string, EventStandards>) =>
+    g ? (JSON.parse(JSON.stringify(g)) as Record<string, EventStandards>) : undefined;
+
+  const schools = [
+    { id: "ne10_southern_connecticut_state", schoolName: "Southern Connecticut State University", state: "CT" },
+    { id: "ne10_franklin_pierce", schoolName: "Franklin Pierce University", state: "NH" },
+    { id: "ne10_assumption", schoolName: "Assumption University", state: "MA" },
+    { id: "ne10_saint_anselm", schoolName: "Saint Anselm College", state: "NH" },
+    { id: "ne10_adelphi", schoolName: "Adelphi University", state: "NY" },
+    { id: "ne10_bentley", schoolName: "Bentley University", state: "MA" },
+    { id: "ne10_american_international", schoolName: "American International College", state: "MA" }
+  ];
+
+  schools.forEach((info) => {
+    schoolStandards.push({
+      id: info.id,
+      schoolName: info.schoolName,
+      division: "D2",
+      conference: "Northeast-10",
+      state: info.state,
+      maleStandards: cloneGroup(ref.maleStandards),
+      femaleStandards: cloneGroup(ref.femaleStandards) as Record<string, EventStandards>
+    });
+  });
+})();
+
 // Tighten Big Ten 100m/200m target, recruit, and walk-on standards
 (() => {
   const targetDelta = 0.03; // seconds faster
