@@ -17474,6 +17474,37 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Gulf South Conference schools added using La Salle standards
+(() => {
+  const ref = schoolStandards.find((s) => s.schoolName === "La Salle University");
+  if (!ref) return;
+
+  const cloneGroup = (g?: Record<string, EventStandards>) =>
+    g ? (JSON.parse(JSON.stringify(g)) as Record<string, EventStandards>) : undefined;
+
+  const schools = [
+    { id: "gsc_alabama_huntsville", schoolName: "Alabama-Huntsville", state: "AL" },
+    { id: "gsc_lee_tn", schoolName: "Lee (TN)", state: "TN" },
+    { id: "gsc_mississippi_college", schoolName: "Mississippi College", state: "MS" },
+    { id: "gsc_montevallo", schoolName: "Montevallo", state: "AL" },
+    { id: "gsc_west_alabama", schoolName: "West Alabama", state: "AL" },
+    { id: "gsc_trevecca_nazarene", schoolName: "Trevecca Nazarene", state: "TN" },
+    { id: "gsc_christian_brothers", schoolName: "Christian Brothers", state: "TN" }
+  ];
+
+  schools.forEach((info) => {
+    schoolStandards.push({
+      id: info.id,
+      schoolName: info.schoolName,
+      division: "D2",
+      conference: "Gulf South",
+      state: info.state,
+      maleStandards: cloneGroup(ref.maleStandards),
+      femaleStandards: cloneGroup(ref.femaleStandards) as Record<string, EventStandards>
+    });
+  });
+})();
+
 // Tighten Big Ten 100m/200m target, recruit, and walk-on standards
 (() => {
   const targetDelta = 0.03; // seconds faster
