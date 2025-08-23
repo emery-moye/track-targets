@@ -17536,6 +17536,45 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Northeast-10 overrides: harden 400m (men & women) and women's 100m for SCSU, Franklin Pierce, and Saint Anselm
+(() => {
+  const targetSchools = new Set([
+    "Southern Connecticut State University",
+    "Franklin Pierce University",
+    "Saint Anselm College",
+  ]);
+
+  const ensureEvent = (group: Record<string, EventStandards>, event: string, def: EventStandards) => {
+    if (!group[event]) group[event] = { ...def };
+  };
+
+  schoolStandards.forEach((s) => {
+    if (!targetSchools.has(s.schoolName)) return;
+
+    // Men's 400m
+    if (s.maleStandards) {
+      ensureEvent(s.maleStandards, "400m", { target: "48.75", recruit: "49.50", walkon: "51.50" });
+      s.maleStandards["400m"].target = "48.75";
+      s.maleStandards["400m"].recruit = "49.50";
+      s.maleStandards["400m"].walkon = "51.50";
+    }
+
+    // Women's 400m
+    if (s.femaleStandards) {
+      ensureEvent(s.femaleStandards, "400m", { target: "57.45", recruit: "59.20", walkon: "61.00" });
+      s.femaleStandards["400m"].target = "57.45";
+      s.femaleStandards["400m"].recruit = "59.20";
+      s.femaleStandards["400m"].walkon = "61.00";
+
+      // Women's 100m
+      ensureEvent(s.femaleStandards, "100m", { target: "12.00", recruit: "12.30", walkon: "12.99" });
+      s.femaleStandards["100m"].target = "12.00";
+      s.femaleStandards["100m"].recruit = "12.30";
+      s.femaleStandards["100m"].walkon = "12.99";
+    }
+  });
+})();
+
 // Tighten Big Ten 100m/200m target, recruit, and walk-on standards
 (() => {
   const targetDelta = 0.03; // seconds faster
