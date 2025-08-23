@@ -17575,6 +17575,26 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// PSAC overrides: harden women's 100m for SRU, ESU, IUP, Cal U (awaiting 200m specifics)
+(() => {
+  const targetSchools = new Set([
+    "Slippery Rock University",
+    "East Stroudsburg University",
+    "Indiana University of Pennsylvania",
+    "California University of Pennsylvania",
+  ]);
+
+  schoolStandards.forEach((s) => {
+    if (s.conference !== "PSAC" || !targetSchools.has(s.schoolName)) return;
+    const g = s.femaleStandards;
+    if (!g) return;
+    if (!g["100m"]) g["100m"] = { target: "11.99", recruit: "12.40", walkon: "12.60" };
+    g["100m"].target = "11.99";
+    g["100m"].recruit = "12.40";
+    g["100m"].walkon = "12.60";
+  });
+})();
+
 // Tighten Big Ten 100m/200m target, recruit, and walk-on standards
 (() => {
   const targetDelta = 0.03; // seconds faster
