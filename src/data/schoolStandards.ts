@@ -17683,6 +17683,41 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Northern Sun (NSIC) Conference schools added using Pittsburg State standards
+(() => {
+  const ref = schoolStandards.find((s) => s.schoolName === "Pittsburg State University");
+  if (!ref) return;
+
+  const cloneGroup = (g?: Record<string, EventStandards>) =>
+    g ? (JSON.parse(JSON.stringify(g)) as Record<string, EventStandards>) : undefined;
+
+  const schools = [
+    { id: "nsic_augustana", schoolName: "Augustana University", state: "SD" },
+    { id: "nsic_concordia_st_paul", schoolName: "Concordia University, St. Paul", state: "MN" },
+    { id: "nsic_msu_moorhead", schoolName: "Minnesota State University Moorhead", state: "MN" },
+    { id: "nsic_minnesota_state", schoolName: "Minnesota State University, Mankato", state: "MN" },
+    { id: "nsic_minnesota_duluth", schoolName: "University of Minnesota Duluth", state: "MN" },
+    { id: "nsic_minot_state", schoolName: "Minot State University", state: "ND" },
+    { id: "nsic_northern_state", schoolName: "Northern State University", state: "SD" },
+    { id: "nsic_southwest_minnesota_state", schoolName: "Southwest Minnesota State University", state: "MN" },
+    { id: "nsic_sioux_falls", schoolName: "University of Sioux Falls", state: "SD" },
+    { id: "nsic_university_of_mary", schoolName: "University of Mary", state: "ND" },
+    { id: "nsic_wayne_state_ne", schoolName: "Wayne State College", state: "NE" }
+  ];
+
+  schools.forEach((info) => {
+    schoolStandards.push({
+      id: info.id,
+      schoolName: info.schoolName,
+      division: "D2",
+      conference: "Northern Sun",
+      state: info.state,
+      maleStandards: cloneGroup(ref.maleStandards),
+      femaleStandards: cloneGroup(ref.femaleStandards) as Record<string, EventStandards>
+    });
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
