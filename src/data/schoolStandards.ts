@@ -17691,7 +17691,7 @@ export const schoolStandards: SchoolStandards[] = [
   const cloneGroup = (g?: Record<string, EventStandards>) =>
     g ? (JSON.parse(JSON.stringify(g)) as Record<string, EventStandards>) : undefined;
 
-  const schools = [
+  const schools: Array<{ id: string; schoolName: string; state: string; womensOnly?: boolean }> = [
     { id: "nsic_augustana", schoolName: "Augustana University", state: "SD" },
     { id: "nsic_concordia_st_paul", schoolName: "Concordia University, St. Paul", state: "MN" },
     { id: "nsic_msu_moorhead", schoolName: "Minnesota State University Moorhead", state: "MN" },
@@ -17702,7 +17702,10 @@ export const schoolStandards: SchoolStandards[] = [
     { id: "nsic_southwest_minnesota_state", schoolName: "Southwest Minnesota State University", state: "MN" },
     { id: "nsic_sioux_falls", schoolName: "University of Sioux Falls", state: "SD" },
     { id: "nsic_university_of_mary", schoolName: "University of Mary", state: "ND" },
-    { id: "nsic_wayne_state_ne", schoolName: "Wayne State College", state: "NE" }
+    { id: "nsic_wayne_state_ne", schoolName: "Wayne State College", state: "NE" },
+    // Added per request: women's-only programs
+    { id: "nsic_bemidji_state", schoolName: "Bemidji State University", state: "MN", womensOnly: true },
+    { id: "nsic_winona_state", schoolName: "Winona State University", state: "MN", womensOnly: true }
   ];
 
   schools.forEach((info) => {
@@ -17712,7 +17715,7 @@ export const schoolStandards: SchoolStandards[] = [
       division: "D2",
       conference: "Northern Sun",
       state: info.state,
-      maleStandards: cloneGroup(ref.maleStandards),
+      maleStandards: info.womensOnly ? undefined : cloneGroup(ref.maleStandards),
       femaleStandards: cloneGroup(ref.femaleStandards) as Record<string, EventStandards>
     });
   });
