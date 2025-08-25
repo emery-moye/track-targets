@@ -17747,6 +17747,18 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Adjust Bemidji State 100m hurdles to be slightly easier (-0.05 seconds)
+(() => {
+  const bemidjiState = schoolStandards.find(s => s.id === "nsic_bemidji_state");
+  if (bemidjiState && bemidjiState.femaleStandards) {
+    bemidjiState.femaleStandards["100m Hurdles"] = { 
+      target: "12.90", 
+      recruit: "13.30", 
+      walkon: "13.70" 
+    };
+  }
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
