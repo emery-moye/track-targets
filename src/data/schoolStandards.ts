@@ -17718,6 +17718,32 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Adjust Northern Sun (NSIC) field event standards to be a little easier
+(() => {
+  const setMens = (g?: Record<string, EventStandards>) => {
+    if (!g) return;
+    g["High Jump"] = { target: "6'8\"", recruit: "6'6\"", walkon: "6'2\"" };
+    g["Long Jump"] = { target: "23'6\"", recruit: "23'0\"", walkon: "22'0\"" };
+    g["Pole Vault"] = { target: "16'0\"", recruit: "15'6\"", walkon: "14'9\"" };
+    g["Triple Jump"] = { target: "48'0\"", recruit: "47'0\"", walkon: "44'0\"" };
+    g["Javelin"] = { target: "200'0\"", recruit: "190'0\"", walkon: "175'0\"" };
+  };
+  const setWomens = (g?: Record<string, EventStandards>) => {
+    if (!g) return;
+    g["High Jump"] = { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" };
+    g["Long Jump"] = { target: "18'6\"", recruit: "18'0\"", walkon: "17'0\"" };
+    g["Pole Vault"] = { target: "12'6\"", recruit: "12'0\"", walkon: "11'6\"" };
+    g["Triple Jump"] = { target: "38'0\"", recruit: "37'0\"", walkon: "35'0\"" };
+    g["Javelin"] = { target: "130'0\"", recruit: "125'0\"", walkon: "115'0\"" };
+  };
+
+  schoolStandards.forEach((s) => {
+    if (s.conference !== "Northern Sun") return;
+    setMens(s.maleStandards);
+    setWomens(s.femaleStandards);
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
