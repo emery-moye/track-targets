@@ -17909,8 +17909,8 @@ export const schoolStandards: SchoolStandards[] = [
   const easierSchools = [
     { id: "pacwest_academy_of_art", schoolName: "Academy of Art University", division: "D2", conference: "PacWest", state: "CA" },
     { id: "pacwest_westmont", schoolName: "Westmont College", division: "D2", conference: "PacWest", state: "CA" },
-    { id: "gsac_jessup", schoolName: "William Jessup University", division: "NAIA", conference: "GSAC", state: "CA" },
-    { id: "gsac_vanguard", schoolName: "Vanguard University", division: "NAIA", conference: "GSAC", state: "CA" },
+    { id: "pacwest_jessup", schoolName: "William Jessup University", division: "NAIA", conference: "PacWest", state: "CA" },
+    { id: "pacwest_vanguard", schoolName: "Vanguard University", division: "NAIA", conference: "PacWest", state: "CA" },
     { id: "pacwest_dominican", schoolName: "Dominican University of California", division: "D2", conference: "PacWest", state: "CA" },
   ];
 
