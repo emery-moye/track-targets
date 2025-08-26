@@ -17759,6 +17759,59 @@ export const schoolStandards: SchoolStandards[] = [
   }
 })();
 
+// Azusa Pacific University (PacWest) — added from provided walk-on standards
+(() => {
+  schoolStandards.push({
+    id: "pacwest_azusa_pacific",
+    schoolName: "Azusa Pacific University",
+    division: "D2",
+    conference: "PacWest",
+    state: "CA",
+    maleStandards: {
+      "100m": { target: "10.80", recruit: "11.10", walkon: "11.30" },
+      "200m": { target: "22.50", recruit: "22.80", walkon: "23.00" },
+      "300m Hurdles": { target: "39.50", recruit: "39.80", walkon: "40.00" },
+      "400m": { target: "50.50", recruit: "50.80", walkon: "51.00" },
+      "400m Hurdles": { target: "56.50", recruit: "56.80", walkon: "57.00" },
+      "110m Hurdles": { target: "15.00", recruit: "15.30", walkon: "15.50" },
+      "800m": { target: "1:58", recruit: "2:01", walkon: "2:03" },
+      "1600m": { target: "4:40", recruit: "4:43", walkon: "4:45" },
+      "3200m": { target: "10:05", recruit: "10:08", walkon: "10:10" },
+      "Decathlon": { target: "6400", recruit: "6000", walkon: "5800" },
+      "Long Jump": { target: "22'0\"", recruit: "21'6\"", walkon: "21'0\"" },
+      "Triple Jump": { target: "45'0\"", recruit: "44'0\"", walkon: "43'0\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "14'0\"", walkon: "13'6\"" },
+      "High Jump": { target: "6'6\"", recruit: "6'4\"", walkon: "6'2\"" },
+      "Shot Put": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
+      "Discus": { target: "140'0\"", recruit: "130'0\"", walkon: "120'0\"" },
+      "Weight Throw": { target: "52'0\"", recruit: "50'0\"", walkon: "48'0\"" },
+      "Hammer": { target: "140'0\"", recruit: "135'0\"", walkon: "130'0\"" },
+      "Javelin": { target: "170'0\"", recruit: "160'0\"", walkon: "150'0\"" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.10", recruit: "12.40", walkon: "12.60" },
+      "200m": { target: "25.50", recruit: "25.80", walkon: "26.00" },
+      "300m Hurdles": { target: "45.50", recruit: "45.80", walkon: "46.00" },
+      "400m": { target: "60.50", recruit: "60.80", walkon: "61.00" },
+      "400m Hurdles": { target: "63.50", recruit: "63.80", walkon: "64.00" },
+      "100m Hurdles": { target: "15.00", recruit: "15.30", walkon: "15.50" },
+      "800m": { target: "2:19", recruit: "2:22", walkon: "2:24" },
+      "1600m": { target: "5:35", recruit: "5:38", walkon: "5:40" },
+      "3200m": { target: "12:15", recruit: "12:18", walkon: "12:20" },
+      "Heptathlon": { target: "4800", recruit: "4400", walkon: "4200" },
+      "Long Jump": { target: "18'0\"", recruit: "17'6\"", walkon: "17'0\"" },
+      "Triple Jump": { target: "37'0\"", recruit: "36'0\"", walkon: "35'0\"" },
+      "Pole Vault": { target: "11'6\"", recruit: "11'0\"", walkon: "10'6\"" },
+      "High Jump": { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" },
+      "Shot Put": { target: "39'0\"", recruit: "37'0\"", walkon: "35'0\"" },
+      "Discus": { target: "120'0\"", recruit: "110'0\"", walkon: "100'0\"" },
+      "Weight Throw": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
+      "Hammer": { target: "130'0\"", recruit: "125'0\"", walkon: "120'0\"" },
+      "Javelin": { target: "130'0\"", recruit: "120'0\"", walkon: "110'0\"" }
+    }
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
