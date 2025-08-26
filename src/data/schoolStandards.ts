@@ -18180,6 +18180,21 @@ export const schoolStandards: SchoolStandards[] = [
   const maleStandards = generateStandards(baseMaleWalkOn);
   const femaleStandards = generateStandards(baseFemaleWalkOn);
 
+  // Make Shot Put and Javelin harder for all RMAC schools (both Men and Women)
+  const harderField = (walkOn: string, recruitFactor: number, targetFactor: number) => ({
+    walkon: walkOn,
+    recruit: hardenDistance(walkOn, recruitFactor),
+    target: hardenDistance(walkOn, targetFactor),
+  });
+
+  // Men's overrides
+  maleStandards["Shot Put"] = harderField(baseMaleWalkOn["Shot Put"], 1.08, 1.15); // +8% recruit, +15% target
+  maleStandards["Javelin"] = harderField(baseMaleWalkOn["Javelin"], 1.10, 1.18);  // +10% recruit, +18% target
+
+  // Women's overrides
+  femaleStandards["Shot Put"] = harderField(baseFemaleWalkOn["Shot Put"], 1.08, 1.15);
+  femaleStandards["Javelin"] = harderField(baseFemaleWalkOn["Javelin"], 1.10, 1.18);
+
   type Meta = { id: string; schoolName: string; division: string; conference: string; state: string };
   const rmacSchools: Meta[] = [
     { id: "rmac_adams_state", schoolName: "Adams State University", division: "D2", conference: "RMAC", state: "CO" },
