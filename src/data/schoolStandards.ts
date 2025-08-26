@@ -18077,16 +18077,108 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
-// Rocky Mountain Athletic Conference (RMAC) — initial add with Men's 100m and Pole Vault (M/W)
+// Rocky Mountain Athletic Conference (RMAC) — complete standards from Regis walk-on baseline
 (() => {
-  const commonMaleStandards: Record<string, { target: string; recruit: string; walkon: string }> = {
-    "100m": { target: "10.60", recruit: "10.80", walkon: "11.20" }, // per spec: ~10.5-10.65 target, 10.7-10.8 recruit, 11.1-11.3 walk-on
-    "Pole Vault": { target: "15'9\"", recruit: "15'0\"", walkon: "14'3\"" } // within requested ranges
+  // Helper functions to make standards harder
+  const hardenTime = (timeStr: string, factor: number): string => {
+    if (timeStr.includes(":")) {
+      const [min, sec] = timeStr.split(":").map(parseFloat);
+      const totalSeconds = min * 60 + sec;
+      const hardenedSeconds = totalSeconds * factor;
+      const newMin = Math.floor(hardenedSeconds / 60);
+      const newSec = (hardenedSeconds % 60).toFixed(2);
+      return `${newMin}:${newSec.padStart(5, "0")}`;
+    } else {
+      return (parseFloat(timeStr) * factor).toFixed(2);
+    }
   };
 
-  const commonFemaleStandards: Record<string, { target: string; recruit: string; walkon: string }> = {
-    "Pole Vault": { target: "12'0\"", recruit: "11'6\"", walkon: "11'0\"" }
+  const hardenDistance = (distStr: string, factor: number): string => {
+    if (distStr.includes("'")) {
+      const match = distStr.match(/(\d+)'(\d+)"/);
+      if (match) {
+        const feet = parseInt(match[1]);
+        const inches = parseInt(match[2]);
+        const totalInches = (feet * 12 + inches) * factor;
+        const newFeet = Math.floor(totalInches / 12);
+        const newInches = Math.round(totalInches % 12);
+        return `${newFeet}'${newInches}"`;
+      }
+    }
+    return distStr;
   };
+
+  // Base walk-on standards from Regis image (converted 1600m->1500m, 3200m->3000m, 300H->400H)
+  const baseMaleWalkOn = {
+    "100m": "11.30",
+    "200m": "23.00", 
+    "400m": "51.50",
+    "800m": "2:00.00",
+    "1500m": "4:25.00", // converted from 1600m: 4:35
+    "Mile": "4:35.00",
+    "3000m": "9:20.00", // converted from 3200m: 9:50  
+    "5000m": "16:45.00",
+    "110m Hurdles": "15.50",
+    "400m Hurdles": "55.00", // converted from 300H: 42.00
+    "High Jump": "6'0\"",
+    "Pole Vault": "14'3\"", // as specified earlier
+    "Long Jump": "20'6\"",
+    "Triple Jump": "43'0\"",
+    "Shot Put": "46'0\"",
+    "Discus": "140'0\"", 
+    "Javelin": "140'0\""
+  };
+
+  const baseFemaleWalkOn = {
+    "100m": "12.90",
+    "200m": "26.50",
+    "400m": "61.00", 
+    "800m": "2:20.00",
+    "1500m": "5:05.00", // converted from 1600m: 5:20
+    "Mile": "5:20.00",
+    "3000m": "11:10.00", // converted from 3200m: 11:40
+    "5000m": "19:45.00",
+    "100m Hurdles": "16.50",
+    "400m Hurdles": "66.00", // converted from 300H: 50.00
+    "High Jump": "5'0\"",
+    "Pole Vault": "11'0\"", // as specified earlier  
+    "Long Jump": "15'6\"",
+    "Triple Jump": "33'6\"",
+    "Shot Put": "36'0\"",
+    "Discus": "110'0\"",
+    "Javelin": "100'0\""
+  };
+
+  // Generate recruit (harder than walk-on) and target (hardest) standards
+  const generateStandards = (walkOnStandards: Record<string, string>) => {
+    const standards: Record<string, { target: string; recruit: string; walkon: string }> = {};
+    
+    Object.entries(walkOnStandards).forEach(([event, walkOn]) => {
+      const isTimeEvent = event.includes("m") && !event.includes("Jump") && !event.includes("Put") && !event.includes("Discus") && !event.includes("Javelin");
+      
+      if (isTimeEvent) {
+        // For time events, faster = harder (multiply by < 1.0)
+        const recruit = hardenTime(walkOn, 0.97); // 3% faster
+        const target = hardenTime(walkOn, 0.94);  // 6% faster
+        standards[event] = { target, recruit, walkon: walkOn };
+      } else {
+        // For field events, farther/higher = harder (multiply by > 1.0) 
+        const recruit = hardenDistance(walkOn, 1.05); // 5% farther/higher
+        const target = hardenDistance(walkOn, 1.10);  // 10% farther/higher
+        standards[event] = { target, recruit, walkon: walkOn };
+      }
+    });
+
+    // Override men's 100m as specifically requested
+    if (standards["100m"]) {
+      standards["100m"] = { target: "10.60", recruit: "10.80", walkon: "11.20" };
+    }
+
+    return standards;
+  };
+
+  const maleStandards = generateStandards(baseMaleWalkOn);
+  const femaleStandards = generateStandards(baseFemaleWalkOn);
 
   type Meta = { id: string; schoolName: string; division: string; conference: string; state: string };
   const rmacSchools: Meta[] = [
@@ -18109,8 +18201,8 @@ export const schoolStandards: SchoolStandards[] = [
   rmacSchools.forEach(meta => {
     schoolStandards.push({
       ...meta,
-      maleStandards: { ...commonMaleStandards },
-      femaleStandards: { ...commonFemaleStandards },
+      maleStandards: { ...maleStandards },
+      femaleStandards: { ...femaleStandards },
     });
   });
 })();
