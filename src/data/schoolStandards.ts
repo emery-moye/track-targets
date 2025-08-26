@@ -17812,6 +17812,121 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Fresno Pacific, CUI, Biola (clone APU) + Academy of Art, Westmont, Jessup, Vanguard, Dominican (eased)
+(() => {
+  const apu = schoolStandards.find(s => s.id === "pacwest_azusa_pacific");
+  if (!apu) return;
+
+  const deepClone = <T>(obj: T): T => JSON.parse(JSON.stringify(obj));
+
+  // 1) Exact clones (same standards as Azusa Pacific)
+  const clones = [
+    { id: "pacwest_fresno_pacific", schoolName: "Fresno Pacific University", division: "D2", conference: "PacWest", state: "CA" },
+    { id: "pacwest_concordia_irvine", schoolName: "Concordia University Irvine", division: "D2", conference: "PacWest", state: "CA" },
+    { id: "pacwest_biola", schoolName: "Biola University", division: "D2", conference: "PacWest", state: "CA" },
+  ];
+
+  clones.forEach(meta => {
+    schoolStandards.push({
+      ...meta,
+      maleStandards: deepClone(apu.maleStandards),
+      femaleStandards: deepClone(apu.femaleStandards),
+    });
+  });
+
+  // 2) Slightly easier standards helpers
+  const easeTime = (v: string, factor: number) => {
+    if (v.includes(":")) {
+      const parts = v.split(":").map(Number);
+      let total = 0;
+      for (const p of parts) total = total * 60 + (isNaN(p) ? 0 : p);
+      const eased = total * factor;
+      const minutes = Math.floor(eased / 60);
+      const seconds = Math.round(eased % 60);
+      const secStr = seconds.toString().padStart(2, "0");
+      return `${minutes}:${secStr}`;
+    } else {
+      const num = parseFloat(v);
+      if (isNaN(num)) return v;
+      return (num * factor).toFixed(2);
+    }
+  };
+
+  const parseFeetInches = (v: string): number | null => {
+    const m = v.match(/^(\d+)'(\d+)"$/);
+    if (!m) return null;
+    const feet = parseInt(m[1], 10);
+    const inches = parseInt(m[2], 10);
+    return feet * 12 + inches;
+  };
+  const formatFeetInches = (inches: number): string => {
+    const total = Math.max(0, Math.round(inches));
+    const ft = Math.floor(total / 12);
+    const inch = total % 12;
+    return `${ft}'${inch}"`;
+  };
+
+  const easeDistance = (v: string, factor: number) => {
+    const inches = parseFeetInches(v);
+    if (inches == null) return v;
+    return formatFeetInches(inches * factor);
+  };
+
+  const isPoints = (v: string) => /^\d{3,5}$/.test(v);
+  const easePoints = (v: string, factor: number) => {
+    const n = parseInt(v, 10);
+    if (isNaN(n)) return v;
+    return Math.round((n * factor) / 10) * 10 + "";
+  };
+
+  const easeValue = (v: string, tier: "target" | "recruit" | "walkon") => {
+    const timeFactor = tier === "target" ? 1.011 : tier === "recruit" ? 1.007 : 1.004; // slower = easier
+    const distFactor = tier === "target" ? 0.989 : tier === "recruit" ? 0.993 : 0.996; // shorter = easier
+    const pointsFactor = distFactor; // fewer points = easier
+
+    if (v.includes("'")) {
+      return easeDistance(v, distFactor);
+    }
+    if (isPoints(v)) {
+      return easePoints(v, pointsFactor);
+    }
+    // treat as time
+    return easeTime(v, timeFactor);
+  };
+
+  const easeStandards = (standards: Record<string, { target: string; recruit: string; walkon: string }>) => {
+    const out: Record<string, { target: string; recruit: string; walkon: string }> = {};
+    Object.entries(standards).forEach(([event, perf]) => {
+      out[event] = {
+        target: easeValue(perf.target, "target"),
+        recruit: easeValue(perf.recruit, "recruit"),
+        walkon: easeValue(perf.walkon, "walkon"),
+      };
+    });
+    return out;
+  };
+
+  const easierSchools = [
+    { id: "pacwest_academy_of_art", schoolName: "Academy of Art University", division: "D2", conference: "PacWest", state: "CA" },
+    { id: "pacwest_westmont", schoolName: "Westmont College", division: "D2", conference: "PacWest", state: "CA" },
+    { id: "gsac_jessup", schoolName: "William Jessup University", division: "NAIA", conference: "GSAC", state: "CA" },
+    { id: "gsac_vanguard", schoolName: "Vanguard University", division: "NAIA", conference: "GSAC", state: "CA" },
+    { id: "pacwest_dominican", schoolName: "Dominican University of California", division: "D2", conference: "PacWest", state: "CA" },
+  ];
+
+  easierSchools.forEach(meta => {
+    const male = easeStandards(apu.maleStandards as any);
+    const female = easeStandards(apu.femaleStandards as any);
+    // Exact override for Men's 100m to match example
+    male["100m"] = { target: "10.92", recruit: "11.18", walkon: "11.35" };
+    schoolStandards.push({
+      ...meta,
+      maleStandards: male,
+      femaleStandards: female,
+    });
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
