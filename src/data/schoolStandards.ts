@@ -18180,20 +18180,30 @@ export const schoolStandards: SchoolStandards[] = [
   const maleStandards = generateStandards(baseMaleWalkOn);
   const femaleStandards = generateStandards(baseFemaleWalkOn);
 
-  // Make Shot Put and Javelin harder for all RMAC schools (both Men and Women)
-  const harderField = (walkOn: string, recruitFactor: number, targetFactor: number) => ({
-    walkon: walkOn,
-    recruit: hardenDistance(walkOn, recruitFactor),
-    target: hardenDistance(walkOn, targetFactor),
-  });
+  // Make Shot Put and Javelin much harder for all RMAC schools (both Men and Women)
+  // Men's overrides - much harder standards
+  maleStandards["Shot Put"] = { 
+    walkon: "46'0\"", 
+    recruit: "50'0\"", 
+    target: "55'0\"" 
+  };
+  maleStandards["Javelin"] = { 
+    walkon: "140'0\"", 
+    recruit: "165'0\"", 
+    target: "188'0\"" 
+  };
 
-  // Men's overrides
-  maleStandards["Shot Put"] = harderField(baseMaleWalkOn["Shot Put"], 1.08, 1.15); // +8% recruit, +15% target
-  maleStandards["Javelin"] = harderField(baseMaleWalkOn["Javelin"], 1.10, 1.18);  // +10% recruit, +18% target
-
-  // Women's overrides
-  femaleStandards["Shot Put"] = harderField(baseFemaleWalkOn["Shot Put"], 1.08, 1.15);
-  femaleStandards["Javelin"] = harderField(baseFemaleWalkOn["Javelin"], 1.10, 1.18);
+  // Women's overrides - proportionally harder
+  femaleStandards["Shot Put"] = { 
+    walkon: "36'0\"", 
+    recruit: "41'0\"", 
+    target: "46'0\"" 
+  };
+  femaleStandards["Javelin"] = { 
+    walkon: "100'0\"", 
+    recruit: "125'0\"", 
+    target: "150'0\"" 
+  };
 
   type Meta = { id: string; schoolName: string; division: string; conference: string; state: string };
   const rmacSchools: Meta[] = [
