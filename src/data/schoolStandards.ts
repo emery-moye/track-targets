@@ -17761,54 +17761,153 @@ export const schoolStandards: SchoolStandards[] = [
 
 // Azusa Pacific University (PacWest) — added from provided walk-on standards
 (() => {
+  // Helper functions to make standards harder
+  const hardenTime = (v: string, factor: number) => {
+    if (v.includes(":")) {
+      const parts = v.split(":").map(Number);
+      let total = 0;
+      for (const p of parts) total = total * 60 + (isNaN(p) ? 0 : p);
+      const hardened = total * factor;
+      const minutes = Math.floor(hardened / 60);
+      const seconds = Math.round(hardened % 60);
+      const secStr = seconds.toString().padStart(2, "0");
+      return `${minutes}:${secStr}`;
+    } else {
+      const num = parseFloat(v);
+      if (isNaN(num)) return v;
+      return (num * factor).toFixed(2);
+    }
+  };
+
+  const parseFeetInches = (v: string): number | null => {
+    const m = v.match(/^(\d+)'(\d+)"$/);
+    if (!m) return null;
+    const feet = parseInt(m[1], 10);
+    const inches = parseInt(m[2], 10);
+    return feet * 12 + inches;
+  };
+  
+  const formatFeetInches = (inches: number): string => {
+    const total = Math.max(0, Math.round(inches));
+    const ft = Math.floor(total / 12);
+    const inch = total % 12;
+    return `${ft}'${inch}"`;
+  };
+
+  const hardenDistance = (v: string, factor: number) => {
+    const inches = parseFeetInches(v);
+    if (inches == null) return v;
+    return formatFeetInches(inches * factor);
+  };
+
+  const isPoints = (v: string) => /^\d{3,5}$/.test(v);
+  const hardenPoints = (v: string, factor: number) => {
+    const n = parseInt(v, 10);
+    if (isNaN(n)) return v;
+    return Math.round(n * factor) + "";
+  };
+
+  const hardenValue = (v: string, tier: "target" | "recruit") => {
+    const timeFactor = tier === "target" ? 0.97 : 0.985; // faster = harder
+    const distFactor = tier === "target" ? 1.015 : 1.008; // farther = harder
+    const pointsFactor = distFactor; // more points = harder
+
+    if (v.includes("'")) {
+      return hardenDistance(v, distFactor);
+    }
+    if (isPoints(v)) {
+      return hardenPoints(v, pointsFactor);
+    }
+    // treat as time
+    return hardenTime(v, timeFactor);
+  };
+
+  // Original APU standards
+  const originalMaleStandards = {
+    "100m": { target: "10.80", recruit: "11.10", walkon: "11.30" },
+    "200m": { target: "22.50", recruit: "22.80", walkon: "23.00" },
+    "300m Hurdles": { target: "39.50", recruit: "39.80", walkon: "40.00" },
+    "400m": { target: "50.50", recruit: "50.80", walkon: "51.00" },
+    "400m Hurdles": { target: "56.50", recruit: "56.80", walkon: "57.00" },
+    "110m Hurdles": { target: "15.00", recruit: "15.30", walkon: "15.50" },
+    "800m": { target: "1:58", recruit: "2:01", walkon: "2:03" },
+    "1600m": { target: "4:40", recruit: "4:43", walkon: "4:45" },
+    "3200m": { target: "10:05", recruit: "10:08", walkon: "10:10" },
+    "Decathlon": { target: "6400", recruit: "6000", walkon: "5800" },
+    "Long Jump": { target: "22'0\"", recruit: "21'6\"", walkon: "21'0\"" },
+    "Triple Jump": { target: "45'0\"", recruit: "44'0\"", walkon: "43'0\"" },
+    "Pole Vault": { target: "14'6\"", recruit: "14'0\"", walkon: "13'6\"" },
+    "High Jump": { target: "6'6\"", recruit: "6'4\"", walkon: "6'2\"" },
+    "Shot Put": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
+    "Discus": { target: "140'0\"", recruit: "130'0\"", walkon: "120'0\"" },
+    "Weight Throw": { target: "52'0\"", recruit: "50'0\"", walkon: "48'0\"" },
+    "Hammer": { target: "140'0\"", recruit: "135'0\"", walkon: "130'0\"" },
+    "Javelin": { target: "170'0\"", recruit: "160'0\"", walkon: "150'0\"" }
+  };
+
+  const originalFemaleStandards = {
+    "100m": { target: "12.10", recruit: "12.40", walkon: "12.60" },
+    "200m": { target: "25.50", recruit: "25.80", walkon: "26.00" },
+    "300m Hurdles": { target: "45.50", recruit: "45.80", walkon: "46.00" },
+    "400m": { target: "60.50", recruit: "60.80", walkon: "61.00" },
+    "400m Hurdles": { target: "63.50", recruit: "63.80", walkon: "64.00" },
+    "100m Hurdles": { target: "15.00", recruit: "15.30", walkon: "15.50" },
+    "800m": { target: "2:19", recruit: "2:22", walkon: "2:24" },
+    "1600m": { target: "5:35", recruit: "5:38", walkon: "5:40" },
+    "3200m": { target: "12:15", recruit: "12:18", walkon: "12:20" },
+    "Heptathlon": { target: "4800", recruit: "4400", walkon: "4200" },
+    "Long Jump": { target: "18'0\"", recruit: "17'6\"", walkon: "17'0\"" },
+    "Triple Jump": { target: "37'0\"", recruit: "36'0\"", walkon: "35'0\"" },
+    "Pole Vault": { target: "11'6\"", recruit: "11'0\"", walkon: "10'6\"" },
+    "High Jump": { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" },
+    "Shot Put": { target: "39'0\"", recruit: "37'0\"", walkon: "35'0\"" },
+    "Discus": { target: "120'0\"", recruit: "110'0\"", walkon: "100'0\"" },
+    "Weight Throw": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
+    "Hammer": { target: "130'0\"", recruit: "125'0\"", walkon: "120'0\"" },
+    "Javelin": { target: "130'0\"", recruit: "120'0\"", walkon: "110'0\"" }
+  };
+
+  // Create hardened standards (skip 100m and High Jump)
+  const hardenedMaleStandards: Record<string, { target: string; recruit: string; walkon: string }> = {};
+  Object.entries(originalMaleStandards).forEach(([event, perf]) => {
+    if (event === "100m" || event === "High Jump") {
+      // Keep original standards for 100m and High Jump
+      hardenedMaleStandards[event] = { ...perf };
+    } else {
+      hardenedMaleStandards[event] = {
+        target: hardenValue(perf.target, "target"),
+        recruit: hardenValue(perf.recruit, "recruit"),
+        walkon: perf.walkon // Keep walk-on unchanged
+      };
+    }
+  });
+
+  const hardenedFemaleStandards: Record<string, { target: string; recruit: string; walkon: string }> = {};
+  Object.entries(originalFemaleStandards).forEach(([event, perf]) => {
+    if (event === "100m" || event === "High Jump") {
+      // Keep original standards for 100m and High Jump
+      hardenedFemaleStandards[event] = { ...perf };
+    } else {
+      hardenedFemaleStandards[event] = {
+        target: hardenValue(perf.target, "target"),
+        recruit: hardenValue(perf.recruit, "recruit"),
+        walkon: perf.walkon // Keep walk-on unchanged
+      };
+    }
+  });
+
+  // Apply specific overrides for APU men's 200m and 400m
+  hardenedMaleStandards["200m"].target = "21.35";
+  hardenedMaleStandards["400m"].target = "47.25";
+
   schoolStandards.push({
     id: "pacwest_azusa_pacific",
     schoolName: "Azusa Pacific University",
     division: "D2",
     conference: "PacWest",
     state: "CA",
-    maleStandards: {
-      "100m": { target: "10.80", recruit: "11.10", walkon: "11.30" },
-      "200m": { target: "22.50", recruit: "22.80", walkon: "23.00" },
-      "300m Hurdles": { target: "39.50", recruit: "39.80", walkon: "40.00" },
-      "400m": { target: "50.50", recruit: "50.80", walkon: "51.00" },
-      "400m Hurdles": { target: "56.50", recruit: "56.80", walkon: "57.00" },
-      "110m Hurdles": { target: "15.00", recruit: "15.30", walkon: "15.50" },
-      "800m": { target: "1:58", recruit: "2:01", walkon: "2:03" },
-      "1600m": { target: "4:40", recruit: "4:43", walkon: "4:45" },
-      "3200m": { target: "10:05", recruit: "10:08", walkon: "10:10" },
-      "Decathlon": { target: "6400", recruit: "6000", walkon: "5800" },
-      "Long Jump": { target: "22'0\"", recruit: "21'6\"", walkon: "21'0\"" },
-      "Triple Jump": { target: "45'0\"", recruit: "44'0\"", walkon: "43'0\"" },
-      "Pole Vault": { target: "14'6\"", recruit: "14'0\"", walkon: "13'6\"" },
-      "High Jump": { target: "6'6\"", recruit: "6'4\"", walkon: "6'2\"" },
-      "Shot Put": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
-      "Discus": { target: "140'0\"", recruit: "130'0\"", walkon: "120'0\"" },
-      "Weight Throw": { target: "52'0\"", recruit: "50'0\"", walkon: "48'0\"" },
-      "Hammer": { target: "140'0\"", recruit: "135'0\"", walkon: "130'0\"" },
-      "Javelin": { target: "170'0\"", recruit: "160'0\"", walkon: "150'0\"" }
-    },
-    femaleStandards: {
-      "100m": { target: "12.10", recruit: "12.40", walkon: "12.60" },
-      "200m": { target: "25.50", recruit: "25.80", walkon: "26.00" },
-      "300m Hurdles": { target: "45.50", recruit: "45.80", walkon: "46.00" },
-      "400m": { target: "60.50", recruit: "60.80", walkon: "61.00" },
-      "400m Hurdles": { target: "63.50", recruit: "63.80", walkon: "64.00" },
-      "100m Hurdles": { target: "15.00", recruit: "15.30", walkon: "15.50" },
-      "800m": { target: "2:19", recruit: "2:22", walkon: "2:24" },
-      "1600m": { target: "5:35", recruit: "5:38", walkon: "5:40" },
-      "3200m": { target: "12:15", recruit: "12:18", walkon: "12:20" },
-      "Heptathlon": { target: "4800", recruit: "4400", walkon: "4200" },
-      "Long Jump": { target: "18'0\"", recruit: "17'6\"", walkon: "17'0\"" },
-      "Triple Jump": { target: "37'0\"", recruit: "36'0\"", walkon: "35'0\"" },
-      "Pole Vault": { target: "11'6\"", recruit: "11'0\"", walkon: "10'6\"" },
-      "High Jump": { target: "5'6\"", recruit: "5'4\"", walkon: "5'2\"" },
-      "Shot Put": { target: "39'0\"", recruit: "37'0\"", walkon: "35'0\"" },
-      "Discus": { target: "120'0\"", recruit: "110'0\"", walkon: "100'0\"" },
-      "Weight Throw": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
-      "Hammer": { target: "130'0\"", recruit: "125'0\"", walkon: "120'0\"" },
-      "Javelin": { target: "130'0\"", recruit: "120'0\"", walkon: "110'0\"" }
-    }
+    maleStandards: hardenedMaleStandards,
+    femaleStandards: hardenedFemaleStandards
   });
 })();
 
@@ -17819,7 +17918,68 @@ export const schoolStandards: SchoolStandards[] = [
 
   const deepClone = <T>(obj: T): T => JSON.parse(JSON.stringify(obj));
 
-  // 1) Exact clones (same standards as Azusa Pacific)
+  // Helper functions to make standards harder for all PacWest schools
+  const hardenTime = (v: string, factor: number) => {
+    if (v.includes(":")) {
+      const parts = v.split(":").map(Number);
+      let total = 0;
+      for (const p of parts) total = total * 60 + (isNaN(p) ? 0 : p);
+      const hardened = total * factor;
+      const minutes = Math.floor(hardened / 60);
+      const seconds = Math.round(hardened % 60);
+      const secStr = seconds.toString().padStart(2, "0");
+      return `${minutes}:${secStr}`;
+    } else {
+      const num = parseFloat(v);
+      if (isNaN(num)) return v;
+      return (num * factor).toFixed(2);
+    }
+  };
+
+  const parseFeetInches = (v: string): number | null => {
+    const m = v.match(/^(\d+)'(\d+)"$/);
+    if (!m) return null;
+    const feet = parseInt(m[1], 10);
+    const inches = parseInt(m[2], 10);
+    return feet * 12 + inches;
+  };
+  
+  const formatFeetInches = (inches: number): string => {
+    const total = Math.max(0, Math.round(inches));
+    const ft = Math.floor(total / 12);
+    const inch = total % 12;
+    return `${ft}'${inch}"`;
+  };
+
+  const hardenDistance = (v: string, factor: number) => {
+    const inches = parseFeetInches(v);
+    if (inches == null) return v;
+    return formatFeetInches(inches * factor);
+  };
+
+  const isPoints = (v: string) => /^\d{3,5}$/.test(v);
+  const hardenPoints = (v: string, factor: number) => {
+    const n = parseInt(v, 10);
+    if (isNaN(n)) return v;
+    return Math.round(n * factor) + "";
+  };
+
+  const hardenValue = (v: string, tier: "target" | "recruit") => {
+    const timeFactor = tier === "target" ? 0.97 : 0.985; // faster = harder
+    const distFactor = tier === "target" ? 1.015 : 1.008; // farther = harder
+    const pointsFactor = distFactor; // more points = harder
+
+    if (v.includes("'")) {
+      return hardenDistance(v, distFactor);
+    }
+    if (isPoints(v)) {
+      return hardenPoints(v, pointsFactor);
+    }
+    // treat as time
+    return hardenTime(v, timeFactor);
+  };
+
+  // 1) Exact clones (same hardened standards as APU)
   const clones = [
     { id: "pacwest_fresno_pacific", schoolName: "Fresno Pacific University", division: "D2", conference: "PacWest", state: "CA" },
     { id: "pacwest_concordia_irvine", schoolName: "Concordia University Irvine", division: "D2", conference: "PacWest", state: "CA" },
@@ -17834,7 +17994,7 @@ export const schoolStandards: SchoolStandards[] = [
     });
   });
 
-  // 2) Slightly easier standards helpers
+  // 2) Slightly easier standards helpers (for the "easier" schools)
   const easeTime = (v: string, factor: number) => {
     if (v.includes(":")) {
       const parts = v.split(":").map(Number);
@@ -17852,27 +18012,12 @@ export const schoolStandards: SchoolStandards[] = [
     }
   };
 
-  const parseFeetInches = (v: string): number | null => {
-    const m = v.match(/^(\d+)'(\d+)"$/);
-    if (!m) return null;
-    const feet = parseInt(m[1], 10);
-    const inches = parseInt(m[2], 10);
-    return feet * 12 + inches;
-  };
-  const formatFeetInches = (inches: number): string => {
-    const total = Math.max(0, Math.round(inches));
-    const ft = Math.floor(total / 12);
-    const inch = total % 12;
-    return `${ft}'${inch}"`;
-  };
-
   const easeDistance = (v: string, factor: number) => {
     const inches = parseFeetInches(v);
     if (inches == null) return v;
     return formatFeetInches(inches * factor);
   };
 
-  const isPoints = (v: string) => /^\d{3,5}$/.test(v);
   const easePoints = (v: string, factor: number) => {
     const n = parseInt(v, 10);
     if (isNaN(n)) return v;
@@ -17897,11 +18042,16 @@ export const schoolStandards: SchoolStandards[] = [
   const easeStandards = (standards: Record<string, { target: string; recruit: string; walkon: string }>) => {
     const out: Record<string, { target: string; recruit: string; walkon: string }> = {};
     Object.entries(standards).forEach(([event, perf]) => {
-      out[event] = {
-        target: easeValue(perf.target, "target"),
-        recruit: easeValue(perf.recruit, "recruit"),
-        walkon: easeValue(perf.walkon, "walkon"),
-      };
+      if (event === "100m" || event === "High Jump") {
+        // Keep APU's hardened standards for 100m and High Jump (which are unchanged from original)
+        out[event] = { ...perf };
+      } else {
+        out[event] = {
+          target: easeValue(perf.target, "target"),
+          recruit: easeValue(perf.recruit, "recruit"),
+          walkon: easeValue(perf.walkon, "walkon"), // For easier schools, we do ease walk-on too
+        };
+      }
     });
     return out;
   };
