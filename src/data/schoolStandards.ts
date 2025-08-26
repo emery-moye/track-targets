@@ -18077,6 +18077,44 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Rocky Mountain Athletic Conference (RMAC) — initial add with Men's 100m and Pole Vault (M/W)
+(() => {
+  const commonMaleStandards: Record<string, { target: string; recruit: string; walkon: string }> = {
+    "100m": { target: "10.60", recruit: "10.80", walkon: "11.20" }, // per spec: ~10.5-10.65 target, 10.7-10.8 recruit, 11.1-11.3 walk-on
+    "Pole Vault": { target: "15'9\"", recruit: "15'0\"", walkon: "14'3\"" } // within requested ranges
+  };
+
+  const commonFemaleStandards: Record<string, { target: string; recruit: string; walkon: string }> = {
+    "Pole Vault": { target: "12'0\"", recruit: "11'6\"", walkon: "11'0\"" }
+  };
+
+  type Meta = { id: string; schoolName: string; division: string; conference: string; state: string };
+  const rmacSchools: Meta[] = [
+    { id: "rmac_adams_state", schoolName: "Adams State University", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_black_hills_state", schoolName: "Black Hills State University", division: "D2", conference: "RMAC", state: "SD" },
+    { id: "rmac_csu_pueblo", schoolName: "Colorado State University Pueblo", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_chadron_state", schoolName: "Chadron State College", division: "D2", conference: "RMAC", state: "NE" },
+    { id: "rmac_colorado_christian", schoolName: "Colorado Christian University", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_colorado_mines", schoolName: "Colorado School of Mines", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_colorado_mesa", schoolName: "Colorado Mesa University", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_fort_lewis", schoolName: "Fort Lewis College", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_msu_denver", schoolName: "MSU Denver", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_regis", schoolName: "Regis University", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_south_dakota_mines", schoolName: "South Dakota Mines", division: "D2", conference: "RMAC", state: "SD" },
+    { id: "rmac_uc_colorado_springs", schoolName: "University of Colorado Colorado Springs", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_western_colorado", schoolName: "Western Colorado University", division: "D2", conference: "RMAC", state: "CO" },
+    { id: "rmac_westminster_ut", schoolName: "Westminster University (Utah)", division: "D2", conference: "RMAC", state: "UT" },
+  ];
+
+  rmacSchools.forEach(meta => {
+    schoolStandards.push({
+      ...meta,
+      maleStandards: { ...commonMaleStandards },
+      femaleStandards: { ...commonFemaleStandards },
+    });
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
