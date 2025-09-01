@@ -18354,11 +18354,29 @@ export const schoolStandards: SchoolStandards[] = [
     { id: "wiac_uw_stevens_point", schoolName: "University of Wisconsin-Stevens Point", division: "D3", conference: "WIAC", state: "WI" },
   ];
 
+  // Schools with hardened sprint standards (La Crosse, Eau Claire, Oshkosh, Whitewater)
+  const hardenedSchoolIds = ["wiac_uw_la_crosse", "wiac_uw_eau_claire", "wiac_uw_oshkosh", "wiac_uw_whitewater"];
+  
   wiacSchools.forEach((meta) => {
-    schoolStandards.push({
-      ...meta,
+    const baseStandards = {
       maleStandards: southAlabama.maleStandards ? { ...southAlabama.maleStandards } : undefined,
       femaleStandards: { ...southAlabama.femaleStandards },
+    };
+
+    // Apply hardened standards for specific schools
+    if (hardenedSchoolIds.includes(meta.id) && baseStandards.maleStandards) {
+      baseStandards.maleStandards["100m"] = { target: "10.32", recruit: "10.52", walkon: "10.71" };
+      baseStandards.maleStandards["200m"] = { target: "20.93", recruit: "21.23", walkon: "21.52" };
+      baseStandards.maleStandards["400m"] = { target: "46.56", recruit: "47.25", walkon: "47.93" };
+      
+      baseStandards.femaleStandards["100m"] = { target: "11.49", recruit: "11.79", walkon: "12.08" };
+      baseStandards.femaleStandards["200m"] = { target: "23.67", recruit: "24.06", walkon: "24.45" };
+      baseStandards.femaleStandards["400m"] = { target: "53.80", recruit: "54.68", walkon: "56.74" };
+    }
+
+    schoolStandards.push({
+      ...meta,
+      ...baseStandards,
     });
   });
 })();
