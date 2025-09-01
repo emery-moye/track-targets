@@ -18357,6 +18357,78 @@ export const schoolStandards: SchoolStandards[] = [
   // Schools with hardened sprint standards (La Crosse, Eau Claire, Oshkosh, Whitewater)
   const hardenedSchoolIds = ["wiac_uw_la_crosse", "wiac_uw_eau_claire", "wiac_uw_oshkosh", "wiac_uw_whitewater"];
   
+  // Schools to ease standards slightly (make ~0.5% easier)
+  const easedSchoolIds = ["wiac_uw_stout", "wiac_uw_stevens_point"];
+
+  // Helper to ease standards by percentage
+  const easeStandardsByPct = (
+    standards: Record<string, EventStandards> | undefined,
+    timePct = 0.005,
+    distPct = 0.005
+  ): Record<string, EventStandards> | undefined => {
+    if (!standards) return standards;
+
+    const isDistance = (val: string) => val.includes("'") || val.includes('"') || val.includes("\u2019") || val.includes("\u201D");
+    const isTime = (val: string) => val.includes(":") || /\d+\.\d+/.test(val);
+
+    const formatTime = (totalSeconds: number) => {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds - minutes * 60;
+      const secStr = seconds < 10 ? `0${seconds.toFixed(2)}` : seconds.toFixed(2);
+      return minutes > 0 ? `${minutes}:${secStr}` : seconds.toFixed(2);
+    };
+
+    const adjustValue = (event: string, val: string): string => {
+      // Points-based events
+      if (event === "Decathlon" || event === "Heptathlon") {
+        const n = parseFloat(val.replace(/[^\d.]/g, ""));
+        if (Number.isNaN(n)) return val;
+        const adjusted = Math.round(n * (1 - distPct) / 10) * 10; // nearest 10
+        return String(adjusted);
+      }
+
+      // Distances (feet/inches)
+      if (isDistance(val)) {
+        const feetMatch = val.match(/(\d+)[\u0027\u2019]/);
+        const inchMatch = val.match(/(\d+)[\u0022\u201D]/);
+        const feet = feetMatch ? parseInt(feetMatch[1], 10) : 0;
+        const inches = inchMatch ? parseInt(inchMatch[1], 10) : 0;
+        const totalInches = feet * 12 + inches;
+        const newInches = Math.max(0, Math.round(totalInches * (1 - distPct)));
+        const newFeet = Math.floor(newInches / 12);
+        const newRemInches = newInches % 12;
+        return `${newFeet}'${newRemInches}\"`;
+      }
+
+      // Times (ss.xx or mm:ss.xx)
+      if (isTime(val)) {
+        if (val.includes(":")) {
+          const [mStr, sStr] = val.split(":");
+          const minutes = parseInt(mStr, 10);
+          const seconds = parseFloat(sStr);
+          const total = minutes * 60 + seconds;
+          const adjusted = total * (1 + timePct);
+          return formatTime(adjusted);
+        }
+        const seconds = parseFloat(val);
+        if (Number.isNaN(seconds)) return val;
+        return parseFloat((seconds * (1 + timePct)).toFixed(2)).toFixed(2);
+      }
+
+      return val;
+    };
+
+    const result: Record<string, EventStandards> = {};
+    Object.entries(standards).forEach(([event, ev]) => {
+      result[event] = {
+        target: adjustValue(event, ev.target),
+        recruit: adjustValue(event, ev.recruit),
+        walkon: adjustValue(event, ev.walkon),
+      };
+    });
+    return result;
+  };
+  
   wiacSchools.forEach((meta) => {
     const baseStandards = {
       maleStandards: southAlabama.maleStandards ? { ...southAlabama.maleStandards } : undefined,
@@ -18372,6 +18444,14 @@ export const schoolStandards: SchoolStandards[] = [
       baseStandards.femaleStandards["100m"] = { target: "11.49", recruit: "11.79", walkon: "12.08" };
       baseStandards.femaleStandards["200m"] = { target: "23.67", recruit: "24.06", walkon: "24.45" };
       baseStandards.femaleStandards["400m"] = { target: "53.80", recruit: "54.68", walkon: "56.74" };
+    }
+
+    // Apply easing for Stout and Stevens Point
+    if (easedSchoolIds.includes(meta.id)) {
+      if (baseStandards.maleStandards) {
+        baseStandards.maleStandards = easeStandardsByPct(baseStandards.maleStandards);
+      }
+      baseStandards.femaleStandards = easeStandardsByPct(baseStandards.femaleStandards)!;
     }
 
     schoolStandards.push({
