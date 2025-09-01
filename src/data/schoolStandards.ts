@@ -18239,23 +18239,98 @@ export const schoolStandards: SchoolStandards[] = [
   );
   if (!adams) return;
 
-  type Meta = { id: string; schoolName: string; division: string; conference: string; state: string };
+  // Helper function to make standards 1% easier
+  const makeEasier = (performance: string, event: string): string => {
+    // Time-based events (lower is better) - increase by 1%
+    const isTimeBased = event.includes('m') && !event.includes('Jump') && !event.includes('Put') && !event.includes('Throw') && !event.includes('Discus') && !event.includes('Hammer') && !event.includes('Javelin') && !event.includes('athlon');
+    
+    // Handle time formats (mm:ss.xx or ss.xx)
+    if (performance.includes(':')) {
+      const [minutes, seconds] = performance.split(':');
+      const totalSeconds = parseInt(minutes) * 60 + parseFloat(seconds);
+      const newSeconds = totalSeconds * 1.01; // 1% slower (easier)
+      const newMinutes = Math.floor(newSeconds / 60);
+      const remainingSeconds = (newSeconds % 60).toFixed(2);
+      return newMinutes > 0 ? `${newMinutes}:${remainingSeconds.padStart(5, '0')}` : remainingSeconds;
+    }
+    
+    // Handle distance formats with feet and inches
+    const straightApostrophe = "'";
+    const curlyApostrophe = "\u2019";
+    const straightQuote = '"';
+    const curlyQuote = "\u201D";
+    if (performance.includes(straightApostrophe) || performance.includes(straightQuote) || 
+        performance.includes(curlyApostrophe) || performance.includes(curlyQuote)) {
+      const feetMatch = performance.match(/(\d+)[\u0027\u2019]/);
+      const inchMatch = performance.match(/(\d+)[\u0022\u201D]/);
+      const feet = feetMatch ? parseInt(feetMatch[1]) : 0;
+      const inches = inchMatch ? parseInt(inchMatch[1]) : 0;
+      const totalInches = feet * 12 + inches;
+      
+      if (isTimeBased) {
+        // This shouldn't happen for distance formats, but handle it
+        const newInches = Math.round(totalInches * 1.01);
+        const newFeet = Math.floor(newInches / 12);
+        const remainingInches = newInches % 12;
+        return `${newFeet}'${remainingInches}"`;
+      } else {
+        // Distance/height events (higher is better) - decrease by 1% (making it easier to achieve)
+        const newInches = Math.round(totalInches * 0.99);
+        const newFeet = Math.floor(newInches / 12);
+        const remainingInches = newInches % 12;
+        return `${newFeet}'${remainingInches}"`;
+      }
+    }
+    
+    // Handle regular numbers (points for decathlon/heptathlon)
+    const numericValue = parseFloat(performance.replace(/[^\d.]/g, ''));
+    if (!isNaN(numericValue)) {
+      if (isTimeBased) {
+        return (numericValue * 1.01).toFixed(2);
+      } else {
+        // For points and other distance events, make easier (lower requirement)
+        return Math.round(numericValue * 0.99).toString();
+      }
+    }
+    
+    return performance; // Return original if can't parse
+  };
+
+  // Helper function to apply easier standards to all events
+  const applyEasierStandards = (standards: Record<string, EventStandards>): Record<string, EventStandards> => {
+    const easierStandards: Record<string, EventStandards> = {};
+    
+    Object.keys(standards).forEach(event => {
+      easierStandards[event] = {
+        target: makeEasier(standards[event].target, event),
+        recruit: makeEasier(standards[event].recruit, event),
+        walkon: makeEasier(standards[event].walkon, event),
+      };
+    });
+    
+    return easierStandards;
+  };
+
+  type Meta = { id: string; schoolName: string; division: string; conference: string; state: string; makeEasier?: boolean };
   const arcSchools: Meta[] = [
     { id: "arc_central_college", schoolName: "Central College", division: "D3", conference: "American Rivers Conference", state: "IA" },
     { id: "arc_university_of_dubuque", schoolName: "University of Dubuque", division: "D3", conference: "American Rivers Conference", state: "IA" },
     { id: "arc_loras_college", schoolName: "Loras College", division: "D3", conference: "American Rivers Conference", state: "IA" },
     { id: "arc_nebraska_wesleyan", schoolName: "Nebraska Wesleyan University", division: "D3", conference: "American Rivers Conference", state: "NE" },
-    { id: "arc_simpson_college", schoolName: "Simpson College", division: "D3", conference: "American Rivers Conference", state: "IA" },
-    { id: "arc_buena_vista", schoolName: "Buena Vista University", division: "D3", conference: "American Rivers Conference", state: "IA" },
-    { id: "arc_luther_college", schoolName: "Luther College", division: "D3", conference: "American Rivers Conference", state: "IA" },
-    { id: "arc_coe_college", schoolName: "Coe College", division: "D3", conference: "American Rivers Conference", state: "IA" },
+    { id: "arc_simpson_college", schoolName: "Simpson College", division: "D3", conference: "American Rivers Conference", state: "IA", makeEasier: true },
+    { id: "arc_buena_vista", schoolName: "Buena Vista University", division: "D3", conference: "American Rivers Conference", state: "IA", makeEasier: true },
+    { id: "arc_luther_college", schoolName: "Luther College", division: "D3", conference: "American Rivers Conference", state: "IA", makeEasier: true },
+    { id: "arc_coe_college", schoolName: "Coe College", division: "D3", conference: "American Rivers Conference", state: "IA", makeEasier: true },
   ];
 
   arcSchools.forEach((meta) => {
+    const maleStandards = adams.maleStandards ? (meta.makeEasier ? applyEasierStandards({ ...adams.maleStandards }) : { ...adams.maleStandards }) : undefined;
+    const femaleStandards = meta.makeEasier ? applyEasierStandards({ ...adams.femaleStandards }) : { ...adams.femaleStandards };
+
     schoolStandards.push({
       ...meta,
-      maleStandards: adams.maleStandards ? { ...adams.maleStandards } : undefined,
-      femaleStandards: { ...adams.femaleStandards },
+      maleStandards,
+      femaleStandards,
     });
   });
 })();
