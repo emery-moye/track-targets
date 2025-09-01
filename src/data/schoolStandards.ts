@@ -18461,6 +18461,43 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Add UAA schools using Fordham University standards
+(() => {
+  const fordham = schoolStandards.find(
+    (s) => s.id === "16" || s.schoolName === "Fordham University"
+  );
+  if (!fordham) return;
+
+  type UAAMeta = { id: string; schoolName: string; division: string; conference: string; state: string };
+  const uaaSchools: UAAMeta[] = [
+    { id: "uaa_carnegie_mellon", schoolName: "Carnegie Mellon University", division: "D3", conference: "UAA", state: "PA" },
+    { id: "uaa_emory", schoolName: "Emory University", division: "D3", conference: "UAA", state: "GA" },
+    { id: "uaa_university_of_chicago", schoolName: "University of Chicago", division: "D3", conference: "UAA", state: "IL" },
+    { id: "uaa_washington_university_in_st_louis", schoolName: "Washington University in St. Louis", division: "D3", conference: "UAA", state: "MO" },
+    { id: "uaa_case_western_reserve", schoolName: "Case Western Reserve University", division: "D3", conference: "UAA", state: "OH" },
+    { id: "uaa_nyu", schoolName: "New York University", division: "D3", conference: "UAA", state: "NY" },
+    { id: "uaa_brandeis", schoolName: "Brandeis University", division: "D3", conference: "UAA", state: "MA" },
+  ];
+
+  const deepCopyStandards = (src?: Record<string, EventStandards>): Record<string, EventStandards> | undefined => {
+    if (!src) return undefined;
+    const out: Record<string, EventStandards> = {};
+    Object.entries(src).forEach(([event, s]) => {
+      out[event] = { target: s.target, recruit: s.recruit, walkon: s.walkon };
+    });
+    return out;
+  };
+
+  uaaSchools.forEach((meta) => {
+    if (schoolStandards.some((s) => s.id === meta.id)) return; // guard duplicates
+    schoolStandards.push({
+      ...meta,
+      maleStandards: deepCopyStandards(fordham.maleStandards),
+      femaleStandards: deepCopyStandards(fordham.femaleStandards)!,
+    });
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
