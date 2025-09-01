@@ -18232,6 +18232,34 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Add American Rivers Conference (A-R-C) schools using Adams State standards
+(() => {
+  const adams = schoolStandards.find(
+    (s) => s.id === "rmac_adams_state" || s.schoolName === "Adams State University"
+  );
+  if (!adams) return;
+
+  type Meta = { id: string; schoolName: string; division: string; conference: string; state: string };
+  const arcSchools: Meta[] = [
+    { id: "arc_central_college", schoolName: "Central College", division: "D3", conference: "American Rivers Conference", state: "IA" },
+    { id: "arc_university_of_dubuque", schoolName: "University of Dubuque", division: "D3", conference: "American Rivers Conference", state: "IA" },
+    { id: "arc_loras_college", schoolName: "Loras College", division: "D3", conference: "American Rivers Conference", state: "IA" },
+    { id: "arc_nebraska_wesleyan", schoolName: "Nebraska Wesleyan University", division: "D3", conference: "American Rivers Conference", state: "NE" },
+    { id: "arc_simpson_college", schoolName: "Simpson College", division: "D3", conference: "American Rivers Conference", state: "IA" },
+    { id: "arc_buena_vista", schoolName: "Buena Vista University", division: "D3", conference: "American Rivers Conference", state: "IA" },
+    { id: "arc_luther_college", schoolName: "Luther College", division: "D3", conference: "American Rivers Conference", state: "IA" },
+    { id: "arc_coe_college", schoolName: "Coe College", division: "D3", conference: "American Rivers Conference", state: "IA" },
+  ];
+
+  arcSchools.forEach((meta) => {
+    schoolStandards.push({
+      ...meta,
+      maleStandards: adams.maleStandards ? { ...adams.maleStandards } : undefined,
+      femaleStandards: { ...adams.femaleStandards },
+    });
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
