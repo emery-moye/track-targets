@@ -18335,12 +18335,39 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Add WIAC schools using University of South Alabama standards
+(() => {
+  const southAlabama = schoolStandards.find(
+    (s) => s.id === "89" || s.schoolName === "University of South Alabama"
+  );
+  if (!southAlabama) return;
+
+  type WIACMeta = { id: string; schoolName: string; division: string; conference: string; state: string };
+  const wiacSchools: WIACMeta[] = [
+    { id: "wiac_uw_whitewater", schoolName: "University of Wisconsin-Whitewater", division: "D3", conference: "WIAC", state: "WI" },
+    { id: "wiac_uw_la_crosse", schoolName: "University of Wisconsin-La Crosse", division: "D3", conference: "WIAC", state: "WI" },
+    { id: "wiac_uw_eau_claire", schoolName: "University of Wisconsin-Eau Claire", division: "D3", conference: "WIAC", state: "WI" },
+    { id: "wiac_uw_oshkosh", schoolName: "University of Wisconsin-Oshkosh", division: "D3", conference: "WIAC", state: "WI" },
+    { id: "wiac_uw_river_falls", schoolName: "University of Wisconsin-River Falls", division: "D3", conference: "WIAC", state: "WI" },
+    { id: "wiac_uw_platteville", schoolName: "University of Wisconsin-Platteville", division: "D3", conference: "WIAC", state: "WI" },
+    { id: "wiac_uw_stout", schoolName: "University of Wisconsin-Stout", division: "D3", conference: "WIAC", state: "WI" },
+    { id: "wiac_uw_stevens_point", schoolName: "University of Wisconsin-Stevens Point", division: "D3", conference: "WIAC", state: "WI" },
+  ];
+
+  wiacSchools.forEach((meta) => {
+    schoolStandards.push({
+      ...meta,
+      maleStandards: southAlabama.maleStandards ? { ...southAlabama.maleStandards } : undefined,
+      femaleStandards: { ...southAlabama.femaleStandards },
+    });
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
   );
 };
-
 export const searchSchools = (query: string): SchoolStandards[] => {
   if (!query.trim()) return schoolStandards;
   
