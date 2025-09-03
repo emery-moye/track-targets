@@ -18498,16 +18498,8 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
-// Add CUNYAC schools using Slippery Rock University standards
+// Add CUNYAC schools with custom easier standards
 (() => {
-  // Find Slippery Rock University to use as template
-  const slipperyRockTemplate = schoolStandards.find(school => school.id === "psac_slippery_rock");
-  
-  if (!slipperyRockTemplate) {
-    console.warn("Slippery Rock University not found for CUNYAC template");
-    return;
-  }
-
   const cunyacSchools = [
     {
       id: "cunyac_brooklyn_college",
@@ -18553,25 +18545,69 @@ export const schoolStandards: SchoolStandards[] = [
     }
   ];
 
-  // Deep copy function for standards
-  const deepCopyStandards = (standards: any) => {
-    if (!standards) return undefined;
-    return JSON.parse(JSON.stringify(standards));
+  // Custom easier standards for CUNYAC schools
+  const cunyacMaleStandards = {
+    "100m": { target: "11.00", recruit: "11.15", walkon: "11.30" },
+    "200m": { target: "22.50", recruit: "22.80", walkon: "23.10" },
+    "400m": { target: "50.50", recruit: "51.50", walkon: "52.50" },
+    "800m": { target: "2:05.00", recruit: "2:10.00", walkon: "2:15.00" },
+    "1500m": { target: "4:20.00", recruit: "4:30.00", walkon: "4:40.00" },
+    "Mile": { target: "4:45.00", recruit: "4:55.00", walkon: "5:05.00" },
+    "5000m": { target: "17:00.00", recruit: "17:30.00", walkon: "18:00.00" },
+    "10000m": { target: "35:00.00", recruit: "36:00.00", walkon: "37:00.00" },
+    "110m Hurdles": { target: "15.50", recruit: "16.00", walkon: "16.50" },
+    "400m Hurdles": { target: "58.00", recruit: "59.50", walkon: "61.00" },
+    "High Jump": { target: "6'3\"", recruit: "6'0\"", walkon: "5'8\"" },
+    "Pole Vault": { target: "13'0\"", recruit: "12'0\"", walkon: "11'0\"" },
+    "Long Jump": { target: "21'0\"", recruit: "20'0\"", walkon: "19'0\"" },
+    "Triple Jump": { target: "42'0\"", recruit: "40'0\"", walkon: "38'0\"" },
+    "Shot Put": { target: "40'0\"", recruit: "37'0\"", walkon: "34'0\"" },
+    "Discus": { target: "125'0\"", recruit: "115'0\"", walkon: "105'0\"" },
+    "Hammer": { target: "130'0\"", recruit: "120'0\"", walkon: "110'0\"" },
+    "Javelin": { target: "150'0\"", recruit: "140'0\"", walkon: "130'0\"" },
+    "Decathlon": { target: "5000", recruit: "4700", walkon: "4400" }
+  };
+
+  const cunyacFemaleStandards = {
+    "100m": { target: "12.80", recruit: "13.00", walkon: "13.20" },
+    "200m": { target: "26.00", recruit: "26.50", walkon: "27.00" },
+    "400m": { target: "60.00", recruit: "61.50", walkon: "63.00" },
+    "800m": { target: "2:30.00", recruit: "2:35.00", walkon: "2:40.00" },
+    "1500m": { target: "5:10.00", recruit: "5:20.00", walkon: "5:30.00" },
+    "Mile": { target: "5:40.00", recruit: "5:50.00", walkon: "6:00.00" },
+    "5000m": { target: "19:30.00", recruit: "20:00.00", walkon: "20:30.00" },
+    "10000m": { target: "41:00.00", recruit: "42:00.00", walkon: "43:00.00" },
+    "100m Hurdles": { target: "16.00", recruit: "16.50", walkon: "17.00" },
+    "400m Hurdles": { target: "67.00", recruit: "69.00", walkon: "71.00" },
+    "High Jump": { target: "5'0\"", recruit: "4'10\"", walkon: "4'8\"" },
+    "Pole Vault": { target: "9'6\"", recruit: "9'0\"", walkon: "8'6\"" },
+    "Long Jump": { target: "16'6\"", recruit: "15'6\"", walkon: "14'6\"" },
+    "Triple Jump": { target: "33'0\"", recruit: "31'0\"", walkon: "29'0\"" },
+    "Shot Put": { target: "34'0\"", recruit: "31'0\"", walkon: "28'0\"" },
+    "Discus": { target: "110'0\"", recruit: "100'0\"", walkon: "90'0\"" },
+    "Hammer": { target: "120'0\"", recruit: "110'0\"", walkon: "100'0\"" },
+    "Javelin": { target: "115'0\"", recruit: "105'0\"", walkon: "95'0\"" },
+    "Heptathlon": { target: "3800", recruit: "3500", walkon: "3200" }
   };
 
   cunyacSchools.forEach(schoolMeta => {
-    // Check if school already exists
-    const existingSchool = schoolStandards.find(school => school.id === schoolMeta.id);
-    if (!existingSchool) {
-      schoolStandards.push({
-        id: schoolMeta.id,
-        schoolName: schoolMeta.schoolName,
-        division: schoolMeta.division,
-        conference: schoolMeta.conference,
-        state: schoolMeta.state,
-        maleStandards: deepCopyStandards(slipperyRockTemplate.maleStandards),
-        femaleStandards: deepCopyStandards(slipperyRockTemplate.femaleStandards)!,
-      });
+    // Check if school already exists and update/add it
+    const existingIndex = schoolStandards.findIndex(school => school.id === schoolMeta.id);
+    
+    const schoolData = {
+      id: schoolMeta.id,
+      schoolName: schoolMeta.schoolName,
+      division: schoolMeta.division,
+      conference: schoolMeta.conference,
+      state: schoolMeta.state,
+      maleStandards: { ...cunyacMaleStandards },
+      femaleStandards: { ...cunyacFemaleStandards }
+    };
+
+    if (existingIndex >= 0) {
+      schoolStandards[existingIndex] = schoolData;
+    } else {
+      schoolStandards.push(schoolData);
     }
   });
 })();
