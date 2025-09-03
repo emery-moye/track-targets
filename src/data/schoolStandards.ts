@@ -18569,9 +18569,9 @@ export const schoolStandards: SchoolStandards[] = [
   };
 
   const cunyacFemaleStandards = {
-    "100m": { target: "12.80", recruit: "13.00", walkon: "13.20" },
-    "200m": { target: "26.00", recruit: "26.50", walkon: "27.00" },
-    "400m": { target: "60.00", recruit: "61.50", walkon: "63.00" },
+    "100m": { target: "13.25", recruit: "13.55", walkon: "13.85" },
+    "200m": { target: "27.50", recruit: "28.00", walkon: "28.60" },
+    "400m": { target: "65.00", recruit: "67.00", walkon: "69.00" },
     "800m": { target: "2:30.00", recruit: "2:35.00", walkon: "2:40.00" },
     "1500m": { target: "5:10.00", recruit: "5:20.00", walkon: "5:30.00" },
     "Mile": { target: "5:40.00", recruit: "5:50.00", walkon: "6:00.00" },
