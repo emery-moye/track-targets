@@ -18547,9 +18547,9 @@ export const schoolStandards: SchoolStandards[] = [
 
   // Custom easier standards for CUNYAC schools
   const cunyacMaleStandards = {
-    "100m": { target: "11.00", recruit: "11.15", walkon: "11.30" },
-    "200m": { target: "22.50", recruit: "22.80", walkon: "23.10" },
-    "400m": { target: "50.50", recruit: "51.50", walkon: "52.50" },
+    "100m": { target: "11.15", recruit: "11.45", walkon: "12.00" },
+    "200m": { target: "22.99", recruit: "23.65", walkon: "24.00" },
+    "400m": { target: "50.75", recruit: "53.00", walkon: "57.00" },
     "800m": { target: "2:05.00", recruit: "2:10.00", walkon: "2:15.00" },
     "1500m": { target: "4:20.00", recruit: "4:30.00", walkon: "4:40.00" },
     "Mile": { target: "4:45.00", recruit: "4:55.00", walkon: "5:05.00" },
