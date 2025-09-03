@@ -18498,6 +18498,84 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// Add CUNYAC schools using Slippery Rock University standards
+(() => {
+  // Find Slippery Rock University to use as template
+  const slipperyRockTemplate = schoolStandards.find(school => school.id === "psac_slippery_rock");
+  
+  if (!slipperyRockTemplate) {
+    console.warn("Slippery Rock University not found for CUNYAC template");
+    return;
+  }
+
+  const cunyacSchools = [
+    {
+      id: "cunyac_brooklyn_college",
+      schoolName: "Brooklyn College",
+      division: "D3",
+      conference: "CUNYAC",
+      state: "NY"
+    },
+    {
+      id: "cunyac_ccny",
+      schoolName: "City College of New York",
+      division: "D3",
+      conference: "CUNYAC",
+      state: "NY"
+    },
+    {
+      id: "cunyac_hunter_college",
+      schoolName: "Hunter College",
+      division: "D3",
+      conference: "CUNYAC",
+      state: "NY"
+    },
+    {
+      id: "cunyac_lehman_college",
+      schoolName: "Lehman College",
+      division: "D3",
+      conference: "CUNYAC",
+      state: "NY"
+    },
+    {
+      id: "cunyac_medgar_evers_college",
+      schoolName: "Medgar Evers College",
+      division: "D3",
+      conference: "CUNYAC",
+      state: "NY"
+    },
+    {
+      id: "cunyac_york_college",
+      schoolName: "York College",
+      division: "D3",
+      conference: "CUNYAC",
+      state: "NY"
+    }
+  ];
+
+  // Deep copy function for standards
+  const deepCopyStandards = (standards: any) => {
+    if (!standards) return undefined;
+    return JSON.parse(JSON.stringify(standards));
+  };
+
+  cunyacSchools.forEach(schoolMeta => {
+    // Check if school already exists
+    const existingSchool = schoolStandards.find(school => school.id === schoolMeta.id);
+    if (!existingSchool) {
+      schoolStandards.push({
+        id: schoolMeta.id,
+        schoolName: schoolMeta.schoolName,
+        division: schoolMeta.division,
+        conference: schoolMeta.conference,
+        state: schoolMeta.state,
+        maleStandards: deepCopyStandards(slipperyRockTemplate.maleStandards),
+        femaleStandards: deepCopyStandards(slipperyRockTemplate.femaleStandards)!,
+      });
+    }
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
