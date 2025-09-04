@@ -62,6 +62,7 @@ const determineTier = (userPerformance: string, standards: any, event: string): 
 
 export const generateMatches = (gradeLevel: string, event: string, personalBest: string, gender: string): SchoolMatch[] => {
   const matches: SchoolMatch[] = [];
+  const eliteConferences = ['SEC', 'Big Ten', 'ACC', 'Big 12'];
   
   console.log(`=== GENERATING MATCHES ===`);
   console.log(`Event: ${event}, Personal Best: ${personalBest}, Gender: ${gender}`);
@@ -82,6 +83,12 @@ export const generateMatches = (gradeLevel: string, event: string, personalBest:
     console.log(`Standards for ${event}:`, standards[event]);
     const tier = determineTier(personalBest, standards, event);
     console.log(`Tier result: ${tier}`);
+    
+    // Prevent walk-on matches for elite conferences
+    if (tier === 'walkon' && eliteConferences.includes(school.conference)) {
+      console.log(`Skipping walk-on match for elite conference: ${school.conference}`);
+      return;
+    }
     
     if (tier) {
       const match = {
