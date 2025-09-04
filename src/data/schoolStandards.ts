@@ -1743,9 +1743,9 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "A10",
     state: "PA",
     maleStandards: {
-      "100m": { target: "10.80", recruit: "10.90", walkon: "11.00" },
-      "200m": { target: "22.20", recruit: "22.40", walkon: "22.60" },
-      "400m": { target: "49.50", recruit: "50.00", walkon: "50.50" },
+      "100m": { target: "10.68", recruit: "10.85", walkon: "11.00" },
+      "200m": { target: "21.40", recruit: "22.00", walkon: "22.50" },
+      "400m": { target: "47.50", recruit: "48.65", walkon: "50.00" },
       "800m": { target: "1:55.00", recruit: "1:57.00", walkon: "1:59.00" },
       "1500m": { target: "4:05.00", recruit: "4:09.00", walkon: "4:13.00" },
       "Mile": { target: "4:28.00", recruit: "4:32.00", walkon: "4:36.00" },
