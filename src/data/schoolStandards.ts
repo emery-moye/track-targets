@@ -1746,7 +1746,7 @@ export const schoolStandards: SchoolStandards[] = [
       "100m": { target: "10.68", recruit: "10.85", walkon: "11.00" },
       "200m": { target: "21.40", recruit: "22.00", walkon: "22.50" },
       "400m": { target: "47.50", recruit: "48.65", walkon: "50.00" },
-      "800m": { target: "1:52.50", recruit: "1:54.50", walkon: "1:56.50" },
+      "800m": { target: "1:52.50", recruit: "1:54.50", walkon: "1:58.50" },
       "1500m": { target: "4:05.00", recruit: "4:09.00", walkon: "4:13.00" },
       "Mile": { target: "4:28.00", recruit: "4:32.00", walkon: "4:36.00" },
       "5000m": { target: "15:20.00", recruit: "15:35.00", walkon: "15:50.00" },
