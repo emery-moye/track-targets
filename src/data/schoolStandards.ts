@@ -2791,7 +2791,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Mile": { target: "4:08.00", recruit: "4:12.00", walkon: "4:18.00" },
       "5000m": { target: "15:50.00", recruit: "16:20.00", walkon: "16:55.00" },
       "10000m": { target: "32:15.00", recruit: "32:20.00", walkon: "32:25.00" },
-      "110m Hurdles": { target: "13.90", recruit: "14.20", walkon: "14.65" },
+      "110m Hurdles": { target: "14.05", recruit: "14.40", walkon: "14.65" },
       "400m Hurdles": { target: "52.00", recruit: "53.50", walkon: "55.50" },
       "High Jump": { target: "6'9\"", recruit: "6'7\"", walkon: "6'4\"" },
       "Pole Vault": { target: "15'9\"", recruit: "15'3\"", walkon: "14'0\"" },
