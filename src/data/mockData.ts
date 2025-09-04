@@ -36,9 +36,9 @@ const determineTier = (userPerformance: string, standards: any, event: string): 
   const userValue = parsePerformance(userPerformance, event);
   const targetValue = parsePerformance(standards[event].target, event);
   const recruitValue = parsePerformance(standards[event].recruit, event);
-  const walkonValue = parsePerformance(standards[event].walkon, event);
+  const walkonValue = standards[event].walkon ? parsePerformance(standards[event].walkon, event) : null;
   
-  console.log(`Event: ${event}, User: ${userPerformance} (${userValue}), Target: ${standards[event].target} (${targetValue}), Recruit: ${standards[event].recruit} (${recruitValue}), Walk-on: ${standards[event].walkon} (${walkonValue})`);
+  console.log(`Event: ${event}, User: ${userPerformance} (${userValue}), Target: ${standards[event].target} (${targetValue}), Recruit: ${standards[event].recruit} (${recruitValue}), Walk-on: ${standards[event].walkon || 'N/A'} (${walkonValue || 'N/A'})`);
   
   // For track events (time-based), lower is better
   const isTimeBased = event.includes('m') && !event.includes('Jump') && !event.includes('Put') && !event.includes('Throw') && !event.includes('Discus') && !event.includes('Hammer') && !event.includes('Javelin');
@@ -48,13 +48,13 @@ const determineTier = (userPerformance: string, standards: any, event: string): 
   if (isTimeBased) {
     if (userValue <= targetValue) return "target";
     if (userValue <= recruitValue) return "recruit";
-    if (userValue <= walkonValue) return "walkon";
+    if (walkonValue !== null && userValue <= walkonValue) return "walkon";
   } else {
     // For field events (distance/height), higher is better
     // Check if user meets each tier's minimum requirement
     if (userValue >= targetValue) return "target";
     if (userValue >= recruitValue) return "recruit";
-    if (userValue >= walkonValue) return "walkon";
+    if (walkonValue !== null && userValue >= walkonValue) return "walkon";
   }
   
   return null;

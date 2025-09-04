@@ -23,6 +23,11 @@ export const SchoolDetailsModal = ({ school, isOpen, onClose }: SchoolDetailsMod
       );
     }
 
+    // Check if any event has walk-on standards
+    const hasWalkonStandards = Object.values(standards).some((eventStandards: any) => 
+      eventStandards?.walkon
+    );
+
     return (
       <div className="space-y-4">
         <h4 className="font-semibold text-lg">{title} Standards</h4>
@@ -37,9 +42,11 @@ export const SchoolDetailsModal = ({ school, isOpen, onClose }: SchoolDetailsMod
                 <th className="text-left p-3 font-semibold">
                   <TierBadge tier="recruit" /> Recruit
                 </th>
-                <th className="text-left p-3 font-semibold">
-                  <TierBadge tier="walkon" /> Walk-On
-                </th>
+                {hasWalkonStandards && (
+                  <th className="text-left p-3 font-semibold">
+                    <TierBadge tier="walkon" /> Walk-On
+                  </th>
+                )}
               </tr>
             </thead>
             <tbody>
@@ -48,7 +55,9 @@ export const SchoolDetailsModal = ({ school, isOpen, onClose }: SchoolDetailsMod
                   <td className="p-3 font-medium">{event}</td>
                   <td className="p-3 text-target">{eventStandards.target}</td>
                   <td className="p-3 text-recruit">{eventStandards.recruit}</td>
-                  <td className="p-3 text-walkon">{eventStandards.walkon}</td>
+                  {hasWalkonStandards && (
+                    <td className="p-3 text-walkon">{eventStandards.walkon || '-'}</td>
+                  )}
                 </tr>
               ))}
             </tbody>
