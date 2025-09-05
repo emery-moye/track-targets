@@ -9,19 +9,19 @@ const parsePerformance = (performance: string, event: string): number => {
     return parseInt(minutes) * 60 + parseFloat(seconds);
   }
   
-  // Handle distance formats - support both straight and curly quotes
-  const straightApostrophe = "'";
-  const curlyApostrophe = "\u2019";
-  const straightQuote = '"';
-  const curlyQuote = "\u201D";
-  if (performance.includes(straightApostrophe) || performance.includes(straightQuote) || 
-      performance.includes(curlyApostrophe) || performance.includes(curlyQuote)) {
-    // Match both straight and curly quotes for feet and inches
-    const feetMatch = performance.match(/(\d+)[\u0027\u2019]/);
-    const inchMatch = performance.match(/(\d+)[\u0022\u201D]/);
-    const feet = feetMatch ? parseInt(feetMatch[1]) : 0;
-    const inches = inchMatch ? parseInt(inchMatch[1]) : 0;
-    return feet * 12 + inches; // Convert to total inches
+  // Handle distance/height formats - normalize curly quotes and support missing inch marker
+  const normalized = performance
+    .replace(/\u2019/g, "'")
+    .replace(/\u201D/g, '"')
+    .trim();
+  if (normalized.includes("'") || normalized.includes('"')) {
+    // Match feet and optional inches even without the inch marker
+    const heightMatch = normalized.match(/(\d+)\s*'\s*(\d{1,2})?/);
+    if (heightMatch) {
+      const feet = parseInt(heightMatch[1], 10) || 0;
+      const inches = heightMatch[2] ? parseInt(heightMatch[2], 10) : 0;
+      return feet * 12 + inches; // Convert to total inches
+    }
   }
   
   // Handle regular numbers (remove any non-numeric characters except decimal)
