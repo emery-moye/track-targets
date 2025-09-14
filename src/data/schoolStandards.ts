@@ -17924,7 +17924,7 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
-// CCIW Conference schools added using Le Moyne College standards
+// CCIW Conference schools - 3 schools with original Le Moyne College standards
 (() => {
   const ref = schoolStandards.find((s) => s.schoolName === "Le Moyne College");
   if (!ref) return;
@@ -17935,13 +17935,7 @@ export const schoolStandards: SchoolStandards[] = [
   const schools = [
     { id: "cciw_north_central_college", schoolName: "North Central College", state: "IL" },
     { id: "cciw_augustana_college_il", schoolName: "Augustana College", state: "IL" },
-    { id: "cciw_illinois_wesleyan_university", schoolName: "Illinois Wesleyan University", state: "IL" },
-    { id: "cciw_millikin_university", schoolName: "Millikin University", state: "IL" },
-    { id: "cciw_carthage_college", schoolName: "Carthage College", state: "WI" },
-    { id: "cciw_north_park_university", schoolName: "North Park University", state: "IL" },
-    { id: "cciw_wheaton_college_il", schoolName: "Wheaton College", state: "IL" },
-    { id: "cciw_carroll_university", schoolName: "Carroll University", state: "WI" },
-    { id: "cciw_elmhurst_university", schoolName: "Elmhurst University", state: "IL" }
+    { id: "cciw_illinois_wesleyan_university", schoolName: "Illinois Wesleyan University", state: "IL" }
   ];
 
   schools.forEach((info) => {
@@ -17953,6 +17947,53 @@ export const schoolStandards: SchoolStandards[] = [
       state: info.state,
       maleStandards: cloneGroup(ref.maleStandards),
       femaleStandards: cloneGroup(ref.femaleStandards) as Record<string, EventStandards>
+    });
+  });
+})();
+
+// CCIW Conference schools - 6 schools with easier hurdles, shot put, and discus standards
+(() => {
+  const ref = schoolStandards.find((s) => s.schoolName === "Le Moyne College");
+  if (!ref) return;
+
+  const cloneGroup = (g?: Record<string, EventStandards>) =>
+    g ? (JSON.parse(JSON.stringify(g)) as Record<string, EventStandards>) : undefined;
+
+  const schools = [
+    { id: "cciw_millikin_university", schoolName: "Millikin University", state: "IL" },
+    { id: "cciw_carthage_college", schoolName: "Carthage College", state: "WI" },
+    { id: "cciw_north_park_university", schoolName: "North Park University", state: "IL" },
+    { id: "cciw_wheaton_college_il", schoolName: "Wheaton College", state: "IL" },
+    { id: "cciw_carroll_university", schoolName: "Carroll University", state: "WI" },
+    { id: "cciw_elmhurst_university", schoolName: "Elmhurst University", state: "IL" }
+  ];
+
+  schools.forEach((info) => {
+    const maleStandards = cloneGroup(ref.maleStandards);
+    const femaleStandards = cloneGroup(ref.femaleStandards);
+
+    // Make hurdles, shot put, and discus easier for men
+    if (maleStandards) {
+      maleStandards["110m Hurdles"] = { target: "15.25", recruit: "15.50", walkon: "15.85" };
+      maleStandards["Shot Put"] = { target: "50'0\"", recruit: "46'0\"", walkon: "42'0\"" };
+      maleStandards["Discus"] = { target: "150'0\"", recruit: "140'0\"", walkon: "125'0\"" };
+    }
+
+    // Make hurdles, shot put, and discus easier for women  
+    if (femaleStandards) {
+      femaleStandards["100m Hurdles"] = { target: "15.10", recruit: "15.35", walkon: "15.75" };
+      femaleStandards["Shot Put"] = { target: "42'0\"", recruit: "39'0\"", walkon: "36'0\"" };
+      femaleStandards["Discus"] = { target: "120'0\"", recruit: "110'0\"", walkon: "100'0\"" };
+    }
+
+    schoolStandards.push({
+      id: info.id,
+      schoolName: info.schoolName,
+      division: "D3",
+      conference: "CCIW",
+      state: info.state,
+      maleStandards: maleStandards,
+      femaleStandards: femaleStandards as Record<string, EventStandards>
     });
   });
 })();
