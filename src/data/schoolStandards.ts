@@ -18011,6 +18011,40 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
+// CCS Conference Schools (using East Stroudsburg University standards)
+(() => {
+  // Find East Stroudsburg University as reference
+  const eastStroudsburgStandards = schoolStandards.find(s => s.id === "psac_east_stroudsburg");
+  if (!eastStroudsburgStandards) return;
+
+  // CCS schools to add
+  const ccsSchools = [
+    { id: "ccs_piedmont_university", schoolName: "Piedmont University", state: "GA" },
+    { id: "ccs_asbury_university", schoolName: "Asbury University", state: "KY" },
+    { id: "ccs_belhaven_university", schoolName: "Belhaven University", state: "MS" },
+    { id: "ccs_huntingdon_college", schoolName: "Huntingdon College", state: "AL" },
+    { id: "ccs_maryville_college_tn", schoolName: "Maryville College", state: "TN" },
+    { id: "ccs_covenant_college", schoolName: "Covenant College", state: "GA" }
+  ];
+
+  // Add each CCS school with East Stroudsburg standards
+  ccsSchools.forEach(schoolInfo => {
+    // Deep clone the standards
+    const maleStandards = JSON.parse(JSON.stringify(eastStroudsburgStandards?.maleStandards || {}));
+    const femaleStandards = JSON.parse(JSON.stringify(eastStroudsburgStandards.femaleStandards));
+
+    schoolStandards.push({
+      id: schoolInfo.id,
+      schoolName: schoolInfo.schoolName,
+      division: "D3",
+      conference: "CCS", 
+      state: schoolInfo.state,
+      maleStandards: maleStandards,
+      femaleStandards: femaleStandards
+    });
+  });
+})();
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
