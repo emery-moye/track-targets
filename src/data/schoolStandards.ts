@@ -18011,39 +18011,306 @@ export const schoolStandards: SchoolStandards[] = [
   });
 })();
 
-// CCS Conference Schools (using East Stroudsburg University standards)
-(() => {
-  // Find East Stroudsburg University as reference
-  const eastStroudsburgStandards = schoolStandards.find(s => s.id === "psac_east_stroudsburg");
-  if (!eastStroudsburgStandards) return;
+// CCS Conference Schools (with adjusted standards)
+const ccsSchools = [
+  {
+    id: "ccs_piedmont_university",
+    schoolName: "Piedmont University",
+    division: "D3",
+    conference: "CCS",
+    state: "GA",
+    maleStandards: {
+      "100m": { target: "11.15", recruit: "11.45", walkon: "11.75" },
+      "200m": { target: "22.40", recruit: "22.90", walkon: "23.40" },
+      "400m": { target: "50.30", recruit: "51.30", walkon: "52.30" },
+      "800m": { target: "1:57.50", recruit: "2:01.50", walkon: "2:05.50" },
+      "1500m": { target: "4:05.00", recruit: "4:15.00", walkon: "4:25.00" },
+      "Mile": { target: "4:28.00", recruit: "4:38.00", walkon: "4:48.00" },
+      "5000m": { target: "16:05.00", recruit: "16:45.00", walkon: "17:25.00" },
+      "10000m": { target: "33:45.00", recruit: "35:15.00", walkon: "36:45.00" },
+      "110m Hurdles": { target: "15.10", recruit: "15.70", walkon: "16.30" },
+      "400m Hurdles": { target: "55.50", recruit: "58.50", walkon: "61.50" },
+      "High Jump": { target: "6'2\"", recruit: "6'0\"", walkon: "5'10\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "13'6\"", walkon: "12'6\"" },
+      "Long Jump": { target: "22'0\"", recruit: "21'0\"", walkon: "20'0\"" },
+      "Triple Jump": { target: "44'0\"", recruit: "42'6\"", walkon: "41'0\"" },
+      "Shot Put": { target: "46'6\"", recruit: "42'6\"", walkon: "38'6\"" },
+      "Discus": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Hammer": { target: "152'0\"", recruit: "142'0\"", walkon: "132'0\"" },
+      "Javelin": { target: "172'0\"", recruit: "157'0\"", walkon: "142'0\"" },
+      "Decathlon": { target: "5850", recruit: "5450", walkon: "5050" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.3", recruit: "12.85", walkon: "13.4" },
+      "200m": { target: "25.40", recruit: "26.20", walkon: "27.00" },
+      "400m": { target: "58.80", recruit: "62.32", walkon: "64.05" },
+      "800m": { target: "2:24.00", recruit: "2:31.00", walkon: "2:38.00" },
+      "1500m": { target: "4:58.00", recruit: "5:13.00", walkon: "5:28.00" },
+      "Mile": { target: "5:28.00", recruit: "5:48.00", walkon: "6:08.00" },
+      "5000m": { target: "18:25.00", recruit: "19:25.00", walkon: "20:25.00" },
+      "10000m": { target: "38:45.00", recruit: "40:45.00", walkon: "42:45.00" },
+      "100m Hurdles": { target: "15.40", recruit: "16.10", walkon: "16.80" },
+      "400m Hurdles": { target: "65.50", recruit: "68.50", walkon: "71.50" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "16'9\"", walkon: "15'9\"" },
+      "Triple Jump": { target: "36'6\"", recruit: "34'6\"", walkon: "32'6\"" },
+      "Shot Put": { target: "40'6\"", recruit: "36'6\"", walkon: "32'6\"" },
+      "Discus": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Hammer": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Javelin": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Heptathlon": { target: "4250", recruit: "3950", walkon: "3650" }
+    }
+  },
+  {
+    id: "ccs_asbury_university", 
+    schoolName: "Asbury University",
+    division: "D3",
+    conference: "CCS",
+    state: "KY",
+    maleStandards: {
+      "100m": { target: "11.15", recruit: "11.45", walkon: "11.75" },
+      "200m": { target: "22.40", recruit: "22.90", walkon: "23.40" },
+      "400m": { target: "50.30", recruit: "51.30", walkon: "52.30" },
+      "800m": { target: "1:57.50", recruit: "2:01.50", walkon: "2:05.50" },
+      "1500m": { target: "4:05.00", recruit: "4:15.00", walkon: "4:25.00" },
+      "Mile": { target: "4:28.00", recruit: "4:38.00", walkon: "4:48.00" },
+      "5000m": { target: "16:05.00", recruit: "16:45.00", walkon: "17:25.00" },
+      "10000m": { target: "33:45.00", recruit: "35:15.00", walkon: "36:45.00" },
+      "110m Hurdles": { target: "15.10", recruit: "15.70", walkon: "16.30" },
+      "400m Hurdles": { target: "55.50", recruit: "58.50", walkon: "61.50" },
+      "High Jump": { target: "6'2\"", recruit: "6'0\"", walkon: "5'10\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "13'6\"", walkon: "12'6\"" },
+      "Long Jump": { target: "22'0\"", recruit: "21'0\"", walkon: "20'0\"" },
+      "Triple Jump": { target: "44'0\"", recruit: "42'6\"", walkon: "41'0\"" },
+      "Shot Put": { target: "46'6\"", recruit: "42'6\"", walkon: "38'6\"" },
+      "Discus": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Hammer": { target: "152'0\"", recruit: "142'0\"", walkon: "132'0\"" },
+      "Javelin": { target: "172'0\"", recruit: "157'0\"", walkon: "142'0\"" },
+      "Decathlon": { target: "5850", recruit: "5450", walkon: "5050" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.3", recruit: "12.85", walkon: "13.4" },
+      "200m": { target: "25.40", recruit: "26.20", walkon: "27.00" },
+      "400m": { target: "58.80", recruit: "62.32", walkon: "64.05" },
+      "800m": { target: "2:24.00", recruit: "2:31.00", walkon: "2:38.00" },
+      "1500m": { target: "4:58.00", recruit: "5:13.00", walkon: "5:28.00" },
+      "Mile": { target: "5:28.00", recruit: "5:48.00", walkon: "6:08.00" },
+      "5000m": { target: "18:25.00", recruit: "19:25.00", walkon: "20:25.00" },
+      "10000m": { target: "38:45.00", recruit: "40:45.00", walkon: "42:45.00" },
+      "100m Hurdles": { target: "15.40", recruit: "16.10", walkon: "16.80" },
+      "400m Hurdles": { target: "65.50", recruit: "68.50", walkon: "71.50" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "16'9\"", walkon: "15'9\"" },
+      "Triple Jump": { target: "36'6\"", recruit: "34'6\"", walkon: "32'6\"" },
+      "Shot Put": { target: "40'6\"", recruit: "36'6\"", walkon: "32'6\"" },
+      "Discus": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Hammer": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Javelin": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Heptathlon": { target: "4250", recruit: "3950", walkon: "3650" }
+    }
+  },
+  {
+    id: "ccs_belhaven_university",
+    schoolName: "Belhaven University", 
+    division: "D3",
+    conference: "CCS",
+    state: "MS",
+    maleStandards: {
+      "100m": { target: "11.15", recruit: "11.45", walkon: "11.75" },
+      "200m": { target: "22.40", recruit: "22.90", walkon: "23.40" },
+      "400m": { target: "50.30", recruit: "51.30", walkon: "52.30" },
+      "800m": { target: "1:57.50", recruit: "2:01.50", walkon: "2:05.50" },
+      "1500m": { target: "4:05.00", recruit: "4:15.00", walkon: "4:25.00" },
+      "Mile": { target: "4:28.00", recruit: "4:38.00", walkon: "4:48.00" },
+      "5000m": { target: "16:05.00", recruit: "16:45.00", walkon: "17:25.00" },
+      "10000m": { target: "33:45.00", recruit: "35:15.00", walkon: "36:45.00" },
+      "110m Hurdles": { target: "15.10", recruit: "15.70", walkon: "16.30" },
+      "400m Hurdles": { target: "55.50", recruit: "58.50", walkon: "61.50" },
+      "High Jump": { target: "6'2\"", recruit: "6'0\"", walkon: "5'10\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "13'6\"", walkon: "12'6\"" },
+      "Long Jump": { target: "22'0\"", recruit: "21'0\"", walkon: "20'0\"" },
+      "Triple Jump": { target: "44'0\"", recruit: "42'6\"", walkon: "41'0\"" },
+      "Shot Put": { target: "46'6\"", recruit: "42'6\"", walkon: "38'6\"" },
+      "Discus": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Hammer": { target: "152'0\"", recruit: "142'0\"", walkon: "132'0\"" },
+      "Javelin": { target: "172'0\"", recruit: "157'0\"", walkon: "142'0\"" },
+      "Decathlon": { target: "5850", recruit: "5450", walkon: "5050" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.3", recruit: "12.85", walkon: "13.4" },
+      "200m": { target: "25.40", recruit: "26.20", walkon: "27.00" },
+      "400m": { target: "58.80", recruit: "62.32", walkon: "64.05" },
+      "800m": { target: "2:24.00", recruit: "2:31.00", walkon: "2:38.00" },
+      "1500m": { target: "4:58.00", recruit: "5:13.00", walkon: "5:28.00" },
+      "Mile": { target: "5:28.00", recruit: "5:48.00", walkon: "6:08.00" },
+      "5000m": { target: "18:25.00", recruit: "19:25.00", walkon: "20:25.00" },
+      "10000m": { target: "38:45.00", recruit: "40:45.00", walkon: "42:45.00" },
+      "100m Hurdles": { target: "15.40", recruit: "16.10", walkon: "16.80" },
+      "400m Hurdles": { target: "65.50", recruit: "68.50", walkon: "71.50" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "16'9\"", walkon: "15'9\"" },
+      "Triple Jump": { target: "36'6\"", recruit: "34'6\"", walkon: "32'6\"" },
+      "Shot Put": { target: "40'6\"", recruit: "36'6\"", walkon: "32'6\"" },
+      "Discus": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Hammer": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Javelin": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Heptathlon": { target: "4250", recruit: "3950", walkon: "3650" }
+    }
+  },
+  {
+    id: "ccs_huntingdon_college",
+    schoolName: "Huntingdon College",
+    division: "D3", 
+    conference: "CCS",
+    state: "AL",
+    maleStandards: {
+      "100m": { target: "11.15", recruit: "11.45", walkon: "11.75" },
+      "200m": { target: "22.40", recruit: "22.90", walkon: "23.40" },
+      "400m": { target: "50.30", recruit: "51.30", walkon: "52.30" },
+      "800m": { target: "1:57.50", recruit: "2:01.50", walkon: "2:05.50" },
+      "1500m": { target: "4:05.00", recruit: "4:15.00", walkon: "4:25.00" },
+      "Mile": { target: "4:28.00", recruit: "4:38.00", walkon: "4:48.00" },
+      "5000m": { target: "16:05.00", recruit: "16:45.00", walkon: "17:25.00" },
+      "10000m": { target: "33:45.00", recruit: "35:15.00", walkon: "36:45.00" },
+      "110m Hurdles": { target: "15.10", recruit: "15.70", walkon: "16.30" },
+      "400m Hurdles": { target: "55.50", recruit: "58.50", walkon: "61.50" },
+      "High Jump": { target: "6'2\"", recruit: "6'0\"", walkon: "5'10\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "13'6\"", walkon: "12'6\"" },
+      "Long Jump": { target: "22'0\"", recruit: "21'0\"", walkon: "20'0\"" },
+      "Triple Jump": { target: "44'0\"", recruit: "42'6\"", walkon: "41'0\"" },
+      "Shot Put": { target: "46'6\"", recruit: "42'6\"", walkon: "38'6\"" },
+      "Discus": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Hammer": { target: "152'0\"", recruit: "142'0\"", walkon: "132'0\"" },
+      "Javelin": { target: "172'0\"", recruit: "157'0\"", walkon: "142'0\"" },
+      "Decathlon": { target: "5850", recruit: "5450", walkon: "5050" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.3", recruit: "12.85", walkon: "13.4" },
+      "200m": { target: "25.40", recruit: "26.20", walkon: "27.00" },
+      "400m": { target: "58.80", recruit: "62.32", walkon: "64.05" },
+      "800m": { target: "2:24.00", recruit: "2:31.00", walkon: "2:38.00" },
+      "1500m": { target: "4:58.00", recruit: "5:13.00", walkon: "5:28.00" },
+      "Mile": { target: "5:28.00", recruit: "5:48.00", walkon: "6:08.00" },
+      "5000m": { target: "18:25.00", recruit: "19:25.00", walkon: "20:25.00" },
+      "10000m": { target: "38:45.00", recruit: "40:45.00", walkon: "42:45.00" },
+      "100m Hurdles": { target: "15.40", recruit: "16.10", walkon: "16.80" },
+      "400m Hurdles": { target: "65.50", recruit: "68.50", walkon: "71.50" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "16'9\"", walkon: "15'9\"" },
+      "Triple Jump": { target: "36'6\"", recruit: "34'6\"", walkon: "32'6\"" },
+      "Shot Put": { target: "40'6\"", recruit: "36'6\"", walkon: "32'6\"" },
+      "Discus": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Hammer": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Javelin": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Heptathlon": { target: "4250", recruit: "3950", walkon: "3650" }
+    }
+  },
+  {
+    id: "ccs_maryville_college_tn",
+    schoolName: "Maryville College",
+    division: "D3",
+    conference: "CCS",
+    state: "TN",
+    maleStandards: {
+      "100m": { target: "11.15", recruit: "11.45", walkon: "11.75" },
+      "200m": { target: "22.40", recruit: "22.90", walkon: "23.40" },
+      "400m": { target: "50.30", recruit: "51.30", walkon: "52.30" },
+      "800m": { target: "1:57.50", recruit: "2:01.50", walkon: "2:05.50" },
+      "1500m": { target: "4:05.00", recruit: "4:15.00", walkon: "4:25.00" },
+      "Mile": { target: "4:28.00", recruit: "4:38.00", walkon: "4:48.00" },
+      "5000m": { target: "16:05.00", recruit: "16:45.00", walkon: "17:25.00" },
+      "10000m": { target: "33:45.00", recruit: "35:15.00", walkon: "36:45.00" },
+      "110m Hurdles": { target: "15.10", recruit: "15.70", walkon: "16.30" },
+      "400m Hurdles": { target: "55.50", recruit: "58.50", walkon: "61.50" },
+      "High Jump": { target: "6'2\"", recruit: "6'0\"", walkon: "5'10\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "13'6\"", walkon: "12'6\"" },
+      "Long Jump": { target: "22'0\"", recruit: "21'0\"", walkon: "20'0\"" },
+      "Triple Jump": { target: "44'0\"", recruit: "42'6\"", walkon: "41'0\"" },
+      "Shot Put": { target: "46'6\"", recruit: "42'6\"", walkon: "38'6\"" },
+      "Discus": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Hammer": { target: "152'0\"", recruit: "142'0\"", walkon: "132'0\"" },
+      "Javelin": { target: "172'0\"", recruit: "157'0\"", walkon: "142'0\"" },
+      "Decathlon": { target: "5850", recruit: "5450", walkon: "5050" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.3", recruit: "12.85", walkon: "13.4" },
+      "200m": { target: "25.40", recruit: "26.20", walkon: "27.00" },
+      "400m": { target: "58.80", recruit: "62.32", walkon: "64.05" },
+      "800m": { target: "2:24.00", recruit: "2:31.00", walkon: "2:38.00" },
+      "1500m": { target: "4:58.00", recruit: "5:13.00", walkon: "5:28.00" },
+      "Mile": { target: "5:28.00", recruit: "5:48.00", walkon: "6:08.00" },
+      "5000m": { target: "18:25.00", recruit: "19:25.00", walkon: "20:25.00" },
+      "10000m": { target: "38:45.00", recruit: "40:45.00", walkon: "42:45.00" },
+      "100m Hurdles": { target: "15.40", recruit: "16.10", walkon: "16.80" },
+      "400m Hurdles": { target: "65.50", recruit: "68.50", walkon: "71.50" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "16'9\"", walkon: "15'9\"" },
+      "Triple Jump": { target: "36'6\"", recruit: "34'6\"", walkon: "32'6\"" },
+      "Shot Put": { target: "40'6\"", recruit: "36'6\"", walkon: "32'6\"" },
+      "Discus": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Hammer": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Javelin": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Heptathlon": { target: "4250", recruit: "3950", walkon: "3650" }
+    }
+  },
+  {
+    id: "ccs_covenant_college",
+    schoolName: "Covenant College", 
+    division: "D3",
+    conference: "CCS",
+    state: "GA",
+    maleStandards: {
+      "100m": { target: "11.15", recruit: "11.45", walkon: "11.75" },
+      "200m": { target: "22.40", recruit: "22.90", walkon: "23.40" },
+      "400m": { target: "50.30", recruit: "51.30", walkon: "52.30" },
+      "800m": { target: "1:57.50", recruit: "2:01.50", walkon: "2:05.50" },
+      "1500m": { target: "4:05.00", recruit: "4:15.00", walkon: "4:25.00" },
+      "Mile": { target: "4:28.00", recruit: "4:38.00", walkon: "4:48.00" },
+      "5000m": { target: "16:05.00", recruit: "16:45.00", walkon: "17:25.00" },
+      "10000m": { target: "33:45.00", recruit: "35:15.00", walkon: "36:45.00" },
+      "110m Hurdles": { target: "15.10", recruit: "15.70", walkon: "16.30" },
+      "400m Hurdles": { target: "55.50", recruit: "58.50", walkon: "61.50" },
+      "High Jump": { target: "6'2\"", recruit: "6'0\"", walkon: "5'10\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "13'6\"", walkon: "12'6\"" },
+      "Long Jump": { target: "22'0\"", recruit: "21'0\"", walkon: "20'0\"" },
+      "Triple Jump": { target: "44'0\"", recruit: "42'6\"", walkon: "41'0\"" },
+      "Shot Put": { target: "46'6\"", recruit: "42'6\"", walkon: "38'6\"" },
+      "Discus": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Hammer": { target: "152'0\"", recruit: "142'0\"", walkon: "132'0\"" },
+      "Javelin": { target: "172'0\"", recruit: "157'0\"", walkon: "142'0\"" },
+      "Decathlon": { target: "5850", recruit: "5450", walkon: "5050" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.3", recruit: "12.85", walkon: "13.4" },
+      "200m": { target: "25.40", recruit: "26.20", walkon: "27.00" },
+      "400m": { target: "58.80", recruit: "62.32", walkon: "64.05" },
+      "800m": { target: "2:24.00", recruit: "2:31.00", walkon: "2:38.00" },
+      "1500m": { target: "4:58.00", recruit: "5:13.00", walkon: "5:28.00" },
+      "Mile": { target: "5:28.00", recruit: "5:48.00", walkon: "6:08.00" },
+      "5000m": { target: "18:25.00", recruit: "19:25.00", walkon: "20:25.00" },
+      "10000m": { target: "38:45.00", recruit: "40:45.00", walkon: "42:45.00" },
+      "100m Hurdles": { target: "15.40", recruit: "16.10", walkon: "16.80" },
+      "400m Hurdles": { target: "65.50", recruit: "68.50", walkon: "71.50" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "16'9\"", walkon: "15'9\"" },
+      "Triple Jump": { target: "36'6\"", recruit: "34'6\"", walkon: "32'6\"" },
+      "Shot Put": { target: "40'6\"", recruit: "36'6\"", walkon: "32'6\"" },
+      "Discus": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Hammer": { target: "142'0\"", recruit: "132'0\"", walkon: "122'0\"" },
+      "Javelin": { target: "127'0\"", recruit: "117'0\"", walkon: "107'0\"" },
+      "Heptathlon": { target: "4250", recruit: "3950", walkon: "3650" }
+    }
+  }
+];
 
-  // CCS schools to add
-  const ccsSchools = [
-    { id: "ccs_piedmont_university", schoolName: "Piedmont University", state: "GA" },
-    { id: "ccs_asbury_university", schoolName: "Asbury University", state: "KY" },
-    { id: "ccs_belhaven_university", schoolName: "Belhaven University", state: "MS" },
-    { id: "ccs_huntingdon_college", schoolName: "Huntingdon College", state: "AL" },
-    { id: "ccs_maryville_college_tn", schoolName: "Maryville College", state: "TN" },
-    { id: "ccs_covenant_college", schoolName: "Covenant College", state: "GA" }
-  ];
-
-  // Add each CCS school with East Stroudsburg standards
-  ccsSchools.forEach(schoolInfo => {
-    // Deep clone the standards
-    const maleStandards = JSON.parse(JSON.stringify(eastStroudsburgStandards?.maleStandards || {}));
-    const femaleStandards = JSON.parse(JSON.stringify(eastStroudsburgStandards.femaleStandards));
-
-    schoolStandards.push({
-      id: schoolInfo.id,
-      schoolName: schoolInfo.schoolName,
-      division: "D3",
-      conference: "CCS", 
-      state: schoolInfo.state,
-      maleStandards: maleStandards,
-      femaleStandards: femaleStandards
-    });
-  });
-})();
+// Add all CCS schools to the main array
+schoolStandards.push(...ccsSchools);
 
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
