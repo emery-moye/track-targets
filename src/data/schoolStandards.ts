@@ -17939,14 +17939,25 @@ export const schoolStandards: SchoolStandards[] = [
   ];
 
   schools.forEach((info) => {
+    const maleStandards = cloneGroup(ref.maleStandards);
+    const femaleStandards = cloneGroup(ref.femaleStandards);
+
+    // Update 100m walk-on standards for CCIW
+    if (maleStandards) {
+      maleStandards["100m"].walkon = "11.37";
+    }
+    if (femaleStandards) {
+      femaleStandards["100m"].walkon = "12.96";
+    }
+
     schoolStandards.push({
       id: info.id,
       schoolName: info.schoolName,
       division: "D3",
       conference: "CCIW",
       state: info.state,
-      maleStandards: cloneGroup(ref.maleStandards),
-      femaleStandards: cloneGroup(ref.femaleStandards) as Record<string, EventStandards>
+      maleStandards: maleStandards,
+      femaleStandards: femaleStandards as Record<string, EventStandards>
     });
   });
 })();
@@ -17974,6 +17985,7 @@ export const schoolStandards: SchoolStandards[] = [
 
     // Make hurdles, shot put, and discus easier for men
     if (maleStandards) {
+      maleStandards["100m"].walkon = "11.37";
       maleStandards["110m Hurdles"] = { target: "15.25", recruit: "15.50", walkon: "15.85" };
       maleStandards["Shot Put"] = { target: "50'0\"", recruit: "46'0\"", walkon: "42'0\"" };
       maleStandards["Discus"] = { target: "150'0\"", recruit: "140'0\"", walkon: "125'0\"" };
@@ -17981,6 +17993,7 @@ export const schoolStandards: SchoolStandards[] = [
 
     // Make hurdles, shot put, and discus easier for women  
     if (femaleStandards) {
+      femaleStandards["100m"].walkon = "12.96";
       femaleStandards["100m Hurdles"] = { target: "15.10", recruit: "15.35", walkon: "15.75" };
       femaleStandards["Shot Put"] = { target: "42'0\"", recruit: "39'0\"", walkon: "36'0\"" };
       femaleStandards["Discus"] = { target: "120'0\"", recruit: "110'0\"", walkon: "100'0\"" };
