@@ -18748,7 +18748,7 @@ const hcacSchools: SchoolStandards[] = [
     conference: "HCAC",
     state: "IN",
     maleStandards: {
-      "100m": { target: "10.90", recruit: "11.10", walkon: "11.30" },
+      "100m": { target: "10.80", recruit: "11.05", walkon: "11.30" },
       "200m": { target: "22.30", recruit: "22.70", walkon: "23.10" },
       "400m": { target: "49.80", recruit: "50.50", walkon: "51.20" },
       "800m": { target: "1:55.00", recruit: "1:58.00", walkon: "2:01.00" },
@@ -18758,7 +18758,7 @@ const hcacSchools: SchoolStandards[] = [
       "10000m": { target: "33:15.00", recruit: "34:15.00", walkon: "35:15.00" },
       "110m Hurdles": { target: "14.70", recruit: "15.20", walkon: "15.70" },
       "400m Hurdles": { target: "57.20", recruit: "58.40", walkon: "59.60" },
-      "High Jump": { target: "6'1\"", recruit: "5'11\"", walkon: "5'9\"" },
+      "High Jump": { target: "6'3\"", recruit: "6'0\"", walkon: "5'9\"" },
       "Pole Vault": { target: "13'9\"", recruit: "13'3\"", walkon: "12'3\"" },
       "Long Jump": { target: "21'9\"", recruit: "20'9\"", walkon: "19'9\"" },
       "Triple Jump": { target: "44'6\"", recruit: "42'6\"", walkon: "40'6\"" },
