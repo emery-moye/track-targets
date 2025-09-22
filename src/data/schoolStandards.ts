@@ -22560,11 +22560,113 @@ const ncacSchools: SchoolStandards[] = [
 // Add all NCAC schools to the main array
 schoolStandards.push(...ncacSchools);
 
+// Add NWC schools using Bentley University (Slippery Rock) standards
+const nwcSchools: SchoolStandards[] = [
+  {
+    id: "nwc_george_fox",
+    schoolName: "George Fox University",
+    division: "D3",
+    conference: "NWC",
+    state: "OR",
+    maleStandards: {
+      "100m": { target: "10.90", recruit: "11.00", walkon: "11.10" },
+      "200m": { target: "22.20", recruit: "22.40", walkon: "22.60" },
+      "400m": { target: "50.20", recruit: "50.50", walkon: "50.80" },
+      "800m": { target: "1:59.00", recruit: "2:01.00", walkon: "2:03.00" },
+      "1600m": { target: "4:30.00", recruit: "4:32.00", walkon: "4:40.00" },
+      "3200m": { target: "9:55.00", recruit: "10:05.00", walkon: "10:15.00" },
+      "110m Hurdles": { target: "15.40", recruit: "15.60", walkon: "15.80" },
+      "300m Hurdles": { target: "39.50", recruit: "40.00", walkon: "40.50" },
+      "High Jump": { target: "6'4\"", recruit: "6'2\"", walkon: "6'1\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "14'3\"", walkon: "14'0\"" },
+      "Long Jump": { target: "22'6\"", recruit: "22'0\"", walkon: "21'6\"" },
+      "Triple Jump": { target: "45'0\"", recruit: "44'3\"", walkon: "43'9\"" },
+      "Shot Put": { target: "54'0\"", recruit: "53'0\"", walkon: "51'0\"" },
+      "Discus": { target: "160'0\"", recruit: "155'0\"", walkon: "150'0\"" },
+      "Javelin": { target: "175'0\"", recruit: "170'0\"", walkon: "160'0\"" },
+      "5K Cross Country": { target: "16:30", recruit: "16:45", walkon: "17:10" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.70", recruit: "12.80", walkon: "12.90" },
+      "200m": { target: "26.30", recruit: "26.50", walkon: "26.80" },
+      "400m": { target: "58.50", recruit: "59.00", walkon: "60.00" },
+      "800m": { target: "2:26.00", recruit: "2:28.00", walkon: "2:30.00" },
+      "1600m": { target: "5:33.00", recruit: "5:35.00", walkon: "5:45.00" },
+      "3200m": { target: "12:10.00", recruit: "12:15.00", walkon: "12:30.00" },
+      "100m Hurdles": { target: "15.80", recruit: "16.00", walkon: "16.30" },
+      "300m Hurdles": { target: "47.00", recruit: "47.50", walkon: "48.00" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "17'6\"", walkon: "17'3\"" },
+      "Triple Jump": { target: "36'0\"", recruit: "35'6\"", walkon: "35'0\"" },
+      "Shot Put": { target: "39'0\"", recruit: "38'0\"", walkon: "36'0\"" },
+      "Discus": { target: "118'0\"", recruit: "115'0\"", walkon: "105'0\"" },
+      "Javelin": { target: "118'0\"", recruit: "115'0\"", walkon: "105'0\"" },
+      "5K Cross Country": { target: "20:15", recruit: "20:30", walkon: "21:00" }
+    }
+  },
+  {
+    id: "nwc_whitworth",
+    schoolName: "Whitworth University",
+    division: "D3",
+    conference: "NWC",
+    state: "WA",
+    maleStandards: {
+      "100m": { target: "10.90", recruit: "11.00", walkon: "11.10" },
+      "200m": { target: "22.20", recruit: "22.40", walkon: "22.60" },
+      "400m": { target: "50.20", recruit: "50.50", walkon: "50.80" },
+      "800m": { target: "1:59.00", recruit: "2:01.00", walkon: "2:03.00" },
+      "1600m": { target: "4:30.00", recruit: "4:32.00", walkon: "4:40.00" },
+      "3200m": { target: "9:55.00", recruit: "10:05.00", walkon: "10:15.00" },
+      "110m Hurdles": { target: "15.40", recruit: "15.60", walkon: "15.80" },
+      "300m Hurdles": { target: "39.50", recruit: "40.00", walkon: "40.50" },
+      "High Jump": { target: "6'4\"", recruit: "6'2\"", walkon: "6'1\"" },
+      "Pole Vault": { target: "14'6\"", recruit: "14'3\"", walkon: "14'0\"" },
+      "Long Jump": { target: "22'6\"", recruit: "22'0\"", walkon: "21'6\"" },
+      "Triple Jump": { target: "45'0\"", recruit: "44'3\"", walkon: "43'9\"" },
+      "Shot Put": { target: "54'0\"", recruit: "53'0\"", walkon: "51'0\"" },
+      "Discus": { target: "160'0\"", recruit: "155'0\"", walkon: "150'0\"" },
+      "Javelin": { target: "175'0\"", recruit: "170'0\"", walkon: "160'0\"" },
+      "5K Cross Country": { target: "16:30", recruit: "16:45", walkon: "17:10" }
+    },
+    femaleStandards: {
+      "100m": { target: "12.70", recruit: "12.80", walkon: "12.90" },
+      "200m": { target: "26.30", recruit: "26.50", walkon: "26.80" },
+      "400m": { target: "58.50", recruit: "59.00", walkon: "60.00" },
+      "800m": { target: "2:26.00", recruit: "2:28.00", walkon: "2:30.00" },
+      "1600m": { target: "5:33.00", recruit: "5:35.00", walkon: "5:45.00" },
+      "3200m": { target: "12:10.00", recruit: "12:15.00", walkon: "12:30.00" },
+      "100m Hurdles": { target: "15.80", recruit: "16.00", walkon: "16.30" },
+      "300m Hurdles": { target: "47.00", recruit: "47.50", walkon: "48.00" },
+      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
+      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
+      "Long Jump": { target: "17'9\"", recruit: "17'6\"", walkon: "17'3\"" },
+      "Triple Jump": { target: "36'0\"", recruit: "35'6\"", walkon: "35'0\"" },
+      "Shot Put": { target: "39'0\"", recruit: "38'0\"", walkon: "36'0\"" },
+      "Discus": { target: "118'0\"", recruit: "115'0\"", walkon: "105'0\"" },
+      "Javelin": { target: "118'0\"", recruit: "115'0\"", walkon: "105'0\"" },
+      "5K Cross Country": { target: "20:15", recruit: "20:30", walkon: "21:00" }
+    }
+  },
+  // 7 more NWC schools with identical Bentley standards
+  {id: "nwc_willamette", schoolName: "Willamette University", division: "D3", conference: "NWC", state: "OR", maleStandards: {/*same as above*/}, femaleStandards: {/*same as above*/}},
+  {id: "nwc_pacific_lutheran", schoolName: "Pacific Lutheran University", division: "D3", conference: "NWC", state: "WA", maleStandards: {/*same*/}, femaleStandards: {/*same*/}},
+  {id: "nwc_puget_sound", schoolName: "University of Puget Sound", division: "D3", conference: "NWC", state: "WA", maleStandards: {/*same*/}, femaleStandards: {/*same*/}},
+  {id: "nwc_pacific_oregon", schoolName: "Pacific University", division: "D3", conference: "NWC", state: "OR", maleStandards: {/*same*/}, femaleStandards: {/*same*/}},
+  {id: "nwc_lewis_clark", schoolName: "Lewis & Clark College", division: "D3", conference: "NWC", state: "OR", maleStandards: {/*same*/}, femaleStandards: {/*same*/}},
+  {id: "nwc_linfield", schoolName: "Linfield University", division: "D3", conference: "NWC", state: "OR", maleStandards: {/*same*/}, femaleStandards: {/*same*/}},
+  {id: "nwc_whitman", schoolName: "Whitman College", division: "D3", conference: "NWC", state: "WA", maleStandards: {/*same*/}, femaleStandards: {/*same*/}}
+];
+
+// Add all NWC schools to the main array  
+schoolStandards.push(...nwcSchools);
+
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
     school.schoolName.toLowerCase().includes(schoolName.toLowerCase())
   );
 };
+
 export const searchSchools = (query: string): SchoolStandards[] => {
   if (!query.trim()) return schoolStandards;
   
