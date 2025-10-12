@@ -1831,23 +1831,23 @@ export const schoolStandards: SchoolStandards[] = [
       "Javelin": { target: "225'0\"", recruit: "200'0\"" }
     },
     femaleStandards: {
-      "100m": { target: "11.40", recruit: "11.60" },
-      "200m": { target: "23.30", recruit: "23.60" },
-      "400m": { target: "52.90", recruit: "54.40" },
-      "800m": { target: "2:04.00", recruit: "2:08.00" },
+      "100m": { target: "11.45", recruit: "11.80" },
+      "200m": { target: "23.50", recruit: "24.20" },
+      "400m": { target: "53.50", recruit: "55.30" },
+      "800m": { target: "2:06:50", recruit: "2:13:00" },
       "1500m": { target: "4:16.00", recruit: "4:26.00" },
       "5000m": { target: "16:25.00", recruit: "16:55.00" },
       "10000m": { target: "33:50.00", recruit: "34:50.00" },
       "100m Hurdles": { target: "13.15", recruit: "13.55" },
       "400m Hurdles": { target: "57.70", recruit: "59.70" },
-      "High Jump": { target: "5'8\"", recruit: "5'6\"" },
-      "Pole Vault": { target: "13'0\"", recruit: "12'6\"" },
+      "High Jump": { target: "5'10\"", recruit: "5'7\"" },
+      "Pole Vault": { target: "14'0\"", recruit: "13'1\"" },
       "Long Jump": { target: "20'3\"", recruit: "19'3\"" },
       "Triple Jump": { target: "42'3\"", recruit: "40'3\"" },
       "Shot Put": { target: "50'0\"", recruit: "45'0\"" },
       "Discus": { target: "162'0\"", recruit: "147'0\"" },
       "Hammer": { target: "180'0\"", recruit: "165'0\"" },
-      "Javelin": { target: "162'0\"", recruit: "147'0\"" }
+      "Javelin": { target: "160'0\"", recruit: "135'0\"" }
     }
   },
   {
