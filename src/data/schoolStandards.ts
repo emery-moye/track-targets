@@ -11644,22 +11644,22 @@ export const schoolStandards: SchoolStandards[] = [
       "5K (Cross Country)": { target: "16:30", recruit: "16:35", walkon: "17:00" }
     },
     femaleStandards: {
-      "100m": { target: "12.70", recruit: "12.80", walkon: "12.90" },
-      "200m": { target: "26.30", recruit: "26.50", walkon: "26.80" },
-      "400m": { target: "58.50", recruit: "59.00", walkon: "60.00" },
-      "800m": { target: "2:26.00", recruit: "2:28.00", walkon: "2:30.00" },
-      "1600m": { target: "5:33.00", recruit: "5:35.00", walkon: "5:45.00" },
-      "3200m": { target: "12:10.00", recruit: "12:15.00", walkon: "12:30.00" },
-      "100m Hurdles": { target: "15.80", recruit: "16.00", walkon: "16.30" },
-      "300m Hurdles": { target: "47.00", recruit: "47.50", walkon: "48.00" },
-      "High Jump": { target: "5'4\"", recruit: "5'2\"", walkon: "5'0\"" },
-      "Pole Vault": { target: "11'3\"", recruit: "10'7\"", walkon: "9'6\"" },
-      "Long Jump": { target: "17'9\"", recruit: "17'6\"", walkon: "17'3\"" },
-      "Triple Jump": { target: "36'0\"", recruit: "35'6\"", walkon: "35'0\"" },
-      "Shot Put": { target: "39'0\"", recruit: "38'0\"", walkon: "36'0\"" },
-      "Discus": { target: "118'0\"", recruit: "115'0\"", walkon: "105'0\"" },
-      "Javelin": { target: "118'0\"", recruit: "115'0\"", walkon: "105'0\"" },
-      "5K (Cross Country)": { target: "20:15", recruit: "20:30", walkon: "21:00" }
+      "100m": { target: "12.50", recruit: "12.60", walkon: "12.80" },
+      "200m": { target: "26.50", recruit: "26.60", walkon: "26.80" },
+      "400m": { target: "59.65", recruit: "59.75", walkon: "1:00.60" },
+      "800m": { target: "2:23.00", recruit: "2:24.00", walkon: "2:28.00" },
+      "1600m": { target: "5:28.00", recruit: "5:30.00", walkon: "5:35.00" },
+      "3200m": { target: "11:57.00", recruit: "12:00.00", walkon: "12:15.00" },
+      "100m Hurdles": { target: "15.65", recruit: "15.75", walkon: "15.90" },
+      "300m Hurdles": { target: "46.80", recruit: "47.00", walkon: "47.60" },
+      "High Jump": { target: "5'4\"", recruit: "5'3\"", walkon: "5'2\"" },
+      "Pole Vault": { target: "11'9\"", recruit: "11'6\"", walkon: "11'0\"" },
+      "Long Jump": { target: "17'11\"", recruit: "17'9\"", walkon: "17'3\"" },
+      "Triple Jump": { target: "36'3\"", recruit: "36'0\"", walkon: "35'3\"" },
+      "Shot Put": { target: "38'6\"", recruit: "38'0\"", walkon: "36'0\"" },
+      "Discus": { target: "117'0\"", recruit: "115'0\"", walkon: "110'0\"" },
+      "Javelin": { target: "122'0\"", recruit: "120'0\"", walkon: "112'0\"" },
+      "5K (Cross Country)": { target: "20:10", recruit: "20:15", walkon: "20:35" }
     }
   },
   {
