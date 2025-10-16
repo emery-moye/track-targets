@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { TierBadge, TierType } from "./TierBadge";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SchoolDetailsModal } from "./SchoolDetailsModal";
 import { findSchoolStandards } from "@/data/schoolStandards";
+import { generateSchoolSlug } from "@/lib/schoolPageUtils";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export interface SchoolMatch {
@@ -26,6 +28,7 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
   const [selectedSchool, setSelectedSchool] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
 
   const divisions = [...new Set(results.map(r => r.division))];
   const conferences = [...new Set(results.map(r => r.conference))];
@@ -39,11 +42,8 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
   });
 
   const handleSchoolClick = (schoolMatch: SchoolMatch) => {
-    const schoolStandards = findSchoolStandards(schoolMatch.schoolName);
-    if (schoolStandards) {
-      setSelectedSchool(schoolStandards);
-      setIsModalOpen(true);
-    }
+    const slug = generateSchoolSlug(schoolMatch.schoolName);
+    navigate(`/schools/${slug}`);
   };
 
   if (results.length === 0) {
