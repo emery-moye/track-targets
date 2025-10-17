@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sitemap Generator</title>
+</head>
+<body>
+  <h1>Generating Complete Sitemap...</h1>
+  <pre id="output">Loading...</pre>
+  
+  <script type="module">
+    import { schoolStandards } from '../src/data/schoolStandards.ts';
+    
+    const baseUrl = 'https://trackandfieldstandards.com';
+    const today = new Date().toISOString().split('T')[0];
+    
+    function generateSchoolSlug(schoolName) {
+      return schoolName
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim() + '-track-standards';
+    }
+    
+    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${baseUrl}/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+`;
+    
+    schoolStandards.forEach(school => {
+      const slug = generateSchoolSlug(school.schoolName);
+      sitemap += `  <url>
+    <loc>${baseUrl}/schools/${slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`;
+    });
+    
+    sitemap += `</urlset>`;
+    
+    document.getElementById('output').textContent = sitemap;
+    
+    // Download button
+    const downloadBtn = document.createElement('button');
+    downloadBtn.textContent = 'Download sitemap.xml';
+    downloadBtn.style.cssText = 'margin: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer;';
+    downloadBtn.onclick = () => {
+      const blob = new Blob([sitemap], { type: 'application/xml' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'sitemap.xml';
+      a.click();
+    };
+    document.body.insertBefore(downloadBtn, document.getElementById('output'));
+    
+    console.log(`✅ Generated ${schoolStandards.length + 1} URLs`);
+  </script>
+</body>
+</html>
