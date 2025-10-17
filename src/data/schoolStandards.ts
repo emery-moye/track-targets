@@ -18784,7 +18784,6 @@ export const schoolStandards: SchoolStandards[] = [
 
   // 1) Exact clones (same hardened standards as APU)
   const clones = [
-    { id: "pacwest_fresno_pacific", schoolName: "Fresno Pacific University", division: "D2", conference: "PacWest", state: "CA" },
     { id: "pacwest_concordia_irvine", schoolName: "Concordia University Irvine", division: "D2", conference: "PacWest", state: "CA" },
     { id: "pacwest_biola", schoolName: "Biola University", division: "D2", conference: "PacWest", state: "CA" },
   ];
@@ -18796,6 +18795,33 @@ export const schoolStandards: SchoolStandards[] = [
       femaleStandards: deepClone(apu.femaleStandards),
     });
   });
+
+  // Fresno Pacific University - custom men's standards for specific events
+  const fresnoPacific = {
+    id: "pacwest_fresno_pacific",
+    schoolName: "Fresno Pacific University",
+    division: "D2",
+    conference: "PacWest",
+    state: "CA",
+    maleStandards: deepClone(apu.maleStandards),
+    femaleStandards: deepClone(apu.femaleStandards),
+  };
+
+  // Override specific men's track events
+  if (fresnoPacific.maleStandards["800m"]) {
+    fresnoPacific.maleStandards["800m"] = { target: "1:52.50", recruit: "1:55.00", walkon: "2:00.00" };
+  }
+  if (fresnoPacific.maleStandards["1600m"]) {
+    fresnoPacific.maleStandards["1600m"] = { target: "4:12.00", recruit: "4:20.00", walkon: "4:40.00" };
+  }
+  if (fresnoPacific.maleStandards["3200m"]) {
+    fresnoPacific.maleStandards["3200m"] = { target: "9:15.00", recruit: "9:25.00", walkon: "9:50.00" };
+  }
+  if (fresnoPacific.maleStandards["Mile"]) {
+    fresnoPacific.maleStandards["Mile"] = { target: "4:15.00", recruit: "4:22.00", walkon: "4:41.00" };
+  }
+
+  schoolStandards.push(fresnoPacific);
 
   // 2) Slightly easier standards helpers (for the "easier" schools)
   const easeTime = (v: string, factor: number) => {
