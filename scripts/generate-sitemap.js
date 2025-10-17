@@ -2,7 +2,7 @@ import { schoolStandards } from '../src/data/schoolStandards.ts';
 import { generateSchoolSlug } from '../src/lib/schoolPageUtils.ts';
 import { writeFileSync } from 'fs';
 
-const baseUrl = 'https://track-targets.com';
+const baseUrl = 'https://trackandfieldstandards.com';
 const today = new Date().toISOString().split('T')[0];
 
 const generateSitemap = () => {
