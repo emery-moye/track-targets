@@ -18442,7 +18442,6 @@ export const schoolStandards: SchoolStandards[] = [
   const targetDelta = 0.03; // seconds faster
   const rrDelta = 0.09;     // seconds faster for recruit and walk-on
   const tighten = (evt: EventStandards) => {
-    if (!evt.walkon) return;
     let t = parseFloat(evt.target) - targetDelta;
     let r = parseFloat(evt.recruit) - rrDelta;
     let w = parseFloat(evt.walkon) - rrDelta;
@@ -18473,7 +18472,6 @@ export const schoolStandards: SchoolStandards[] = [
 (() => {
   const walkonDelta = 0.21; // seconds faster
   const tighten = (evt: EventStandards) => {
-    if (!evt.walkon) return;
     const r = parseFloat(evt.recruit);
     let w = parseFloat(evt.walkon) - walkonDelta;
     if (!Number.isFinite(r) || !Number.isFinite(w)) return;
@@ -18818,16 +18816,16 @@ export const schoolStandards: SchoolStandards[] = [
   };
 
   // Override specific men's track events
-  if (fresnoPacific.maleStandards && fresnoPacific.maleStandards["800m"]) {
+  if (fresnoPacific.maleStandards["800m"]) {
     fresnoPacific.maleStandards["800m"] = { target: "1:52.50", recruit: "1:55.00", walkon: "2:00.00" };
   }
-  if (fresnoPacific.maleStandards && fresnoPacific.maleStandards["1600m"]) {
+  if (fresnoPacific.maleStandards["1600m"]) {
     fresnoPacific.maleStandards["1600m"] = { target: "4:12.00", recruit: "4:20.00", walkon: "4:40.00" };
   }
-  if (fresnoPacific.maleStandards && fresnoPacific.maleStandards["3200m"]) {
+  if (fresnoPacific.maleStandards["3200m"]) {
     fresnoPacific.maleStandards["3200m"] = { target: "9:15.00", recruit: "9:25.00", walkon: "9:50.00" };
   }
-  if (fresnoPacific.maleStandards && fresnoPacific.maleStandards["Mile"]) {
+  if (fresnoPacific.maleStandards["Mile"]) {
     fresnoPacific.maleStandards["Mile"] = { target: "4:15.00", recruit: "4:22.00", walkon: "4:41.00" };
   }
 
@@ -19154,11 +19152,10 @@ export const schoolStandards: SchoolStandards[] = [
     const easierStandards: Record<string, EventStandards> = {};
     
     Object.keys(standards).forEach(event => {
-      const eventStandard = standards[event];
       easierStandards[event] = {
-        target: makeEasier(eventStandard.target, event),
-        recruit: makeEasier(eventStandard.recruit, event),
-        walkon: eventStandard.walkon ? makeEasier(eventStandard.walkon, event) : undefined,
+        target: makeEasier(standards[event].target, event),
+        recruit: makeEasier(standards[event].recruit, event),
+        walkon: makeEasier(standards[event].walkon, event),
       };
     });
     
@@ -19277,7 +19274,7 @@ export const schoolStandards: SchoolStandards[] = [
       result[event] = {
         target: adjustValue(event, ev.target),
         recruit: adjustValue(event, ev.recruit),
-        walkon: ev.walkon ? adjustValue(event, ev.walkon) : undefined,
+        walkon: adjustValue(event, ev.walkon),
       };
     });
     return result;
