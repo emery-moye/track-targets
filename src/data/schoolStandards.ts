@@ -18821,6 +18821,20 @@ export const schoolStandards: SchoolStandards[] = [
     fresnoPacific.maleStandards["Mile"] = { target: "4:15.00", recruit: "4:22.00", walkon: "4:41.00" };
   }
 
+  // Override specific women's track events
+  if (fresnoPacific.femaleStandards["800m"]) {
+    fresnoPacific.femaleStandards["800m"] = { target: "2:24.00", recruit: "2:28.00", walkon: "2:30.00" };
+  }
+  if (fresnoPacific.femaleStandards["1600m"]) {
+    fresnoPacific.femaleStandards["1600m"] = { target: "5:12.00", recruit: "5:20.00", walkon: "5:40.00" };
+  }
+  if (fresnoPacific.femaleStandards["Mile"]) {
+    fresnoPacific.femaleStandards["Mile"] = { target: "5:15.00", recruit: "5:22.00", walkon: "5:41.00" };
+  }
+  if (fresnoPacific.femaleStandards["3200m"]) {
+    fresnoPacific.femaleStandards["3200m"] = { target: "11:22.00", recruit: "11:45.00", walkon: "12:30.00" };
+  }
+
   schoolStandards.push(fresnoPacific);
 
   // 2) Slightly easier standards helpers (for the "easier" schools)
