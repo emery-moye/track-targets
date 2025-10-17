@@ -1,15 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, X } from "lucide-react";
 import { searchSchools, SchoolStandards } from "@/data/schoolStandards";
-import { SchoolDetailsModal } from "./SchoolDetailsModal";
+import { generateSchoolSlug } from "@/lib/schoolPageUtils";
 
 export const CollegeSearchBar = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SchoolStandards[]>([]);
-  const [selectedSchool, setSelectedSchool] = useState<SchoolStandards | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
 
@@ -25,8 +25,8 @@ export const CollegeSearchBar = () => {
   };
 
   const handleSchoolClick = (school: SchoolStandards) => {
-    setSelectedSchool(school);
-    setIsModalOpen(true);
+    const slug = generateSchoolSlug(school.schoolName);
+    navigate(`/schools/${slug}`);
     setShowResults(false);
     setIsMobileExpanded(false);
   };
@@ -149,12 +149,6 @@ export const CollegeSearchBar = () => {
           </div>
         )}
       </div>
-
-      <SchoolDetailsModal
-        school={selectedSchool}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </>
   );
 };
