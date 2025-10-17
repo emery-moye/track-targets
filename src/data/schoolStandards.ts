@@ -2282,7 +2282,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "52'0\"", recruit: "47'0\"", walkon: "42'0\"" },
       "Discus": { target: "155'0\"", recruit: "140'0\"", walkon: "125'0\"" },
       "Hammer": { target: "170'0\"", recruit: "150'0\"", walkon: "130'0\"" },
-      "Javelin": { target: "185'0\"", recruit: "165'0\"", walkon: "145'0\"" }
+        "Javelin": { target: "192'0\"", recruit: "178'0\"", walkon: "169'0\"" }
     },
     femaleStandards: {
       "100m": { target: "12.10", recruit: "12.30", walkon: "12.50" },
@@ -2329,7 +2329,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "51'6\"", recruit: "46'6\"", walkon: "41'6\"" },
       "Discus": { target: "153'0\"", recruit: "138'0\"", walkon: "123'0\"" },
       "Hammer": { target: "168'0\"", recruit: "148'0\"", walkon: "128'0\"" },
-      "Javelin": { target: "183'0\"", recruit: "163'0\"", walkon: "143'0\"" }
+      "Javelin": { target: "192'0\"", recruit: "178'0\"", walkon: "169'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.85", recruit: "12.20", walkon: "12.50" },
@@ -2470,7 +2470,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Shot Put": { target: "51'4\"", recruit: "46'4\"", walkon: "41'4\"" },
       "Discus": { target: "152'6\"", recruit: "137'6\"", walkon: "122'6\"" },
       "Hammer": { target: "167'6\"", recruit: "147'6\"", walkon: "127'6\"" },
-      "Javelin": { target: "182'6\"", recruit: "162'6\"", walkon: "142'6\"" }
+      "Javelin": { target: "192'0\"", recruit: "178'0\"", walkon: "169'0\"" }
     },
     femaleStandards: {
       "100m": { target: "11.70", recruit: "12.05", walkon: "12.40" },
