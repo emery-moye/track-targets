@@ -18803,6 +18803,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "PacWest",
     state: "CA",
+    hasOfficialStandards: true,
     maleStandards: deepClone(apu.maleStandards),
     femaleStandards: deepClone(apu.femaleStandards),
   };
