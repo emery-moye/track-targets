@@ -3893,6 +3893,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "FL",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.25", recruit: "10.35" },
       "200m": { target: "20.70", recruit: "20.90" },
@@ -4936,6 +4937,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "CAA",
     state: "MA",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.60", walkon: "10.80" },
       "200m": { target: "21.20", recruit: "21.60", walkon: "21.90" },
@@ -5619,6 +5621,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "WV",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.60", walkon: "11.00" },
       "200m": { target: "21.65", recruit: "21.70", walkon: "22.30" },
@@ -5757,6 +5760,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "AZ",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.40" },
       "200m": { target: "21.20", recruit: "21.30" },
@@ -7902,6 +7906,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "NH",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.65", recruit: "10.75", walkon: "10.95" },
       "200m": { target: "21.45", recruit: "21.65", walkon: "22.05" },
@@ -7949,6 +7954,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "RI",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.70", recruit: "10.80", walkon: "11.00" },
       "200m": { target: "21.80", recruit: "21.90", walkon: "22.20" },
@@ -8756,6 +8762,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ASUN",
     state: "FL",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.40", walkon: "10.55" },
       "200m": { target: "20.95", recruit: "21.20", walkon: "21.50" },
@@ -10814,6 +10821,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "CUSA",
     state: "VA",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.25", recruit: "10.30", walkon: "10.60" },
       "200m": { target: "20.80", recruit: "20.90", walkon: "21.40" },
@@ -12668,6 +12676,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D2",
     conference: "PSAC",
     state: "PA",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.80", recruit: "10.90", walkon: "11.10" },
       "200m": { target: "22.15", recruit: "22.25", walkon: "22.60" },
