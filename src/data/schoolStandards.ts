@@ -10,6 +10,7 @@ export interface SchoolStandards {
   division: string;
   conference: string;
   state: string;
+  hasOfficialStandards?: boolean;
   maleStandards?: Record<string, EventStandards>;
   femaleStandards: Record<string, EventStandards>;
 }
@@ -1243,6 +1244,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "IA",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.35" },
       "200m": { target: "20.60", recruit: "20.90" },
@@ -1810,6 +1812,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "NJ",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.65" },
       "200m": { target: "20.75", recruit: "21.25" },
@@ -1856,6 +1859,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "KY",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.45" },
       "200m": { target: "20.70", recruit: "21.00" },
@@ -2696,6 +2700,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "VA",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.40", walkon: "10.60" },
       "200m": { target: "20.50", recruit: "21.00", walkon: "21.50" },
@@ -2792,6 +2797,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "NY",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.7", walkon: "11.08" },
       "200m": { target: "21.50", recruit: "21.9", walkon: "22.5" },
@@ -3996,6 +4002,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "MAC",
     state: "OH",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.65", walkon: "10.75" },
       "200m": { target: "21.30", recruit: "21.50", walkon: "21.70" },
@@ -4791,6 +4798,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "CAA",
     state: "NC",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.45", recruit: "10.55", walkon: "10.80" },
       "200m": { target: "21.30", recruit: "21.50", walkon: "21.90" },
@@ -5372,6 +5380,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "NC",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.50", walkon: "10.70" },
       "200m": { target: "20.80", recruit: "21.40", walkon: "21.70" },
@@ -6450,6 +6459,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "PA",
+    hasOfficialStandards: true,
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.60", recruit: "11.80", walkon: "12.25" },
@@ -6506,6 +6516,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "TX",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.40", walkon: "10.60" },
       "200m": { target: "20.65", recruit: "20.90", walkon: "21.20" },
@@ -8199,6 +8210,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "CT",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.60", walkon: "10.80" },
       "200m": { target: "21.15", recruit: "21.40", walkon: "21.80" },
@@ -12139,6 +12151,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Sky",
     state: "OR",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.40", recruit: "10.60", walkon: "10.80" },
       "200m": { target: "21.30", recruit: "21.60", walkon: "21.90" },

@@ -7,6 +7,7 @@ import { SchoolDetailsModal } from "./SchoolDetailsModal";
 import { findSchoolStandards } from "@/data/schoolStandards";
 import { generateSchoolSlug } from "@/lib/schoolPageUtils";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Star } from "lucide-react";
 
 export interface SchoolMatch {
   id: string;
@@ -15,6 +16,7 @@ export interface SchoolMatch {
   conference: string;
   tier: TierType;
   state: string;
+  hasOfficialStandards?: boolean;
 }
 
 interface ResultsTableProps {
@@ -130,7 +132,12 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
                 onClick={() => handleSchoolClick(result)}
               >
                 <td className="p-4">
-                  <span className="font-bold text-foreground">{result.schoolName}</span>
+                  <span className="font-bold text-foreground flex items-center gap-2">
+                    {result.schoolName}
+                    {result.hasOfficialStandards && (
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    )}
+                  </span>
                 </td>
                 {isMobile ? (
                   <>

@@ -93,6 +93,7 @@ export const generateMatches = (gradeLevel: string, event: string, personalBest:
     if (tier) {
       const match = {
         id: school.id,
+        hasOfficialStandards: school.hasOfficialStandards,
         schoolName: school.schoolName,
         division: school.division,
         conference: school.conference,

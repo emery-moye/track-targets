@@ -5,7 +5,7 @@ import { findSchoolBySlug, generateSchoolMetaDescription, generateSchoolPageTitl
 import { SchoolStandardsTable } from "@/components/SchoolStandardsTable";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronRight, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const SchoolPage = () => {
@@ -84,8 +84,11 @@ const SchoolPage = () => {
 
           {/* School Header */}
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight flex items-center gap-3">
               {school.schoolName} Track & Field Recruiting Standards
+              {school.hasOfficialStandards && (
+                <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+              )}
             </h1>
             
             <div className="flex flex-wrap gap-3 items-center">
