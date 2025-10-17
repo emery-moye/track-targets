@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EventStandards } from "@/data/schoolStandards";
+import { TierBadge } from "@/components/TierBadge";
 
 interface SchoolStandardsTableProps {
   title: string;
@@ -28,9 +29,9 @@ export const SchoolStandardsTable = ({ title, standards }: SchoolStandardsTableP
             <TableHeader>
               <TableRow>
                 <TableHead className="font-semibold">Event</TableHead>
-                <TableHead className="font-semibold">Target</TableHead>
-                <TableHead className="font-semibold">Recruit</TableHead>
-                <TableHead className="font-semibold">Walk-On</TableHead>
+                <TableHead className="font-semibold"><TierBadge tier="target" /></TableHead>
+                <TableHead className="font-semibold"><TierBadge tier="recruit" /></TableHead>
+                <TableHead className="font-semibold"><TierBadge tier="walkon" /></TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
