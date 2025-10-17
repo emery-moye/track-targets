@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -6,6 +6,7 @@ import { Search } from "lucide-react";
 
 interface SearchFormProps {
   onSearch: (data: { gradeLevel: string; event: string; personalBest: string; gender: string }) => void;
+  initialValues?: { gradeLevel: string; event: string; personalBest: string; gender: string } | null;
 }
 
 const gradeOptions = [
@@ -48,12 +49,22 @@ const eventOptions = [
   "Javelin"
 ];
 
-export const SearchForm = ({ onSearch }: SearchFormProps) => {
+export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
   const [gradeLevel, setGradeLevel] = useState("");
   const [event, setEvent] = useState("");
   const [personalBest, setPersonalBest] = useState("");
   const [gender, setGender] = useState("");
   const [error, setError] = useState("");
+
+  // Populate form with initial values if provided
+  useEffect(() => {
+    if (initialValues) {
+      setGradeLevel(initialValues.gradeLevel);
+      setEvent(initialValues.event);
+      setPersonalBest(initialValues.personalBest);
+      setGender(initialValues.gender);
+    }
+  }, [initialValues]);
 
   const validatePersonalBest = (value: string) => {
     // Allow formats like: 10.5, 10.50, 1:23.45 for running events

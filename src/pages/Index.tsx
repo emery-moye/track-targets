@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { SearchForm } from "@/components/SearchForm";
 import { ResultsTable, SchoolMatch } from "@/components/ResultsTable";
@@ -8,18 +9,48 @@ import { Button } from "@/components/ui/button";
 // import tiktokLogo from "@/assets/tiktok-logo.png";
 
 const Index = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [results, setResults] = useState<SchoolMatch[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
+  const [initialFormData, setInitialFormData] = useState<{ gradeLevel: string; event: string; personalBest: string; gender: string } | null>(null);
+
+  // On mount, check if we have search params from URL
+  useEffect(() => {
+    const gradeLevel = searchParams.get('gradeLevel');
+    const event = searchParams.get('event');
+    const personalBest = searchParams.get('personalBest');
+    const gender = searchParams.get('gender');
+
+    if (gradeLevel && event && personalBest && gender) {
+      // Auto-populate form and trigger search
+      const formData = { gradeLevel, event, personalBest, gender };
+      setInitialFormData(formData);
+      
+      const matches = generateMatches(gradeLevel, event, personalBest, gender);
+      setResults(matches);
+      setHasSearched(true);
+    }
+  }, []); // Only run once on mount
 
   const handleSearch = (data: { gradeLevel: string; event: string; personalBest: string; gender: string }) => {
     const matches = generateMatches(data.gradeLevel, data.event, data.personalBest, data.gender);
     setResults(matches);
     setHasSearched(true);
+    
+    // Update URL with search params
+    setSearchParams({
+      gradeLevel: data.gradeLevel,
+      event: data.event,
+      personalBest: data.personalBest,
+      gender: data.gender
+    });
   };
 
   const handleReset = () => {
     setResults([]);
     setHasSearched(false);
+    setInitialFormData(null);
+    setSearchParams({}); // Clear URL params
   };
 
   return (
@@ -31,7 +62,7 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-foreground">Find your best college matches instantly</h2>
         </div>
         
-        <SearchForm onSearch={handleSearch} />
+        <SearchForm onSearch={handleSearch} initialValues={initialFormData} />
         
         {!hasSearched && (
           <>

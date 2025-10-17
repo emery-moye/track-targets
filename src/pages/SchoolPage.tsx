@@ -61,10 +61,13 @@ const SchoolPage = () => {
         {/* Header */}
         <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-10">
           <div className="container mx-auto px-4 py-4">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <button 
+              onClick={() => navigate(-1)} 
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               <ArrowLeft className="h-4 w-4" />
-              Back to Search
-            </Link>
+              Back to Results
+            </button>
           </div>
         </header>
 
