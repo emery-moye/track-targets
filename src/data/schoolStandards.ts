@@ -2031,6 +2031,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Patriot League",
     state: "MA",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.70", recruit: "10.85", walkon: "11.00" },
       "200m": { target: "21.90", recruit: "22.30", walkon: "22.49" },
@@ -2503,6 +2504,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "RI",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.70", walkon: "10.90" },
       "200m": { target: "21.50", recruit: "21.80", walkon: "22.20" },
