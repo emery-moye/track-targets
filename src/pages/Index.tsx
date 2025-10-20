@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { SearchForm } from "@/components/SearchForm";
-import { ResultsTable, SchoolMatch } from "@/components/ResultsTable";
+import { SchoolMatch } from "@/components/ResultsTable";
 import { generateMatches } from "@/data/mockData";
 import { Button } from "@/components/ui/button";
-// import instagramLogo from "@/assets/instagram-logo.png";
-// import tiktokLogo from "@/assets/tiktok-logo.png";
+
+// Lazy load ResultsTable for better performance
+const ResultsTable = lazy(() => import("@/components/ResultsTable").then(module => ({ default: module.ResultsTable })));
 
 const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -83,7 +84,9 @@ const Index = () => {
         )}
         
         {hasSearched && (
-          <ResultsTable results={results} />
+          <Suspense fallback={<div className="bg-card rounded-xl shadow-lg p-8 text-center">Loading results...</div>}>
+            <ResultsTable results={results} />
+          </Suspense>
         )}
       </main>
       
@@ -107,7 +110,14 @@ const Index = () => {
                 className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Follow us on Instagram"
               >
-                <img src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" alt="Instagram" className="w-8 h-8" />
+                <img 
+                  src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" 
+                  alt="Instagram" 
+                  className="w-8 h-8"
+                  loading="lazy"
+                  width="32"
+                  height="32"
+                />
               </a>
               <a
                 href="https://www.tiktok.com/@preferredrecruit"
@@ -116,7 +126,14 @@ const Index = () => {
                 className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Follow us on TikTok"
               >
-                <img src="/lovable-uploads/82c35b69-d949-4123-bc13-1914a86a4454.png" alt="TikTok" className="w-8 h-8" />
+                <img 
+                  src="/lovable-uploads/82c35b69-d949-4123-bc13-1914a86a4454.png" 
+                  alt="TikTok" 
+                  className="w-8 h-8"
+                  loading="lazy"
+                  width="32"
+                  height="32"
+                />
               </a>
               <a
                 href="https://www.youtube.com/@thepreferredrecruit/videos"
@@ -125,7 +142,14 @@ const Index = () => {
                 className="p-2 hover:opacity-80 transition-opacity"
                 aria-label="Subscribe to our YouTube channel"
               >
-                <img src="/lovable-uploads/e6f73d11-1cba-49c6-8fc5-fa310e18e051.png" alt="YouTube" className="h-8 w-auto object-contain" />
+                <img 
+                  src="/lovable-uploads/e6f73d11-1cba-49c6-8fc5-fa310e18e051.png" 
+                  alt="YouTube" 
+                  className="h-8 w-auto object-contain"
+                  loading="lazy"
+                  width="32"
+                  height="32"
+                />
               </a>
             </div>
           </div>
