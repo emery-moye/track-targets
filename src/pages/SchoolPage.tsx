@@ -5,7 +5,7 @@ import { findSchoolBySlug, generateSchoolMetaDescription, generateSchoolPageTitl
 import { SchoolStandardsTable } from "@/components/SchoolStandardsTable";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, ChevronRight, Star } from "lucide-react";
+import { ArrowLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const SchoolPage = () => {
@@ -112,6 +112,22 @@ const SchoolPage = () => {
                 </p>
               </CardContent>
             </Card>
+
+            {/* Coaches Link */}
+            {school.coachesUrl && (
+              <div className="flex items-center gap-2 text-sm">
+                <span className="text-muted-foreground">Coaches:</span>
+                <a 
+                  href={school.coachesUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline flex items-center gap-1"
+                >
+                  View Coaching Staff
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Men's Standards */}

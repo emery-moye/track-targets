@@ -11,6 +11,7 @@ export interface SchoolStandards {
   conference: string;
   state: string;
   hasOfficialStandards?: boolean;
+  coachesUrl?: string;
   maleStandards?: Record<string, EventStandards>;
   femaleStandards: Record<string, EventStandards>;
 }
@@ -887,6 +888,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "OK",
+    coachesUrl: "https://soonersports.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -5763,6 +5765,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Big 12",
     state: "AZ",
     hasOfficialStandards: true,
+    coachesUrl: "https://arizonawildcats.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.40" },
       "200m": { target: "21.20", recruit: "21.30" },
@@ -5810,6 +5813,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "AZ",
+    coachesUrl: "https://thesundevils.com/sports/track-field/roster",
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.45" },
       "200m": { target: "21.25", recruit: "21.35" },
@@ -5858,6 +5862,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "TX",
+    coachesUrl: "https://baylorbears.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.28", recruit: "10.48" },
       "200m": { target: "21.18", recruit: "21.38" },
@@ -5905,6 +5910,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "OH",
+    coachesUrl: "https://gobearcats.com/sports/track-field/roster",
     maleStandards: {
       "100m": { target: "10.32", recruit: "10.52" },
       "200m": { target: "21.22", recruit: "21.42" },
@@ -5952,6 +5958,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "CO",
+    coachesUrl: "https://cubuffs.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.33", recruit: "10.53" },
       "200m": { target: "21.23", recruit: "21.43" },
@@ -5999,6 +6006,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "IA",
+    coachesUrl: "https://cyclones.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.31", recruit: "10.51" },
       "200m": { target: "21.21", recruit: "21.41" },
@@ -6046,6 +6054,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "KS",
+    coachesUrl: "https://kuathletics.com/sports/track-and-field/coaches/2024-25",
     maleStandards: {
       "100m": { target: "10.29", recruit: "10.49" },
       "200m": { target: "21.19", recruit: "21.39" },
@@ -6093,6 +6102,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "KS",
+    coachesUrl: "https://www.kstatesports.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.34", recruit: "10.54" },
       "200m": { target: "21.24", recruit: "21.44" },
@@ -6140,6 +6150,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "OK",
+    coachesUrl: "https://okstate.com/sports/mxct/coaches",
     maleStandards: {
       "100m": { target: "10.27", recruit: "10.47" },
       "200m": { target: "21.17", recruit: "21.37" },
@@ -6187,6 +6198,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "TX",
+    coachesUrl: "https://gofrogs.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.26", recruit: "10.46" },
       "200m": { target: "21.16", recruit: "21.36" },
@@ -6234,6 +6246,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "TX",
+    coachesUrl: "https://texastech.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.10", recruit: "10.39" },
       "200m": { target: "20.95", recruit: "21.25" },
@@ -6281,6 +6294,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "TX",
+    coachesUrl: "https://uhcougars.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.12", recruit: "10.30" },
       "200m": { target: "20.97", recruit: "21.17" },
@@ -6328,6 +6342,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "UT",
+    coachesUrl: "https://byucougars.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.31", recruit: "10.35" },
       "200m": { target: "21.21", recruit: "21.20" },
@@ -6376,6 +6391,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "WV",
+    coachesUrl: "https://wvusports.com/sports/womens-track-and-field/coaches",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.63", recruit: "11.66" },
@@ -6404,6 +6420,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "UT",
+    coachesUrl: "https://utahutes.com/sports/track-and-field/coaches",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.65", recruit: "11.70" },
@@ -6432,6 +6449,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big 12",
     state: "FL",
+    coachesUrl: "https://ucfknights.com/sports/track-and-field/roster",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.67", recruit: "11.74" },
