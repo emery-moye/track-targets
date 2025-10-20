@@ -416,6 +416,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "OH",
+    coachesUrl: "https://ohiostatebuckeyes.com/sports/mens-track-field/roster/",
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.40" },
       "200m": { target: "20.80", recruit: "21.10" },
@@ -510,6 +511,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "AL",
+    coachesUrl: "https://rolltide.com/sports/xctrack/coaches",
     maleStandards: {
       "100m": { target: "10.10", recruit: "10.40" },
       "200m": { target: "20.50", recruit: "20.90" },
@@ -557,6 +559,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "AR",
+    coachesUrl: "https://arkansasrazorbacks.com/sport/m-track/roster/",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -604,6 +607,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "GA",
+    coachesUrl: "https://georgiadogs.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.08", recruit: "10.38" },
       "200m": { target: "20.45", recruit: "20.85" },
@@ -651,6 +655,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "TX",
+    coachesUrl: "https://12thman.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.12", recruit: "10.42" },
       "200m": { target: "20.55", recruit: "20.95" },
@@ -698,6 +703,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "MS",
+    coachesUrl: "https://olemisssports.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.14", recruit: "10.44" },
       "200m": { target: "20.58", recruit: "20.98" },
@@ -745,6 +751,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "TN",
+    coachesUrl: "https://utsports.com/sports/track-and-field",
     maleStandards: {
       "100m": { target: "10.13", recruit: "10.43" },
       "200m": { target: "20.57", recruit: "20.97" },
@@ -794,6 +801,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "AL",
+    coachesUrl: "https://auburntigers.com/sports/xctrack/roster",
     maleStandards: {
       "100m": { target: "10.11", recruit: "10.41" },
       "200m": { target: "20.53", recruit: "20.93" },
@@ -841,6 +849,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "LA",
+    coachesUrl: "https://lsusports.net/sports/tf/roster/",
     maleStandards: {
       "100m": { target: "10.10", recruit: "10.40" },
       "200m": { target: "20.50", recruit: "20.90" },
@@ -936,6 +945,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "SC",
+    coachesUrl: "https://gamecocksonline.com/sports/track/roster/",
     maleStandards: {
       "100m": { target: "10.16", recruit: "10.46" },
       "200m": { target: "20.62", recruit: "21.02" },
@@ -983,6 +993,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "KY",
+    coachesUrl: "https://ukathletics.com/sports/track/roster/",
     maleStandards: {
       "100m": { target: "10.17", recruit: "10.47" },
       "200m": { target: "20.65", recruit: "21.05" },
@@ -1030,6 +1041,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "MS",
+    coachesUrl: "https://hailstate.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.18", recruit: "10.48" },
       "200m": { target: "20.68", recruit: "21.08" },
@@ -1077,6 +1089,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "MO",
+    coachesUrl: "https://mutigers.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.19", recruit: "10.49" },
       "200m": { target: "20.70", recruit: "21.10" },
@@ -1124,6 +1137,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "SEC",
     state: "TN",
+    coachesUrl: "https://vucommodores.com/sports/wtrack/roster/",
     femaleStandards: {
       "100m": { target: "11.33", recruit: "11.63" },
       "200m": { target: "23.27", recruit: "23.77" },
@@ -1151,6 +1165,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "OR",
+    coachesUrl: "https://goducks.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.05", recruit: "10.25" },
       "200m": { target: "20.40", recruit: "20.70" },
@@ -1199,6 +1214,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "CA",
+    coachesUrl: "https://uclabruins.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.18", recruit: "10.38" },
       "200m": { target: "20.70", recruit: "21.00" },
@@ -1249,6 +1265,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Big Ten",
     state: "IA",
     hasOfficialStandards: true,
+    coachesUrl: "https://hawkeyesports.com/sports/mtrack/roster",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.35" },
       "200m": { target: "20.60", recruit: "20.90" },
@@ -1298,6 +1315,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "MI",
+    coachesUrl: "https://mgoblue.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.25", recruit: "10.55" },
       "200m": { target: "20.70", recruit: "21.35" },
@@ -1348,6 +1366,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "PA",
+    coachesUrl: "https://gopsusports.com/sports/track-field/roster",
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.40" },
       "200m": { target: "20.70", recruit: "21.00" },
@@ -1395,6 +1414,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "CA",
+    coachesUrl: "https://usctrojans.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.00", recruit: "10.20" },
       "200m": { target: "20.30", recruit: "20.60" },
@@ -1442,6 +1462,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "NE",
+    coachesUrl: "https://huskers.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.50" },
       "200m": { target: "20.90", recruit: "21.20" },
@@ -1489,6 +1510,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "MN",
+    coachesUrl: "https://gophersports.com/sports/womens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.60" },
       "200m": { target: "20.75", recruit: "21.35" },
@@ -1538,6 +1560,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "WI",
+    coachesUrl: "https://uwbadgers.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.50" },
       "200m": { target: "20.90", recruit: "21.20" },
@@ -1585,6 +1608,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "WA",
+    coachesUrl: "https://gohuskies.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.25", recruit: "10.45" },
       "200m": { target: "20.80", recruit: "21.10" },
@@ -1632,6 +1656,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "IN",
+    coachesUrl: "https://purduesports.com/news/2024/8/22/miller-announces-track-field-coaching-staff",
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.55" },
       "200m": { target: "21.00", recruit: "21.30" },
@@ -1679,6 +1704,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "IL",
+    coachesUrl: "https://fightingillini.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.55" },
       "200m": { target: "21.00", recruit: "21.30" },
@@ -1726,6 +1752,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "MD",
+    coachesUrl: "https://umterps.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.50" },
       "200m": { target: "20.90", recruit: "21.20" },
@@ -1773,6 +1800,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "IN",
+    coachesUrl: "https://iuhoosiers.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.40" },
       "200m": { target: "20.90", recruit: "21.20" },
@@ -1817,6 +1845,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "Big Ten",
     state: "NJ",
     hasOfficialStandards: true,
+    coachesUrl: "https://scarletknights.com/sports/track-and-field/roster/2024-25",
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.65" },
       "200m": { target: "20.75", recruit: "21.25" },
@@ -1864,6 +1893,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "ACC",
     state: "KY",
     hasOfficialStandards: true,
+    coachesUrl: "https://gocards.com/sports/track-and-field/coaches/2024-25",
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.45" },
       "200m": { target: "20.70", recruit: "21.00" },
@@ -1913,6 +1943,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Big Ten",
     state: "IL",
+    coachesUrl: "https://nusports.com/sports/womens-cross-country/coaches",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.65", recruit: "11.85" },
@@ -2851,6 +2882,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "NC",
+    coachesUrl: "https://goduke.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.05", recruit: "10.35" },
       "200m": { target: "20.40", recruit: "20.80" },
@@ -3357,6 +3389,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "NC",
+    coachesUrl: "https://goheels.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.05", recruit: "10.35" },
       "200m": { target: "20.40", recruit: "20.80" },
@@ -3404,6 +3437,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "NC",
+    coachesUrl: "https://gopack.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -3451,6 +3485,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "CA",
+    coachesUrl: "https://calbears.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.05", recruit: "10.35" },
       "200m": { target: "20.40", recruit: "20.80" },
@@ -3498,6 +3533,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "VA",
+    coachesUrl: "https://hokiesports.com/staff/ben-thomas",
     maleStandards: {
       "100m": { target: "10.05", recruit: "10.35" },
       "200m": { target: "20.40", recruit: "20.80" },
@@ -3545,6 +3581,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "SC",
+    coachesUrl: "https://clemsontigers.com/sports/track-field/roster/",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -3592,6 +3629,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "PA",
+    coachesUrl: "https://pittsburghpanthers.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -3639,6 +3677,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "FL",
+    coachesUrl: "https://people.miami.edu/profile/77b6a2d391d492a2a983189330027d35",
     maleStandards: {
       "100m": { target: "10.05", recruit: "10.35" },
       "200m": { target: "20.40", recruit: "20.80" },
@@ -3686,6 +3725,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "NC",
+    coachesUrl: "https://godeacs.com/sports/track-and-field/coaches",
     maleStandards: {
       "800m": { target: "1:47.00", recruit: "1:51.00" },
       "1500m": { target: "3:43.00", recruit: "3:50.00" },
@@ -3709,6 +3749,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "VA",
+    coachesUrl: "https://virginiasports.com/sports/xctrack/roster/",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -3756,6 +3797,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "IN",
+    coachesUrl: "https://und.com/staff/david-beauchem/",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -3803,6 +3845,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "NY",
+    coachesUrl: "https://cuse.com/sports/track-and-field/coaches/46209",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -3850,6 +3893,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "GA",
+    coachesUrl: "https://ramblinwreck.com/coach/grover-hinsdale/",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.45" },
       "200m": { target: "20.60", recruit: "21.00" },
@@ -3898,6 +3942,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "ACC",
     state: "FL",
     hasOfficialStandards: true,
+    coachesUrl: "https://seminoles.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.25", recruit: "10.35" },
       "200m": { target: "20.70", recruit: "20.90" },
@@ -3947,6 +3992,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "MA",
+    coachesUrl: "https://bceagles.com/coaches.aspx?rc=407",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.40", recruit: "11.70" },
@@ -3975,6 +4021,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "ACC",
     state: "TX",
+    coachesUrl: "https://smumustangs.com/sports/womens-track-and-field/coaches",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.40", recruit: "11.70" },
