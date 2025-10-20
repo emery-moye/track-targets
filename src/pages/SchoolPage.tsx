@@ -33,6 +33,7 @@ const SchoolPage = () => {
     "name": school.schoolName,
     "sport": "Track and Field",
     "description": metaDescription,
+    "url": `https://trackandfieldstandards.com/schools/${schoolSlug}`,
     "address": {
       "@type": "PostalAddress",
       "addressRegion": school.state
@@ -48,10 +49,21 @@ const SchoolPage = () => {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={`https://trackandfieldstandards.com/schools/${schoolSlug}`} />
+        
+        <meta property="og:url" content={`https://trackandfieldstandards.com/schools/${schoolSlug}`} />
         <meta property="og:title" content={`${school.schoolName} Track & Field Standards`} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
-        <meta name="keywords" content={`${school.schoolName} track standards, ${school.schoolName} track and field, ${school.conference} track standards, ${school.division} track recruiting, ${school.schoolName} recruiting standards`} />
+        <meta property="og:image" content="https://trackandfieldstandards.com/lovable-uploads/32e64d19-2b4a-46c0-bcb0-0c1657cf2992.png" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${school.schoolName} Track & Field Standards`} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content="https://trackandfieldstandards.com/lovable-uploads/32e64d19-2b4a-46c0-bcb0-0c1657cf2992.png" />
+        
+        <meta name="keywords" content={`${school.schoolName} track standards, ${school.schoolName} track and field recruiting, ${school.schoolName} track recruiting standards, ${school.conference} track standards, ${school.division} track and field, ${school.schoolName} walk on standards, ${school.schoolName} recruiting times, ${school.state} track and field recruiting`} />
+        
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
@@ -85,11 +97,14 @@ const SchoolPage = () => {
           {/* School Header */}
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight flex items-center gap-3">
-              {school.schoolName} Track & Field Recruiting Standards
+              {school.schoolName} Track & Field Standards
               {school.hasOfficialStandards && (
                 <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
               )}
             </h1>
+            <p className="text-xl text-muted-foreground">
+              Official Recruiting Standards & Performance Benchmarks
+            </p>
             
             <div className="flex flex-wrap gap-3 items-center">
               <Badge variant="secondary" className="text-lg px-4 py-2">
