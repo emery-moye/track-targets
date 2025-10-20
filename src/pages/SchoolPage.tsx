@@ -115,16 +115,16 @@ const SchoolPage = () => {
 
             {/* Coaches Link */}
             {school.coachesUrl && (
-              <div className="flex items-center gap-2 text-sm">
-                <span className="text-muted-foreground">Coaches:</span>
+              <div className="flex items-center gap-3 text-base py-3 px-4 bg-muted/30 rounded-lg border border-border/40">
+                <span className="text-foreground font-semibold">Coaches:</span>
                 <a 
                   href={school.coachesUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline flex items-center gap-1"
+                  className="text-primary hover:underline flex items-center gap-2 font-medium"
                 >
                   View Coaching Staff
-                  <ExternalLink className="h-3 w-3" />
+                  <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
             )}
