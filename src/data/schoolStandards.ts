@@ -27033,6 +27033,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
+    hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.40", recruit: "10.50", walkon: "10.71" },
       "200m": { target: "21.20", recruit: "21.40", walkon: "21.68" },
