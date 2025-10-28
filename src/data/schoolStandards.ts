@@ -27506,6 +27506,16 @@ const scacSchools: SchoolStandards[] = [
       "Javelin": { target: "139'0\"", recruit: "125'0\"", walkon: "114'0\"" },
       "Heptathlon": { target: "5325", recruit: "4800", walkon: "4525" }
     }
+  },
+  {
+    id: "bw_hawaii",
+    schoolName: "University of Hawaii",
+    searchKeywords: ["hawaii", "uh", "rainbow warriors"],
+    division: "D1",
+    conference: "Big West",
+    state: "HI",
+    femaleStandards: {
+      "100m": { target: "11.60", recruit: "11.73", walkon: "11.93" },
       "200m": { target: "23.46", recruit: "23.86", walkon: "24.46" },
       "400m": { target: "53.68", recruit: "55.18", walkon: "56.63" },
       "800m": { target: "2:09.25", recruit: "2:12.25", walkon: "2:15.25" },
@@ -27530,41 +27540,6 @@ const scacSchools: SchoolStandards[] = [
       "Hammer": { target: "159'0\"", recruit: "154'0\"", walkon: "146'0\"" },
       "Javelin": { target: "146'0\"", recruit: "132'0\"", walkon: "121'0\"" },
       "Heptathlon": { target: "5550", recruit: "5025", walkon: "4750" }
-    }
-  },
-  {
-    id: "bw_hawaii",
-    schoolName: "University of Hawaii",
-    searchKeywords: ["hawaii", "uh", "rainbow warriors"],
-    division: "D1",
-    conference: "Big West",
-    state: "HI",
-    femaleStandards: {
-      "100m": { target: "11.62", recruit: "11.75", walkon: "11.95" },
-      "200m": { target: "23.50", recruit: "23.90", walkon: "24.50" },
-      "400m": { target: "53.75", recruit: "55.25", walkon: "56.70" },
-      "800m": { target: "2:10.00", recruit: "2:13.00", walkon: "2:16.00" },
-      "1500m": { target: "4:39.00", recruit: "4:45.00", walkon: "4:51.00" },
-      "1600m": { target: "5:04.50", recruit: "5:08.00", walkon: "5:13.80" },
-      "Mile": { target: "5:08.50", recruit: "5:11.00", walkon: "5:16.20" },
-      "3000m": { target: "10:22.00", recruit: "10:31.00", walkon: "10:42.50" },
-      "5000m": { target: "11:17.00", recruit: "11:23.50", walkon: "11:25.50" },
-      "2 Mile": { target: "11:12.00", recruit: "11:19.00", walkon: "11:31.50" },
-      "10000m": { target: "18:07.00", recruit: "18:13.50", walkon: "18:34.50" },
-      "100m Hurdles": { target: "13.45", recruit: "13.92", walkon: "14.25" },
-      "300m Hurdles": { target: "43.20", recruit: "43.50", walkon: "44.45" },
-      "400m Hurdles": { target: "59.00", recruit: "1:01.00", walkon: "1:03.00" },
-      "2000m Steeplechase": { target: "7:02.00", recruit: "7:08.50", walkon: "7:19.50" },
-      "3000m Steeplechase": { target: "11:07.00", recruit: "11:13.50", walkon: "11:29.50" },
-      "High Jump": { target: "5'8\"", recruit: "5'6\"", walkon: "5'4\"" },
-      "Pole Vault": { target: "13'0\"", recruit: "12'6\"", walkon: "11'9\"" },
-      "Long Jump": { target: "19'8\"", recruit: "19'0\"", walkon: "18'6\"" },
-      "Triple Jump": { target: "40'2\"", recruit: "39'3\"", walkon: "38'0\"" },
-      "Shot Put": { target: "48'0\"", recruit: "47'0\"", walkon: "45'0\"" },
-      "Discus": { target: "160'2\"", recruit: "145'0\"", walkon: "140'0\"" },
-      "Hammer": { target: "156'0\"", recruit: "151'0\"", walkon: "143'4\"" },
-      "Javelin": { target: "143'0\"", recruit: "129'0\"", walkon: "118'0\"" },
-      "Heptathlon": { target: "5450", recruit: "4925", walkon: "4650" }
     }
   }
 ];
