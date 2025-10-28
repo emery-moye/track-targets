@@ -27,6 +27,7 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
   const [divisionFilter, setDivisionFilter] = useState("all");
   const [conferenceFilter, setConferenceFilter] = useState("all");
   const [tierFilter, setTierFilter] = useState("all");
+  const [stateFilter, setStateFilter] = useState("all");
   const [selectedSchool, setSelectedSchool] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = useIsMobile();
@@ -35,12 +36,14 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
   const divisions = [...new Set(results.map(r => r.division))];
   const conferences = [...new Set(results.map(r => r.conference))];
   const tiers = ["target", "recruit", "walkon"];
+  const states = [...new Set(results.map(r => r.state))].sort();
 
   const filteredResults = results.filter(result => {
     const divMatch = divisionFilter === "all" || result.division === divisionFilter;
     const confMatch = conferenceFilter === "all" || result.conference === conferenceFilter;
     const tierMatch = tierFilter === "all" || result.tier === tierFilter;
-    return divMatch && confMatch && tierMatch;
+    const stateMatch = stateFilter === "all" || result.state === stateFilter;
+    return divMatch && confMatch && tierMatch && stateMatch;
   });
 
   const handleSchoolClick = (schoolMatch: SchoolMatch) => {
@@ -98,6 +101,18 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
                 <SelectItem key={tier} value={tier}>
                   {tier.charAt(0).toUpperCase() + tier.slice(1)}
                 </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          
+          <Select value={stateFilter} onValueChange={setStateFilter}>
+            <SelectTrigger className="w-32">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All States</SelectItem>
+              {states.map(state => (
+                <SelectItem key={state} value={state}>{state}</SelectItem>
               ))}
             </SelectContent>
           </Select>
