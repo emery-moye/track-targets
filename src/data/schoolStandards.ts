@@ -10,6 +10,7 @@ export interface SchoolStandards {
   division: string;
   conference: string;
   state: string;
+  searchKeywords?: string[];
   hasOfficialStandards?: boolean;
   coachesUrl?: string;
   maleStandards?: Record<string, EventStandards>;
@@ -1211,6 +1212,7 @@ export const schoolStandards: SchoolStandards[] = [
   {
     id: "8",
     schoolName: "UCLA",
+    searchKeywords: ["ucla", "bruins", "california"],
     division: "D1",
     conference: "Big Ten",
     state: "CA",
@@ -1363,6 +1365,7 @@ export const schoolStandards: SchoolStandards[] = [
   {
     id: "27",
     schoolName: "Pennsylvania State University",
+    searchKeywords: ["penn state", "psu", "nittany lions"],
     division: "D1",
     conference: "Big Ten",
     state: "PA",
@@ -1411,6 +1414,7 @@ export const schoolStandards: SchoolStandards[] = [
   {
     id: "28",
     schoolName: "University of Southern California",
+    searchKeywords: ["usc", "trojans", "southern california"],
     division: "D1",
     conference: "Big Ten",
     state: "CA",
@@ -3482,6 +3486,7 @@ export const schoolStandards: SchoolStandards[] = [
   {
     id: "50",
     schoolName: "UC Berkeley",
+    searchKeywords: ["berkeley", "cal", "california", "uc berkeley"],
     division: "D1",
     conference: "ACC",
     state: "CA",
@@ -8067,6 +8072,7 @@ export const schoolStandards: SchoolStandards[] = [
   {
     id: "702",
     schoolName: "University of Pennsylvania",
+    searchKeywords: ["upenn", "u penn", "quakers"],
     division: "D1",
     conference: "Ivy League",
     state: "PA",
@@ -26981,9 +26987,55 @@ export const findSchoolStandards = (schoolName: string): SchoolStandards | undef
 export const searchSchools = (query: string): SchoolStandards[] => {
   if (!query.trim()) return schoolStandards;
   
-  return schoolStandards.filter(school =>
-    school.schoolName.toLowerCase().includes(query.toLowerCase()) ||
-    school.conference.toLowerCase().includes(query.toLowerCase()) ||
-    school.state.toLowerCase().includes(query.toLowerCase())
-  );
+  const queryLower = query.toLowerCase().trim();
+  const queryWords = queryLower.split(/\s+/);
+  
+  const results = schoolStandards.map(school => {
+    const nameLower = school.schoolName.toLowerCase();
+    const conferenceLower = school.conference.toLowerCase();
+    const stateLower = school.state.toLowerCase();
+    const keywords = school.searchKeywords?.map(k => k.toLowerCase()) || [];
+    
+    let score = 0;
+    
+    // Exact name match (highest priority)
+    if (nameLower === queryLower) {
+      score = 1000;
+    }
+    // Name starts with query
+    else if (nameLower.startsWith(queryLower)) {
+      score = 800;
+    }
+    // Exact keyword match
+    else if (keywords.includes(queryLower)) {
+      score = 700;
+    }
+    // All query words present in name
+    else if (queryWords.every(word => nameLower.includes(word))) {
+      score = 600;
+    }
+    // Simple substring match in name
+    else if (nameLower.includes(queryLower)) {
+      score = 500;
+    }
+    // Keyword contains query
+    else if (keywords.some(k => k.includes(queryLower))) {
+      score = 400;
+    }
+    // Conference match
+    else if (conferenceLower.includes(queryLower)) {
+      score = 200;
+    }
+    // State match
+    else if (stateLower.includes(queryLower)) {
+      score = 100;
+    }
+    
+    return { school, score };
+  });
+  
+  return results
+    .filter(r => r.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(r => r.school);
 };
