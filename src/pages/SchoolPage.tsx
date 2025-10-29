@@ -177,7 +177,7 @@ const SchoolPage = () => {
               <Button 
                 size="lg" 
                 variant="secondary"
-                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSe5TZaBW-tCz8Tw2pEcGrQa5AV1OKnxDU7G1Zj3L3_ULp6S7A/viewform', '_blank')}
+                onClick={() => window.open('https://app.thepreferredrecruit.com/page_3tfle/?utm_source=PRstandards&utm_medium=web&utm_campaign=PR', '_blank')}
               >
                 Apply Now
               </Button>
