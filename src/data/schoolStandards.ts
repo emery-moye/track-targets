@@ -27636,12 +27636,15 @@ const wccSchools: SchoolStandards[] = [
       "5000m": { target: "15:10.00", recruit: "15:25.00", walkon: "16:00.00" }
     },
     femaleStandards: {
-      "400m": { target: "55.50", recruit: "56.50", walkon: "58.00" },
-      "800m": { target: "2:10.00", recruit: "2:13.00", walkon: "2:16.00" },
-      "1500m": { target: "4:30.50", recruit: "4:41.50", walkon: "4:53.50" },
-      "1600m": { target: "4:49.50", recruit: "4:56.50", walkon: "5:03.50" },
-      "3200m": { target: "10:37.00", recruit: "10:47.00", walkon: "10:57.00" },
-      "5000m": { target: "16:47.00", recruit: "17:02.00", walkon: "17:32.00" }
+      "100m": { target: "12.10", recruit: "12.30", walkon: "12.50" },
+      "200m": { target: "25.10", recruit: "25.30", walkon: "25.50" },
+      "400m": { target: "56.90", recruit: "57.40", walkon: "57.90" },
+      "100m Hurdles": { target: "13.90", recruit: "14.40", walkon: "14.90" },
+      "300m Hurdles": { target: "45.00", recruit: "45.50", walkon: "46.00" },
+      "800m": { target: "2:12.00", recruit: "2:15.00", walkon: "2:18.00" },
+      "1600m": { target: "5:00.00", recruit: "5:05.00", walkon: "5:10.00" },
+      "3200m": { target: "10:40.00", recruit: "10:50.00", walkon: "11:00.00" },
+      "5000m": { target: "18:30.00", recruit: "18:45.00", walkon: "19:00.00" }
     }
   },
   {
