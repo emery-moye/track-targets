@@ -27623,12 +27623,17 @@ const wccSchools: SchoolStandards[] = [
     division: "D1",
     conference: "WCC",
     state: "CA",
+    hasOfficialStandards: true,
     maleStandards: {
-      "800m": { target: "1:51.50", recruit: "1:53.50", walkon: "1:55.50" },
-      "1500m": { target: "3:53.50", recruit: "4:00.50", walkon: "4:07.50" },
-      "1600m": { target: "4:05.50", recruit: "4:12.50", walkon: "4:24.50" },
-      "3200m": { target: "9:00.50", recruit: "9:10.50", walkon: "9:28.50" },
-      "5000m": { target: "14:26.00", recruit: "14:46.00", walkon: "15:16.00" }
+      "100m": { target: "10.60", recruit: "10.75", walkon: "10.90" },
+      "200m": { target: "22.00", recruit: "22.20", walkon: "22.40" },
+      "400m": { target: "48.50", recruit: "49.00", walkon: "49.50" },
+      "100m Hurdles": { target: "13.50", recruit: "14.00", walkon: "14.50" },
+      "300m Hurdles": { target: "37.50", recruit: "38.00", walkon: "38.50" },
+      "800m": { target: "1:52.00", recruit: "1:55.00", walkon: "2:00.00" },
+      "1600m": { target: "4:15.00", recruit: "4:20.00", walkon: "4:25.00" },
+      "3200m": { target: "9:15.00", recruit: "9:25.00", walkon: "9:40.00" },
+      "5000m": { target: "15:10.00", recruit: "15:25.00", walkon: "16:00.00" }
     },
     femaleStandards: {
       "400m": { target: "55.50", recruit: "56.50", walkon: "58.00" },
