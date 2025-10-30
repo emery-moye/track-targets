@@ -27600,12 +27600,13 @@ const wccSchools: SchoolStandards[] = [
     division: "D1",
     conference: "WCC",
     state: "CA",
+    hasOfficialStandards: true,
     maleStandards: {
-      "800m": { target: "1:51.50", recruit: "1:54.00", walkon: "1:56.00" },
-      "1500m": { target: "3:54.00", recruit: "4:01.00", walkon: "4:08.50" },
-      "1600m": { target: "4:06.00", recruit: "4:13.50", walkon: "4:25.00" },
-      "3200m": { target: "9:01.50", recruit: "9:11.50", walkon: "9:29.50" },
-      "5000m": { target: "14:27.00", recruit: "14:47.00", walkon: "15:17.00" }
+      "1500m": { target: "3:54.00", recruit: "4:02.00", walkon: "4:07.00" },
+      "1600m": { target: "4:12.00", recruit: "4:20.00", walkon: "4:25.00" },
+      "3000m": { target: "8:34.00", recruit: "8:42.00", walkon: "9:01.00" },
+      "3200m": { target: "9:12.00", recruit: "9:20.00", walkon: "9:40.00" },
+      "5000m": { target: "14:50.00", recruit: "15:00.00", walkon: "15:30.00" }
     },
     femaleStandards: {
       "400m": { target: "55.50", recruit: "56.50", walkon: "58.00" },
