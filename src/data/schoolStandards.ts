@@ -27544,8 +27544,216 @@ const scacSchools: SchoolStandards[] = [
   }
 ];
 
+// WCC (West Coast Conference) Schools - Distance Focused
+const wccSchools: SchoolStandards[] = [
+  {
+    id: "wcc_sanfrancisco",
+    schoolName: "University of San Francisco",
+    searchKeywords: ["usf", "san francisco", "dons", "usfca"],
+    division: "D1",
+    conference: "WCC",
+    state: "CA",
+    hasOfficialStandards: true,
+    maleStandards: {
+      "800m": { target: "1:51.00", recruit: "1:53.00", walkon: "1:55.00" },
+      "1500m": { target: "3:53.00", recruit: "4:00.00", walkon: "4:07.00" },
+      "1600m": { target: "4:05.00", recruit: "4:12.00", walkon: "4:24.00" },
+      "3200m": { target: "9:00.00", recruit: "9:10.00", walkon: "9:28.00" },
+      "5000m": { target: "14:25.00", recruit: "14:45.00", walkon: "15:15.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "55.00", recruit: "56.00", walkon: "57.50" },
+      "800m": { target: "2:09.00", recruit: "2:12.00", walkon: "2:15.00" },
+      "1500m": { target: "4:29.00", recruit: "4:40.00", walkon: "4:52.00" },
+      "1600m": { target: "4:48.00", recruit: "4:55.00", walkon: "5:02.00" },
+      "3200m": { target: "10:35.00", recruit: "10:45.00", walkon: "10:55.00" },
+      "5000m": { target: "16:45.00", recruit: "17:00.00", walkon: "17:30.00" }
+    }
+  },
+  {
+    id: "wcc_gonzaga",
+    schoolName: "Gonzaga University",
+    searchKeywords: ["gonzaga", "zags", "bulldogs", "gu"],
+    division: "D1",
+    conference: "WCC",
+    state: "WA",
+    maleStandards: {
+      "800m": { target: "1:50.50", recruit: "1:52.00", walkon: "1:54.00" },
+      "1500m": { target: "3:52.00", recruit: "3:59.00", walkon: "4:05.50" },
+      "1600m": { target: "4:04.00", recruit: "4:11.00", walkon: "4:22.50" },
+      "3200m": { target: "8:58.50", recruit: "9:08.50", walkon: "9:26.00" },
+      "5000m": { target: "14:23.00", recruit: "14:43.00", walkon: "15:12.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "54.50", recruit: "55.50", walkon: "57.00" },
+      "800m": { target: "2:08.00", recruit: "2:11.00", walkon: "2:14.00" },
+      "1500m": { target: "4:27.50", recruit: "4:38.50", walkon: "4:50.50" },
+      "1600m": { target: "4:46.50", recruit: "4:53.50", walkon: "5:00.50" },
+      "3200m": { target: "10:33.00", recruit: "10:43.00", walkon: "10:53.00" },
+      "5000m": { target: "16:43.00", recruit: "16:58.00", walkon: "17:28.00" }
+    }
+  },
+  {
+    id: "wcc_lmu",
+    schoolName: "Loyola Marymount University",
+    searchKeywords: ["lmu", "loyola marymount", "lions", "loyola"],
+    division: "D1",
+    conference: "WCC",
+    state: "CA",
+    maleStandards: {
+      "800m": { target: "1:51.50", recruit: "1:54.00", walkon: "1:56.00" },
+      "1500m": { target: "3:54.00", recruit: "4:01.00", walkon: "4:08.50" },
+      "1600m": { target: "4:06.00", recruit: "4:13.50", walkon: "4:25.00" },
+      "3200m": { target: "9:01.50", recruit: "9:11.50", walkon: "9:29.50" },
+      "5000m": { target: "14:27.00", recruit: "14:47.00", walkon: "15:17.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "55.50", recruit: "56.50", walkon: "58.00" },
+      "800m": { target: "2:09.50", recruit: "2:12.50", walkon: "2:15.50" },
+      "1500m": { target: "4:30.00", recruit: "4:41.00", walkon: "4:53.00" },
+      "1600m": { target: "4:49.00", recruit: "4:56.00", walkon: "5:03.00" },
+      "3200m": { target: "10:36.00", recruit: "10:46.00", walkon: "10:56.50" },
+      "5000m": { target: "16:46.50", recruit: "17:01.50", walkon: "17:31.50" }
+    }
+  },
+  {
+    id: "wcc_pepperdine",
+    schoolName: "Pepperdine University",
+    searchKeywords: ["pepperdine", "waves", "pepp"],
+    division: "D1",
+    conference: "WCC",
+    state: "CA",
+    maleStandards: {
+      "800m": { target: "1:51.50", recruit: "1:53.50", walkon: "1:55.50" },
+      "1500m": { target: "3:53.50", recruit: "4:00.50", walkon: "4:07.50" },
+      "1600m": { target: "4:05.50", recruit: "4:12.50", walkon: "4:24.50" },
+      "3200m": { target: "9:00.50", recruit: "9:10.50", walkon: "9:28.50" },
+      "5000m": { target: "14:26.00", recruit: "14:46.00", walkon: "15:16.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "55.50", recruit: "56.50", walkon: "58.00" },
+      "800m": { target: "2:10.00", recruit: "2:13.00", walkon: "2:16.00" },
+      "1500m": { target: "4:30.50", recruit: "4:41.50", walkon: "4:53.50" },
+      "1600m": { target: "4:49.50", recruit: "4:56.50", walkon: "5:03.50" },
+      "3200m": { target: "10:37.00", recruit: "10:47.00", walkon: "10:57.00" },
+      "5000m": { target: "16:47.00", recruit: "17:02.00", walkon: "17:32.00" }
+    }
+  },
+  {
+    id: "wcc_portland",
+    schoolName: "University of Portland",
+    searchKeywords: ["portland", "pilots", "up", "university of portland"],
+    division: "D1",
+    conference: "WCC",
+    state: "OR",
+    maleStandards: {
+      "800m": { target: "1:50.50", recruit: "1:52.50", walkon: "1:54.50" },
+      "1500m": { target: "3:52.50", recruit: "3:59.50", walkon: "4:06.50" },
+      "1600m": { target: "4:04.50", recruit: "4:11.50", walkon: "4:23.50" },
+      "3200m": { target: "8:59.00", recruit: "9:09.00", walkon: "9:27.00" },
+      "5000m": { target: "14:24.00", recruit: "14:44.00", walkon: "15:14.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "54.50", recruit: "55.50", walkon: "57.00" },
+      "800m": { target: "2:08.50", recruit: "2:11.50", walkon: "2:14.50" },
+      "1500m": { target: "4:28.00", recruit: "4:39.00", walkon: "4:51.00" },
+      "1600m": { target: "4:47.00", recruit: "4:54.00", walkon: "5:01.00" },
+      "3200m": { target: "10:34.00", recruit: "10:44.00", walkon: "10:54.00" },
+      "5000m": { target: "16:44.00", recruit: "16:59.00", walkon: "17:29.00" }
+    }
+  },
+  {
+    id: "wcc_sandiego",
+    schoolName: "University of San Diego",
+    searchKeywords: ["usd", "san diego", "toreros", "university of san diego"],
+    division: "D1",
+    conference: "WCC",
+    state: "CA",
+    maleStandards: {
+      "800m": { target: "1:51.00", recruit: "1:53.50", walkon: "1:55.50" },
+      "1500m": { target: "3:53.50", recruit: "4:00.50", walkon: "4:07.50" },
+      "1600m": { target: "4:05.50", recruit: "4:12.50", walkon: "4:24.50" },
+      "3200m": { target: "9:00.50", recruit: "9:10.50", walkon: "9:28.50" },
+      "5000m": { target: "14:26.00", recruit: "14:46.00", walkon: "15:16.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "55.50", recruit: "56.50", walkon: "58.00" },
+      "800m": { target: "2:09.50", recruit: "2:12.50", walkon: "2:15.50" },
+      "1500m": { target: "4:30.00", recruit: "4:41.00", walkon: "4:53.00" },
+      "1600m": { target: "4:49.00", recruit: "4:56.00", walkon: "5:03.00" },
+      "3200m": { target: "10:36.50", recruit: "10:46.50", walkon: "10:56.50" },
+      "5000m": { target: "16:46.00", recruit: "17:01.00", walkon: "17:31.00" }
+    }
+  },
+  {
+    id: "wcc_santaclara",
+    schoolName: "Santa Clara University",
+    searchKeywords: ["santa clara", "scu", "broncos", "scubroncos"],
+    division: "D1",
+    conference: "WCC",
+    state: "CA",
+    maleStandards: {
+      "800m": { target: "1:52.00", recruit: "1:54.50", walkon: "1:56.50" },
+      "1500m": { target: "3:54.50", recruit: "4:01.50", walkon: "4:09.00" },
+      "1600m": { target: "4:06.50", recruit: "4:14.00", walkon: "4:26.00" },
+      "3200m": { target: "9:02.00", recruit: "9:12.00", walkon: "9:30.00" },
+      "5000m": { target: "14:28.00", recruit: "14:48.00", walkon: "15:18.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "56.00", recruit: "57.00", walkon: "58.50" },
+      "800m": { target: "2:10.50", recruit: "2:13.50", walkon: "2:16.50" },
+      "1500m": { target: "4:31.00", recruit: "4:42.00", walkon: "4:54.00" },
+      "1600m": { target: "4:50.00", recruit: "4:57.00", walkon: "5:04.00" },
+      "3200m": { target: "10:37.50", recruit: "10:47.50", walkon: "10:57.50" },
+      "5000m": { target: "16:48.00", recruit: "17:03.00", walkon: "17:33.00" }
+    }
+  },
+  {
+    id: "wcc_stmarys",
+    schoolName: "Saint Mary's College of California",
+    searchKeywords: ["saint marys", "smc", "gaels", "st marys", "saint mary's"],
+    division: "D1",
+    conference: "WCC",
+    state: "CA",
+    maleStandards: {
+      "800m": { target: "1:52.00", recruit: "1:54.50", walkon: "1:57.00" },
+      "1500m": { target: "3:54.50", recruit: "4:02.00", walkon: "4:09.00" },
+      "1600m": { target: "4:07.00", recruit: "4:14.00", walkon: "4:26.00" },
+      "3200m": { target: "9:02.00", recruit: "9:12.00", walkon: "9:30.00" },
+      "5000m": { target: "14:28.00", recruit: "14:48.00", walkon: "15:18.00" }
+    },
+    femaleStandards: {
+      "400m": { target: "56.50", recruit: "57.50", walkon: "59.00" },
+      "800m": { target: "2:11.00", recruit: "2:14.00", walkon: "2:17.00" },
+      "1500m": { target: "4:31.50", recruit: "4:42.50", walkon: "4:54.50" },
+      "1600m": { target: "4:50.50", recruit: "4:57.50", walkon: "5:04.50" },
+      "3200m": { target: "10:38.00", recruit: "10:48.00", walkon: "10:58.00" },
+      "5000m": { target: "16:48.50", recruit: "17:03.50", walkon: "17:33.50" }
+    }
+  },
+  {
+    id: "wcc_pacific",
+    schoolName: "University of the Pacific",
+    searchKeywords: ["pacific", "uop", "tigers", "university of the pacific"],
+    division: "D1",
+    conference: "WCC",
+    state: "CA",
+    femaleStandards: {
+      "400m": { target: "55.50", recruit: "56.50", walkon: "58.00" },
+      "800m": { target: "2:10.00", recruit: "2:13.00", walkon: "2:16.00" },
+      "1500m": { target: "4:30.50", recruit: "4:41.50", walkon: "4:53.50" },
+      "1600m": { target: "4:49.50", recruit: "4:56.50", walkon: "5:03.50" },
+      "3200m": { target: "10:37.00", recruit: "10:47.00", walkon: "10:57.00" },
+      "5000m": { target: "16:47.00", recruit: "17:02.00", walkon: "17:32.00" }
+    }
+  }
+];
+
 // Add all SCAC schools to the main array
 schoolStandards.push(...scacSchools);
+
+// Add all WCC schools to the main array
+schoolStandards.push(...wccSchools);
 
 export const findSchoolStandards = (schoolName: string): SchoolStandards | undefined => {
   return schoolStandards.find(school => 
