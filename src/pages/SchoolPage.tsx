@@ -41,7 +41,9 @@ const SchoolPage = () => {
     "memberOf": {
       "@type": "SportsOrganization",
       "name": school.conference
-    }
+    },
+    "sameAs": school.coachesUrl ? [school.coachesUrl] : [],
+    "keywords": `${school.schoolName} track standards, ${school.conference}, ${school.division}, track and field recruiting`
   };
 
   return (
@@ -52,17 +54,17 @@ const SchoolPage = () => {
         <link rel="canonical" href={`https://trackandfieldstandards.com/schools/${schoolSlug}`} />
         
         <meta property="og:url" content={`https://trackandfieldstandards.com/schools/${schoolSlug}`} />
-        <meta property="og:title" content={`${school.schoolName} Track & Field Standards`} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://trackandfieldstandards.com/lovable-uploads/32e64d19-2b4a-46c0-bcb0-0c1657cf2992.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${school.schoolName} Track & Field Standards`} />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content="https://trackandfieldstandards.com/lovable-uploads/32e64d19-2b4a-46c0-bcb0-0c1657cf2992.png" />
         
-        <meta name="keywords" content={`${school.schoolName} track standards, ${school.schoolName} track and field recruiting, ${school.schoolName} track recruiting standards, ${school.conference} track standards, ${school.division} track and field, ${school.schoolName} walk on standards, ${school.schoolName} recruiting times, ${school.state} track and field recruiting`} />
+        <meta name="keywords" content={`${school.schoolName} track standards, ${school.schoolName} track and field recruiting, ${school.schoolName} recruiting standards, ${school.conference} track standards, ${school.division} track and field, ${school.schoolName} walk on standards, ${school.schoolName} recruiting times, ${school.state} track and field recruiting, ${school.schoolName} target times, ${school.schoolName} recruit times, ${school.schoolName} performance standards`} />
         
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -200,7 +202,7 @@ const SchoolPage = () => {
         <footer className="border-t mt-16 py-8 bg-card/50">
           <div className="container mx-auto px-4 text-center space-y-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Preferred Recruit. All rights reserved.
+              © {new Date().getFullYear()} Preferred Recruit. All rights reserved.
             </p>
             <div className="flex justify-center gap-6">
               <a 
