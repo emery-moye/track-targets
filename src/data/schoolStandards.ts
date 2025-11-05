@@ -2558,6 +2558,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "RI",
+    coachesUrl: "https://gorhody.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.70", walkon: "10.90" },
@@ -2702,6 +2703,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "OH",
+    coachesUrl: "https://daytonflyers.com/sports/track-and-field/roster",
     femaleStandards: {
       "100m": { target: "11.25", recruit: "11.47", walkon: "11.70" },
       "200m": { target: "23.40", recruit: "23.80", walkon: "24.20" },
@@ -2730,6 +2732,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "VA",
+    coachesUrl: "https://richmondspiders.com/sports/track-and-field/roster",
     femaleStandards: {
       "100m": { target: "11.25", recruit: "11.47", walkon: "11.70" },
       "200m": { target: "23.40", recruit: "23.80", walkon: "24.20" },
@@ -2808,7 +2811,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "DC",
-    coachesUrl: "https://gwsports.com/sports/track-and-field/roster",
+    coachesUrl: "https://gwsports.com/sports/mens-cross-country/roster",
     maleStandards: {
       "100m": { target: "10.75", recruit: "10.85", walkon: "10.95" },
       "200m": { target: "21.80", recruit: "22.00", walkon: "22.20" },
@@ -2856,6 +2859,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "NY",
+    coachesUrl: "https://fordhamsports.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.7", walkon: "11.08" },
