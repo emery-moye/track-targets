@@ -1985,6 +1985,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Patriot League",
     state: "MA",
+    coachesUrl: "https://goterriers.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.45", recruit: "10.65", walkon: "10.85" },
       "200m": { target: "21.40", recruit: "21.70", walkon: "22.10" },
@@ -2032,6 +2033,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Patriot League",
     state: "PA",
+    coachesUrl: "https://goleopards.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.70", recruit: "10.80", walkon: "10.90" },
       "200m": { target: "21.70", recruit: "21.90", walkon: "22.10" },
@@ -2079,6 +2081,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Patriot League",
     state: "MA",
+    coachesUrl: "https://goholycross.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.75", recruit: "10.85", walkon: "11.00" },
@@ -2123,6 +2126,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Patriot League",
     state: "PA",
+    coachesUrl: "https://lehighsports.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.70", recruit: "10.80", walkon: "10.90" },
       "200m": { target: "21.75", recruit: "21.95", walkon: "22.15" },
@@ -2170,6 +2174,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Patriot League",
     state: "MD",
+    coachesUrl: "https://loyolagreyhounds.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.75", recruit: "10.85", walkon: "10.95" },
       "200m": { target: "21.85", recruit: "22.05", walkon: "22.25" },
@@ -2217,6 +2222,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Patriot League",
     state: "DC",
+    coachesUrl: "https://aueagles.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.70", recruit: "10.85", walkon: "11.00" },
       "200m": { target: "21.90", recruit: "22.30", walkon: "22.49" },
@@ -8014,6 +8020,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "NH",
+    coachesUrl: "https://dartmouthsports.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.65", recruit: "10.75", walkon: "10.95" },
@@ -8062,6 +8069,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "RI",
+    coachesUrl: "https://brownbears.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.70", recruit: "10.80", walkon: "11.00" },
@@ -8111,6 +8119,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "PA",
+    coachesUrl: "https://pennathletics.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.55", walkon: "10.75" },
       "200m": { target: "21.10", recruit: "21.35", walkon: "21.75" },
@@ -8163,6 +8172,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "MA",
+    coachesUrl: "https://gocrimson.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.40", recruit: "10.65", walkon: "10.85" },
       "200m": { target: "21.20", recruit: "21.45", walkon: "21.85" },
@@ -8215,6 +8225,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "NY",
+    coachesUrl: "https://gocolumbialions.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.40", recruit: "10.65", walkon: "10.85" },
       "200m": { target: "21.20", recruit: "21.45", walkon: "21.85" },
@@ -8267,6 +8278,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "NY",
+    coachesUrl: "https://cornellbigred.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.40", recruit: "10.65", walkon: "10.85" },
       "200m": { target: "21.20", recruit: "21.45", walkon: "21.85" },
@@ -8319,6 +8331,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "CT",
+    coachesUrl: "https://yalebulldogs.com/sports/mens-track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.60", walkon: "10.80" },
@@ -8372,6 +8385,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Ivy League",
     state: "NJ",
+    coachesUrl: "https://goprincetontigers.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.55", walkon: "10.75" },
       "200m": { target: "21.10", recruit: "21.35", walkon: "21.75" },
