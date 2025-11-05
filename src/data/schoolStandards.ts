@@ -2318,7 +2318,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "PA",
-    coachesUrl: "https://goduquesne.com/sports/track-and-field/roster",
+    coachesUrl: "https://goduquesne.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.68", recruit: "10.85", walkon: "11.00" },
       "200m": { target: "21.40", recruit: "22.00", walkon: "22.50" },
