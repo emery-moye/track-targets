@@ -27083,6 +27083,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
+    coachesUrl: "https://fullertontitans.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.40", recruit: "10.50", walkon: "10.71" },
@@ -27140,7 +27141,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://fullertontitans.com/sports/track-and-field/roster",
+    coachesUrl: "https://longbeachstate.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.32", recruit: "10.44", walkon: "10.62" },
       "200m": { target: "20.63", recruit: "21.03", walkon: "21.63" },
@@ -27194,7 +27195,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://longbeachstate.com/sports/track-and-field/roster",
+    coachesUrl: "https://ucsbgauchos.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.29", recruit: "10.41", walkon: "10.59" },
       "200m": { target: "20.58", recruit: "20.98", walkon: "21.58" },
@@ -27248,7 +27249,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://ucsbgauchos.com/sports/track-and-field/roster",
+    coachesUrl: "https://ucirvinesports.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.33", recruit: "10.45", walkon: "10.63" },
       "200m": { target: "20.64", recruit: "21.04", walkon: "21.64" },
@@ -27302,7 +27303,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://ucirvinesports.com/sports/track-and-field/roster",
+    coachesUrl: "https://gomatadors.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.31", recruit: "10.43", walkon: "10.61" },
       "200m": { target: "20.61", recruit: "21.01", walkon: "21.61" },
@@ -27356,7 +27357,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://gomatadors.com/sports/track-and-field/roster",
+    coachesUrl: "https://ucsdtritons.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.29", recruit: "10.41", walkon: "10.59" },
       "200m": { target: "20.59", recruit: "20.99", walkon: "21.59" },
@@ -27410,7 +27411,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://ucsdtritons.com/sports/track-and-field/roster",
+    coachesUrl: "https://gohighlanders.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.34", recruit: "10.46", walkon: "10.64" },
       "200m": { target: "20.65", recruit: "21.05", walkon: "21.65" },
@@ -27464,7 +27465,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://gohighlanders.com/sports/track-and-field/roster",
+    coachesUrl: "https://ucdavisaggies.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.31", recruit: "10.43", walkon: "10.61" },
       "200m": { target: "20.62", recruit: "21.02", walkon: "21.62" },
@@ -27518,7 +27519,7 @@ const scacSchools: SchoolStandards[] = [
     division: "D1",
     conference: "Big West",
     state: "CA",
-    coachesUrl: "https://ucdavisaggies.com/sports/track-and-field/roster",
+    coachesUrl: "https://gorunners.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.35", recruit: "10.47", walkon: "10.65" },
       "200m": { target: "20.66", recruit: "21.06", walkon: "21.66" },
