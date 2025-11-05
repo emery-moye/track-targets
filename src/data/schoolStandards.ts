@@ -5245,6 +5245,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "TX",
+    coachesUrl: "https://txst.com/sports/track-and-field/roster/coaches",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.25", recruit: "10.35", walkon: "10.50" },
@@ -5295,6 +5296,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "AR",
+    coachesUrl: "https://astateredwolves.com/sports/track-and-field/coaches",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.60", walkon: "10.80" },
@@ -5343,6 +5345,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "LA",
+    coachesUrl: "https://ragincajuns.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.40", recruit: "10.60", walkon: "10.80" },
       "200m": { target: "21.10", recruit: "21.40", walkon: "21.70" },
@@ -5390,6 +5393,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "AL",
+    coachesUrl: "https://usajaguars.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.75", walkon: "10.95" },
       "200m": { target: "21.40", recruit: "21.70", walkon: "22.00" },
@@ -5437,6 +5441,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "NC",
+    coachesUrl: "https://appstatesports.com/sports/mens-track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.50", walkon: "10.70" },
@@ -5490,6 +5495,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "MS",
+    coachesUrl: "https://southernmiss.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.70", walkon: "10.90" },
       "200m": { target: "21.30", recruit: "21.60", walkon: "21.90" },
@@ -5537,6 +5543,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "LA",
+    coachesUrl: "https://ulmwarhawks.com/sports/track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.60", recruit: "10.80", walkon: "11.00" },
       "200m": { target: "21.50", recruit: "21.80", walkon: "22.10" },
@@ -5584,6 +5591,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "AL",
+    coachesUrl: "https://troytrojans.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.75", walkon: "10.95" },
       "200m": { target: "21.40", recruit: "21.70", walkon: "22.00" },
@@ -5631,6 +5639,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "SC",
+    coachesUrl: "https://goccusports.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.45", recruit: "10.55", walkon: "10.70" },
@@ -5686,6 +5695,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "WV",
+    coachesUrl: "https://herdzone.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.55", recruit: "10.60", walkon: "11.00" },
@@ -5734,6 +5744,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "VA",
+    coachesUrl: "https://jmusports.com/sports/track-and-field/roster",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.65", recruit: "11.95", walkon: "12.55" },
@@ -5764,6 +5775,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "GA",
+    coachesUrl: "https://georgiastatesports.com/sports/womens-track-and-field/roster",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.70", recruit: "12.00", walkon: "12.60" },
@@ -5794,6 +5806,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "Sun Belt",
     state: "GA",
+    coachesUrl: "https://gseagles.com/sports/cross-country/roster",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.68", recruit: "11.98", walkon: "12.58" },
@@ -6539,6 +6552,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "PA",
+    coachesUrl: "https://owlsports.com/sports/womens-track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {},
     femaleStandards: {
@@ -6568,6 +6582,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "AL",
+    coachesUrl: "https://uabsports.com/sports/womens-track-and-field/roster",
     maleStandards: {},
     femaleStandards: {
       "100m": { target: "11.60", recruit: "11.80", walkon: "12.25" },
@@ -6596,6 +6611,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "TX",
+    coachesUrl: "https://meangreensports.com/sports/track-and-field/roster",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.40", walkon: "10.60" },
@@ -6644,6 +6660,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "FL",
+    coachesUrl: "https://gousfbulls.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.35", walkon: "10.55" },
       "200m": { target: "20.55", recruit: "20.80", walkon: "21.10" },
@@ -6691,6 +6708,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "KS",
+    coachesUrl: "https://goshockers.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.35", walkon: "10.55" },
       "200m": { target: "20.55", recruit: "20.80", walkon: "21.10" },
@@ -6738,6 +6756,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "NC",
+    coachesUrl: "https://charlotte49ers.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.15", recruit: "10.35", walkon: "10.55" },
       "200m": { target: "20.55", recruit: "20.80", walkon: "21.10" },
@@ -6785,6 +6804,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "NC",
+    coachesUrl: "https://ecupirates.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.22", recruit: "10.42", walkon: "10.62" },
       "200m": { target: "20.68", recruit: "20.93", walkon: "21.23" },
@@ -6832,6 +6852,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "TX",
+    coachesUrl: "https://riceowls.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.25", recruit: "10.45", walkon: "10.65" },
       "200m": { target: "20.70", recruit: "20.95", walkon: "21.25" },
@@ -6879,6 +6900,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "FL",
+    coachesUrl: "https://fausports.com/sports/womens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.23", recruit: "10.43", walkon: "10.63" },
       "200m": { target: "20.70", recruit: "20.95", walkon: "21.25" },
@@ -6926,6 +6948,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "TN",
+    coachesUrl: "https://gotigersgo.com/sports/mens-track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.24", recruit: "10.44", walkon: "10.64" },
       "200m": { target: "20.72", recruit: "20.97", walkon: "21.27" },
@@ -6973,6 +6996,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "LA",
+    coachesUrl: "https://tulanegreenwave.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.26", recruit: "10.46", walkon: "10.66" },
       "200m": { target: "20.75", recruit: "21.00", walkon: "21.30" },
@@ -7020,6 +7044,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "OK",
+    coachesUrl: "https://tulsahurricane.com/sports/track-and-field/roster",
     maleStandards: {
       "100m": { target: "10.28", recruit: "10.48", walkon: "10.68" },
       "200m": { target: "20.78", recruit: "21.03", walkon: "21.33" },
@@ -7067,6 +7092,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "American",
     state: "TX",
+    coachesUrl: "https://goutsa.com/sports/track-fieldcross-country/roster",
     maleStandards: {
       "100m": { target: "10.30", recruit: "10.50", walkon: "10.70" },
       "200m": { target: "20.80", recruit: "21.05", walkon: "21.35" },
