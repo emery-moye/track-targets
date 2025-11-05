@@ -2366,7 +2366,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "PA",
-    coachesUrl: "https://sjuhawks.com/sports/track-and-field/roster",
+    coachesUrl: "https://sjuhawks.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.71", recruit: "10.88", walkon: "11.03" },
       "200m": { target: "21.45", recruit: "22.05", walkon: "22.55" },
