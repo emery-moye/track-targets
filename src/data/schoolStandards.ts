@@ -2859,7 +2859,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "NY",
-    coachesUrl: "https://fordhamsports.com/sports/track-and-field/roster",
+    coachesUrl: "https://fordhamsports.com/sports/mens-track-and-field/roster#sidearm-roster-coaches",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.7", walkon: "11.08" },
