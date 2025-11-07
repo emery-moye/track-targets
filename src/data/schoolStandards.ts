@@ -2607,7 +2607,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "NY",
-    coachesUrl: "https://gobonnies.com/sports/track-and-field/roster",
+    coachesUrl: "https://gobonnies.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.70", walkon: "10.90" },
       "200m": { target: "21.50", recruit: "21.80", walkon: "22.20" },
@@ -2655,7 +2655,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "VA",
-    coachesUrl: "https://gomason.com/sports/track-and-field/roster",
+    coachesUrl: "https://gomason.com/sports/mens-track-and-field/coaches",
     maleStandards: {
       "100m": { target: "10.50", recruit: "10.70", walkon: "10.90" },
       "200m": { target: "21.50", recruit: "21.80", walkon: "22.20" },
@@ -2703,7 +2703,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "OH",
-    coachesUrl: "https://daytonflyers.com/sports/track-and-field/roster",
+    coachesUrl: "https://daytonflyers.com/sports/womens-track-and-field/roster#sidearm-roster-coaches",
     femaleStandards: {
       "100m": { target: "11.25", recruit: "11.47", walkon: "11.70" },
       "200m": { target: "23.40", recruit: "23.80", walkon: "24.20" },
@@ -2732,7 +2732,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "VA",
-    coachesUrl: "https://richmondspiders.com/sports/track-and-field/roster",
+    coachesUrl: "https://richmondspiders.com/sports/womens-track-and-field/coaches?path=wtrack",
     femaleStandards: {
       "100m": { target: "11.25", recruit: "11.47", walkon: "11.70" },
       "200m": { target: "23.40", recruit: "23.80", walkon: "24.20" },
@@ -2761,6 +2761,7 @@ export const schoolStandards: SchoolStandards[] = [
     division: "D1",
     conference: "A10",
     state: "VA",
+    coachesUrl: "https://vcuathletics.com/sports/mens-track-and-field/coaches",
     hasOfficialStandards: true,
     maleStandards: {
       "100m": { target: "10.20", recruit: "10.40", walkon: "10.60" },
