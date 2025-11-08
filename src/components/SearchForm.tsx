@@ -37,6 +37,7 @@ const eventOptions = [
   "10000m",
   "100m Hurdles",
   "110m Hurdles",
+  "300m Hurdles",
   "400m Hurdles",
   "3000m Steeplechase",
   "High Jump",
