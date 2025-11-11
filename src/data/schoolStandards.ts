@@ -10469,7 +10469,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MEAC",
     state: "VA",
     maleStandards: {
-      "100m": { target: "10.55", recruit: "10.85", walkon: "21.60" },
+      "100m": { target: "10.55", recruit: "10.85", walkon: "11.00" },
       "200m": { target: "21.35", recruit: "21.48", walkon: "21.60" },
       "400m": { target: "47.90", recruit: "48.25", walkon: "48.60" },
       "800m": { target: "1:53.0", recruit: "1:54.25", walkon: "1:55.5" },
@@ -10494,7 +10494,7 @@ export const schoolStandards: SchoolStandards[] = [
       "1500m": { target: "4:50.00", recruit: "5:05.00", walkon: "5:20.00" },
       "3000m": { target: "10:20.00", recruit: "10:30.00", walkon: "10:40.00" },
       "5000m": { target: "18:45.00", recruit: "19:00.00", walkon: "19:15.00" },
-      "100m Hurdles": { target: "7.80", recruit: "8.00", walkon: "8.20" },
+      "100m Hurdles": { target: "13.90", recruit: "14.10", walkon: "14.30" },
       "High Jump": { target: "5'8\"", recruit: "5'7\"", walkon: "5'6\"" },
       "Pole Vault": { target: "9'6\"", recruit: "9'3\"", walkon: "9'0\"" },
       "Long Jump": { target: "19'3\"", recruit: "18'11\"", walkon: "18'7\"" },
@@ -10558,7 +10558,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MEAC",
     state: "MD",
     maleStandards: {
-      "100m": { target: "10.60", recruit: "10.90", walkon: "21.65" },
+      "100m": { target: "10.60", recruit: "10.90", walkon: "11.05" },
       "200m": { target: "21.45", recruit: "21.58", walkon: "21.70" },
       "400m": { target: "48.10", recruit: "48.45", walkon: "48.80" },
       "800m": { target: "1:53.5", recruit: "1:54.75", walkon: "1:56.0" },
@@ -10603,7 +10603,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MEAC",
     state: "NC",
     maleStandards: {
-      "100m": { target: "10.57", recruit: "10.87", walkon: "21.62" },
+      "100m": { target: "10.57", recruit: "10.87", walkon: "11.02" },
       "200m": { target: "21.38", recruit: "21.51", walkon: "21.63" },
       "400m": { target: "47.95", recruit: "48.30", walkon: "48.65" },
       "800m": { target: "1:53.2", recruit: "1:54.45", walkon: "1:55.7" },
@@ -10648,7 +10648,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MEAC",
     state: "SC",
     maleStandards: {
-      "100m": { target: "10.59", recruit: "10.89", walkon: "21.64" },
+      "100m": { target: "10.59", recruit: "10.89", walkon: "11.04" },
       "200m": { target: "21.42", recruit: "21.55", walkon: "21.67" },
       "400m": { target: "48.05", recruit: "48.40", walkon: "48.75" },
       "800m": { target: "1:53.4", recruit: "1:54.65", walkon: "1:55.9" },
@@ -10693,7 +10693,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MEAC",
     state: "DE",
     maleStandards: {
-      "100m": { target: "10.62", recruit: "10.92", walkon: "21.68" },
+      "100m": { target: "10.62", recruit: "10.92", walkon: "11.08" },
       "200m": { target: "21.48", recruit: "21.61", walkon: "21.73" },
       "400m": { target: "48.15", recruit: "48.50", walkon: "48.85" },
       "800m": { target: "1:53.7", recruit: "1:54.95", walkon: "1:56.2" },
@@ -10738,7 +10738,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MEAC",
     state: "MD",
     maleStandards: {
-      "100m": { target: "10.56", recruit: "10.86", walkon: "21.61" },
+      "100m": { target: "10.56", recruit: "10.86", walkon: "11.01" },
       "200m": { target: "21.37", recruit: "21.50", walkon: "21.62" },
       "400m": { target: "47.92", recruit: "48.27", walkon: "48.62" },
       "800m": { target: "1:53.1", recruit: "1:54.35", walkon: "1:55.6" },
@@ -10783,7 +10783,7 @@ export const schoolStandards: SchoolStandards[] = [
     conference: "MEAC",
     state: "MD",
     maleStandards: {
-      "100m": { target: "10.65", recruit: "10.95", walkon: "21.71" },
+      "100m": { target: "10.65", recruit: "10.95", walkon: "11.11" },
       "200m": { target: "21.52", recruit: "21.65", walkon: "21.77" },
       "400m": { target: "48.25", recruit: "48.60", walkon: "48.95" },
       "800m": { target: "1:54.0", recruit: "1:55.25", walkon: "1:56.5" },
