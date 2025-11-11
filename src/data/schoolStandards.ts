@@ -19734,6 +19734,7 @@ export const schoolStandards: SchoolStandards[] = [
     "3000m": "9:20.00", // converted from 3200m: 9:50  
     "5000m": "16:45.00",
     "110m Hurdles": "15.50",
+    "300m Hurdles": "39.89",
     "400m Hurdles": "55.00", // converted from 300H: 42.00
     "High Jump": "6'0\"",
     "Pole Vault": "14'3\"", // as specified earlier
@@ -19754,6 +19755,7 @@ export const schoolStandards: SchoolStandards[] = [
     "3000m": "11:10.00", // converted from 3200m: 11:40
     "5000m": "19:45.00",
     "100m Hurdles": "16.50",
+    "300m Hurdles": "48.31",
     "400m Hurdles": "66.00", // converted from 300H: 50.00
     "High Jump": "5'0\"",
     "Pole Vault": "11'0\"", // as specified earlier  
