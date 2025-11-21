@@ -20,6 +20,7 @@ const eventOptions = [
   "400m",
   "800m",
   "1500m",
+  "1600m",
   "Mile",
   "3000m",
   "5000m",
