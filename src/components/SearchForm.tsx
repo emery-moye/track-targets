@@ -5,20 +5,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search } from "lucide-react";
 
 interface SearchFormProps {
-  onSearch: (data: { gradeLevel: string; event: string; personalBest: string; gender: string }) => void;
-  initialValues?: { gradeLevel: string; event: string; personalBest: string; gender: string } | null;
+  onSearch: (data: { event: string; personalBest: string; gender: string }) => void;
+  initialValues?: { event: string; personalBest: string; gender: string } | null;
 }
-
-const gradeOptions = [
-  "High School Freshman",
-  "High School Sophomore", 
-  "High School Junior",
-  "High School Senior",
-  "College Freshman",
-  "College Sophomore",
-  "College Junior",
-  "College Senior"
-];
 
 const genderOptions = [
   "Men's",
@@ -51,7 +40,6 @@ const eventOptions = [
 ];
 
 export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
-  const [gradeLevel, setGradeLevel] = useState("");
   const [event, setEvent] = useState("");
   const [personalBest, setPersonalBest] = useState("");
   const [gender, setGender] = useState("");
@@ -60,7 +48,6 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
   // Populate form with initial values if provided
   useEffect(() => {
     if (initialValues) {
-      setGradeLevel(initialValues.gradeLevel);
       setEvent(initialValues.event);
       setPersonalBest(initialValues.personalBest);
       setGender(initialValues.gender);
@@ -79,7 +66,7 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!gradeLevel || !event || !personalBest || !gender) {
+    if (!event || !personalBest || !gender) {
       setError("Please fill in all fields");
       return;
     }
@@ -90,28 +77,13 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
     }
     
     setError("");
-    onSearch({ gradeLevel, event, personalBest, gender });
+    onSearch({ event, personalBest, gender });
   };
 
   return (
     <div className="bg-card rounded-xl shadow-lg p-6 mb-8">
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div>
-            <Select value={gradeLevel} onValueChange={setGradeLevel}>
-              <SelectTrigger className="h-12 focus:ring-primary focus:border-primary">
-                <SelectValue placeholder="Select Grade Level" />
-              </SelectTrigger>
-              <SelectContent>
-                {gradeOptions.map((grade) => (
-                  <SelectItem key={grade} value={grade}>
-                    {grade}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-          
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <Select value={event} onValueChange={setEvent}>
               <SelectTrigger className="h-12 focus:ring-primary focus:border-primary">

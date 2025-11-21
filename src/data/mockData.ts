@@ -60,7 +60,7 @@ const determineTier = (userPerformance: string, standards: any, event: string): 
   return null;
 };
 
-export const generateMatches = (gradeLevel: string, event: string, personalBest: string, gender: string): SchoolMatch[] => {
+export const generateMatches = (event: string, personalBest: string, gender: string): SchoolMatch[] => {
   const matches: SchoolMatch[] = [];
   const eliteConferences = ['SEC', 'Big Ten', 'ACC', 'Big 12'];
   
