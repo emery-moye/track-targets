@@ -13,34 +13,32 @@ const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [results, setResults] = useState<SchoolMatch[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
-  const [initialFormData, setInitialFormData] = useState<{ gradeLevel: string; event: string; personalBest: string; gender: string } | null>(null);
+  const [initialFormData, setInitialFormData] = useState<{ event: string; personalBest: string; gender: string } | null>(null);
 
   // On mount, check if we have search params from URL
   useEffect(() => {
-    const gradeLevel = searchParams.get('gradeLevel');
     const event = searchParams.get('event');
     const personalBest = searchParams.get('personalBest');
     const gender = searchParams.get('gender');
 
-    if (gradeLevel && event && personalBest && gender) {
+    if (event && personalBest && gender) {
       // Auto-populate form and trigger search
-      const formData = { gradeLevel, event, personalBest, gender };
+      const formData = { event, personalBest, gender };
       setInitialFormData(formData);
       
-      const matches = generateMatches(gradeLevel, event, personalBest, gender);
+      const matches = generateMatches(event, personalBest, gender);
       setResults(matches);
       setHasSearched(true);
     }
   }, []); // Only run once on mount
 
-  const handleSearch = (data: { gradeLevel: string; event: string; personalBest: string; gender: string }) => {
-    const matches = generateMatches(data.gradeLevel, data.event, data.personalBest, data.gender);
+  const handleSearch = (data: { event: string; personalBest: string; gender: string }) => {
+    const matches = generateMatches(data.event, data.personalBest, data.gender);
     setResults(matches);
     setHasSearched(true);
     
     // Update URL with search params
     setSearchParams({
-      gradeLevel: data.gradeLevel,
       event: data.event,
       personalBest: data.personalBest,
       gender: data.gender
