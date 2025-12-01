@@ -95,7 +95,10 @@ export const CollegeSearchBar = () => {
         </div>
 
         {showResults && searchResults.length > 0 && (
-          <div className="absolute top-full left-0 right-0 mt-1 bg-card border rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+          <div 
+            className="absolute top-full left-0 right-0 mt-1 bg-card border rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto"
+            onMouseDown={(e) => e.preventDefault()}
+          >
             {searchResults.map((school) => (
               <div
                 key={school.id}
@@ -151,7 +154,10 @@ export const CollegeSearchBar = () => {
             </div>
 
             {showResults && searchResults.length > 0 && (
-              <div className="bg-card border rounded-lg shadow-lg max-h-96 overflow-y-auto">
+              <div 
+                className="bg-card border rounded-lg shadow-lg max-h-96 overflow-y-auto"
+                onMouseDown={(e) => e.preventDefault()}
+              >
                 {searchResults.map((school) => (
                   <div
                     key={school.id}
