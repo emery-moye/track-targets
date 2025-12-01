@@ -1310,7 +1310,7 @@ export const schoolStandards: SchoolStandards[] = [
   {
     id: "8",
     schoolName: "UCLA",
-    searchKeywords: ["ucla", "bruins", "california"],
+    searchKeywords: ["ucla", "bruins", "california", "university of california", "uc", "los angeles"],
     division: "D1",
     conference: "Big Ten",
     state: "CA",
@@ -3943,7 +3943,7 @@ export const schoolStandards: SchoolStandards[] = [
   {
     id: "50",
     schoolName: "UC Berkeley",
-    searchKeywords: ["berkeley", "cal", "california", "uc berkeley"],
+    searchKeywords: ["berkeley", "cal", "california", "uc berkeley", "university of california", "uc"],
     division: "D1",
     conference: "ACC",
     state: "CA",
@@ -28430,7 +28430,7 @@ const scacSchools: SchoolStandards[] = [
   {
     id: "bw_ucsb",
     schoolName: "UC Santa Barbara",
-    searchKeywords: ["ucsb", "santa barbara", "gauchos"],
+    searchKeywords: ["ucsb", "santa barbara", "gauchos", "university of california", "uc"],
     division: "D1",
     conference: "Big West",
     state: "CA",
@@ -28486,7 +28486,7 @@ const scacSchools: SchoolStandards[] = [
   {
     id: "bw_uci",
     schoolName: "UC Irvine",
-    searchKeywords: ["uci", "irvine", "anteaters"],
+    searchKeywords: ["uci", "irvine", "anteaters", "university of california", "uc"],
     division: "D1",
     conference: "Big West",
     state: "CA",
@@ -28598,7 +28598,7 @@ const scacSchools: SchoolStandards[] = [
   {
     id: "bw_ucsd",
     schoolName: "UC San Diego",
-    searchKeywords: ["ucsd", "san diego", "tritons"],
+    searchKeywords: ["ucsd", "san diego", "tritons", "university of california", "uc"],
     division: "D1",
     conference: "Big West",
     state: "CA",
@@ -28654,7 +28654,7 @@ const scacSchools: SchoolStandards[] = [
   {
     id: "bw_ucr",
     schoolName: "UC Riverside",
-    searchKeywords: ["ucr", "riverside", "highlanders"],
+    searchKeywords: ["ucr", "riverside", "highlanders", "university of california", "uc"],
     division: "D1",
     conference: "Big West",
     state: "CA",
@@ -28710,7 +28710,7 @@ const scacSchools: SchoolStandards[] = [
   {
     id: "bw_ucd",
     schoolName: "UC Davis",
-    searchKeywords: ["uc davis", "davis", "aggies"],
+    searchKeywords: ["uc davis", "davis", "aggies", "university of california", "uc"],
     division: "D1",
     conference: "Big West",
     state: "CA",
