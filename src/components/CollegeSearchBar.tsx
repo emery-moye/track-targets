@@ -13,6 +13,8 @@ export const CollegeSearchBar = () => {
   const [showResults, setShowResults] = useState(false);
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileDropdownRef = useRef<HTMLDivElement>(null);
 
   // Real-time search with debouncing
   useEffect(() => {
@@ -33,9 +35,40 @@ export const CollegeSearchBar = () => {
   // Click outside to close
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setShowResults(false);
+      // Check if click is inside the main container
+      if (containerRef.current?.contains(event.target as Node)) {
+        return; // Click inside container, don't close
       }
+      
+      // Check if click is within dropdown's bounding box (including scrollbar)
+      if (dropdownRef.current) {
+        const rect = dropdownRef.current.getBoundingClientRect();
+        const { clientX, clientY } = event;
+        if (
+          clientX >= rect.left &&
+          clientX <= rect.right &&
+          clientY >= rect.top &&
+          clientY <= rect.bottom
+        ) {
+          return; // Click is within dropdown area (including scrollbar)
+        }
+      }
+
+      // Check mobile dropdown
+      if (mobileDropdownRef.current) {
+        const rect = mobileDropdownRef.current.getBoundingClientRect();
+        const { clientX, clientY } = event;
+        if (
+          clientX >= rect.left &&
+          clientX <= rect.right &&
+          clientY >= rect.top &&
+          clientY <= rect.bottom
+        ) {
+          return; // Click is within mobile dropdown area
+        }
+      }
+      
+      setShowResults(false);
     };
     
     document.addEventListener('mousedown', handleClickOutside);
@@ -96,6 +129,7 @@ export const CollegeSearchBar = () => {
 
         {showResults && searchResults.length > 0 && (
           <div 
+            ref={dropdownRef}
             className="absolute top-full left-0 right-0 mt-1 bg-card border rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto"
             onMouseDown={(e) => e.preventDefault()}
           >
@@ -155,6 +189,7 @@ export const CollegeSearchBar = () => {
 
             {showResults && searchResults.length > 0 && (
               <div 
+                ref={mobileDropdownRef}
                 className="bg-card border rounded-lg shadow-lg max-h-96 overflow-y-auto"
                 onMouseDown={(e) => e.preventDefault()}
               >
