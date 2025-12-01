@@ -29650,6 +29650,61 @@ export const findSchoolStandards = (schoolName: string): SchoolStandards | undef
   );
 };
 
+// State mapping for enhanced state-based search
+const stateMap: Record<string, { fullName: string; aliases: string[] }> = {
+  "AL": { fullName: "alabama", aliases: ["bama"] },
+  "AK": { fullName: "alaska", aliases: [] },
+  "AZ": { fullName: "arizona", aliases: ["zona"] },
+  "AR": { fullName: "arkansas", aliases: [] },
+  "CA": { fullName: "california", aliases: ["cal", "cali"] },
+  "CO": { fullName: "colorado", aliases: [] },
+  "CT": { fullName: "connecticut", aliases: ["conn"] },
+  "DE": { fullName: "delaware", aliases: [] },
+  "DC": { fullName: "district of columbia", aliases: ["washington dc", "d.c."] },
+  "FL": { fullName: "florida", aliases: ["fla"] },
+  "GA": { fullName: "georgia", aliases: [] },
+  "HI": { fullName: "hawaii", aliases: [] },
+  "ID": { fullName: "idaho", aliases: [] },
+  "IL": { fullName: "illinois", aliases: [] },
+  "IN": { fullName: "indiana", aliases: [] },
+  "IA": { fullName: "iowa", aliases: [] },
+  "KS": { fullName: "kansas", aliases: [] },
+  "KY": { fullName: "kentucky", aliases: [] },
+  "LA": { fullName: "louisiana", aliases: [] },
+  "ME": { fullName: "maine", aliases: [] },
+  "MD": { fullName: "maryland", aliases: [] },
+  "MA": { fullName: "massachusetts", aliases: ["mass"] },
+  "MI": { fullName: "michigan", aliases: ["mich"] },
+  "MN": { fullName: "minnesota", aliases: ["minn"] },
+  "MS": { fullName: "mississippi", aliases: ["miss"] },
+  "MO": { fullName: "missouri", aliases: [] },
+  "MT": { fullName: "montana", aliases: [] },
+  "NE": { fullName: "nebraska", aliases: [] },
+  "NV": { fullName: "nevada", aliases: [] },
+  "NH": { fullName: "new hampshire", aliases: [] },
+  "NJ": { fullName: "new jersey", aliases: ["jersey"] },
+  "NM": { fullName: "new mexico", aliases: [] },
+  "NY": { fullName: "new york", aliases: [] },
+  "NC": { fullName: "north carolina", aliases: ["carolina"] },
+  "ND": { fullName: "north dakota", aliases: [] },
+  "OH": { fullName: "ohio", aliases: [] },
+  "OK": { fullName: "oklahoma", aliases: [] },
+  "OR": { fullName: "oregon", aliases: [] },
+  "PA": { fullName: "pennsylvania", aliases: ["penn", "penna"] },
+  "RI": { fullName: "rhode island", aliases: [] },
+  "SC": { fullName: "south carolina", aliases: ["carolina"] },
+  "SD": { fullName: "south dakota", aliases: [] },
+  "TN": { fullName: "tennessee", aliases: ["tenn"] },
+  "TX": { fullName: "texas", aliases: ["tex"] },
+  "UT": { fullName: "utah", aliases: [] },
+  "VT": { fullName: "vermont", aliases: [] },
+  "VA": { fullName: "virginia", aliases: [] },
+  "WA": { fullName: "washington", aliases: [] },
+  "WV": { fullName: "west virginia", aliases: [] },
+  "WI": { fullName: "wisconsin", aliases: ["wisc"] },
+  "WY": { fullName: "wyoming", aliases: [] }
+};
+
 export const searchSchools = (query: string): SchoolStandards[] => {
   if (!query.trim()) return [];
   
@@ -29661,6 +29716,7 @@ export const searchSchools = (query: string): SchoolStandards[] => {
     const conferenceLower = school.conference.toLowerCase();
     const stateLower = school.state.toLowerCase();
     const keywords = school.searchKeywords?.map(k => k.toLowerCase()) || [];
+    const stateInfo = stateMap[school.state];
     
     let score = 0;
     
@@ -29692,11 +29748,27 @@ export const searchSchools = (query: string): SchoolStandards[] => {
     else if (keywords.some(k => k.includes(queryLower))) {
       score = 400;
     }
+    // State abbreviation exact match (e.g., "PA")
+    else if (stateLower === queryLower) {
+      score = 300;
+    }
+    // Full state name exact match (e.g., "pennsylvania")
+    else if (stateInfo && stateInfo.fullName === queryLower) {
+      score = 300;
+    }
+    // State alias match (e.g., "penn" for Pennsylvania)
+    else if (stateInfo && stateInfo.aliases.includes(queryLower)) {
+      score = 250;
+    }
     // Conference match
     else if (conferenceLower.includes(queryLower)) {
       score = 200;
     }
-    // State match
+    // Partial state name match (e.g., "pennsy" matches "pennsylvania")
+    else if (stateInfo && stateInfo.fullName.startsWith(queryLower) && queryLower.length >= 3) {
+      score = 150;
+    }
+    // Partial state match (fallback)
     else if (stateLower.includes(queryLower)) {
       score = 100;
     }
