@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -12,15 +12,41 @@ export const CollegeSearchBar = () => {
   const [searchResults, setSearchResults] = useState<SchoolStandards[]>([]);
   const [showResults, setShowResults] = useState(false);
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Real-time search with debouncing
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (searchQuery.trim().length >= 2) {
+        const results = searchSchools(searchQuery).slice(0, 10);
+        setSearchResults(results);
+        setShowResults(true);
+      } else {
+        setSearchResults([]);
+        setShowResults(false);
+      }
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // Click outside to close
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setShowResults(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleSearch = () => {
-    if (searchQuery.trim()) {
-      const results = searchSchools(searchQuery);
+    if (searchQuery.trim().length >= 2) {
+      const results = searchSchools(searchQuery).slice(0, 10);
       setSearchResults(results);
       setShowResults(true);
-    } else {
-      setSearchResults([]);
-      setShowResults(false);
     }
   };
 
@@ -53,7 +79,7 @@ export const CollegeSearchBar = () => {
   return (
     <>
       {/* Desktop Search */}
-      <div className="hidden md:block relative w-full max-w-2xl mx-auto">
+      <div ref={containerRef} className="hidden md:block relative w-full max-w-2xl mx-auto">
         <div className="flex gap-3">
           <Input
             type="text"
@@ -93,7 +119,7 @@ export const CollegeSearchBar = () => {
       </div>
 
       {/* Mobile Search */}
-      <div className="md:hidden relative w-full">
+      <div ref={containerRef} className="md:hidden relative w-full">
         {!isMobileExpanded ? (
           <Button
             onClick={handleMobileToggle}

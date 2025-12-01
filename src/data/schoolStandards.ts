@@ -29651,7 +29651,7 @@ export const findSchoolStandards = (schoolName: string): SchoolStandards | undef
 };
 
 export const searchSchools = (query: string): SchoolStandards[] => {
-  if (!query.trim()) return schoolStandards;
+  if (!query.trim()) return [];
   
   const queryLower = query.toLowerCase().trim();
   const queryWords = queryLower.split(/\s+/);
@@ -29668,12 +29668,16 @@ export const searchSchools = (query: string): SchoolStandards[] => {
     if (nameLower === queryLower) {
       score = 1000;
     }
+    // Exact keyword match
+    else if (keywords.includes(queryLower)) {
+      score = 900;
+    }
     // Name starts with query
     else if (nameLower.startsWith(queryLower)) {
       score = 800;
     }
-    // Exact keyword match
-    else if (keywords.includes(queryLower)) {
+    // Keyword starts with query (for partial matches like "berk")
+    else if (keywords.some(k => k.startsWith(queryLower))) {
       score = 700;
     }
     // All query words present in name
