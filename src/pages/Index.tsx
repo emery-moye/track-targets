@@ -92,12 +92,12 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center gap-4">
             <a 
-              href="https://app.thepreferredrecruit.com/page_3tfle/?utm_source=PRstandards&utm_medium=web&utm_campaign=PR" 
+              href="https://app.thepreferredrecruit.com/quiz/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-2 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
             >
-              Apply Now
+              Free Recruitment Quiz
             </a>
             
             <div className="flex items-center gap-2">
