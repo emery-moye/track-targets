@@ -106,14 +106,27 @@ All colors MUST be HSL.
 
 /* Modern Clean Design System */
 
-/* Subtle gradient background */
+/* Vibrant mesh gradient background (Stripe-inspired) */
 .gradient-bg {
+  background: 
+    radial-gradient(ellipse at 10% 20%, hsl(280 70% 92% / 0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 30%, hsl(258 80% 88% / 0.5) 0%, transparent 40%),
+    radial-gradient(ellipse at 40% 80%, hsl(200 70% 92% / 0.4) 0%, transparent 50%),
+    linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(240 20% 98%) 100%);
+}
+
+/* Multi-color gradient text (Stripe-style hero) */
+.gradient-text-hero {
   background: linear-gradient(
-    135deg,
-    hsl(240 20% 98%) 0%,
-    hsl(258 30% 97%) 50%,
-    hsl(240 20% 98%) 100%
+    135deg, 
+    hsl(258 90% 50%) 0%, 
+    hsl(280 80% 55%) 40%,
+    hsl(320 70% 58%) 70%,
+    hsl(258 90% 55%) 100%
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Soft shadows */
@@ -176,9 +189,51 @@ All colors MUST be HSL.
   background-clip: text;
 }
 
-/* Gradient card backgrounds */
+/* Premium gradient card with decorative elements */
 .gradient-card {
-  background: linear-gradient(135deg, hsl(258 90% 58%) 0%, hsl(280 70% 50%) 100%);
+  background: linear-gradient(135deg, hsl(258 90% 55%) 0%, hsl(280 75% 50%) 50%, hsl(320 70% 55%) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 300px;
+  height: 300px;
+  background: hsl(0 0% 100% / 0.1);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.gradient-card::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -20%;
+  width: 200px;
+  height: 200px;
+  background: hsl(280 80% 60% / 0.2);
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+/* Floating card effect */
+.float-card {
+  background: hsl(0 0% 100%);
+  box-shadow: 
+    0 20px 60px -15px hsl(258 50% 30% / 0.12),
+    0 0 0 1px hsl(0 0% 100% / 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.float-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 30px 80px -20px hsl(258 50% 30% / 0.18),
+    0 0 0 1px hsl(0 0% 100% / 0.9);
 }
 
 /* Pulse animation for badges */
