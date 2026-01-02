@@ -6,6 +6,7 @@ import { SchoolMatch } from "@/components/ResultsTable";
 import { generateMatches } from "@/data/mockData";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { CollegeLogoMarquee } from "@/components/CollegeLogoMarquee";
 
 // Lazy load ResultsTable for better performance
 const ResultsTable = lazy(() => import("@/components/ResultsTable").then(module => ({ default: module.ResultsTable })));
@@ -68,6 +69,8 @@ const Index = () => {
         </div>
         
         <SearchForm onSearch={handleSearch} initialValues={initialFormData} />
+        
+        {!hasSearched && <CollegeLogoMarquee />}
         
         {!hasSearched && (
           <div className="gradient-card rounded-2xl p-6 md:p-8 max-w-2xl mx-auto text-center shadow-2xl shadow-primary/20">
