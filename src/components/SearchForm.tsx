@@ -82,15 +82,15 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
   };
 
   return (
-    <div className="neo-border neo-shadow-primary bg-card p-6 md:p-8 mb-8 neo-hover">
+    <div className="bg-card rounded-2xl soft-shadow-lg p-6 md:p-8 mb-10 hover-lift max-w-4xl mx-auto">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <Select value={event} onValueChange={setEvent}>
-              <SelectTrigger className="h-14 rounded-none neo-border bg-background font-medium focus:ring-0 focus:ring-offset-0 focus:border-primary">
+              <SelectTrigger className="h-14 rounded-xl border-border bg-secondary/50 font-medium focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <SelectValue placeholder="Select Event" />
               </SelectTrigger>
-              <SelectContent className="neo-border rounded-none">
+              <SelectContent className="rounded-xl border-border">
                 {eventOptions.map((eventName) => (
                   <SelectItem key={eventName} value={eventName} className="font-medium">
                     {eventName}
@@ -106,16 +106,16 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
               placeholder="Personal Best (e.g., 10.5, 1:23.45)"
               value={personalBest}
               onChange={(e) => setPersonalBest(e.target.value)}
-              className="h-14 rounded-none neo-border bg-background font-medium focus:ring-0 focus:ring-offset-0 focus:border-primary focus-visible:ring-0"
+              className="h-14 rounded-xl border-border bg-secondary/50 font-medium focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
             />
           </div>
           
           <div>
             <Select value={gender} onValueChange={setGender}>
-              <SelectTrigger className="h-14 rounded-none neo-border bg-background font-medium focus:ring-0 focus:ring-offset-0 focus:border-primary">
+              <SelectTrigger className="h-14 rounded-xl border-border bg-secondary/50 font-medium focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <SelectValue placeholder="Select Gender" />
               </SelectTrigger>
-              <SelectContent className="neo-border rounded-none">
+              <SelectContent className="rounded-xl border-border">
                 {genderOptions.map((genderOption) => (
                   <SelectItem key={genderOption} value={genderOption} className="font-medium">
                     {genderOption}
@@ -129,15 +129,15 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
         <div className="flex justify-center mt-6">
           <Button 
             type="submit" 
-            className="neo-border bg-primary text-primary-foreground px-12 h-16 rounded-none font-black text-lg neo-shadow neo-btn"
+            className="bg-primary hover:bg-primary/90 text-white px-10 h-14 rounded-xl font-semibold text-lg btn-smooth glow-primary"
           >
-            <Search className="mr-3 h-6 w-6" />
+            <Search className="mr-3 h-5 w-5" />
             Search Colleges
           </Button>
         </div>
         
         {error && (
-          <p className="text-destructive text-sm text-center mt-4 font-bold">{error}</p>
+          <p className="text-destructive text-sm text-center mt-4 font-medium">{error}</p>
         )}
       </form>
     </div>

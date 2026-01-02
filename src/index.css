@@ -8,88 +8,81 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* PR Preferred Recruit Theme - Purple Palette */
-    --background: 0 0% 96%; /* Light Gray #F5F5F5 */
-    --foreground: 0 0% 12%; /* Deep Charcoal #1F1F1F */
+    /* PR Preferred Recruit Theme - Modern Clean */
+    --background: 240 20% 98%; /* Soft off-white */
+    --foreground: 240 10% 15%; /* Deep charcoal */
 
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 0 0% 12%;
+    --card: 0 0% 100%; /* Pure white */
+    --card-foreground: 240 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 12%;
+    --popover-foreground: 240 10% 15%;
 
-    --primary: 258 100% 60%; /* Purple #6F42C1 */
+    --primary: 258 90% 58%; /* Vibrant purple */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 94%; /* Light input background */
-    --secondary-foreground: 0 0% 12%;
+    --secondary: 240 10% 96%;
+    --secondary-foreground: 240 10% 15%;
 
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 240 10% 94%;
+    --muted-foreground: 240 5% 46%;
 
-    --accent: 258 100% 60%; /* Same as primary for consistency */
+    --accent: 258 90% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 4 90% 58%; /* Soft Red for Walk-On */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 94%;
-    --ring: 258 100% 60%; /* Purple focus ring */
+    --border: 240 10% 90%;
+    --input: 240 10% 94%;
+    --ring: 258 90% 58%;
 
     /* Tier Colors */
-    --tier-target: 122 39% 49%; /* Bright Green #4CAF50 */
-    --tier-recruit: 45 100% 51%; /* Amber/Yellow #FFC107 */
-    --tier-walkon: 4 90% 58%; /* Soft Red #F44336 */
-    --tier-nomatch: 0 0% 62%; /* Gray #9E9E9E */
+    --tier-target: 142 70% 45%;
+    --tier-recruit: 38 92% 50%;
+    --tier-walkon: 0 84% 60%;
+    --tier-nomatch: 240 5% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 0 0% 8%;
+    --background: 240 10% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 10%;
+    --card: 240 10% 10%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 10%;
+    --popover: 240 10% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 258 100% 60%;
+    --primary: 258 90% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 240 10% 15%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 258 100% 60%;
+    --accent: 258 90% 65%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 4 90% 58%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 258 100% 60%;
+    --border: 240 10% 20%;
+    --input: 240 10% 15%;
+    --ring: 258 90% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -107,85 +100,97 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-inter antialiased;
   }
 }
 
-/* Neobrutalist Design System */
+/* Modern Clean Design System */
 
-/* Dot pattern background */
-.neo-pattern {
-  background-image: radial-gradient(circle, hsl(var(--foreground) / 0.08) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+/* Subtle gradient background */
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    hsl(240 20% 98%) 0%,
+    hsl(258 30% 97%) 50%,
+    hsl(240 20% 98%) 100%
+  );
 }
 
-/* Hard offset shadows - the signature neobrutalist look */
-.neo-shadow {
-  box-shadow: 5px 5px 0px 0px hsl(var(--foreground));
+/* Soft shadows */
+.soft-shadow {
+  box-shadow: 0 4px 20px -4px hsl(240 10% 15% / 0.08);
 }
 
-.neo-shadow-sm {
-  box-shadow: 3px 3px 0px 0px hsl(var(--foreground));
+.soft-shadow-lg {
+  box-shadow: 0 8px 30px -6px hsl(240 10% 15% / 0.12);
 }
 
-.neo-shadow-primary {
-  box-shadow: 5px 5px 0px 0px hsl(var(--primary));
+.soft-shadow-xl {
+  box-shadow: 0 16px 50px -12px hsl(240 10% 15% / 0.15);
 }
 
-.neo-shadow-lg {
-  box-shadow: 8px 8px 0px 0px hsl(var(--foreground));
+/* Primary glow shadow */
+.glow-primary {
+  box-shadow: 0 8px 30px -6px hsl(258 90% 58% / 0.25);
 }
 
-/* Thick borders */
-.neo-border {
-  border: 3px solid hsl(var(--foreground));
+.glow-primary-lg {
+  box-shadow: 0 12px 40px -8px hsl(258 90% 58% / 0.35);
 }
 
-.neo-border-primary {
-  border: 3px solid hsl(var(--primary));
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Interactive hover effects */
-.neo-hover {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -8px hsl(258 90% 58% / 0.2);
 }
 
-.neo-hover:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0px 0px hsl(var(--foreground));
+/* Glass effect */
+.glass {
+  background: hsl(0 0% 100% / 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid hsl(0 0% 100% / 0.6);
 }
 
-.neo-hover-primary:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0px 0px hsl(var(--primary));
+/* Smooth button transition */
+.btn-smooth {
+  transition: all 0.2s ease;
 }
 
-/* Button specific hover */
-.neo-btn {
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+.btn-smooth:hover {
+  transform: translateY(-2px);
 }
 
-.neo-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0px 0px hsl(var(--primary));
+.btn-smooth:active {
+  transform: translateY(0);
 }
 
-.neo-btn:active {
-  transform: translate(0px, 0px);
-  box-shadow: 3px 3px 0px 0px hsl(var(--primary));
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(258 90% 58%) 0%, hsl(280 80% 55%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Accent colors for CTA sections */
-.neo-accent-yellow {
-  background-color: hsl(48, 96%, 53%);
+/* Gradient card backgrounds */
+.gradient-card {
+  background: linear-gradient(135deg, hsl(258 90% 58%) 0%, hsl(280 70% 50%) 100%);
 }
 
-.neo-accent-green {
-  background-color: hsl(var(--tier-target));
+/* Pulse animation for badges */
+.pulse-dot {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Footer styling */
-.neo-footer {
-  background: hsl(var(--card));
-  border-top: 4px solid hsl(var(--foreground));
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
