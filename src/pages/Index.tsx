@@ -59,12 +59,7 @@ const Index = () => {
       
       <main className="container mx-auto px-4 md:px-6 py-10 md:py-16">
         {/* Hero Section - Stripe + Bain inspired */}
-        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/15 to-purple-500/15 text-primary px-5 py-2.5 rounded-full text-sm font-semibold border border-primary/20 mb-8">
-            <span className="w-2 h-2 bg-primary rounded-full pulse-dot"></span>
-            500+ College Programs Analyzed
-          </div>
-          
+        <div className="text-center max-w-4xl mx-auto mb-10 md:mb-12">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
             Find Your
             <br />
