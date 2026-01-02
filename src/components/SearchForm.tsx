@@ -82,15 +82,15 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
   };
 
   return (
-    <div className="bg-card rounded-2xl soft-shadow-lg p-6 md:p-8 mb-10 hover-lift max-w-4xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="float-card rounded-3xl p-8 md:p-10 mb-12 max-w-4xl mx-auto">
+      <form onSubmit={handleSubmit} className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div>
             <Select value={event} onValueChange={setEvent}>
-              <SelectTrigger className="h-14 rounded-xl border-border bg-secondary/50 font-medium focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+              <SelectTrigger className="h-16 rounded-2xl border-border/60 bg-muted/50 font-medium text-base focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all">
                 <SelectValue placeholder="Select Event" />
               </SelectTrigger>
-              <SelectContent className="rounded-xl border-border">
+              <SelectContent className="rounded-xl border-border/60">
                 {eventOptions.map((eventName) => (
                   <SelectItem key={eventName} value={eventName} className="font-medium">
                     {eventName}
@@ -106,16 +106,16 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
               placeholder="Personal Best (e.g., 10.5, 1:23.45)"
               value={personalBest}
               onChange={(e) => setPersonalBest(e.target.value)}
-              className="h-14 rounded-xl border-border bg-secondary/50 font-medium focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+              className="h-16 rounded-2xl border-border/60 bg-muted/50 font-medium text-base focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all"
             />
           </div>
           
           <div>
             <Select value={gender} onValueChange={setGender}>
-              <SelectTrigger className="h-14 rounded-xl border-border bg-secondary/50 font-medium focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+              <SelectTrigger className="h-16 rounded-2xl border-border/60 bg-muted/50 font-medium text-base focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all">
                 <SelectValue placeholder="Select Gender" />
               </SelectTrigger>
-              <SelectContent className="rounded-xl border-border">
+              <SelectContent className="rounded-xl border-border/60">
                 {genderOptions.map((genderOption) => (
                   <SelectItem key={genderOption} value={genderOption} className="font-medium">
                     {genderOption}
@@ -126,10 +126,10 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
           </div>
         </div>
         
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center">
           <Button 
             type="submit" 
-            className="bg-primary hover:bg-primary/90 text-white px-10 h-14 rounded-xl font-semibold text-lg btn-smooth glow-primary"
+            className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white px-12 h-16 rounded-2xl font-bold text-lg shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300"
           >
             <Search className="mr-3 h-5 w-5" />
             Search Colleges

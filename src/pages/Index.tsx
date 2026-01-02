@@ -58,19 +58,22 @@ const Index = () => {
       <Header onReset={handleReset} />
       
       <main className="container mx-auto px-4 md:px-6 py-10 md:py-16">
-        {/* Hero Section */}
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+        {/* Hero Section - Stripe + Bain inspired */}
+        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/15 to-purple-500/15 text-primary px-5 py-2.5 rounded-full text-sm font-semibold border border-primary/20 mb-8">
             <span className="w-2 h-2 bg-primary rounded-full pulse-dot"></span>
-            500+ College Programs
+            500+ College Programs Analyzed
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-tight">
-            Find Your Perfect
-            <span className="gradient-text"> College Match</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+            Find Your
+            <br />
+            <span className="gradient-text-hero">Perfect College</span>
+            <br />
+            Match
           </h1>
           
-          <p className="text-lg text-muted-foreground mt-5 max-w-xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mt-8 max-w-2xl mx-auto leading-relaxed font-medium">
             Compare your personal bests against recruiting standards from top track & field programs
           </p>
         </div>
@@ -78,19 +81,20 @@ const Index = () => {
         <SearchForm onSearch={handleSearch} initialValues={initialFormData} />
         
         {!hasSearched && (
-          <div className="gradient-card rounded-2xl p-8 md:p-10 max-w-2xl mx-auto text-center soft-shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+          <div className="gradient-card rounded-3xl p-10 md:p-14 max-w-3xl mx-auto text-center shadow-2xl shadow-primary/20">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 relative z-10">
               Need Help With Recruitment?
             </h3>
-            <p className="text-white/80 mb-6 text-lg">
+            <p className="text-white/85 mb-8 text-lg md:text-xl relative z-10">
               Get personalized guidance from our expert team
             </p>
             <a 
               href="https://start.thepreferredrecruit.com/home-page317375" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="relative z-10 inline-block"
             >
-              <Button className="bg-white text-primary hover:bg-white/90 font-semibold h-12 px-8 rounded-xl btn-smooth shadow-lg">
+              <Button className="bg-white text-primary hover:bg-gray-50 font-bold h-14 px-10 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 Learn More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -109,7 +113,7 @@ const Index = () => {
         )}
       </main>
       
-      <footer className="fixed bottom-0 left-0 right-0 glass border-t border-border/50 py-4 px-6 z-20">
+      <footer className="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-border/30 py-5 px-6 z-20">
         <div className="container mx-auto">
           <div className="flex items-center justify-center gap-4 md:gap-6">
             <a 
@@ -117,7 +121,7 @@ const Index = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button className="bg-primary hover:bg-primary/90 text-white font-semibold h-11 px-6 rounded-xl btn-smooth glow-primary">
+              <Button className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white font-bold h-12 px-8 rounded-xl shadow-lg shadow-primary/25 transition-all">
                 Free Recruitment Quiz
               </Button>
             </a>
