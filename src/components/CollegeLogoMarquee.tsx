@@ -21,7 +21,7 @@ const colleges = [
 export function CollegeLogoMarquee() {
   return (
     <div className="w-full overflow-hidden py-6">
-      <div className="flex animate-marquee">
+      <div className="flex animate-marquee w-max">
         {/* First set of logos */}
         {colleges.map((college, index) => (
           <div
