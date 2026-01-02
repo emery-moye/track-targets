@@ -82,12 +82,12 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
   };
 
   return (
-    <div className="bg-card rounded-xl shadow-lg p-6 mb-8">
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="glass-card rounded-2xl shadow-2xl p-8 mb-8 hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <Select value={event} onValueChange={setEvent}>
-              <SelectTrigger className="h-12 focus:ring-primary focus:border-primary">
+              <SelectTrigger className="h-14 rounded-xl border-2 border-border/50 focus:border-primary focus:ring-primary/20 transition-all duration-200">
                 <SelectValue placeholder="Select Event" />
               </SelectTrigger>
               <SelectContent>
@@ -106,13 +106,13 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
               placeholder="Personal Best (e.g., 10.5, 1:23.45, 6'6&quot;)"
               value={personalBest}
               onChange={(e) => setPersonalBest(e.target.value)}
-              className="h-12 focus:ring-primary focus:border-primary"
+              className="h-14 rounded-xl border-2 border-border/50 focus:border-primary focus:ring-primary/20 transition-all duration-200"
             />
           </div>
           
           <div>
             <Select value={gender} onValueChange={setGender}>
-              <SelectTrigger className="h-12 focus:ring-primary focus:border-primary">
+              <SelectTrigger className="h-14 rounded-xl border-2 border-border/50 focus:border-primary focus:ring-primary/20 transition-all duration-200">
                 <SelectValue placeholder="Select Gender" />
               </SelectTrigger>
               <SelectContent>
@@ -126,18 +126,22 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
           </div>
         </div>
         
-        <div className="col-start-2 col-span-2 justify-self-center mt-4">
-          <Button 
-            type="submit" 
-            className="px-8 h-16 rounded-xl shadow-lg hover:scale-105 transition-all duration-200 text-lg font-semibold"
-          >
-            <Search className="mr-3 h-5 w-5" />
-            Search Colleges
-          </Button>
+        <div className="flex justify-center mt-6">
+          <div className="relative">
+            {/* Pulsing glow effect behind button */}
+            <div className="absolute inset-0 bg-primary/40 rounded-2xl blur-xl animate-pulse-glow" />
+            <Button 
+              type="submit" 
+              className="relative px-10 h-16 rounded-2xl shadow-xl text-lg font-bold bg-gradient-to-r from-primary to-primary/80 hover:scale-110 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300"
+            >
+              <Search className="mr-3 h-6 w-6" />
+              Search Colleges
+            </Button>
+          </div>
         </div>
         
         {error && (
-          <p className="text-destructive text-sm mt-4">{error}</p>
+          <p className="text-destructive text-sm text-center mt-4 font-medium">{error}</p>
         )}
       </form>
     </div>
