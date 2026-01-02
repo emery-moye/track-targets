@@ -28689,7 +28689,7 @@ const scacSchools: SchoolStandards[] = [
       "3000m": { target: "10:21.50", recruit: "10:30.50", walkon: "10:42.00" },
       "5000m": { target: "11:16.50", recruit: "11:23.00", walkon: "11:25.00" },
       "2 Mile": { target: "11:11.50", recruit: "11:18.50", walkon: "11:31.00" },
-      "10000m": { target: "18:06.50", recruit: "18:13.00", walkon: "18:34.00" },
+      "10000m": { target: "35:36.00", recruit: "36:00.00", walkon: "36:30.00" },
       "100m Hurdles": { target: "13.44", recruit: "13.91", walkon: "14.24" },
       "300m Hurdles": { target: "43.17", recruit: "43.47", walkon: "44.42" },
       "400m Hurdles": { target: "58.96", recruit: "1:00.96", walkon: "1:02.96" },
