@@ -54,29 +54,35 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background pb-24 neo-pattern">
+    <div className="min-h-screen gradient-bg pb-28">
       <Header onReset={handleReset} />
       
-      <main className="container mx-auto px-4 md:px-6 py-8">
-        {/* Hero Section - Neobrutalist Style */}
-        <div className="neo-border neo-shadow bg-card p-8 md:p-12 mb-10 max-w-4xl mx-auto neo-hover">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground tracking-tight leading-tight">
-            Find Your Best{" "}
-            <span className="text-primary underline decoration-4 underline-offset-4">College Matches</span>
-          </h2>
-          <p className="text-lg md:text-xl text-foreground/70 mt-4 font-medium">
-            Compare your times against 500+ college track & field programs instantly
+      <main className="container mx-auto px-4 md:px-6 py-10 md:py-16">
+        {/* Hero Section */}
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-primary rounded-full pulse-dot"></span>
+            500+ College Programs
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-tight">
+            Find Your Perfect
+            <span className="gradient-text"> College Match</span>
+          </h1>
+          
+          <p className="text-lg text-muted-foreground mt-5 max-w-xl mx-auto leading-relaxed">
+            Compare your personal bests against recruiting standards from top track & field programs
           </p>
         </div>
         
         <SearchForm onSearch={handleSearch} initialValues={initialFormData} />
         
         {!hasSearched && (
-          <div className="neo-border neo-shadow neo-accent-yellow p-8 mb-8 max-w-2xl mx-auto neo-hover">
-            <h3 className="text-2xl md:text-3xl font-black text-foreground mb-3">
-              Want Help With Your Recruitment?
+          <div className="gradient-card rounded-2xl p-8 md:p-10 max-w-2xl mx-auto text-center soft-shadow-xl">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              Need Help With Recruitment?
             </h3>
-            <p className="text-foreground/80 mb-6 font-medium">
+            <p className="text-white/80 mb-6 text-lg">
               Get personalized guidance from our expert team
             </p>
             <a 
@@ -84,7 +90,7 @@ const Index = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button className="neo-border bg-foreground text-background font-black h-14 px-8 rounded-none neo-shadow-sm neo-btn text-lg">
+              <Button className="bg-white text-primary hover:bg-white/90 font-semibold h-12 px-8 rounded-xl btn-smooth shadow-lg">
                 Learn More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -94,7 +100,7 @@ const Index = () => {
         
         {hasSearched && (
           <Suspense fallback={
-            <div className="neo-border neo-shadow bg-card p-8 text-center font-bold">
+            <div className="bg-card rounded-2xl soft-shadow-lg p-8 text-center text-muted-foreground">
               Loading results...
             </div>
           }>
@@ -103,7 +109,7 @@ const Index = () => {
         )}
       </main>
       
-      <footer className="fixed bottom-0 left-0 right-0 neo-footer py-4 px-6 z-20">
+      <footer className="fixed bottom-0 left-0 right-0 glass border-t border-border/50 py-4 px-6 z-20">
         <div className="container mx-auto">
           <div className="flex items-center justify-center gap-4 md:gap-6">
             <a 
@@ -111,7 +117,7 @@ const Index = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button className="neo-border-primary bg-primary text-primary-foreground font-black h-12 px-6 rounded-none neo-shadow-sm neo-btn">
+              <Button className="bg-primary hover:bg-primary/90 text-white font-semibold h-11 px-6 rounded-xl btn-smooth glow-primary">
                 Free Recruitment Quiz
               </Button>
             </a>
@@ -121,48 +127,48 @@ const Index = () => {
                 href="https://www.instagram.com/preferredrecruit/?next=%2F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="neo-border bg-card p-2 neo-shadow-sm neo-hover"
+                className="w-10 h-10 rounded-full bg-secondary hover:bg-primary/10 flex items-center justify-center transition-colors"
                 aria-label="Follow us on Instagram"
               >
                 <img 
                   src="/lovable-uploads/3c147542-29e4-4c27-9198-0d365762fd02.png" 
                   alt="Instagram" 
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   loading="lazy"
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                 />
               </a>
               <a
                 href="https://www.tiktok.com/@preferredrecruit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="neo-border bg-card p-2 neo-shadow-sm neo-hover"
+                className="w-10 h-10 rounded-full bg-secondary hover:bg-primary/10 flex items-center justify-center transition-colors"
                 aria-label="Follow us on TikTok"
               >
                 <img 
                   src="/lovable-uploads/82c35b69-d949-4123-bc13-1914a86a4454.png" 
                   alt="TikTok" 
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   loading="lazy"
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                 />
               </a>
               <a
                 href="https://www.youtube.com/@thepreferredrecruit/videos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="neo-border bg-card p-2 neo-shadow-sm neo-hover"
+                className="w-10 h-10 rounded-full bg-secondary hover:bg-primary/10 flex items-center justify-center transition-colors"
                 aria-label="Subscribe to our YouTube channel"
               >
                 <img 
                   src="/lovable-uploads/e6f73d11-1cba-49c6-8fc5-fa310e18e051.png" 
                   alt="YouTube" 
-                  className="h-6 w-auto object-contain"
+                  className="h-5 w-auto object-contain"
                   loading="lazy"
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                 />
               </a>
             </div>

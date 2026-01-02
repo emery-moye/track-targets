@@ -12,7 +12,7 @@ export const Header = ({ onReset }: HeaderProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-card neo-border border-t-0 border-l-0 border-r-0">
+    <header className="sticky top-0 z-50 glass border-b border-border/50">
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -21,12 +21,12 @@ export const Header = ({ onReset }: HeaderProps) => {
               className="hover:opacity-80 transition-opacity"
               onClick={handleLogoClick}
             >
-            <img 
-              src="/lovable-uploads/32e64d19-2b4a-46c0-bcb0-0c1657cf2992.png" 
-              alt="PR Preferred Recruit Logo" 
-              className="h-12"
-              fetchPriority="high"
-            />
+              <img 
+                src="/lovable-uploads/32e64d19-2b4a-46c0-bcb0-0c1657cf2992.png" 
+                alt="PR Preferred Recruit Logo" 
+                className="h-10 md:h-12"
+                fetchPriority="high"
+              />
             </Link>
           </div>
           
@@ -40,7 +40,7 @@ export const Header = ({ onReset }: HeaderProps) => {
             <CollegeSearchBar />
           </div>
           
-          <div className="text-sm text-foreground font-bold hidden md:block">
+          <div className="text-sm text-muted-foreground font-medium hidden md:block">
             Find your perfect college match
           </div>
         </div>
