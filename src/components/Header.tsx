@@ -12,8 +12,8 @@ export const Header = ({ onReset }: HeaderProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-card shadow-lg border-b">
-      <div className="container mx-auto px-6 py-4">
+    <header className="sticky top-0 z-50 bg-card neo-border border-t-0 border-l-0 border-r-0">
+      <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link 
@@ -40,7 +40,7 @@ export const Header = ({ onReset }: HeaderProps) => {
             <CollegeSearchBar />
           </div>
           
-          <div className="text-sm text-muted-foreground hidden md:block">
+          <div className="text-sm text-foreground font-bold hidden md:block">
             Find your perfect college match
           </div>
         </div>

@@ -82,17 +82,17 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
   };
 
   return (
-    <div className="glass-card rounded-2xl shadow-2xl p-8 mb-8 hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300">
+    <div className="neo-border neo-shadow-primary bg-card p-6 md:p-8 mb-8 neo-hover">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <Select value={event} onValueChange={setEvent}>
-              <SelectTrigger className="h-14 rounded-xl border-2 border-border/50 focus:border-primary focus:ring-primary/20 transition-all duration-200">
+              <SelectTrigger className="h-14 rounded-none neo-border bg-background font-medium focus:ring-0 focus:ring-offset-0 focus:border-primary">
                 <SelectValue placeholder="Select Event" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="neo-border rounded-none">
                 {eventOptions.map((eventName) => (
-                  <SelectItem key={eventName} value={eventName}>
+                  <SelectItem key={eventName} value={eventName} className="font-medium">
                     {eventName}
                   </SelectItem>
                 ))}
@@ -103,21 +103,21 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
           <div>
             <Input
               type="text"
-              placeholder="Personal Best (e.g., 10.5, 1:23.45, 6'6&quot;)"
+              placeholder="Personal Best (e.g., 10.5, 1:23.45)"
               value={personalBest}
               onChange={(e) => setPersonalBest(e.target.value)}
-              className="h-14 rounded-xl border-2 border-border/50 focus:border-primary focus:ring-primary/20 transition-all duration-200"
+              className="h-14 rounded-none neo-border bg-background font-medium focus:ring-0 focus:ring-offset-0 focus:border-primary focus-visible:ring-0"
             />
           </div>
           
           <div>
             <Select value={gender} onValueChange={setGender}>
-              <SelectTrigger className="h-14 rounded-xl border-2 border-border/50 focus:border-primary focus:ring-primary/20 transition-all duration-200">
+              <SelectTrigger className="h-14 rounded-none neo-border bg-background font-medium focus:ring-0 focus:ring-offset-0 focus:border-primary">
                 <SelectValue placeholder="Select Gender" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="neo-border rounded-none">
                 {genderOptions.map((genderOption) => (
-                  <SelectItem key={genderOption} value={genderOption}>
+                  <SelectItem key={genderOption} value={genderOption} className="font-medium">
                     {genderOption}
                   </SelectItem>
                 ))}
@@ -127,21 +127,17 @@ export const SearchForm = ({ onSearch, initialValues }: SearchFormProps) => {
         </div>
         
         <div className="flex justify-center mt-6">
-          <div className="relative">
-            {/* Pulsing glow effect behind button */}
-            <div className="absolute inset-0 bg-primary/40 rounded-2xl blur-xl animate-pulse-glow" />
-            <Button 
-              type="submit" 
-              className="relative px-10 h-16 rounded-2xl shadow-xl text-lg font-bold bg-gradient-to-r from-primary to-primary/80 hover:scale-110 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300"
-            >
-              <Search className="mr-3 h-6 w-6" />
-              Search Colleges
-            </Button>
-          </div>
+          <Button 
+            type="submit" 
+            className="neo-border bg-primary text-primary-foreground px-12 h-16 rounded-none font-black text-lg neo-shadow neo-btn"
+          >
+            <Search className="mr-3 h-6 w-6" />
+            Search Colleges
+          </Button>
         </div>
         
         {error && (
-          <p className="text-destructive text-sm text-center mt-4 font-medium">{error}</p>
+          <p className="text-destructive text-sm text-center mt-4 font-bold">{error}</p>
         )}
       </form>
     </div>

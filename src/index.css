@@ -111,62 +111,81 @@ All colors MUST be HSL.
   }
 }
 
-/* Sporty & Energetic Animations */
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* Neobrutalist Design System */
+
+/* Dot pattern background */
+.neo-pattern {
+  background-image: radial-gradient(circle, hsl(var(--foreground) / 0.08) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.05); }
+/* Hard offset shadows - the signature neobrutalist look */
+.neo-shadow {
+  box-shadow: 5px 5px 0px 0px hsl(var(--foreground));
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+.neo-shadow-sm {
+  box-shadow: 3px 3px 0px 0px hsl(var(--foreground));
 }
 
-@keyframes float-delayed {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+.neo-shadow-primary {
+  box-shadow: 5px 5px 0px 0px hsl(var(--primary));
 }
 
-.hero-gradient {
-  background: linear-gradient(135deg, hsl(258, 100%, 60%), hsl(220, 100%, 55%), hsl(280, 100%, 65%), hsl(258, 100%, 60%));
-  background-size: 300% 300%;
-  animation: gradient-shift 8s ease infinite;
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0px 0px hsl(var(--foreground));
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+/* Thick borders */
+.neo-border {
+  border: 3px solid hsl(var(--foreground));
 }
 
-.animate-float-delayed {
-  animation: float-delayed 6s ease-in-out infinite 2s;
+.neo-border-primary {
+  border: 3px solid hsl(var(--primary));
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+/* Interactive hover effects */
+.neo-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, hsl(258, 100%, 60%), hsl(220, 100%, 55%), hsl(280, 100%, 65%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  padding-bottom: 0.1em;
-  line-height: 1.2;
+.neo-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px 0px hsl(var(--foreground));
 }
 
-.glass-card {
-  background: hsl(var(--card) / 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid hsl(var(--primary) / 0.1);
+.neo-hover-primary:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px 0px hsl(var(--primary));
 }
 
-.glass-footer {
-  background: hsl(var(--background) / 0.85);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid hsl(var(--primary) / 0.2);
+/* Button specific hover */
+.neo-btn {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px 0px hsl(var(--primary));
+}
+
+.neo-btn:active {
+  transform: translate(0px, 0px);
+  box-shadow: 3px 3px 0px 0px hsl(var(--primary));
+}
+
+/* Accent colors for CTA sections */
+.neo-accent-yellow {
+  background-color: hsl(48, 96%, 53%);
+}
+
+.neo-accent-green {
+  background-color: hsl(var(--tier-target));
+}
+
+/* Footer styling */
+.neo-footer {
+  background: hsl(var(--card));
+  border-top: 4px solid hsl(var(--foreground));
 }
