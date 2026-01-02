@@ -71,12 +71,9 @@ const Index = () => {
         
         {!hasSearched && (
           <div className="gradient-card rounded-2xl p-6 md:p-8 max-w-2xl mx-auto text-center shadow-2xl shadow-primary/20">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 relative z-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-5 relative z-10">
               Need Help With Recruitment?
             </h3>
-            <p className="text-white/85 mb-5 text-base md:text-lg relative z-10">
-              Get personalized guidance from our expert team
-            </p>
             <a 
               href="https://start.thepreferredrecruit.com/home-page317375" 
               target="_blank" 
