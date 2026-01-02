@@ -57,30 +57,24 @@ const Index = () => {
     <div className="min-h-screen gradient-bg pb-28">
       <Header onReset={handleReset} />
       
-      <main className="container mx-auto px-4 md:px-6 py-10 md:py-16">
+      <main className="container mx-auto px-4 md:px-6 py-6 md:py-10">
         {/* Hero Section - Stripe + Bain inspired */}
-        <div className="text-center max-w-4xl mx-auto mb-10 md:mb-12">
+        <div className="text-center max-w-4xl mx-auto mb-8">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
             Find Your
             <br />
-            <span className="gradient-text-hero">Perfect College</span>
-            <br />
-            Match
+            <span className="gradient-text-hero">Perfect College Match</span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mt-8 max-w-2xl mx-auto leading-relaxed font-medium">
-            Compare your personal bests against recruiting standards from top track & field programs
-          </p>
         </div>
         
         <SearchForm onSearch={handleSearch} initialValues={initialFormData} />
         
         {!hasSearched && (
-          <div className="gradient-card rounded-3xl p-10 md:p-14 max-w-3xl mx-auto text-center shadow-2xl shadow-primary/20">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 relative z-10">
+          <div className="gradient-card rounded-2xl p-6 md:p-8 max-w-2xl mx-auto text-center shadow-2xl shadow-primary/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 relative z-10">
               Need Help With Recruitment?
             </h3>
-            <p className="text-white/85 mb-8 text-lg md:text-xl relative z-10">
+            <p className="text-white/85 mb-5 text-base md:text-lg relative z-10">
               Get personalized guidance from our expert team
             </p>
             <a 
@@ -89,7 +83,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="relative z-10 inline-block"
             >
-              <Button className="bg-white text-primary hover:bg-gray-50 font-bold h-14 px-10 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+              <Button className="bg-white text-primary hover:bg-gray-50 font-bold h-12 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 Learn More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
