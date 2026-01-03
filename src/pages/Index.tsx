@@ -59,14 +59,16 @@ const Index = () => {
       <Header onReset={handleReset} />
       
       <main className="container mx-auto px-4 md:px-6 py-6 md:py-10">
-        {/* Hero Section - Stripe + Bain inspired */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-            Find Your
-            <br />
-            <span className="gradient-text-hero">Perfect College Match</span>
-          </h1>
-        </div>
+        {/* Hero Section - Only show before search */}
+        {!hasSearched && (
+          <div className="text-center max-w-4xl mx-auto mb-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+              Find Your
+              <br />
+              <span className="gradient-text-hero">Perfect College Match</span>
+            </h1>
+          </div>
+        )}
         
         <SearchForm onSearch={handleSearch} initialValues={initialFormData} />
         
