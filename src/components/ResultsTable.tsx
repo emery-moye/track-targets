@@ -33,8 +33,8 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
 
-  const divisions = [...new Set(results.map(r => r.division))];
-  const conferences = [...new Set(results.map(r => r.conference))];
+  const divisions = [...new Set(results.map(r => r.division))].sort();
+  const conferences = [...new Set(results.map(r => r.conference))].sort();
   const tiers = ["target", "recruit", "walkon"];
   const states = [...new Set(results.map(r => r.state))].sort();
 
