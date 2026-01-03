@@ -30205,7 +30205,7 @@ const miaaSchools: SchoolStandards[] = [
     id: "miaa_trine",
     schoolName: "Trine University",
     division: "D3",
-    conference: "MIAA",
+    conference: "MIAA (D3)",
     state: "IN",
     searchKeywords: ["thunder", "trine thunder", "angola"],
     maleStandards: {
@@ -30260,7 +30260,7 @@ const miaaSchools: SchoolStandards[] = [
     id: "miaa_calvin",
     schoolName: "Calvin University",
     division: "D3",
-    conference: "MIAA",
+    conference: "MIAA (D3)",
     state: "MI",
     searchKeywords: ["knights", "calvin knights", "grand rapids"],
     maleStandards: {
@@ -30315,7 +30315,7 @@ const miaaSchools: SchoolStandards[] = [
     id: "miaa_hope",
     schoolName: "Hope College",
     division: "D3",
-    conference: "MIAA",
+    conference: "MIAA (D3)",
     state: "MI",
     searchKeywords: ["flying dutchmen", "dutchmen", "holland"],
     maleStandards: {
@@ -30370,7 +30370,7 @@ const miaaSchools: SchoolStandards[] = [
     id: "miaa_albion",
     schoolName: "Albion College",
     division: "D3",
-    conference: "MIAA",
+    conference: "MIAA (D3)",
     state: "MI",
     searchKeywords: ["britons", "albion britons"],
     maleStandards: {
@@ -30425,7 +30425,7 @@ const miaaSchools: SchoolStandards[] = [
     id: "miaa_olivet",
     schoolName: "Olivet College",
     division: "D3",
-    conference: "MIAA",
+    conference: "MIAA (D3)",
     state: "MI",
     searchKeywords: ["comets", "olivet comets"],
     maleStandards: {
@@ -30480,7 +30480,7 @@ const miaaSchools: SchoolStandards[] = [
     id: "miaa_adrian",
     schoolName: "Adrian College",
     division: "D3",
-    conference: "MIAA",
+    conference: "MIAA (D3)",
     state: "MI",
     searchKeywords: ["bulldogs", "adrian bulldogs"],
     maleStandards: {
@@ -30535,7 +30535,7 @@ const miaaSchools: SchoolStandards[] = [
     id: "miaa_alma",
     schoolName: "Alma College",
     division: "D3",
-    conference: "MIAA",
+    conference: "MIAA (D3)",
     state: "MI",
     searchKeywords: ["scots", "alma scots"],
     maleStandards: {
