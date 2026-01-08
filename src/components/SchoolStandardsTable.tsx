@@ -15,8 +15,30 @@ interface SchoolStandardsTableProps {
   standards: Record<string, EventStandards>;
 }
 
+// Helper to check if a value is valid (not TBD, empty, or undefined)
+const isValidValue = (value: string | undefined): boolean => {
+  return !!value && value !== "TBD" && value !== "N/A";
+};
+
+// Helper to display value or dash
+const displayValue = (value: string | undefined): string => {
+  if (!value || value === "TBD" || value === "N/A") return "-";
+  return value;
+};
+
 export const SchoolStandardsTable = ({ title, standards }: SchoolStandardsTableProps) => {
-  const events = Object.keys(standards);
+  // Filter out events where ALL values are TBD or missing
+  const filteredEvents = Object.keys(standards).filter((event) => {
+    const std = standards[event];
+    return isValidValue(std.target) || isValidValue(std.recruit) || isValidValue(std.walkon);
+  });
+
+  // Check if any event has walk-on standards
+  const hasWalkonStandards = filteredEvents.some((event) => isValidValue(standards[event].walkon));
+
+  if (filteredEvents.length === 0) {
+    return null;
+  }
 
   return (
     <Card className="w-full">
@@ -31,16 +53,20 @@ export const SchoolStandardsTable = ({ title, standards }: SchoolStandardsTableP
                 <TableHead className="font-semibold">Event</TableHead>
                 <TableHead className="font-semibold"><TierBadge tier="target" /></TableHead>
                 <TableHead className="font-semibold"><TierBadge tier="recruit" /></TableHead>
-                <TableHead className="font-semibold"><TierBadge tier="walkon" /></TableHead>
+                {hasWalkonStandards && (
+                  <TableHead className="font-semibold"><TierBadge tier="walkon" /></TableHead>
+                )}
               </TableRow>
             </TableHeader>
             <TableBody>
-              {events.map((event) => (
+              {filteredEvents.map((event) => (
                 <TableRow key={event}>
                   <TableCell className="font-medium">{event}</TableCell>
-                  <TableCell>{standards[event].target}</TableCell>
-                  <TableCell>{standards[event].recruit}</TableCell>
-                  <TableCell>{standards[event].walkon || 'N/A'}</TableCell>
+                  <TableCell>{displayValue(standards[event].target)}</TableCell>
+                  <TableCell>{displayValue(standards[event].recruit)}</TableCell>
+                  {hasWalkonStandards && (
+                    <TableCell>{displayValue(standards[event].walkon)}</TableCell>
+                  )}
                 </TableRow>
               ))}
             </TableBody>
