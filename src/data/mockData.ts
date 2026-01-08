@@ -29,32 +29,57 @@ const parsePerformance = (performance: string, event: string): number => {
   return parseFloat(cleaned) || 0;
 };
 
+// Helper to check if a standard value is valid (not TBD, N/A, empty, or undefined)
+const isValidStandard = (value: string | undefined): boolean => {
+  return !!value && value !== "TBD" && value !== "N/A" && value.trim() !== "";
+};
+
 // Helper function to determine tier based on performance
 const determineTier = (userPerformance: string, standards: any, event: string): "target" | "recruit" | "walkon" | null => {
   if (!standards || !standards[event]) return null;
   
-  const userValue = parsePerformance(userPerformance, event);
-  const targetValue = parsePerformance(standards[event].target, event);
-  const recruitValue = parsePerformance(standards[event].recruit, event);
-  const walkonValue = standards[event].walkon ? parsePerformance(standards[event].walkon, event) : null;
+  const eventStandards = standards[event];
   
-  console.log(`Event: ${event}, User: ${userPerformance} (${userValue}), Target: ${standards[event].target} (${targetValue}), Recruit: ${standards[event].recruit} (${recruitValue}), Walk-on: ${standards[event].walkon || 'N/A'} (${walkonValue || 'N/A'})`);
+  // Skip if ALL standards are invalid (all TBD/N/A) - school has no real standards for this event
+  if (!isValidStandard(eventStandards.target) && 
+      !isValidStandard(eventStandards.recruit) && 
+      !isValidStandard(eventStandards.walkon)) {
+    return null;
+  }
+  
+  const userValue = parsePerformance(userPerformance, event);
   
   // For track events (time-based), lower is better
   const isTimeBased = (event.toLowerCase().includes('m') || event === 'Mile') && !event.includes('Jump') && !event.includes('Put') && !event.includes('Throw') && !event.includes('Discus') && !event.includes('Hammer') && !event.includes('Javelin');
   
-  console.log(`Is time based: ${isTimeBased}`);
-  
+  // Only compare against tiers with valid values
   if (isTimeBased) {
-    if (userValue <= targetValue) return "target";
-    if (userValue <= recruitValue) return "recruit";
-    if (walkonValue !== null && userValue <= walkonValue) return "walkon";
+    if (isValidStandard(eventStandards.target)) {
+      const targetValue = parsePerformance(eventStandards.target, event);
+      if (userValue <= targetValue) return "target";
+    }
+    if (isValidStandard(eventStandards.recruit)) {
+      const recruitValue = parsePerformance(eventStandards.recruit, event);
+      if (userValue <= recruitValue) return "recruit";
+    }
+    if (isValidStandard(eventStandards.walkon)) {
+      const walkonValue = parsePerformance(eventStandards.walkon, event);
+      if (userValue <= walkonValue) return "walkon";
+    }
   } else {
     // For field events (distance/height), higher is better
-    // Check if user meets each tier's minimum requirement
-    if (userValue >= targetValue) return "target";
-    if (userValue >= recruitValue) return "recruit";
-    if (walkonValue !== null && userValue >= walkonValue) return "walkon";
+    if (isValidStandard(eventStandards.target)) {
+      const targetValue = parsePerformance(eventStandards.target, event);
+      if (userValue >= targetValue) return "target";
+    }
+    if (isValidStandard(eventStandards.recruit)) {
+      const recruitValue = parsePerformance(eventStandards.recruit, event);
+      if (userValue >= recruitValue) return "recruit";
+    }
+    if (isValidStandard(eventStandards.walkon)) {
+      const walkonValue = parsePerformance(eventStandards.walkon, event);
+      if (userValue >= walkonValue) return "walkon";
+    }
   }
   
   return null;
