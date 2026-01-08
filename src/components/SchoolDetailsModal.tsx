@@ -13,6 +13,17 @@ interface SchoolDetailsModalProps {
 export const SchoolDetailsModal = ({ school, isOpen, onClose }: SchoolDetailsModalProps) => {
   if (!school) return null;
 
+  // Helper to check if a value is valid (not TBD, empty, or undefined)
+  const isValidValue = (value: string | undefined): boolean => {
+    return !!value && value !== "TBD" && value !== "N/A";
+  };
+
+  // Helper to display value or dash
+  const displayValue = (value: string | undefined): string => {
+    if (!value || value === "TBD" || value === "N/A") return "-";
+    return value;
+  };
+
   const renderStandardsTable = (standards: Record<string, any> | undefined, title: string) => {
     if (!standards) {
       return (
@@ -23,9 +34,23 @@ export const SchoolDetailsModal = ({ school, isOpen, onClose }: SchoolDetailsMod
       );
     }
 
+    // Filter out events where ALL values are TBD or missing
+    const filteredEntries = Object.entries(standards).filter(([_, eventStandards]) => {
+      return isValidValue(eventStandards.target) || isValidValue(eventStandards.recruit) || isValidValue(eventStandards.walkon);
+    });
+
+    if (filteredEntries.length === 0) {
+      return (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-lg">{title} Standards</h4>
+          <p className="text-muted-foreground">No standards available for this gender.</p>
+        </div>
+      );
+    }
+
     // Check if any event has walk-on standards
-    const hasWalkonStandards = Object.values(standards).some((eventStandards: any) => 
-      eventStandards?.walkon
+    const hasWalkonStandards = filteredEntries.some(([_, eventStandards]) => 
+      isValidValue(eventStandards?.walkon)
     );
 
     return (
@@ -50,13 +75,13 @@ export const SchoolDetailsModal = ({ school, isOpen, onClose }: SchoolDetailsMod
               </tr>
             </thead>
             <tbody>
-              {Object.entries(standards).map(([event, eventStandards]) => (
+              {filteredEntries.map(([event, eventStandards]) => (
                 <tr key={event} className="border-b hover:bg-muted/30">
                   <td className="p-3 font-medium">{event}</td>
-                  <td className="p-3 text-target">{eventStandards.target}</td>
-                  <td className="p-3 text-recruit">{eventStandards.recruit}</td>
+                  <td className="p-3 text-target">{displayValue(eventStandards.target)}</td>
+                  <td className="p-3 text-recruit">{displayValue(eventStandards.recruit)}</td>
                   {hasWalkonStandards && (
-                    <td className="p-3 text-walkon">{eventStandards.walkon || '-'}</td>
+                    <td className="p-3 text-walkon">{displayValue(eventStandards.walkon)}</td>
                   )}
                 </tr>
               ))}
