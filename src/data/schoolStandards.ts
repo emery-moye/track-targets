@@ -29167,6 +29167,24 @@ const wccSchools: SchoolStandards[] = [
     }
   },
   {
+    id: "swac_prairie_view_am",
+    schoolName: "Prairie View A&M University",
+    searchKeywords: ["prairie view", "pvamu", "panthers"],
+    division: "D1",
+    conference: "SWAC",
+    state: "TX",
+    maleStandards: {
+      "1600m": { target: "4:22.00", recruit: "4:31.00", walkon: "4:39.00" },
+      "3200m": { target: "9:15.00", recruit: "9:33.00", walkon: "9:43.00" },
+      "5K XC": { target: "15:55.00", recruit: "16:18.00", walkon: "16:33.00" }
+    },
+    femaleStandards: {
+      "1600m": { target: "5:18.00", recruit: "5:28.00", walkon: "5:39.00" },
+      "3200m": { target: "11:31.00", recruit: "11:52.00", walkon: "12:08.00" },
+      "5K XC": { target: "19:25.00", recruit: "20:25.00", walkon: "21:04.00" }
+    }
+  },
+  {
     id: "mvc-1",
     schoolName: "Indiana State University",
     division: "D1",
