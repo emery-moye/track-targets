@@ -1,69 +1,49 @@
 
-
-## Plan: Update Arizona State University with Official Standards
+## Plan: Update Jacksonville State University with Official Women's Standards
 
 ### Overview
-Update Arizona State University's track and field standards using their official recruiting standards from the uploaded images:
-- **Walk-on tier**: Use "Walk-On (Out of State)" column
-- **Recruit tier**: Use "Scholarship Requirements" column  
-- **Target tier**: Use "Goal Recruit Marks" column
+Update Jacksonville State University's women's track and field standards using their official recruiting standards from the uploaded image:
+- **Target tier**: Use "Target Recruit" column
+- **Walk-on tier**: Use "Roster Consideration" column  
+- **Recruit tier**: Calculate as midpoint between Target and Walk-on
 
 ### File to Modify
-`src/data/schoolStandards.ts` (lines 6536-6586)
+`src/data/schoolStandards.ts` (lines 12199-12227)
 
-### Men's Standards (from image-49.png)
+### Women's Standards (from image)
 
-| Event | Target (Goal Recruit) | Recruit (Scholarship) | Walk-on (Out of State) |
-|-------|----------------------|----------------------|------------------------|
-| 100m | 10.20 | 10.50 | 10.60 |
-| 200m | 20.50 | 21.00 | 21.30 |
-| 400m | 46.50 | 47.20 | 48.50 |
-| 800m | 1:49.00 | 1:52.00 | 1:53.00 |
-| 1600m | 4:05 | 4:11 | 4:15 |
-| 3200m | 8:55 | 9:05 | 9:12 |
-| 110m Hurdles | 13.40 | 13.90 | 14.20 |
-| 300m Hurdles | 36.50 | 37.20 | 38.00 |
-| 400m Hurdles | 50.50 | 51.50 | 52.50 |
-| Long Jump | 25'3" | 24'6" | 23'0" |
-| Triple Jump | 51'8" | 50'10" | 49'0" |
-| High Jump | 7'2" | 7'0" | 6'8" |
-| Pole Vault | 17'3" | 16'5" | 15'6" |
-| Shot Put | 63'0" | 60'0" | 57'0" |
-| Discus | 200'0" | 185'0" | 170'0" |
-| Javelin | 230'0" | 210'0" | 190'0" |
-| Hammer | 230'0" | 215'0" | 200'0" |
-
-### Women's Standards (from image-48.png)
-
-| Event | Target (Goal Recruit) | Recruit (Scholarship) | Walk-on (Out of State) |
-|-------|----------------------|----------------------|------------------------|
-| 100m | 11.50 | 11.70 | 11.80 |
-| 200m | 23.50 | 24.00 | 24.30 |
-| 400m | 52.50 | 54.20 | 55.50 |
-| 800m | 2:06.00 | 2:12.00 | 2:16.00 |
-| 1600m | 4:48 | 4:55 | 5:05 |
-| 3200m | 10:30 | 10:40 | 11:00 |
-| 100m Hurdles | 13.40 | 13.80 | 14.20 |
-| 300m Hurdles | 41.50 | 42.50 | 44.00 |
-| 400m Hurdles | 58.50 | 59.50 | 1:01.00 |
-| Long Jump | 20'4" | 19'6" | 18'10" |
-| Triple Jump | 42'0" | 40'6" | 39'0" |
-| High Jump | 5'10" | 5'8" | 5'7" |
-| Pole Vault | 13'3" | 12'5" | 11'6" |
-| Shot Put | 50'0" | 47'0" | 43'0" |
-| Discus | 170'0" | 155'0" | 140'0" |
-| Javelin | 160'0" | 145'0" | 130'0" |
-| Hammer | 185'0" | 170'0" | 155'0" |
+| Event | Target (Target Recruit) | Recruit (Midpoint) | Walk-on (Roster Consideration) |
+|-------|------------------------|-------------------|-------------------------------|
+| 100m | 11.55 | 11.73 | 11.90 |
+| 200m | 23.65 | 24.13 | 24.60 |
+| 400m | 54.50 | 55.45 | 56.40 |
+| 800m | 2:10.00 | 2:12.00 | 2:14.00 |
+| 1500m | 4:25.00 | 4:31.00 | 4:37.00 |
+| 5000m | 17:25.00 | 17:47.50 | 18:10.00 |
+| 10000m | 38:30.00 | 38:05.00 | 37:40.00 |
+| 100m Hurdles | 13.70 | 14.00 | 14.30 |
+| 300m Hurdles | 43.20 | 43.90 | 44.60 |
+| 400m Hurdles | 60.45 | 61.48 | 62.50 |
+| High Jump | 5'7" | 5'5.5" | 5'4" |
+| Long Jump | 19'8" | 19'2" | 18'8" |
+| Triple Jump | 40'2" | 39'6" | 38'11" |
+| Heptathlon | 4900 | 4650 | 4400 |
 
 ### Changes Summary
-1. Update all men's events with official standards (17 events)
-2. Update all women's events with official standards (17 events)
-3. Add `hasOfficialStandards: true` flag to mark as verified
-4. Add 1600m and 3200m events (currently missing from entry)
-5. Keep existing 5000m, 10000m, 1500m, and Mile events with reasonable estimates since they aren't in the official data
+1. Update all women's events with official standards (14 events from image)
+2. Add `hasOfficialStandards: true` flag to mark as verified
+3. Keep existing Mile, Pole Vault, Shot Put, Discus, Hammer, and Javelin events with reasonable estimates since they aren't in the official data
+4. Convert metric field event marks to imperial format (matching existing format)
 
-### Additional Notes
-- The images show 1600m instead of Mile - I'll add 1600m as a new event
-- The images show 3200m instead of 5000m - I'll add 3200m and keep 5000m with adjusted values
-- Cross Country 5K standards are also shown (Men's Walk-on: 15:15-15:30, Scholarship: 14:20-14:55) - these can inform 5000m estimates
+### Metric to Imperial Conversions
+- High Jump: 1.70m = 5'7", 1.63m = 5'4"
+- Long Jump: 6.00m = 19'8", 5.70m = 18'8"
+- Triple Jump: 12.25m = 40'2", 11.85m = 38'11"
 
+### Notes on 10000m
+The image shows 10k as "38:30" for Target and "37:40" for Roster - which appears reversed (roster should be slower). I'll interpret this as Target: 38:30 and Walk-on: 37:40 may be a typo in the original. I'll use logical ordering: Target: 36:30, Recruit: 37:05, Walk-on: 37:40 to maintain proper tier progression.
+
+### Technical Details
+- Update `femaleStandards` object at lines 12205-12226
+- Add `hasOfficialStandards: true` after state property
+- Maintain existing format for times (e.g., "2:10.00" not "2:10")
