@@ -1,75 +1,82 @@
 
-
-## Plan: Add Texas Southern, Jackson State, and Arkansas Pine Bluff to SWAC
+## Plan: Add Bethune-Cookman University with Official Standards
 
 ### Overview
-Add three new SWAC D1 schools with significantly harder standards than Alabama A&M, with each school having unique (but similar) standards.
+Add Bethune-Cookman University as a new SWAC D1 school using their official recruiting standards from the uploaded images:
+- **Target tier**: Athletic Scholarship standards
+- **Walk-on tier**: Walk-on standards  
+- **Recruit tier**: Calculate as midpoint between Target and Walk-on
 
 ### File to Modify
-`src/data/schoolStandards.ts` - Add new entries after Prairie View A&M (around line 29186)
+`src/data/schoolStandards.ts` - Add new entry after Arkansas Pine Bluff (around line 29324)
 
 ### School Details
+| Field | Value |
+|-------|-------|
+| id | swac_bethune_cookman |
+| schoolName | Bethune-Cookman University |
+| division | D1 |
+| conference | SWAC |
+| state | FL |
+| hasOfficialStandards | true |
+| searchKeywords | "bethune cookman", "bcu", "wildcats", "b-cu" |
 
-| Field | Texas Southern | Jackson State | Arkansas Pine Bluff |
-|-------|---------------|---------------|---------------------|
-| id | swac_texas_southern | swac_jackson_state | swac_arkansas_pine_bluff |
-| state | TX | MS | AR |
-| searchKeywords | "texas southern", "tsu", "tigers" | "jackson state", "jsu", "tigers" | "arkansas pine bluff", "uapb", "golden lions" |
+### Men's Standards (from official documents)
 
-### Standards Strategy
-- Make standards approximately 0.30-0.35 seconds faster for sprints than Alabama A&M
-- Apply proportional improvements across all events
-- Each school gets slightly different values (1-3 hundredths difference for sprints)
+| Event | Target (Scholarship) | Recruit (Midpoint) | Walk-on |
+|-------|---------------------|-------------------|---------|
+| 100m | 10.50 | 10.70 | 10.90 |
+| 200m | 21.50 | 21.70 | 21.90 |
+| 400m | 47.50 | 48.50 | 49.50 |
+| 800m | 1:54.00 | 1:57.00 | 2:00.00 |
+| 1500m | 4:00.00 | 4:10.00 | 4:20.00 |
+| Mile | 4:23.00 | 4:29.00 | 4:35.00 |
+| Steeplechase | 9:30.00 | 10:05.00 | 10:40.00 |
+| 110m Hurdles | 14.00 | 14.50 | 15.00 |
+| 300m Hurdles | 38.00 | 39.00 | 40.00 |
+| 400m Hurdles | 53.00 | 54.50 | 56.00 |
+| High Jump | 6'10" | 6'7" | 6'4" |
+| Long Jump | 23'5" | 22'11" | 22'6" |
+| Triple Jump | 48'0" | 47'0" | 46'0" |
+| Pole Vault | 14'0" | 12'6" | 11'0" |
+| Shot Put | 58'0" | 54'0" | 50'0" |
+| Discus | 170'0" | 162'6" | 155'0" |
+| Javelin | 200'0" | 174'0" | 148'0" |
+| Hammer | 150'0" | 145'6" | 141'0" |
+| 5K XC | 15:55.00 | 16:12.50 | 16:30.00 |
 
-### Men's Standards Comparison
+### Women's Standards (from official documents)
 
-| Event | Alabama A&M | Texas Southern | Jackson State | Arkansas Pine Bluff |
-|-------|-------------|----------------|---------------|---------------------|
-| 100m | 10.71/10.81/10.98 | 10.38/10.50/10.65 | 10.42/10.53/10.68 | 10.45/10.56/10.70 |
-| 200m | 21.65/21.90/22.00 | 21.10/21.35/21.55 | 21.15/21.40/21.60 | 21.20/21.45/21.65 |
-| 400m | 47.83/48.78/49.40 | 46.50/47.20/47.90 | 46.65/47.35/48.05 | 46.80/47.50/48.20 |
-| 800m | 1:53.00/1:58.00/2:00.00 | 1:49.50/1:52.00/1:55.00 | 1:50.00/1:52.50/1:55.50 | 1:50.50/1:53.00/1:56.00 |
-| 1600m | 4:21.00/4:30.00/4:38.00 | 4:08.00/4:15.00/4:22.00 | 4:10.00/4:17.00/4:24.00 | 4:12.00/4:19.00/4:26.00 |
-| 3200m | 9:12.00/9:30.00/9:40.00 | 8:55.00/9:10.00/9:25.00 | 8:58.00/9:13.00/9:28.00 | 9:02.00/9:17.00/9:32.00 |
-| 5K XC | 15:53.00/16:15.00/16:30.00 | 14:45.00/15:10.00/15:35.00 | 14:50.00/15:15.00/15:40.00 | 14:55.00/15:20.00/15:45.00 |
-| 110m Hurdles | 14.20/14.50/14.70 | 13.65/13.90/14.15 | 13.70/13.95/14.20 | 13.75/14.00/14.25 |
-| 300m Hurdles | 38.24/39.54/43.77 | 36.50/37.50/38.50 | 36.70/37.70/38.70 | 36.90/37.90/38.90 |
-| High Jump | 6'8"/6'4"/6'3" | 7'0"/6'10"/6'7" | 6'11"/6'9"/6'6" | 6'10"/6'8"/6'5" |
-| Long Jump | 23'10"/23'0"/22'7" | 25'0"/24'4"/23'8" | 24'10"/24'2"/23'6" | 24'8"/24'0"/23'4" |
-| Triple Jump | 48'8"/47'3"/46'6" | 51'0"/49'6"/48'0" | 50'8"/49'2"/47'8" | 50'4"/48'10"/47'4" |
-| Pole Vault | 13'6"/12'4"/12'2" | 15'6"/14'6"/13'6" | 15'3"/14'3"/13'3" | 15'0"/14'0"/13'0" |
-| Shot Put | 55'0"/52'0"/52'0" | 58'0"/55'6"/53'0" | 57'6"/55'0"/52'6" | 57'0"/54'6"/52'0" |
-| Discus | 170'0"/140'0"/140'0" | 180'0"/168'0"/155'0" | 178'0"/166'0"/153'0" | 176'0"/164'0"/151'0" |
-| Hammer | 150'0"/132'0"/125'0" | 175'0"/160'0"/145'0" | 172'0"/157'0"/142'0" | 170'0"/155'0"/140'0" |
-| Javelin | 170'0"/150'0"/140'0" | 195'0"/180'0"/165'0" | 192'0"/177'0"/162'0" | 190'0"/175'0"/160'0" |
+| Event | Target (Scholarship) | Recruit (Midpoint) | Walk-on |
+|-------|---------------------|-------------------|---------|
+| 100m | 11.75 | 12.03 | 12.30 |
+| 200m | 24.40 | 24.85 | 25.30 |
+| 400m | 56.00 | 57.00 | 58.00 |
+| 800m | 2:15.00 | 2:17.50 | 2:20.00 |
+| 1500m | 4:50.00 | 5:02.50 | 5:15.00 |
+| Mile | 5:15.00 | 5:22.50 | 5:30.00 |
+| 100m Hurdles | 14.20 | 14.70 | 15.20 |
+| 300m Hurdles | 43.50 | 44.50 | 45.50 |
+| 400m Hurdles | 1:02.00 | 1:04.00 | 1:06.00 |
+| High Jump | 5'6" | 5'4.5" | 5'3" |
+| Long Jump | 19'0" | 18'0" | 17'0" |
+| Triple Jump | 40'0" | 38'6" | 37'0" |
+| Pole Vault | 10'6" | 10'0" | 9'6" |
+| Shot Put | 45'0" | 43'6" | 42'0" |
+| Discus | 135'0" | 132'6" | 130'0" |
+| Javelin | 125'0" | 125'0" | 125'0" |
+| Hammer | 166'11" | 157'11" | 148'11" |
+| 5K XC | 19:00.00 | 20:00.00 | 21:00.00 |
 
-### Women's Standards Comparison
-
-| Event | Alabama A&M | Texas Southern | Jackson State | Arkansas Pine Bluff |
-|-------|-------------|----------------|---------------|---------------------|
-| 100m | 11.68/12.00/12.25 | 11.25/11.45/11.70 | 11.30/11.50/11.75 | 11.35/11.55/11.80 |
-| 200m | 24.38/25.60/25.90 | 23.40/23.85/24.30 | 23.50/23.95/24.40 | 23.60/24.05/24.50 |
-| 400m | 55.80/57.89/58.80 | 52.80/54.00/55.20 | 53.00/54.20/55.40 | 53.20/54.40/55.60 |
-| 800m | 2:12.00/2:18.00/2:23.00 | 2:06.00/2:10.00/2:14.00 | 2:07.00/2:11.00/2:15.00 | 2:08.00/2:12.00/2:16.00 |
-| 1600m | 5:17.00/5:27.00/5:38.00 | 4:50.00/5:00.00/5:10.00 | 4:52.00/5:02.00/5:12.00 | 4:55.00/5:05.00/5:15.00 |
-| 3200m | 11:28.00/11:49.00/12:05.00 | 10:40.00/11:00.00/11:20.00 | 10:45.00/11:05.00/11:25.00 | 10:50.00/11:10.00/11:30.00 |
-| 5K XC | 19:21.00/20:21.00/21:00.00 | 17:30.00/18:15.00/19:00.00 | 17:40.00/18:25.00/19:10.00 | 17:50.00/18:35.00/19:20.00 |
-| 100m Hurdles | 13.80/14.55/14.80 | 13.20/13.55/13.90 | 13.25/13.60/13.95 | 13.30/13.65/14.00 |
-| 300m Hurdles | 43.90/45.70/46.40 | 41.50/42.80/44.00 | 41.70/43.00/44.20 | 41.90/43.20/44.40 |
-| High Jump | 5'8"/5'2"/5'2" | 5'10"/5'8"/5'6" | 5'9.5"/5'7.5"/5'5.5" | 5'9"/5'7"/5'5" |
-| Long Jump | 18'0"/17'0"/16'9" | 20'0"/19'4"/18'8" | 19'10"/19'2"/18'6" | 19'8"/19'0"/18'4" |
-| Triple Jump | 38'2"/37'2"/36'5" | 41'6"/40'4"/39'2" | 41'2"/40'0"/38'10" | 40'10"/39'8"/38'6" |
-| Pole Vault | 11'0"/9'6"/9'0" | 12'6"/11'6"/10'6" | 12'3"/11'3"/10'3" | 12'0"/11'0"/10'0" |
-| Shot Put | 37'0"/36'9"/36'8" | 46'0"/43'0"/40'0" | 45'6"/42'6"/39'6" | 45'0"/42'0"/39'0" |
-| Discus | 135'0"/120'0"/120'0" | 155'0"/145'0"/135'0" | 153'0"/143'0"/133'0" | 150'0"/140'0"/130'0" |
-| Hammer | 148'0"/120'0"/105'0" | 170'0"/155'0"/140'0" | 167'0"/152'0"/137'0" | 165'0"/150'0"/135'0" |
-| Javelin | 130'0"/115'0"/115'0" | 150'0"/140'0"/130'0" | 148'0"/138'0"/128'0" | 145'0"/135'0"/125'0" |
+### Notes on Data Corrections
+- **Men's 1500m walk-on**: The image shows 4:00 for both tiers, which appears to be a typo. I'll use 4:20.00 for walk-on to create proper progression.
+- **Men's Long Jump walk-on**: The image shows "22"57" which appears to be a formatting error. Interpreting as 22'6".
+- **Women's Discus walk-on**: The image shows "13'0" which is clearly a typo - should be 130'0".
+- **Women's Javelin**: Both tiers show 125'0", so recruit will also be 125'0".
+- **5K XC**: Converting from CC (3 miles/3.1 miles) to 5K XC format for consistency with the database.
 
 ### Technical Implementation
-- Insert 3 new entries after Prairie View A&M (line 29186)
-- Texas Southern has the hardest standards (closest to elite programs)
-- Jackson State slightly easier than Texas Southern
-- Arkansas Pine Bluff slightly easier than Jackson State
-- No `hasOfficialStandards` flag since these are estimates
-- Include all events that Alabama A&M has (17 events per gender)
-
+- Insert new entry after Arkansas Pine Bluff (line 29324)
+- Add `hasOfficialStandards: true` since these are from official recruiting sheets
+- Include 19 events for men and 18 events for women (matching official document)
+- Use proper time formatting (e.g., "1:54.00" not "1:54")
