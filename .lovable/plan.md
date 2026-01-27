@@ -1,82 +1,79 @@
 
-## Plan: Add Bethune-Cookman University with Official Standards
+
+## Plan: Add Five SWAC Schools Based on Bethune-Cookman Standards
 
 ### Overview
-Add Bethune-Cookman University as a new SWAC D1 school using their official recruiting standards from the uploaded images:
-- **Target tier**: Athletic Scholarship standards
-- **Walk-on tier**: Walk-on standards  
-- **Recruit tier**: Calculate as midpoint between Target and Walk-on
+Add Florida A&M, Alcorn State, Southern University, Grambling State, and Alabama State to the SWAC conference using Bethune-Cookman's official standards as a baseline with slight variations to make each school unique.
 
 ### File to Modify
-`src/data/schoolStandards.ts` - Add new entry after Arkansas Pine Bluff (around line 29324)
+`src/data/schoolStandards.ts` - Add new entries after Bethune-Cookman (line 29374)
 
 ### School Details
-| Field | Value |
-|-------|-------|
-| id | swac_bethune_cookman |
-| schoolName | Bethune-Cookman University |
-| division | D1 |
-| conference | SWAC |
-| state | FL |
-| hasOfficialStandards | true |
-| searchKeywords | "bethune cookman", "bcu", "wildcats", "b-cu" |
 
-### Men's Standards (from official documents)
+| Field | Florida A&M | Alcorn State | Southern | Grambling | Alabama State |
+|-------|-------------|--------------|----------|-----------|---------------|
+| id | swac_florida_am | swac_alcorn_state | swac_southern | swac_grambling | swac_alabama_state |
+| state | FL | MS | LA | LA | AL |
+| searchKeywords | "florida am", "famu", "rattlers" | "alcorn state", "alcorn", "braves" | "southern", "southern university", "jaguars" | "grambling", "gsu", "tigers" | "alabama state", "asu", "hornets" |
 
-| Event | Target (Scholarship) | Recruit (Midpoint) | Walk-on |
-|-------|---------------------|-------------------|---------|
-| 100m | 10.50 | 10.70 | 10.90 |
-| 200m | 21.50 | 21.70 | 21.90 |
-| 400m | 47.50 | 48.50 | 49.50 |
-| 800m | 1:54.00 | 1:57.00 | 2:00.00 |
-| 1500m | 4:00.00 | 4:10.00 | 4:20.00 |
-| Mile | 4:23.00 | 4:29.00 | 4:35.00 |
-| Steeplechase | 9:30.00 | 10:05.00 | 10:40.00 |
-| 110m Hurdles | 14.00 | 14.50 | 15.00 |
-| 300m Hurdles | 38.00 | 39.00 | 40.00 |
-| 400m Hurdles | 53.00 | 54.50 | 56.00 |
-| High Jump | 6'10" | 6'7" | 6'4" |
-| Long Jump | 23'5" | 22'11" | 22'6" |
-| Triple Jump | 48'0" | 47'0" | 46'0" |
-| Pole Vault | 14'0" | 12'6" | 11'0" |
-| Shot Put | 58'0" | 54'0" | 50'0" |
-| Discus | 170'0" | 162'6" | 155'0" |
-| Javelin | 200'0" | 174'0" | 148'0" |
-| Hammer | 150'0" | 145'6" | 141'0" |
-| 5K XC | 15:55.00 | 16:12.50 | 16:30.00 |
+### Variation Strategy
+Each school will have slightly different standards (0.02-0.10 seconds for sprints, proportional for other events):
+- **Florida A&M**: Slightly harder than BCU (-0.03 to -0.05s for sprints)
+- **Alcorn State**: Very similar to BCU (+0.02 to +0.05s for sprints)
+- **Southern**: Slightly easier than BCU (+0.05 to +0.08s for sprints)
+- **Grambling**: Comparable to BCU (-0.02 to +0.03s for sprints)
+- **Alabama State**: Between BCU and Southern (+0.03 to +0.06s for sprints)
 
-### Women's Standards (from official documents)
+### Men's Standards Comparison
 
-| Event | Target (Scholarship) | Recruit (Midpoint) | Walk-on |
-|-------|---------------------|-------------------|---------|
-| 100m | 11.75 | 12.03 | 12.30 |
-| 200m | 24.40 | 24.85 | 25.30 |
-| 400m | 56.00 | 57.00 | 58.00 |
-| 800m | 2:15.00 | 2:17.50 | 2:20.00 |
-| 1500m | 4:50.00 | 5:02.50 | 5:15.00 |
-| Mile | 5:15.00 | 5:22.50 | 5:30.00 |
-| 100m Hurdles | 14.20 | 14.70 | 15.20 |
-| 300m Hurdles | 43.50 | 44.50 | 45.50 |
-| 400m Hurdles | 1:02.00 | 1:04.00 | 1:06.00 |
-| High Jump | 5'6" | 5'4.5" | 5'3" |
-| Long Jump | 19'0" | 18'0" | 17'0" |
-| Triple Jump | 40'0" | 38'6" | 37'0" |
-| Pole Vault | 10'6" | 10'0" | 9'6" |
-| Shot Put | 45'0" | 43'6" | 42'0" |
-| Discus | 135'0" | 132'6" | 130'0" |
-| Javelin | 125'0" | 125'0" | 125'0" |
-| Hammer | 166'11" | 157'11" | 148'11" |
-| 5K XC | 19:00.00 | 20:00.00 | 21:00.00 |
+| Event | BCU (Base) | Florida A&M | Alcorn State | Southern | Grambling | Alabama State |
+|-------|------------|-------------|--------------|----------|-----------|---------------|
+| 100m | 10.50/10.70/10.90 | 10.45/10.65/10.85 | 10.52/10.72/10.92 | 10.55/10.75/10.95 | 10.48/10.68/10.88 | 10.53/10.73/10.93 |
+| 200m | 21.50/21.70/21.90 | 21.45/21.65/21.85 | 21.52/21.72/21.92 | 21.58/21.78/21.98 | 21.48/21.68/21.88 | 21.55/21.75/21.95 |
+| 400m | 47.50/48.50/49.50 | 47.35/48.35/49.35 | 47.55/48.55/49.55 | 47.65/48.65/49.65 | 47.45/48.45/49.45 | 47.60/48.60/49.60 |
+| 800m | 1:54.00/1:57.00/2:00.00 | 1:53.50/1:56.50/1:59.50 | 1:54.20/1:57.20/2:00.20 | 1:54.50/1:57.50/2:00.50 | 1:53.80/1:56.80/1:59.80 | 1:54.30/1:57.30/2:00.30 |
+| 1500m | 4:00.00/4:10.00/4:20.00 | 3:58.00/4:08.00/4:18.00 | 4:01.00/4:11.00/4:21.00 | 4:03.00/4:13.00/4:23.00 | 3:59.00/4:09.00/4:19.00 | 4:02.00/4:12.00/4:22.00 |
+| Mile | 4:23.00/4:29.00/4:35.00 | 4:21.00/4:27.00/4:33.00 | 4:24.00/4:30.00/4:36.00 | 4:26.00/4:32.00/4:38.00 | 4:22.00/4:28.00/4:34.00 | 4:25.00/4:31.00/4:37.00 |
+| Steeplechase | 9:30.00/10:05.00/10:40.00 | 9:25.00/10:00.00/10:35.00 | 9:32.00/10:07.00/10:42.00 | 9:35.00/10:10.00/10:45.00 | 9:28.00/10:03.00/10:38.00 | 9:33.00/10:08.00/10:43.00 |
+| 110m Hurdles | 14.00/14.50/15.00 | 13.95/14.45/14.95 | 14.02/14.52/15.02 | 14.08/14.58/15.08 | 13.98/14.48/14.98 | 14.05/14.55/15.05 |
+| 300m Hurdles | 38.00/39.00/40.00 | 37.90/38.90/39.90 | 38.05/39.05/40.05 | 38.15/39.15/40.15 | 37.95/38.95/39.95 | 38.10/39.10/40.10 |
+| 400m Hurdles | 53.00/54.50/56.00 | 52.80/54.30/55.80 | 53.10/54.60/56.10 | 53.25/54.75/56.25 | 52.90/54.40/55.90 | 53.15/54.65/56.15 |
+| High Jump | 6'10"/6'7"/6'4" | 6'11"/6'8"/6'5" | 6'10"/6'7"/6'4" | 6'9"/6'6"/6'3" | 6'10"/6'7"/6'4" | 6'9"/6'6"/6'3" |
+| Long Jump | 23'5"/22'11"/22'6" | 23'7"/23'1"/22'8" | 23'4"/22'10"/22'5" | 23'3"/22'9"/22'4" | 23'6"/23'0"/22'7" | 23'3"/22'9"/22'4" |
+| Triple Jump | 48'0"/47'0"/46'0" | 48'4"/47'4"/46'4" | 47'10"/46'10"/45'10" | 47'8"/46'8"/45'8" | 48'2"/47'2"/46'2" | 47'9"/46'9"/45'9" |
+| Pole Vault | 14'0"/12'6"/11'0" | 14'3"/12'9"/11'3" | 13'11"/12'5"/10'11" | 13'9"/12'3"/10'9" | 14'1"/12'7"/11'1" | 13'10"/12'4"/10'10" |
+| Shot Put | 58'0"/54'0"/50'0" | 58'6"/54'6"/50'6" | 57'8"/53'8"/49'8" | 57'6"/53'6"/49'6" | 58'2"/54'2"/50'2" | 57'7"/53'7"/49'7" |
+| Discus | 170'0"/162'6"/155'0" | 172'0"/164'6"/157'0" | 169'0"/161'6"/154'0" | 168'0"/160'6"/153'0" | 171'0"/163'6"/156'0" | 168'6"/161'0"/153'6" |
+| Javelin | 200'0"/174'0"/148'0" | 203'0"/177'0"/151'0" | 198'0"/172'0"/146'0" | 196'0"/170'0"/144'0" | 201'0"/175'0"/149'0" | 197'0"/171'0"/145'0" |
+| Hammer | 150'0"/145'6"/141'0" | 152'0"/147'6"/143'0" | 149'0"/144'6"/140'0" | 148'0"/143'6"/139'0" | 151'0"/146'6"/142'0" | 148'6"/144'0"/139'6" |
+| 5K XC | 15:55.00/16:12.50/16:30.00 | 15:50.00/16:07.50/16:25.00 | 15:58.00/16:15.50/16:33.00 | 16:00.00/16:17.50/16:35.00 | 15:52.00/16:09.50/16:27.00 | 15:57.00/16:14.50/16:32.00 |
 
-### Notes on Data Corrections
-- **Men's 1500m walk-on**: The image shows 4:00 for both tiers, which appears to be a typo. I'll use 4:20.00 for walk-on to create proper progression.
-- **Men's Long Jump walk-on**: The image shows "22"57" which appears to be a formatting error. Interpreting as 22'6".
-- **Women's Discus walk-on**: The image shows "13'0" which is clearly a typo - should be 130'0".
-- **Women's Javelin**: Both tiers show 125'0", so recruit will also be 125'0".
-- **5K XC**: Converting from CC (3 miles/3.1 miles) to 5K XC format for consistency with the database.
+### Women's Standards Comparison
+
+| Event | BCU (Base) | Florida A&M | Alcorn State | Southern | Grambling | Alabama State |
+|-------|------------|-------------|--------------|----------|-----------|---------------|
+| 100m | 11.75/12.03/12.30 | 11.70/11.98/12.25 | 11.78/12.06/12.33 | 11.82/12.10/12.38 | 11.73/12.01/12.28 | 11.80/12.08/12.35 |
+| 200m | 24.40/24.85/25.30 | 24.35/24.80/25.25 | 24.45/24.90/25.35 | 24.50/24.95/25.40 | 24.38/24.83/25.28 | 24.48/24.93/25.38 |
+| 400m | 56.00/57.00/58.00 | 55.80/56.80/57.80 | 56.10/57.10/58.10 | 56.25/57.25/58.25 | 55.90/56.90/57.90 | 56.15/57.15/58.15 |
+| 800m | 2:15.00/2:17.50/2:20.00 | 2:14.50/2:17.00/2:19.50 | 2:15.20/2:17.70/2:20.20 | 2:15.50/2:18.00/2:20.50 | 2:14.80/2:17.30/2:19.80 | 2:15.30/2:17.80/2:20.30 |
+| 1500m | 4:50.00/5:02.50/5:15.00 | 4:48.00/5:00.50/5:13.00 | 4:51.00/5:03.50/5:16.00 | 4:53.00/5:05.50/5:18.00 | 4:49.00/5:01.50/5:14.00 | 4:52.00/5:04.50/5:17.00 |
+| Mile | 5:15.00/5:22.50/5:30.00 | 5:13.00/5:20.50/5:28.00 | 5:16.00/5:23.50/5:31.00 | 5:18.00/5:25.50/5:33.00 | 5:14.00/5:21.50/5:29.00 | 5:17.00/5:24.50/5:32.00 |
+| 100m Hurdles | 14.20/14.70/15.20 | 14.15/14.65/15.15 | 14.22/14.72/15.22 | 14.28/14.78/15.28 | 14.18/14.68/15.18 | 14.25/14.75/15.25 |
+| 300m Hurdles | 43.50/44.50/45.50 | 43.40/44.40/45.40 | 43.55/44.55/45.55 | 43.65/44.65/45.65 | 43.45/44.45/45.45 | 43.60/44.60/45.60 |
+| 400m Hurdles | 1:02.00/1:04.00/1:06.00 | 1:01.80/1:03.80/1:05.80 | 1:02.10/1:04.10/1:06.10 | 1:02.30/1:04.30/1:06.30 | 1:01.90/1:03.90/1:05.90 | 1:02.20/1:04.20/1:06.20 |
+| High Jump | 5'6"/5'4.5"/5'3" | 5'7"/5'5.5"/5'4" | 5'6"/5'4.5"/5'3" | 5'5.5"/5'4"/5'2.5" | 5'6.5"/5'5"/5'3.5" | 5'5.5"/5'4"/5'2.5" |
+| Long Jump | 19'0"/18'0"/17'0" | 19'3"/18'3"/17'3" | 18'11"/17'11"/16'11" | 18'10"/17'10"/16'10" | 19'1"/18'1"/17'1" | 18'10"/17'10"/16'10" |
+| Triple Jump | 40'0"/38'6"/37'0" | 40'4"/38'10"/37'4" | 39'10"/38'4"/36'10" | 39'8"/38'2"/36'8" | 40'2"/38'8"/37'2" | 39'9"/38'3"/36'9" |
+| Pole Vault | 10'6"/10'0"/9'6" | 10'9"/10'3"/9'9" | 10'5"/9'11"/9'5" | 10'3"/9'9"/9'3" | 10'7"/10'1"/9'7" | 10'4"/9'10"/9'4" |
+| Shot Put | 45'0"/43'6"/42'0" | 45'6"/44'0"/42'6" | 44'10"/43'4"/41'10" | 44'8"/43'2"/41'8" | 45'2"/43'8"/42'2" | 44'9"/43'3"/41'9" |
+| Discus | 135'0"/132'6"/130'0" | 137'0"/134'6"/132'0" | 134'0"/131'6"/129'0" | 133'0"/130'6"/128'0" | 136'0"/133'6"/131'0" | 133'6"/131'0"/128'6" |
+| Javelin | 125'0"/125'0"/125'0" | 127'0"/127'0"/127'0" | 124'0"/124'0"/124'0" | 123'0"/123'0"/123'0" | 126'0"/126'0"/126'0" | 123'6"/123'6"/123'6" |
+| Hammer | 166'11"/157'11"/148'11" | 169'0"/160'0"/151'0" | 166'0"/157'0"/148'0" | 165'0"/156'0"/147'0" | 168'0"/159'0"/150'0" | 165'6"/156'6"/147'6" |
+| 5K XC | 19:00.00/20:00.00/21:00.00 | 18:55.00/19:55.00/20:55.00 | 19:05.00/20:05.00/21:05.00 | 19:10.00/20:10.00/21:10.00 | 18:58.00/19:58.00/20:58.00 | 19:08.00/20:08.00/21:08.00 |
 
 ### Technical Implementation
-- Insert new entry after Arkansas Pine Bluff (line 29324)
-- Add `hasOfficialStandards: true` since these are from official recruiting sheets
-- Include 19 events for men and 18 events for women (matching official document)
-- Use proper time formatting (e.g., "1:54.00" not "1:54")
+- Insert 5 new entries after Bethune-Cookman (line 29374)
+- All schools use the same 19 men's events and 18 women's events as BCU
+- No `hasOfficialStandards` flag since these are estimates based on BCU
+- Each school has unique standards with slight variations from BCU
+
