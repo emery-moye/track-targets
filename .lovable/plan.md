@@ -1,49 +1,63 @@
 
-## Plan: Update Jacksonville State University with Official Women's Standards
+## Plan: Add Prairie View A&M University to SWAC
 
 ### Overview
-Update Jacksonville State University's women's track and field standards using their official recruiting standards from the uploaded image:
-- **Target tier**: Use "Target Recruit" column
-- **Walk-on tier**: Use "Roster Consideration" column  
-- **Recruit tier**: Calculate as midpoint between Target and Walk-on
+Add Prairie View A&M University as a new D1 school in the SWAC conference with limited events (distance running only), using Alabama A&M standards as a baseline with slight variations.
 
 ### File to Modify
-`src/data/schoolStandards.ts` (lines 12199-12227)
+`src/data/schoolStandards.ts` - Add new school entry after Alabama A&M (around line 29168)
 
-### Women's Standards (from image)
+### School Details
+| Field | Value |
+|-------|-------|
+| id | swac_prairie_view_am |
+| schoolName | Prairie View A&M University |
+| division | D1 |
+| conference | SWAC |
+| state | TX |
+| searchKeywords | "prairie view", "pvamu", "panthers" |
 
-| Event | Target (Target Recruit) | Recruit (Midpoint) | Walk-on (Roster Consideration) |
-|-------|------------------------|-------------------|-------------------------------|
-| 100m | 11.55 | 11.73 | 11.90 |
-| 200m | 23.65 | 24.13 | 24.60 |
-| 400m | 54.50 | 55.45 | 56.40 |
-| 800m | 2:10.00 | 2:12.00 | 2:14.00 |
-| 1500m | 4:25.00 | 4:31.00 | 4:37.00 |
-| 5000m | 17:25.00 | 17:47.50 | 18:10.00 |
-| 10000m | 38:30.00 | 38:05.00 | 37:40.00 |
-| 100m Hurdles | 13.70 | 14.00 | 14.30 |
-| 300m Hurdles | 43.20 | 43.90 | 44.60 |
-| 400m Hurdles | 60.45 | 61.48 | 62.50 |
-| High Jump | 5'7" | 5'5.5" | 5'4" |
-| Long Jump | 19'8" | 19'2" | 18'8" |
-| Triple Jump | 40'2" | 39'6" | 38'11" |
-| Heptathlon | 4900 | 4650 | 4400 |
+### Events to Include (Distance Only)
+Only 3 events per gender, using Alabama A&M as baseline with slight variations (~1-3 seconds different):
 
-### Changes Summary
-1. Update all women's events with official standards (14 events from image)
-2. Add `hasOfficialStandards: true` flag to mark as verified
-3. Keep existing Mile, Pole Vault, Shot Put, Discus, Hammer, and Javelin events with reasonable estimates since they aren't in the official data
-4. Convert metric field event marks to imperial format (matching existing format)
+**Men's Standards**
+| Event | Alabama A&M | Prairie View A&M (Variation) |
+|-------|-------------|------------------------------|
+| 1600m | 4:21.00 / 4:30.00 / 4:38.00 | 4:22.00 / 4:31.00 / 4:39.00 (+1s) |
+| 3200m | 9:12.00 / 9:30.00 / 9:40.00 | 9:15.00 / 9:33.00 / 9:43.00 (+3s) |
+| 5K XC | 15:53.00 / 16:15.00 / 16:30.00 | 15:55.00 / 16:18.00 / 16:33.00 (+2-3s) |
 
-### Metric to Imperial Conversions
-- High Jump: 1.70m = 5'7", 1.63m = 5'4"
-- Long Jump: 6.00m = 19'8", 5.70m = 18'8"
-- Triple Jump: 12.25m = 40'2", 11.85m = 38'11"
+**Women's Standards**
+| Event | Alabama A&M | Prairie View A&M (Variation) |
+|-------|-------------|------------------------------|
+| 1600m | 5:17.00 / 5:27.00 / 5:38.00 | 5:18.00 / 5:28.00 / 5:39.00 (+1s) |
+| 3200m | 11:28.00 / 11:49.00 / 12:05.00 | 11:31.00 / 11:52.00 / 12:08.00 (+3s) |
+| 5K XC | 19:21.00 / 20:21.00 / 21:00.00 | 19:25.00 / 20:25.00 / 21:04.00 (+4s) |
 
-### Notes on 10000m
-The image shows 10k as "38:30" for Target and "37:40" for Roster - which appears reversed (roster should be slower). I'll interpret this as Target: 38:30 and Walk-on: 37:40 may be a typo in the original. I'll use logical ordering: Target: 36:30, Recruit: 37:05, Walk-on: 37:40 to maintain proper tier progression.
+### New Entry Structure
+```typescript
+{
+  id: "swac_prairie_view_am",
+  schoolName: "Prairie View A&M University",
+  searchKeywords: ["prairie view", "pvamu", "panthers"],
+  division: "D1",
+  conference: "SWAC",
+  state: "TX",
+  maleStandards: {
+    "1600m": { target: "4:22.00", recruit: "4:31.00", walkon: "4:39.00" },
+    "3200m": { target: "9:15.00", recruit: "9:33.00", walkon: "9:43.00" },
+    "5K XC": { target: "15:55.00", recruit: "16:18.00", walkon: "16:33.00" }
+  },
+  femaleStandards: {
+    "1600m": { target: "5:18.00", recruit: "5:28.00", walkon: "5:39.00" },
+    "3200m": { target: "11:31.00", recruit: "11:52.00", walkon: "12:08.00" },
+    "5K XC": { target: "19:25.00", recruit: "20:25.00", walkon: "21:04.00" }
+  }
+}
+```
 
-### Technical Details
-- Update `femaleStandards` object at lines 12205-12226
-- Add `hasOfficialStandards: true` after state property
-- Maintain existing format for times (e.g., "2:10.00" not "2:10")
+### Technical Implementation
+- Insert new entry after Alabama A&M (line 29168)
+- Use slight variations (+1 to +4 seconds slower) to differentiate from Alabama A&M while keeping standards comparable
+- Limited to only the 3 requested distance events (1600m, 3200m, 5K XC)
+- No `hasOfficialStandards` flag since these are estimates based on Alabama A&M
