@@ -1,52 +1,44 @@
 
 
-## Plan: Add Landmark Conference Schools (D3)
+## Plan: Adjust High Jump Standards for Landmark Conference Schools
 
 ### Overview
-Create 8 new Landmark Conference schools using La Salle University as the template. Keep all target standards the same as La Salle, but make recruit and walk-on values easier (as specified: e.g., men's 100m recruit ~11.00, walk-on ~11.30 instead of La Salle's 10.90/11.05). Each school gets barely different values to differentiate them.
-
-### Schools (ranked best to worst)
-1. Susquehanna University (PA)
-2. Moravian University (PA)
-3. Elizabethtown College (PA)
-4. Catholic University (DC)
-5. University of Scranton (PA)
-6. Juniata College (PA)
-7. Drew University (NJ)
-8. Goucher College (MD)
+Update the High Jump target, recruit, and walk-on for all 8 Landmark schools (men and women). Men's target moves to the 6'3"-6'4" range, recruit to 5'11"-6'0", walk-on to 5'8"-5'9". Women's standards adjusted proportionally (roughly 10-11 inches lower across all tiers).
 
 ### File to Modify
-`src/data/schoolStandards.ts` -- Add a new `landmarkSchools` array after the CCC block (before `findSchoolStandards`), then push to `schoolStandards`.
+`src/data/schoolStandards.ts` -- 16 line edits (8 men's + 8 women's High Jump lines)
 
-### Approach for Standards
-Using La Salle as the base, targets stay exactly the same. Recruit and walk-on are made easier by roughly the same proportional amount across all events:
+### Men's High Jump Changes
 
-**Men's sprint example (100m):**
-- La Salle: 10.73 / 10.90 / 11.05
-- Susquehanna (best): 10.73 / 11.00 / 11.30
-- Moravian: 10.73 / 11.02 / 11.34
-- Elizabethtown: 10.73 / 11.04 / 11.38
-- Catholic: 10.73 / 11.06 / 11.42
-- Scranton: 10.73 / 11.08 / 11.46
-- Juniata: 10.73 / 11.10 / 11.50
-- Drew: 10.73 / 11.12 / 11.54
-- Goucher (worst): 10.73 / 11.14 / 11.58
+| School | Current T/R/W | New T/R/W |
+|--------|--------------|-----------|
+| Susquehanna | 6'6" / 6'2" / 5'10" | 6'4" / 6'0" / 5'9" |
+| Moravian | 6'6" / 6'1.5" / 5'9.5" | 6'4" / 5'11.75" / 5'8.75" |
+| Elizabethtown | 6'6" / 6'1" / 5'9" | 6'3.75" / 5'11.5" / 5'8.5" |
+| Catholic | 6'6" / 6'0.5" / 5'8.5" | 6'3.5" / 5'11.25" / 5'8.25" |
+| Scranton | 6'6" / 6'0" / 5'8" | 6'3.25" / 5'11" / 5'8" |
+| Juniata | 6'6" / 5'11.5" / 5'7.5" | 6'3" / 5'10.75" / 5'7.75" |
+| Drew | 6'6" / 5'11" / 5'7" | 6'3" / 5'10.5" / 5'7.5" |
+| Goucher | 6'6" / 5'10.5" / 5'6.5" | 6'3" / 5'10.25" / 5'7.25" |
 
-**General adjustments from La Salle baseline:**
-- Sprint events (100m, 200m): recruit ~+0.10-0.24s easier, walk-on ~+0.25-0.53s easier
-- Mid-distance (400m, 800m): recruit ~+1-2s easier, walk-on ~+2-4s easier
-- Distance (1500m, 5000m, 10000m): recruit ~+3-8s easier, walk-on ~+8-20s easier
-- Hurdles: recruit ~+0.15-0.50s easier, walk-on ~+0.50-1.5s easier
-- Field events (jumps): recruit ~2-4" easier, walk-on ~4-8" easier
-- Throws: recruit ~3-6' easier, walk-on ~8-15' easier
-- Same proportional approach applied to women's events
-- Each school offset by a small increment (0.02-0.06s for sprints, proportional for others)
+### Women's High Jump Changes
+Proportional adjustment -- target moves from 5'4.75" down to roughly 5'2"-5'3", recruit to 4'11"-5'0", walk-on to 4'8"-4'9".
+
+| School | Current T/R/W | New T/R/W |
+|--------|--------------|-----------|
+| Susquehanna | 5'4.75" / 5'1" / 4'9" | 5'3" / 5'0" / 4'9" |
+| Moravian | 5'4.75" / 5'0.5" / 4'8.5" | 5'3" / 4'11.75" / 4'8.75" |
+| Elizabethtown | 5'4.75" / 5'0" / 4'8" | 5'2.75" / 4'11.5" / 4'8.5" |
+| Catholic | 5'4.75" / 4'11.5" / 4'7.5" | 5'2.5" / 4'11.25" / 4'8.25" |
+| Scranton | 5'4.75" / 4'11" / 4'7" | 5'2.25" / 4'11" / 4'8" |
+| Juniata | 5'4.75" / 4'10.5" / 4'6.5" | 5'2" / 4'10.75" / 4'7.75" |
+| Drew | 5'4.75" / 4'10" / 4'6" | 5'2" / 4'10.5" / 4'7.5" |
+| Goucher | 5'4.75" / 4'9.5" / 4'5.5" | 5'2" / 4'10.25" / 4'7.25" |
 
 ### Technical Details
-- Add ~450 lines of new school entries as a `landmarkSchools` array
-- Use `conference: "Landmark"`, `division: "D3"`
-- Include same event set as CCC schools (with 1600m, 300m Hurdles, Decathlon/Heptathlon)
-- Push to `schoolStandards` array
-- Each school gets unique `id` (e.g., `landmark_susquehanna`), `searchKeywords`, `coachesUrl`, and `state`
-- Insert before the `findSchoolStandards` export function (around line 32941)
+- 16 line edits total in `src/data/schoolStandards.ts`
+- Lines: 32964, 32987, 33018, 33041, 33072, 33095, 33126, 33149, 33180, 33203, 33234, 33257, 33288, 33311, 33342, 33365
+- Each edit changes only the High Jump line for that school/gender
+- Targets and recruits/walk-ons all shift down together to match the requested ranges
+- Small incremental differences between schools preserved (0.25" steps)
 
