@@ -1,44 +1,43 @@
 
 
-## Plan: Adjust High Jump Standards for Landmark Conference Schools
+## Plan: Adjust Long Jump Standards for Landmark Conference Schools
 
 ### Overview
-Update the High Jump target, recruit, and walk-on for all 8 Landmark schools (men and women). Men's target moves to the 6'3"-6'4" range, recruit to 5'11"-6'0", walk-on to 5'8"-5'9". Women's standards adjusted proportionally (roughly 10-11 inches lower across all tiers).
+Update the Long Jump recruit and walk-on for all 8 Landmark schools (men and women). Targets stay the same. Men's recruit moves to the 21'6"-21'10" range, walk-on to 19'4"-19'8". Women's adjusted proportionally (recruit ~16'6"-16'10", walk-on ~14'4"-14'8").
 
 ### File to Modify
-`src/data/schoolStandards.ts` -- 16 line edits (8 men's + 8 women's High Jump lines)
+`src/data/schoolStandards.ts` -- 16 line edits (8 men's + 8 women's Long Jump lines)
 
-### Men's High Jump Changes
-
-| School | Current T/R/W | New T/R/W |
-|--------|--------------|-----------|
-| Susquehanna | 6'6" / 6'2" / 5'10" | 6'4" / 6'0" / 5'9" |
-| Moravian | 6'6" / 6'1.5" / 5'9.5" | 6'4" / 5'11.75" / 5'8.75" |
-| Elizabethtown | 6'6" / 6'1" / 5'9" | 6'3.75" / 5'11.5" / 5'8.5" |
-| Catholic | 6'6" / 6'0.5" / 5'8.5" | 6'3.5" / 5'11.25" / 5'8.25" |
-| Scranton | 6'6" / 6'0" / 5'8" | 6'3.25" / 5'11" / 5'8" |
-| Juniata | 6'6" / 5'11.5" / 5'7.5" | 6'3" / 5'10.75" / 5'7.75" |
-| Drew | 6'6" / 5'11" / 5'7" | 6'3" / 5'10.5" / 5'7.5" |
-| Goucher | 6'6" / 5'10.5" / 5'6.5" | 6'3" / 5'10.25" / 5'7.25" |
-
-### Women's High Jump Changes
-Proportional adjustment -- target moves from 5'4.75" down to roughly 5'2"-5'3", recruit to 4'11"-5'0", walk-on to 4'8"-4'9".
+### Men's Long Jump Changes
 
 | School | Current T/R/W | New T/R/W |
 |--------|--------------|-----------|
-| Susquehanna | 5'4.75" / 5'1" / 4'9" | 5'3" / 5'0" / 4'9" |
-| Moravian | 5'4.75" / 5'0.5" / 4'8.5" | 5'3" / 4'11.75" / 4'8.75" |
-| Elizabethtown | 5'4.75" / 5'0" / 4'8" | 5'2.75" / 4'11.5" / 4'8.5" |
-| Catholic | 5'4.75" / 4'11.5" / 4'7.5" | 5'2.5" / 4'11.25" / 4'8.25" |
-| Scranton | 5'4.75" / 4'11" / 4'7" | 5'2.25" / 4'11" / 4'8" |
-| Juniata | 5'4.75" / 4'10.5" / 4'6.5" | 5'2" / 4'10.75" / 4'7.75" |
-| Drew | 5'4.75" / 4'10" / 4'6" | 5'2" / 4'10.5" / 4'7.5" |
-| Goucher | 5'4.75" / 4'9.5" / 4'5.5" | 5'2" / 4'10.25" / 4'7.25" |
+| Susquehanna | 23'2" / 22'2" / 21'2" | 23'2" / 21'10" / 19'8" |
+| Moravian | 23'2" / 22'1" / 21'0" | 23'2" / 21'9.5" / 19'7.5" |
+| Elizabethtown | 23'2" / 22'0" / 20'10" | 23'2" / 21'9" / 19'7" |
+| Catholic | 23'2" / 21'11" / 20'8" | 23'2" / 21'8.5" / 19'6.5" |
+| Scranton | 23'2" / 21'10" / 20'6" | 23'2" / 21'8" / 19'6" |
+| Juniata | 23'2" / 21'9" / 20'4" | 23'2" / 21'7.5" / 19'5.5" |
+| Drew | 23'2" / 21'8" / 20'2" | 23'2" / 21'7" / 19'5" |
+| Goucher | 23'2" / 21'7" / 20'0" | 23'2" / 21'6" / 19'4" |
+
+### Women's Long Jump Changes
+
+| School | Current T/R/W | New T/R/W |
+|--------|--------------|-----------|
+| Susquehanna | 18'6" / 17'4" / 16'2" | 18'6" / 16'10" / 14'8" |
+| Moravian | 18'6" / 17'3" / 16'0" | 18'6" / 16'9.5" / 14'7.5" |
+| Elizabethtown | 18'6" / 17'2" / 15'10" | 18'6" / 16'9" / 14'7" |
+| Catholic | 18'6" / 17'1" / 15'8" | 18'6" / 16'8.5" / 14'6.5" |
+| Scranton | 18'6" / 17'0" / 15'6" | 18'6" / 16'8" / 14'6" |
+| Juniata | 18'6" / 16'11" / 15'4" | 18'6" / 16'7.5" / 14'5.5" |
+| Drew | 18'6" / 16'10" / 15'2" | 18'6" / 16'7" / 14'5" |
+| Goucher | 18'6" / 16'9" / 15'0" | 18'6" / 16'6" / 14'4" |
 
 ### Technical Details
 - 16 line edits total in `src/data/schoolStandards.ts`
-- Lines: 32964, 32987, 33018, 33041, 33072, 33095, 33126, 33149, 33180, 33203, 33234, 33257, 33288, 33311, 33342, 33365
-- Each edit changes only the High Jump line for that school/gender
-- Targets and recruits/walk-ons all shift down together to match the requested ranges
-- Small incremental differences between schools preserved (0.25" steps)
+- Lines: 32966, 32989, 33020, 33043, 33074, 33097, 33128, 33151, 33182, 33205, 33236, 33259, 33290, 33313, 33344, 33367
+- Targets remain unchanged (Men: 23'2", Women: 18'6")
+- 0.5" incremental steps between schools preserved
+- Walk-on standards brought down ~1' for both men and women to be more accessible
 
