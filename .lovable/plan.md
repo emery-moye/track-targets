@@ -1,43 +1,58 @@
 
 
-## Plan: Adjust Long Jump Standards for Landmark Conference Schools
+## Plan: Add Empire 8 Conference Schools (D3)
 
 ### Overview
-Update the Long Jump recruit and walk-on for all 8 Landmark schools (men and women). Targets stay the same. Men's recruit moves to the 21'6"-21'10" range, walk-on to 19'4"-19'8". Women's adjusted proportionally (recruit ~16'6"-16'10", walk-on ~14'4"-14'8").
+Add 9 Empire 8 Conference schools using Tufts University as the baseline template. Standards will be kept very similar to Tufts but with small variations between schools to differentiate them (same approach used for Landmark Conference).
+
+### Schools (ranked best to worst)
+1. SUNY Geneseo (NY)
+2. Brockport State (NY)
+3. St. John Fisher (NY)
+4. Utica University (NY)
+5. Nazareth University (NY)
+6. Houghton University (NY)
+7. Alfred University (NY)
+8. Hartwick College (NY)
+9. Sage Colleges (NY)
+
+### Template (Tufts Standards)
+**Men's:** 100m: 10.90/11.10/11.30, 200m: 22.30/22.70/23.10, 400m: 49.80/50.50/51.20, 800m: 1:55.00/1:58.00/2:01.00, etc.
+**Women's:** 100m: 12.20/12.50/12.80, 200m: 24.80/25.30/25.80, 400m: 56.50/58.00/59.50, etc.
+
+### Differentiation Approach
+- Targets stay exactly the same as Tufts for all schools
+- Recruit and walk-on values get slightly easier as you go down the ranking
+- Small incremental offsets between schools:
+  - Sprints (100m, 200m): ~0.02-0.04s per school
+  - Mid-distance (400m, 800m): ~0.10-0.30s per school
+  - Distance (1500m, 5K, 10K): ~1-3s per school
+  - Hurdles: ~0.04-0.10s per school
+  - Jumps: ~0.25-0.5" per school
+  - Throws: ~1-2' per school
+
+**Men's 100m example:**
+| School | Target | Recruit | Walk-on |
+|--------|--------|---------|---------|
+| SUNY Geneseo | 10.90 | 11.12 | 11.32 |
+| Brockport St | 10.90 | 11.14 | 11.36 |
+| St. John Fisher | 10.90 | 11.16 | 11.40 |
+| Utica | 10.90 | 11.18 | 11.44 |
+| Nazareth | 10.90 | 11.20 | 11.48 |
+| Houghton | 10.90 | 11.22 | 11.52 |
+| Alfred | 10.90 | 11.24 | 11.56 |
+| Hartwick | 10.90 | 11.26 | 11.60 |
+| Sage | 10.90 | 11.28 | 11.64 |
 
 ### File to Modify
-`src/data/schoolStandards.ts` -- 16 line edits (8 men's + 8 women's Long Jump lines)
-
-### Men's Long Jump Changes
-
-| School | Current T/R/W | New T/R/W |
-|--------|--------------|-----------|
-| Susquehanna | 23'2" / 22'2" / 21'2" | 23'2" / 21'10" / 19'8" |
-| Moravian | 23'2" / 22'1" / 21'0" | 23'2" / 21'9.5" / 19'7.5" |
-| Elizabethtown | 23'2" / 22'0" / 20'10" | 23'2" / 21'9" / 19'7" |
-| Catholic | 23'2" / 21'11" / 20'8" | 23'2" / 21'8.5" / 19'6.5" |
-| Scranton | 23'2" / 21'10" / 20'6" | 23'2" / 21'8" / 19'6" |
-| Juniata | 23'2" / 21'9" / 20'4" | 23'2" / 21'7.5" / 19'5.5" |
-| Drew | 23'2" / 21'8" / 20'2" | 23'2" / 21'7" / 19'5" |
-| Goucher | 23'2" / 21'7" / 20'0" | 23'2" / 21'6" / 19'4" |
-
-### Women's Long Jump Changes
-
-| School | Current T/R/W | New T/R/W |
-|--------|--------------|-----------|
-| Susquehanna | 18'6" / 17'4" / 16'2" | 18'6" / 16'10" / 14'8" |
-| Moravian | 18'6" / 17'3" / 16'0" | 18'6" / 16'9.5" / 14'7.5" |
-| Elizabethtown | 18'6" / 17'2" / 15'10" | 18'6" / 16'9" / 14'7" |
-| Catholic | 18'6" / 17'1" / 15'8" | 18'6" / 16'8.5" / 14'6.5" |
-| Scranton | 18'6" / 17'0" / 15'6" | 18'6" / 16'8" / 14'6" |
-| Juniata | 18'6" / 16'11" / 15'4" | 18'6" / 16'7.5" / 14'5.5" |
-| Drew | 18'6" / 16'10" / 15'2" | 18'6" / 16'7" / 14'5" |
-| Goucher | 18'6" / 16'9" / 15'0" | 18'6" / 16'6" / 14'4" |
+`src/data/schoolStandards.ts` -- Add a new `empire8Schools` array after the Landmark block (before `findSchoolStandards`), then push to `schoolStandards`.
 
 ### Technical Details
-- 16 line edits total in `src/data/schoolStandards.ts`
-- Lines: 32966, 32989, 33020, 33043, 33074, 33097, 33128, 33151, 33182, 33205, 33236, 33259, 33290, 33313, 33344, 33367
-- Targets remain unchanged (Men: 23'2", Women: 18'6")
-- 0.5" incremental steps between schools preserved
-- Walk-on standards brought down ~1' for both men and women to be more accessible
+- Add ~500 lines of new school entries as an `empire8Schools: SchoolStandards[]` array
+- Use `conference: "Empire 8"`, `division: "D3"`
+- Include same event set as Tufts (with 1600m, 300m Hurdles)
+- Add Decathlon/Heptathlon entries matching Landmark pattern
+- Push to `schoolStandards` array via `schoolStandards.push(...empire8Schools)`
+- Each school gets unique `id` (e.g., `empire8_geneseo`), `searchKeywords`, `coachesUrl`, and `state: "NY"` for all schools
+- Insert after line 33379 (after the Landmark push), before the `findSchoolStandards` export function
 
