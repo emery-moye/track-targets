@@ -1,74 +1,64 @@
 
-## Plan: Tighten 200m and 400m Standards for Empire 8 Schools
+
+## Plan: Add SUNYAC Conference Schools (D3)
 
 ### Overview
-36 targeted line edits in `src/data/schoolStandards.ts`. All exact current values have been verified by reading the file directly, so these edits will apply cleanly.
+Add 11 SUNYAC Conference schools using Le Moyne College as the baseline template. Each school gets slightly different recruit and walk-on values to differentiate them, while targets stay very close to Le Moyne's. The same event set as Empire 8 will be used (including 1600m, 300m Hurdles, 10000m, Decathlon/Heptathlon).
 
-### Adjustment Logic
-- **Target:** ~0.30s faster for 200m; ~0.80s faster for 400m — a decent bit harder
-- **Recruit:** ~0.30-0.32s faster for 200m; ~0.80-0.80s faster for 400m — a decent bit harder
-- **Walk-on:** ~0.06s faster for 200m; ~0.20s faster for 400m — barely harder
-- Incremental steps between schools are preserved throughout
+### Schools (ranked best to worst)
+1. Cortland State (NY)
+2. PSU Behrend (PA)
+3. Oneonta State (NY)
+4. Plattsburgh State (NY)
+5. SUNY Delhi (NY)
+6. Fredonia State (NY)
+7. Buffalo State (NY)
+8. Alfred State (NY)
+9. Oswego State (NY)
+10. Morrisville State (NY)
+11. SUNY Cobleskill (NY)
 
----
+### Template (Le Moyne Standards)
+**Men's:** 100m: 10.80/10.95/11.10, 200m: 22.20/22.60/22.80, 400m: 49.35/50.10/50.60, 800m: 1:57.00/1:58.00/1:59.50, 1500m: 4:08.00/4:10.00/4:12.00, Mile: 4:22.00/4:24.00/4:28.00, 5000m: 15:35.00/15:50.00/16:00.00, etc.
 
-### Men's 200m
+**Women's:** 100m: 12.20/12.40/12.70, 200m: 24.90/25.40/25.70, 400m: 57.30/58.30/58.80, 800m: 2:21.00/2:23.00/2:25.00, etc.
 
-| School | Line | Current T/R/W | New T/R/W |
-|--------|------|---------------|-----------|
-| Geneseo | 33392 | 22.30 / 22.74 / 23.18 | **22.00 / 22.44 / 23.12** |
-| Brockport | 33445 | 22.30 / 22.78 / 23.24 | **22.00 / 22.48 / 23.18** |
-| St. John Fisher | 33498 | 22.30 / 22.82 / 23.30 | **22.00 / 22.52 / 23.24** |
-| Utica | 33551 | 22.30 / 22.86 / 23.36 | **22.00 / 22.56 / 23.30** |
-| Nazareth | 33604 | 22.30 / 22.90 / 23.42 | **22.00 / 22.60 / 23.36** |
-| Houghton | 33657 | 22.30 / 22.94 / 23.48 | **22.00 / 22.64 / 23.42** |
-| Alfred | 33710 | 22.30 / 22.98 / 23.54 | **22.00 / 22.68 / 23.48** |
-| Hartwick | 33763 | 22.30 / 23.02 / 23.60 | **22.00 / 22.72 / 23.54** |
-| Sage | 33816 | 22.30 / 23.06 / 23.66 | **22.00 / 22.76 / 23.60** |
+### Differentiation Approach
+- Targets stay the same as Le Moyne for all schools
+- Recruit and walk-on values get slightly easier as you go down the ranking
+- Small incremental offsets between schools:
+  - Sprints (100m, 200m): ~0.02-0.04s per school
+  - Mid-distance (400m, 800m): ~0.10-0.30s per school
+  - Distance (1500m, 5K, 10K): ~1-3s per school
+  - Hurdles: ~0.04-0.10s per school
+  - Jumps: ~0.25-0.5" per school
+  - Throws: ~1-2' per school
 
-### Men's 400m
+**Men's 100m example:**
 
-| School | Line | Current T/R/W | New T/R/W |
-|--------|------|---------------|-----------|
-| Geneseo | 33393 | 49.80 / 50.60 / 51.40 | **49.00 / 49.80 / 51.20** |
-| Brockport | 33446 | 49.80 / 50.70 / 51.60 | **49.00 / 49.90 / 51.40** |
-| St. John Fisher | 33499 | 49.80 / 50.80 / 51.80 | **49.00 / 50.00 / 51.60** |
-| Utica | 33552 | 49.80 / 50.90 / 52.00 | **49.00 / 50.10 / 51.80** |
-| Nazareth | 33605 | 49.80 / 51.00 / 52.20 | **49.00 / 50.20 / 52.00** |
-| Houghton | 33658 | 49.80 / 51.10 / 52.40 | **49.00 / 50.30 / 52.20** |
-| Alfred | 33711 | 49.80 / 51.20 / 52.60 | **49.00 / 50.40 / 52.40** |
-| Hartwick | 33764 | 49.80 / 51.30 / 52.80 | **49.00 / 50.50 / 52.60** |
-| Sage | 33817 | 49.80 / 51.40 / 53.00 | **49.00 / 50.60 / 52.80** |
+| School | Target | Recruit | Walk-on |
+|--------|--------|---------|---------|
+| Cortland St | 10.80 | 10.97 | 11.12 |
+| PSU Behrend | 10.80 | 10.99 | 11.16 |
+| Oneonta St | 10.80 | 11.01 | 11.20 |
+| Plattsburgh St | 10.80 | 11.03 | 11.24 |
+| SUNY Delhi | 10.80 | 11.05 | 11.28 |
+| Fredonia St | 10.80 | 11.07 | 11.32 |
+| Buffalo St | 10.80 | 11.09 | 11.36 |
+| Alfred St | 10.80 | 11.11 | 11.40 |
+| Oswego St | 10.80 | 11.13 | 11.44 |
+| Morrisville St | 10.80 | 11.15 | 11.48 |
+| SUNY Cobleskill | 10.80 | 11.17 | 11.52 |
 
-### Women's 200m
-
-| School | Line | Current T/R/W | New T/R/W |
-|--------|------|---------------|-----------|
-| Geneseo | 33415 | 24.80 / 25.34 / 25.88 | **24.40 / 24.88 / 25.78** |
-| Brockport | 33468 | 24.80 / 25.38 / 25.96 | **24.40 / 24.92 / 25.86** |
-| St. John Fisher | 33521 | 24.80 / 25.42 / 26.04 | **24.40 / 24.96 / 25.94** |
-| Utica | 33574 | 24.80 / 25.46 / 26.12 | **24.40 / 25.00 / 26.02** |
-| Nazareth | 33627 | 24.80 / 25.50 / 26.20 | **24.40 / 25.04 / 26.10** |
-| Houghton | 33680 | 24.80 / 25.54 / 26.28 | **24.40 / 25.08 / 26.18** |
-| Alfred | 33733 | 24.80 / 25.58 / 26.36 | **24.40 / 25.12 / 26.26** |
-| Hartwick | 33786 | 24.80 / 25.62 / 26.44 | **24.40 / 25.16 / 26.34** |
-| Sage | 33839 | 24.80 / 25.66 / 26.52 | **24.40 / 25.20 / 26.42** |
-
-### Women's 400m
-
-| School | Line | Current T/R/W | New T/R/W |
-|--------|------|---------------|-----------|
-| Geneseo | 33416 | 56.50 / 58.10 / 59.70 | **55.50 / 57.10 / 59.50** |
-| Brockport | 33469 | 56.50 / 58.20 / 59.90 | **55.50 / 57.20 / 59.70** |
-| St. John Fisher | 33522 | 56.50 / 58.30 / 60.10 | **55.50 / 57.30 / 59.90** |
-| Utica | 33575 | 56.50 / 58.40 / 60.30 | **55.50 / 57.40 / 60.10** |
-| Nazareth | 33628 | 56.50 / 58.50 / 60.50 | **55.50 / 57.50 / 60.30** |
-| Houghton | 33681 | 56.50 / 58.60 / 60.70 | **55.50 / 57.60 / 60.50** |
-| Alfred | 33734 | 56.50 / 58.70 / 60.90 | **55.50 / 57.70 / 60.70** |
-| Hartwick | 33787 | 56.50 / 58.80 / 61.10 | **55.50 / 57.80 / 60.90** |
-| Sage | 33840 | 56.50 / 58.90 / 61.30 | **55.50 / 57.90 / 61.10** |
+### File to Modify
+`src/data/schoolStandards.ts` -- Add a new `sunyacSchools` array after line 33864 (after the Empire 8 push), then push to `schoolStandards`.
 
 ### Technical Details
-- 36 single-line edits — all line numbers verified by direct file inspection
-- Each edit uses the exact current content as the search string to guarantee a match
-- All 36 parallel edits will fire simultaneously for speed
+- Add ~600 lines of new school entries as a `sunyacSchools: SchoolStandards[]` array
+- Use `conference: "SUNYAC"`, `division: "D3"`
+- Include same event set as Empire 8 (100m, 200m, 400m, 800m, 1500m, 1600m, Mile, 5000m, 10000m, 110m/100m Hurdles, 300m Hurdles, 400m Hurdles, High Jump, Pole Vault, Long Jump, Triple Jump, Shot Put, Discus, Hammer, Javelin, Decathlon/Heptathlon)
+- Each school gets unique `id` (e.g., `sunyac_cortland`), `searchKeywords`, and `coachesUrl`
+- States: All NY except PSU Behrend which is PA
+- Push to `schoolStandards` array via `schoolStandards.push(...sunyacSchools)`
+- Insert after line 33864 (after `schoolStandards.push(...empire8Schools)`), before the `findSchoolStandards` export
+
