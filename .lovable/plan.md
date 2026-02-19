@@ -1,64 +1,47 @@
 
 
-## Plan: Add SUNYAC Conference Schools (D3)
+## Plan: Tighten 200m Target and Recruit for SUNYAC Schools
 
 ### Overview
-Add 11 SUNYAC Conference schools using Le Moyne College as the baseline template. Each school gets slightly different recruit and walk-on values to differentiate them, while targets stay very close to Le Moyne's. The same event set as Empire 8 will be used (including 1600m, 300m Hurdles, 10000m, Decathlon/Heptathlon).
+Make the 200m standards ~0.20s harder (faster) for target and recruit across all 11 SUNYAC schools, for both men's and women's. Walk-on stays unchanged.
 
-### Schools (ranked best to worst)
-1. Cortland State (NY)
-2. PSU Behrend (PA)
-3. Oneonta State (NY)
-4. Plattsburgh State (NY)
-5. SUNY Delhi (NY)
-6. Fredonia State (NY)
-7. Buffalo State (NY)
-8. Alfred State (NY)
-9. Oswego State (NY)
-10. Morrisville State (NY)
-11. SUNY Cobleskill (NY)
+### Changes: 22 line edits total
 
-### Template (Le Moyne Standards)
-**Men's:** 100m: 10.80/10.95/11.10, 200m: 22.20/22.60/22.80, 400m: 49.35/50.10/50.60, 800m: 1:57.00/1:58.00/1:59.50, 1500m: 4:08.00/4:10.00/4:12.00, Mile: 4:22.00/4:24.00/4:28.00, 5000m: 15:35.00/15:50.00/16:00.00, etc.
+#### Men's 200m (target 22.20 -> 22.00)
 
-**Women's:** 100m: 12.20/12.40/12.70, 200m: 24.90/25.40/25.70, 400m: 57.30/58.30/58.80, 800m: 2:21.00/2:23.00/2:25.00, etc.
+| School | Line | Current T/R/W | New T/R/W |
+|--------|------|---------------|-----------|
+| Cortland St | 33877 | 22.20 / 22.62 / 22.82 | **22.00** / **22.42** / 22.82 |
+| PSU Behrend | 33930 | 22.20 / 22.66 / 22.86 | **22.00** / **22.46** / 22.86 |
+| Oneonta St | 33983 | 22.20 / 22.70 / 22.90 | **22.00** / **22.50** / 22.90 |
+| Plattsburgh St | 34036 | 22.20 / 22.74 / 22.94 | **22.00** / **22.54** / 22.94 |
+| SUNY Delhi | 34089 | 22.20 / 22.78 / 22.98 | **22.00** / **22.58** / 22.98 |
+| Fredonia St | 34142 | 22.20 / 22.82 / 23.02 | **22.00** / **22.62** / 23.02 |
+| Buffalo St | 34195 | 22.20 / 22.86 / 23.06 | **22.00** / **22.66** / 23.06 |
+| Alfred St | 34248 | 22.20 / 22.90 / 23.10 | **22.00** / **22.70** / 23.10 |
+| Oswego St | 34301 | 22.20 / 22.94 / 23.14 | **22.00** / **22.74** / 23.14 |
+| Morrisville St | 34354 | 22.20 / 22.98 / 23.18 | **22.00** / **22.78** / 23.18 |
+| SUNY Cobleskill | 34407 | 22.20 / 23.02 / 23.22 | **22.00** / **22.82** / 23.22 |
 
-### Differentiation Approach
-- Targets stay the same as Le Moyne for all schools
-- Recruit and walk-on values get slightly easier as you go down the ranking
-- Small incremental offsets between schools:
-  - Sprints (100m, 200m): ~0.02-0.04s per school
-  - Mid-distance (400m, 800m): ~0.10-0.30s per school
-  - Distance (1500m, 5K, 10K): ~1-3s per school
-  - Hurdles: ~0.04-0.10s per school
-  - Jumps: ~0.25-0.5" per school
-  - Throws: ~1-2' per school
+#### Women's 200m (target 24.90 -> 24.70)
 
-**Men's 100m example:**
-
-| School | Target | Recruit | Walk-on |
-|--------|--------|---------|---------|
-| Cortland St | 10.80 | 10.97 | 11.12 |
-| PSU Behrend | 10.80 | 10.99 | 11.16 |
-| Oneonta St | 10.80 | 11.01 | 11.20 |
-| Plattsburgh St | 10.80 | 11.03 | 11.24 |
-| SUNY Delhi | 10.80 | 11.05 | 11.28 |
-| Fredonia St | 10.80 | 11.07 | 11.32 |
-| Buffalo St | 10.80 | 11.09 | 11.36 |
-| Alfred St | 10.80 | 11.11 | 11.40 |
-| Oswego St | 10.80 | 11.13 | 11.44 |
-| Morrisville St | 10.80 | 11.15 | 11.48 |
-| SUNY Cobleskill | 10.80 | 11.17 | 11.52 |
-
-### File to Modify
-`src/data/schoolStandards.ts` -- Add a new `sunyacSchools` array after line 33864 (after the Empire 8 push), then push to `schoolStandards`.
+| School | Line | Current T/R/W | New T/R/W |
+|--------|------|---------------|-----------|
+| Cortland St | 33900 | 24.90 / 25.42 / 25.72 | **24.70** / **25.22** / 25.72 |
+| PSU Behrend | 33953 | 24.90 / 25.44 / 25.74 | **24.70** / **25.24** / 25.74 |
+| Oneonta St | 34006 | 24.90 / 25.46 / 25.76 | **24.70** / **25.26** / 25.76 |
+| Plattsburgh St | 34059 | 24.90 / 25.48 / 25.78 | **24.70** / **25.28** / 25.78 |
+| SUNY Delhi | 34112 | 24.90 / 25.50 / 25.80 | **24.70** / **25.30** / 25.80 |
+| Fredonia St | 34165 | 24.90 / 25.52 / 25.82 | **24.70** / **25.32** / 25.82 |
+| Buffalo St | 34218 | 24.90 / 25.54 / 25.84 | **24.70** / **25.34** / 25.84 |
+| Alfred St | 34271 | 24.90 / 25.56 / 25.86 | **24.70** / **25.36** / 25.86 |
+| Oswego St | 34324 | 24.90 / 25.58 / 25.88 | **24.70** / **25.38** / 25.88 |
+| Morrisville St | 34377 | 24.90 / 25.60 / 25.90 | **24.70** / **25.40** / 25.90 |
+| SUNY Cobleskill | 34430 | 24.90 / 25.62 / 25.92 | **24.70** / **25.42** / 25.92 |
 
 ### Technical Details
-- Add ~600 lines of new school entries as a `sunyacSchools: SchoolStandards[]` array
-- Use `conference: "SUNYAC"`, `division: "D3"`
-- Include same event set as Empire 8 (100m, 200m, 400m, 800m, 1500m, 1600m, Mile, 5000m, 10000m, 110m/100m Hurdles, 300m Hurdles, 400m Hurdles, High Jump, Pole Vault, Long Jump, Triple Jump, Shot Put, Discus, Hammer, Javelin, Decathlon/Heptathlon)
-- Each school gets unique `id` (e.g., `sunyac_cortland`), `searchKeywords`, and `coachesUrl`
-- States: All NY except PSU Behrend which is PA
-- Push to `schoolStandards` array via `schoolStandards.push(...sunyacSchools)`
-- Insert after line 33864 (after `schoolStandards.push(...empire8Schools)`), before the `findSchoolStandards` export
+- 22 single-line edits, all line numbers verified
+- Target and recruit both move 0.20s faster; walk-on unchanged
+- Incremental steps between schools preserved (0.04s men's, 0.02s women's)
+- All edits fired in parallel
 
