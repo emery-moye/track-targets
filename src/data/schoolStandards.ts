@@ -33874,7 +33874,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "10.97", walkon: "11.12" },
-      "200m": { target: "22.20", recruit: "22.62", walkon: "22.82" },
+      "200m": { target: "22.00", recruit: "22.42", walkon: "22.82" },
       "400m": { target: "49.35", recruit: "50.12", walkon: "50.62" },
       "800m": { target: "1:57.00", recruit: "1:58.10", walkon: "1:59.60" },
       "1500m": { target: "4:08.00", recruit: "4:10.50", walkon: "4:12.50" },
@@ -33897,7 +33897,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.42", walkon: "12.72" },
-      "200m": { target: "24.90", recruit: "25.42", walkon: "25.72" },
+      "200m": { target: "24.70", recruit: "25.22", walkon: "25.72" },
       "400m": { target: "57.30", recruit: "58.32", walkon: "58.82" },
       "800m": { target: "2:21.00", recruit: "2:23.10", walkon: "2:25.10" },
       "1500m": { target: "4:55.00", recruit: "4:58.50", walkon: "5:03.50" },
@@ -33927,7 +33927,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "PA",
     maleStandards: {
       "100m": { target: "10.80", recruit: "10.99", walkon: "11.16" },
-      "200m": { target: "22.20", recruit: "22.66", walkon: "22.86" },
+      "200m": { target: "22.00", recruit: "22.46", walkon: "22.86" },
       "400m": { target: "49.35", recruit: "50.22", walkon: "50.72" },
       "800m": { target: "1:57.00", recruit: "1:58.30", walkon: "1:59.80" },
       "1500m": { target: "4:08.00", recruit: "4:11.00", walkon: "4:13.00" },
@@ -33950,7 +33950,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.44", walkon: "12.74" },
-      "200m": { target: "24.90", recruit: "25.44", walkon: "25.74" },
+      "200m": { target: "24.70", recruit: "25.24", walkon: "25.74" },
       "400m": { target: "57.30", recruit: "58.42", walkon: "58.92" },
       "800m": { target: "2:21.00", recruit: "2:23.30", walkon: "2:25.30" },
       "1500m": { target: "4:55.00", recruit: "4:59.00", walkon: "5:04.00" },
@@ -33980,7 +33980,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.01", walkon: "11.20" },
-      "200m": { target: "22.20", recruit: "22.70", walkon: "22.90" },
+      "200m": { target: "22.00", recruit: "22.50", walkon: "22.90" },
       "400m": { target: "49.35", recruit: "50.32", walkon: "50.82" },
       "800m": { target: "1:57.00", recruit: "1:58.50", walkon: "2:00.00" },
       "1500m": { target: "4:08.00", recruit: "4:11.50", walkon: "4:13.50" },
@@ -34003,7 +34003,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.46", walkon: "12.76" },
-      "200m": { target: "24.90", recruit: "25.46", walkon: "25.76" },
+      "200m": { target: "24.70", recruit: "25.26", walkon: "25.76" },
       "400m": { target: "57.30", recruit: "58.52", walkon: "59.02" },
       "800m": { target: "2:21.00", recruit: "2:23.50", walkon: "2:25.50" },
       "1500m": { target: "4:55.00", recruit: "4:59.50", walkon: "5:04.50" },
@@ -34033,7 +34033,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.03", walkon: "11.24" },
-      "200m": { target: "22.20", recruit: "22.74", walkon: "22.94" },
+      "200m": { target: "22.00", recruit: "22.54", walkon: "22.94" },
       "400m": { target: "49.35", recruit: "50.42", walkon: "50.92" },
       "800m": { target: "1:57.00", recruit: "1:58.70", walkon: "2:00.20" },
       "1500m": { target: "4:08.00", recruit: "4:12.00", walkon: "4:14.00" },
@@ -34056,7 +34056,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.48", walkon: "12.78" },
-      "200m": { target: "24.90", recruit: "25.48", walkon: "25.78" },
+      "200m": { target: "24.70", recruit: "25.28", walkon: "25.78" },
       "400m": { target: "57.30", recruit: "58.62", walkon: "59.12" },
       "800m": { target: "2:21.00", recruit: "2:23.70", walkon: "2:25.70" },
       "1500m": { target: "4:55.00", recruit: "5:00.00", walkon: "5:05.00" },
@@ -34086,7 +34086,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.05", walkon: "11.28" },
-      "200m": { target: "22.20", recruit: "22.78", walkon: "22.98" },
+      "200m": { target: "22.00", recruit: "22.58", walkon: "22.98" },
       "400m": { target: "49.35", recruit: "50.52", walkon: "51.02" },
       "800m": { target: "1:57.00", recruit: "1:58.90", walkon: "2:00.40" },
       "1500m": { target: "4:08.00", recruit: "4:12.50", walkon: "4:14.50" },
@@ -34109,7 +34109,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.50", walkon: "12.80" },
-      "200m": { target: "24.90", recruit: "25.50", walkon: "25.80" },
+      "200m": { target: "24.70", recruit: "25.30", walkon: "25.80" },
       "400m": { target: "57.30", recruit: "58.72", walkon: "59.22" },
       "800m": { target: "2:21.00", recruit: "2:23.90", walkon: "2:25.90" },
       "1500m": { target: "4:55.00", recruit: "5:00.50", walkon: "5:05.50" },
@@ -34139,7 +34139,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.07", walkon: "11.32" },
-      "200m": { target: "22.20", recruit: "22.82", walkon: "23.02" },
+      "200m": { target: "22.00", recruit: "22.62", walkon: "23.02" },
       "400m": { target: "49.35", recruit: "50.62", walkon: "51.12" },
       "800m": { target: "1:57.00", recruit: "1:59.10", walkon: "2:00.60" },
       "1500m": { target: "4:08.00", recruit: "4:13.00", walkon: "4:15.00" },
@@ -34162,7 +34162,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.52", walkon: "12.82" },
-      "200m": { target: "24.90", recruit: "25.52", walkon: "25.82" },
+      "200m": { target: "24.70", recruit: "25.32", walkon: "25.82" },
       "400m": { target: "57.30", recruit: "58.82", walkon: "59.32" },
       "800m": { target: "2:21.00", recruit: "2:24.10", walkon: "2:26.10" },
       "1500m": { target: "4:55.00", recruit: "5:01.00", walkon: "5:06.00" },
@@ -34192,7 +34192,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.09", walkon: "11.36" },
-      "200m": { target: "22.20", recruit: "22.86", walkon: "23.06" },
+      "200m": { target: "22.00", recruit: "22.66", walkon: "23.06" },
       "400m": { target: "49.35", recruit: "50.72", walkon: "51.22" },
       "800m": { target: "1:57.00", recruit: "1:59.30", walkon: "2:00.80" },
       "1500m": { target: "4:08.00", recruit: "4:13.50", walkon: "4:15.50" },
@@ -34215,7 +34215,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.54", walkon: "12.84" },
-      "200m": { target: "24.90", recruit: "25.54", walkon: "25.84" },
+      "200m": { target: "24.70", recruit: "25.34", walkon: "25.84" },
       "400m": { target: "57.30", recruit: "58.92", walkon: "59.42" },
       "800m": { target: "2:21.00", recruit: "2:24.30", walkon: "2:26.30" },
       "1500m": { target: "4:55.00", recruit: "5:01.50", walkon: "5:06.50" },
@@ -34245,7 +34245,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.11", walkon: "11.40" },
-      "200m": { target: "22.20", recruit: "22.90", walkon: "23.10" },
+      "200m": { target: "22.00", recruit: "22.70", walkon: "23.10" },
       "400m": { target: "49.35", recruit: "50.82", walkon: "51.32" },
       "800m": { target: "1:57.00", recruit: "1:59.50", walkon: "2:01.00" },
       "1500m": { target: "4:08.00", recruit: "4:14.00", walkon: "4:16.00" },
@@ -34268,7 +34268,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.56", walkon: "12.86" },
-      "200m": { target: "24.90", recruit: "25.56", walkon: "25.86" },
+      "200m": { target: "24.70", recruit: "25.36", walkon: "25.86" },
       "400m": { target: "57.30", recruit: "59.02", walkon: "59.52" },
       "800m": { target: "2:21.00", recruit: "2:24.50", walkon: "2:26.50" },
       "1500m": { target: "4:55.00", recruit: "5:02.00", walkon: "5:07.00" },
@@ -34298,7 +34298,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.13", walkon: "11.44" },
-      "200m": { target: "22.20", recruit: "22.94", walkon: "23.14" },
+      "200m": { target: "22.00", recruit: "22.74", walkon: "23.14" },
       "400m": { target: "49.35", recruit: "50.92", walkon: "51.42" },
       "800m": { target: "1:57.00", recruit: "1:59.70", walkon: "2:01.20" },
       "1500m": { target: "4:08.00", recruit: "4:14.50", walkon: "4:16.50" },
@@ -34321,7 +34321,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.58", walkon: "12.88" },
-      "200m": { target: "24.90", recruit: "25.58", walkon: "25.88" },
+      "200m": { target: "24.70", recruit: "25.38", walkon: "25.88" },
       "400m": { target: "57.30", recruit: "59.12", walkon: "59.62" },
       "800m": { target: "2:21.00", recruit: "2:24.70", walkon: "2:26.70" },
       "1500m": { target: "4:55.00", recruit: "5:02.50", walkon: "5:07.50" },
@@ -34351,7 +34351,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.15", walkon: "11.48" },
-      "200m": { target: "22.20", recruit: "22.98", walkon: "23.18" },
+      "200m": { target: "22.00", recruit: "22.78", walkon: "23.18" },
       "400m": { target: "49.35", recruit: "51.02", walkon: "51.52" },
       "800m": { target: "1:57.00", recruit: "1:59.90", walkon: "2:01.40" },
       "1500m": { target: "4:08.00", recruit: "4:15.00", walkon: "4:17.00" },
@@ -34374,7 +34374,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.60", walkon: "12.90" },
-      "200m": { target: "24.90", recruit: "25.60", walkon: "25.90" },
+      "200m": { target: "24.70", recruit: "25.40", walkon: "25.90" },
       "400m": { target: "57.30", recruit: "59.22", walkon: "59.72" },
       "800m": { target: "2:21.00", recruit: "2:24.90", walkon: "2:26.90" },
       "1500m": { target: "4:55.00", recruit: "5:03.00", walkon: "5:08.00" },
@@ -34404,7 +34404,7 @@ const sunyacSchools: SchoolStandards[] = [
     state: "NY",
     maleStandards: {
       "100m": { target: "10.80", recruit: "11.17", walkon: "11.52" },
-      "200m": { target: "22.20", recruit: "23.02", walkon: "23.22" },
+      "200m": { target: "22.00", recruit: "22.82", walkon: "23.22" },
       "400m": { target: "49.35", recruit: "51.12", walkon: "51.62" },
       "800m": { target: "1:57.00", recruit: "2:00.10", walkon: "2:01.60" },
       "1500m": { target: "4:08.00", recruit: "4:15.50", walkon: "4:17.50" },
@@ -34427,7 +34427,7 @@ const sunyacSchools: SchoolStandards[] = [
     },
     femaleStandards: {
       "100m": { target: "12.20", recruit: "12.62", walkon: "12.92" },
-      "200m": { target: "24.90", recruit: "25.62", walkon: "25.92" },
+      "200m": { target: "24.70", recruit: "25.42", walkon: "25.92" },
       "400m": { target: "57.30", recruit: "59.32", walkon: "59.82" },
       "800m": { target: "2:21.00", recruit: "2:25.10", walkon: "2:27.10" },
       "1500m": { target: "4:55.00", recruit: "5:03.50", walkon: "5:08.50" },
