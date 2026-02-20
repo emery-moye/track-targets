@@ -1,56 +1,48 @@
 
 
-## Plan: Update SUNYAC High Jump Recruit and Walk-on Standards
+## Plan: Make SUNYAC Javelin Standards Easier
 
 ### Overview
-Set men's High Jump recruit to the 6'1"--6'0" range and walk-on to 5'11"--5'10" across all 11 SUNYAC schools. Apply proportional changes for women (recruit 5'0"--4'11", walk-on 4'10"--4'9"). Target stays unchanged for both.
-
-Schools are grouped into 3 tiers to keep clean half/whole-inch values while preserving the ranked hierarchy.
+Reduce javelin standards for all 11 SUNYAC schools. Men get 15 feet easier across all tiers. Women get 12 feet easier on target and recruit, and 16 feet easier on walk-on.
 
 ### Changes: 22 line edits total
 
-#### Men's High Jump (target unchanged at 6'4")
+#### Men's Javelin (all tiers -15')
 
-| School | Line | Current R / W | New R / W |
-|--------|------|--------------|-----------|
-| Cortland St | 33888 | 6'1.75" / 5'11.75" | **6'1"** / **5'11"** |
-| PSU Behrend | 33941 | 6'1.5" / 5'11.5" | **6'1"** / **5'11"** |
-| Oneonta St | 33994 | 6'1.25" / 5'11.25" | **6'1"** / **5'11"** |
-| Plattsburgh St | 34047 | 6'1" / 5'11" | **6'1"** / **5'11"** |
-| SUNY Delhi | 34100 | 6'0.75" / 5'10.75" | **6'0.5"** / **5'10.5"** |
-| Fredonia St | 34153 | 6'0.5" / 5'10.5" | **6'0.5"** / **5'10.5"** |
-| Buffalo St | 34206 | 6'0.25" / 5'10.25" | **6'0.5"** / **5'10.5"** |
-| Alfred St | 34259 | 6'0" / 5'10" | **6'0"** / **5'10"** |
-| Oswego St | 34312 | 5'11.75" / 5'9.75" | **6'0"** / **5'10"** |
-| Morrisville St | 34365 | 5'11.5" / 5'9.5" | **6'0"** / **5'10"** |
-| SUNY Cobleskill | 34418 | 5'11.25" / 5'9.25" | **6'0"** / **5'10"** |
+| School | Line | Current T / R / W | New T / R / W |
+|--------|------|--------------------|---------------|
+| Cortland St | 33895 | 185'0" / 174'10" / 164'10" | **170'0"** / **159'10"** / **149'10"** |
+| PSU Behrend | 33948 | 185'0" / 174'8" / 164'8" | **170'0"** / **159'8"** / **149'8"** |
+| Oneonta St | 34001 | 185'0" / 174'6" / 164'6" | **170'0"** / **159'6"** / **149'6"** |
+| Plattsburgh St | 34054 | 185'0" / 174'4" / 164'4" | **170'0"** / **159'4"** / **149'4"** |
+| SUNY Delhi | 34107 | 185'0" / 174'2" / 164'2" | **170'0"** / **159'2"** / **149'2"** |
+| Fredonia St | 34160 | 185'0" / 174'0" / 164'0" | **170'0"** / **159'0"** / **149'0"** |
+| Buffalo St | 34213 | 185'0" / 173'10" / 163'10" | **170'0"** / **158'10"** / **148'10"** |
+| Alfred St | 34266 | 185'0" / 173'8" / 163'8" | **170'0"** / **158'8"** / **148'8"** |
+| Oswego St | 34319 | 185'0" / 173'6" / 163'6" | **170'0"** / **158'6"** / **148'6"** |
+| Morrisville St | 34372 | 185'0" / 173'4" / 163'4" | **170'0"** / **158'4"** / **148'4"** |
+| SUNY Cobleskill | 34425 | 185'0" / 173'2" / 163'2" | **170'0"** / **158'2"** / **148'2"** |
 
-#### Women's High Jump (target unchanged at 5'3")
+#### Women's Javelin (target/recruit -12', walk-on -16')
 
-| School | Line | Current R / W | New R / W |
-|--------|------|--------------|-----------|
-| Cortland St | 33911 | 5'0.75" / 4'10.75" | **5'0"** / **4'10"** |
-| PSU Behrend | 33964 | 5'0.5" / 4'10.5" | **5'0"** / **4'10"** |
-| Oneonta St | 34017 | 5'0.25" / 4'10.25" | **5'0"** / **4'10"** |
-| Plattsburgh St | 34070 | 5'0" / 4'10" | **5'0"** / **4'10"** |
-| SUNY Delhi | 34123 | 4'11.75" / 4'9.75" | **4'11.5"** / **4'9.5"** |
-| Fredonia St | 34176 | 4'11.5" / 4'9.5" | **4'11.5"** / **4'9.5"** |
-| Buffalo St | 34229 | 4'11.25" / 4'9.25" | **4'11.5"** / **4'9.5"** |
-| Alfred St | 34282 | 4'11" / 4'9" | **4'11"** / **4'9"** |
-| Oswego St | 34335 | 4'10.75" / 4'8.75" | **4'11"** / **4'9"** |
-| Morrisville St | 34388 | 4'10.5" / 4'8.5" | **4'11"** / **4'9"** |
-| SUNY Cobleskill | 34441 | 4'10.25" / 4'8.25" | **4'11"** / **4'9"** |
-
-### Key Notes
-- Schools are grouped into 3 tiers using clean half/whole-inch values (no fractional oddities)
-- Men's recruit: 6'1" (top 4), 6'0.5" (middle 3), 6'0" (bottom 4)
-- Men's walkon: 5'11" (top 4), 5'10.5" (middle 3), 5'10" (bottom 4)
-- Women follow the same tier grouping proportionally
-- Bottom schools (Oswego, Morrisville, Cobleskill) actually get slightly easier standards than current values
-- Target remains unchanged throughout
+| School | Line | Current T / R / W | New T / R / W |
+|--------|------|--------------------|---------------|
+| Cortland St | 33918 | 130'0" / 119'10" / 109'10" | **118'0"** / **107'10"** / **93'10"** |
+| PSU Behrend | 33971 | 130'0" / 119'8" / 109'8" | **118'0"** / **107'8"** / **93'8"** |
+| Oneonta St | 34024 | 130'0" / 119'6" / 109'6" | **118'0"** / **107'6"** / **93'6"** |
+| Plattsburgh St | 34077 | 130'0" / 119'4" / 109'4" | **118'0"** / **107'4"** / **93'4"** |
+| SUNY Delhi | 34130 | 130'0" / 119'2" / 109'2" | **118'0"** / **107'2"** / **93'2"** |
+| Fredonia St | 34183 | 130'0" / 119'0" / 109'0" | **118'0"** / **107'0"** / **93'0"** |
+| Buffalo St | 34236 | 130'0" / 118'10" / 108'10" | **118'0"** / **106'10"** / **92'10"** |
+| Alfred St | 34289 | 130'0" / 118'8" / 108'8" | **118'0"** / **106'8"** / **92'8"** |
+| Oswego St | 34342 | 130'0" / 118'6" / 108'6" | **118'0"** / **106'6"** / **92'6"** |
+| Morrisville St | 34395 | 130'0" / 118'4" / 108'4" | **118'0"** / **106'4"** / **92'4"** |
+| SUNY Cobleskill | 34448 | 130'0" / 118'2" / 108'2" | **118'0"** / **106'2"** / **92'2"** |
 
 ### Technical Details
 - File: `src/data/schoolStandards.ts`
 - 22 single-line edits, all fired in parallel
-- Only `recruit` and `walkon` values change on each line; `target` stays as-is
+- Men: subtract 15' from target, recruit, and walk-on uniformly
+- Women: subtract 12' from target and recruit, subtract 16' from walk-on
+- Incremental offsets between schools preserved (2" gaps)
 
