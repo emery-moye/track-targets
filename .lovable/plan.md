@@ -1,45 +1,56 @@
 
 
-## Plan: Make 1500m Recruit and Walk-on 4 Seconds Easier for SUNYAC Schools
+## Plan: Update SUNYAC High Jump Recruit and Walk-on Standards
 
 ### Overview
-Add ~4 seconds to the recruit and walk-on 1500m standards for all 11 SUNYAC schools, both men's and women's. Target stays unchanged.
+Set men's High Jump recruit to the 6'1"--6'0" range and walk-on to 5'11"--5'10" across all 11 SUNYAC schools. Apply proportional changes for women (recruit 5'0"--4'11", walk-on 4'10"--4'9"). Target stays unchanged for both.
+
+Schools are grouped into 3 tiers to keep clean half/whole-inch values while preserving the ranked hierarchy.
 
 ### Changes: 22 line edits total
 
-#### Men's 1500m (target unchanged at 4:08.00)
+#### Men's High Jump (target unchanged at 6'4")
 
-| School | Line | Current T/R/W | New T/R/W |
-|--------|------|---------------|-----------|
-| Cortland St | 33880 | 4:08.00 / 4:10.50 / 4:12.50 | 4:08.00 / **4:14.50** / **4:16.50** |
-| PSU Behrend | 33933 | 4:08.00 / 4:11.00 / 4:13.00 | 4:08.00 / **4:15.00** / **4:17.00** |
-| Oneonta St | 33986 | 4:08.00 / 4:11.50 / 4:13.50 | 4:08.00 / **4:15.50** / **4:17.50** |
-| Plattsburgh St | 34039 | 4:08.00 / 4:12.00 / 4:14.00 | 4:08.00 / **4:16.00** / **4:18.00** |
-| SUNY Delhi | 34092 | 4:08.00 / 4:12.50 / 4:14.50 | 4:08.00 / **4:16.50** / **4:18.50** |
-| Fredonia St | 34145 | 4:08.00 / 4:13.00 / 4:15.00 | 4:08.00 / **4:17.00** / **4:19.00** |
-| Buffalo St | 34198 | 4:08.00 / 4:13.50 / 4:15.50 | 4:08.00 / **4:17.50** / **4:19.50** |
-| Alfred St | 34251 | 4:08.00 / 4:14.00 / 4:16.00 | 4:08.00 / **4:18.00** / **4:20.00** |
-| Oswego St | 34304 | 4:08.00 / 4:14.50 / 4:16.50 | 4:08.00 / **4:18.50** / **4:20.50** |
-| Morrisville St | 34357 | 4:08.00 / 4:15.00 / 4:17.00 | 4:08.00 / **4:19.00** / **4:21.00** |
-| SUNY Cobleskill | 34410 | 4:08.00 / 4:15.50 / 4:17.50 | 4:08.00 / **4:19.50** / **4:21.50** |
+| School | Line | Current R / W | New R / W |
+|--------|------|--------------|-----------|
+| Cortland St | 33888 | 6'1.75" / 5'11.75" | **6'1"** / **5'11"** |
+| PSU Behrend | 33941 | 6'1.5" / 5'11.5" | **6'1"** / **5'11"** |
+| Oneonta St | 33994 | 6'1.25" / 5'11.25" | **6'1"** / **5'11"** |
+| Plattsburgh St | 34047 | 6'1" / 5'11" | **6'1"** / **5'11"** |
+| SUNY Delhi | 34100 | 6'0.75" / 5'10.75" | **6'0.5"** / **5'10.5"** |
+| Fredonia St | 34153 | 6'0.5" / 5'10.5" | **6'0.5"** / **5'10.5"** |
+| Buffalo St | 34206 | 6'0.25" / 5'10.25" | **6'0.5"** / **5'10.5"** |
+| Alfred St | 34259 | 6'0" / 5'10" | **6'0"** / **5'10"** |
+| Oswego St | 34312 | 5'11.75" / 5'9.75" | **6'0"** / **5'10"** |
+| Morrisville St | 34365 | 5'11.5" / 5'9.5" | **6'0"** / **5'10"** |
+| SUNY Cobleskill | 34418 | 5'11.25" / 5'9.25" | **6'0"** / **5'10"** |
 
-#### Women's 1500m (target unchanged at 4:55.00)
+#### Women's High Jump (target unchanged at 5'3")
 
-| School | Line | Current T/R/W | New T/R/W |
-|--------|------|---------------|-----------|
-| Cortland St | 33903 | 4:55.00 / 4:58.50 / 5:03.50 | 4:55.00 / **5:02.50** / **5:07.50** |
-| PSU Behrend | 33956 | 4:55.00 / 4:59.00 / 5:04.00 | 4:55.00 / **5:03.00** / **5:08.00** |
-| Oneonta St | 34009 | 4:55.00 / 4:59.50 / 5:04.50 | 4:55.00 / **5:03.50** / **5:08.50** |
-| Plattsburgh St | 34062 | 4:55.00 / 5:00.00 / 5:05.00 | 4:55.00 / **5:04.00** / **5:09.00** |
-| SUNY Delhi | 34115 | 4:55.00 / 5:00.50 / 5:05.50 | 4:55.00 / **5:04.50** / **5:09.50** |
-| Fredonia St | 34168 | 4:55.00 / 5:01.00 / 5:06.00 | 4:55.00 / **5:05.00** / **5:10.00** |
-| Buffalo St | 34221 | 4:55.00 / 5:01.50 / 5:06.50 | 4:55.00 / **5:05.50** / **5:10.50** |
-| Alfred St | 34274 | 4:55.00 / 5:02.00 / 5:07.00 | 4:55.00 / **5:06.00** / **5:11.00** |
-| Oswego St | 34327 | 4:55.00 / 5:02.50 / 5:07.50 | 4:55.00 / **5:06.50** / **5:11.50** |
-| Morrisville St | 34380 | 4:55.00 / 5:03.00 / 5:08.00 | 4:55.00 / **5:07.00** / **5:12.00** |
-| SUNY Cobleskill | 34433 | 4:55.00 / 5:03.50 / 5:08.50 | 4:55.00 / **5:07.50** / **5:12.50** |
+| School | Line | Current R / W | New R / W |
+|--------|------|--------------|-----------|
+| Cortland St | 33911 | 5'0.75" / 4'10.75" | **5'0"** / **4'10"** |
+| PSU Behrend | 33964 | 5'0.5" / 4'10.5" | **5'0"** / **4'10"** |
+| Oneonta St | 34017 | 5'0.25" / 4'10.25" | **5'0"** / **4'10"** |
+| Plattsburgh St | 34070 | 5'0" / 4'10" | **5'0"** / **4'10"** |
+| SUNY Delhi | 34123 | 4'11.75" / 4'9.75" | **4'11.5"** / **4'9.5"** |
+| Fredonia St | 34176 | 4'11.5" / 4'9.5" | **4'11.5"** / **4'9.5"** |
+| Buffalo St | 34229 | 4'11.25" / 4'9.25" | **4'11.5"** / **4'9.5"** |
+| Alfred St | 34282 | 4'11" / 4'9" | **4'11"** / **4'9"** |
+| Oswego St | 34335 | 4'10.75" / 4'8.75" | **4'11"** / **4'9"** |
+| Morrisville St | 34388 | 4'10.5" / 4'8.5" | **4'11"** / **4'9"** |
+| SUNY Cobleskill | 34441 | 4'10.25" / 4'8.25" | **4'11"** / **4'9"** |
+
+### Key Notes
+- Schools are grouped into 3 tiers using clean half/whole-inch values (no fractional oddities)
+- Men's recruit: 6'1" (top 4), 6'0.5" (middle 3), 6'0" (bottom 4)
+- Men's walkon: 5'11" (top 4), 5'10.5" (middle 3), 5'10" (bottom 4)
+- Women follow the same tier grouping proportionally
+- Bottom schools (Oswego, Morrisville, Cobleskill) actually get slightly easier standards than current values
+- Target remains unchanged throughout
 
 ### Technical Details
-- 22 single-line edits -- recruit and walk-on each +4.00s; target unchanged
-- Incremental offsets between schools preserved (0.50s for both men's and women's)
-- All edits fired in parallel
+- File: `src/data/schoolStandards.ts`
+- 22 single-line edits, all fired in parallel
+- Only `recruit` and `walkon` values change on each line; `target` stays as-is
+
