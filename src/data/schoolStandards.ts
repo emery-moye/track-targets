@@ -33892,7 +33892,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'11\"", walkon: "47'11\"" },
       "Discus": { target: "170'0\"", recruit: "159'10\"", walkon: "144'10\"" },
       "Hammer": { target: "170'0\"", recruit: "159'10\"", walkon: "149'10\"" },
-      "Javelin": { target: "185'0\"", recruit: "174'10\"", walkon: "164'10\"" },
+      "Javelin": { target: "170'0\"", recruit: "159'10\"", walkon: "149'10\"" },
       "Decathlon": { target: "6800", recruit: "6080", walkon: "5380" }
     },
     femaleStandards: {
@@ -33915,7 +33915,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'11\"", walkon: "40'11\"" },
       "Discus": { target: "135'0\"", recruit: "124'10\"", walkon: "114'10\"" },
       "Hammer": { target: "135'0\"", recruit: "124'10\"", walkon: "114'10\"" },
-      "Javelin": { target: "130'0\"", recruit: "119'10\"", walkon: "109'10\"" },
+      "Javelin": { target: "118'0\"", recruit: "107'10\"", walkon: "93'10\"" },
       "Heptathlon": { target: "4200", recruit: "3760", walkon: "3340" }
     }
   },
@@ -33945,7 +33945,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'10\"", walkon: "47'10\"" },
       "Discus": { target: "170'0\"", recruit: "159'8\"", walkon: "144'8\"" },
       "Hammer": { target: "170'0\"", recruit: "159'8\"", walkon: "149'8\"" },
-      "Javelin": { target: "185'0\"", recruit: "174'8\"", walkon: "164'8\"" },
+      "Javelin": { target: "170'0\"", recruit: "159'8\"", walkon: "149'8\"" },
       "Decathlon": { target: "6800", recruit: "6060", walkon: "5360" }
     },
     femaleStandards: {
@@ -33968,7 +33968,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'10\"", walkon: "40'10\"" },
       "Discus": { target: "135'0\"", recruit: "124'8\"", walkon: "114'8\"" },
       "Hammer": { target: "135'0\"", recruit: "124'8\"", walkon: "114'8\"" },
-      "Javelin": { target: "130'0\"", recruit: "119'8\"", walkon: "109'8\"" },
+      "Javelin": { target: "118'0\"", recruit: "107'8\"", walkon: "93'8\"" },
       "Heptathlon": { target: "4200", recruit: "3740", walkon: "3320" }
     }
   },
@@ -33998,7 +33998,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'9\"", walkon: "47'9\"" },
       "Discus": { target: "170'0\"", recruit: "159'6\"", walkon: "144'6\"" },
       "Hammer": { target: "170'0\"", recruit: "159'6\"", walkon: "149'6\"" },
-      "Javelin": { target: "185'0\"", recruit: "174'6\"", walkon: "164'6\"" },
+      "Javelin": { target: "170'0\"", recruit: "159'6\"", walkon: "149'6\"" },
       "Decathlon": { target: "6800", recruit: "6040", walkon: "5340" }
     },
     femaleStandards: {
@@ -34021,7 +34021,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'9\"", walkon: "40'9\"" },
       "Discus": { target: "135'0\"", recruit: "124'6\"", walkon: "114'6\"" },
       "Hammer": { target: "135'0\"", recruit: "124'6\"", walkon: "114'6\"" },
-      "Javelin": { target: "130'0\"", recruit: "119'6\"", walkon: "109'6\"" },
+      "Javelin": { target: "118'0\"", recruit: "107'6\"", walkon: "93'6\"" },
       "Heptathlon": { target: "4200", recruit: "3720", walkon: "3300" }
     }
   },
@@ -34051,7 +34051,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'8\"", walkon: "47'8\"" },
       "Discus": { target: "170'0\"", recruit: "159'4\"", walkon: "144'4\"" },
       "Hammer": { target: "170'0\"", recruit: "159'4\"", walkon: "149'4\"" },
-      "Javelin": { target: "185'0\"", recruit: "174'4\"", walkon: "164'4\"" },
+      "Javelin": { target: "170'0\"", recruit: "159'4\"", walkon: "149'4\"" },
       "Decathlon": { target: "6800", recruit: "6020", walkon: "5320" }
     },
     femaleStandards: {
@@ -34074,7 +34074,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'8\"", walkon: "40'8\"" },
       "Discus": { target: "135'0\"", recruit: "124'4\"", walkon: "114'4\"" },
       "Hammer": { target: "135'0\"", recruit: "124'4\"", walkon: "114'4\"" },
-      "Javelin": { target: "130'0\"", recruit: "119'4\"", walkon: "109'4\"" },
+      "Javelin": { target: "118'0\"", recruit: "107'4\"", walkon: "93'4\"" },
       "Heptathlon": { target: "4200", recruit: "3700", walkon: "3280" }
     }
   },
@@ -34104,7 +34104,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'7\"", walkon: "47'7\"" },
       "Discus": { target: "170'0\"", recruit: "159'2\"", walkon: "144'2\"" },
       "Hammer": { target: "170'0\"", recruit: "159'2\"", walkon: "149'2\"" },
-      "Javelin": { target: "185'0\"", recruit: "174'2\"", walkon: "164'2\"" },
+      "Javelin": { target: "170'0\"", recruit: "159'2\"", walkon: "149'2\"" },
       "Decathlon": { target: "6800", recruit: "6000", walkon: "5300" }
     },
     femaleStandards: {
@@ -34127,7 +34127,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'7\"", walkon: "40'7\"" },
       "Discus": { target: "135'0\"", recruit: "124'2\"", walkon: "114'2\"" },
       "Hammer": { target: "135'0\"", recruit: "124'2\"", walkon: "114'2\"" },
-      "Javelin": { target: "130'0\"", recruit: "119'2\"", walkon: "109'2\"" },
+      "Javelin": { target: "118'0\"", recruit: "107'2\"", walkon: "93'2\"" },
       "Heptathlon": { target: "4200", recruit: "3680", walkon: "3260" }
     }
   },
@@ -34157,7 +34157,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'6\"", walkon: "47'6\"" },
       "Discus": { target: "170'0\"", recruit: "159'0\"", walkon: "144'0\"" },
       "Hammer": { target: "170'0\"", recruit: "159'0\"", walkon: "149'0\"" },
-      "Javelin": { target: "185'0\"", recruit: "174'0\"", walkon: "164'0\"" },
+      "Javelin": { target: "170'0\"", recruit: "159'0\"", walkon: "149'0\"" },
       "Decathlon": { target: "6800", recruit: "5980", walkon: "5280" }
     },
     femaleStandards: {
@@ -34180,7 +34180,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'6\"", walkon: "40'6\"" },
       "Discus": { target: "135'0\"", recruit: "124'0\"", walkon: "114'0\"" },
       "Hammer": { target: "135'0\"", recruit: "124'0\"", walkon: "114'0\"" },
-      "Javelin": { target: "130'0\"", recruit: "119'0\"", walkon: "109'0\"" },
+      "Javelin": { target: "118'0\"", recruit: "107'0\"", walkon: "93'0\"" },
       "Heptathlon": { target: "4200", recruit: "3660", walkon: "3240" }
     }
   },
@@ -34210,7 +34210,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'5\"", walkon: "47'5\"" },
       "Discus": { target: "170'0\"", recruit: "158'10\"", walkon: "143'10\"" },
       "Hammer": { target: "170'0\"", recruit: "158'10\"", walkon: "148'10\"" },
-      "Javelin": { target: "185'0\"", recruit: "173'10\"", walkon: "163'10\"" },
+      "Javelin": { target: "170'0\"", recruit: "158'10\"", walkon: "148'10\"" },
       "Decathlon": { target: "6800", recruit: "5960", walkon: "5260" }
     },
     femaleStandards: {
@@ -34233,7 +34233,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'5\"", walkon: "40'5\"" },
       "Discus": { target: "135'0\"", recruit: "123'10\"", walkon: "113'10\"" },
       "Hammer": { target: "135'0\"", recruit: "123'10\"", walkon: "113'10\"" },
-      "Javelin": { target: "130'0\"", recruit: "118'10\"", walkon: "108'10\"" },
+      "Javelin": { target: "118'0\"", recruit: "106'10\"", walkon: "92'10\"" },
       "Heptathlon": { target: "4200", recruit: "3640", walkon: "3220" }
     }
   },
@@ -34263,7 +34263,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'4\"", walkon: "47'4\"" },
       "Discus": { target: "170'0\"", recruit: "158'8\"", walkon: "143'8\"" },
       "Hammer": { target: "170'0\"", recruit: "158'8\"", walkon: "148'8\"" },
-      "Javelin": { target: "185'0\"", recruit: "173'8\"", walkon: "163'8\"" },
+      "Javelin": { target: "170'0\"", recruit: "158'8\"", walkon: "148'8\"" },
       "Decathlon": { target: "6800", recruit: "5940", walkon: "5240" }
     },
     femaleStandards: {
@@ -34286,7 +34286,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'4\"", walkon: "40'4\"" },
       "Discus": { target: "135'0\"", recruit: "123'8\"", walkon: "113'8\"" },
       "Hammer": { target: "135'0\"", recruit: "123'8\"", walkon: "113'8\"" },
-      "Javelin": { target: "130'0\"", recruit: "118'8\"", walkon: "108'8\"" },
+      "Javelin": { target: "118'0\"", recruit: "106'8\"", walkon: "92'8\"" },
       "Heptathlon": { target: "4200", recruit: "3620", walkon: "3200" }
     }
   },
@@ -34316,7 +34316,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'3\"", walkon: "47'3\"" },
       "Discus": { target: "170'0\"", recruit: "158'6\"", walkon: "143'6\"" },
       "Hammer": { target: "170'0\"", recruit: "158'6\"", walkon: "148'6\"" },
-      "Javelin": { target: "185'0\"", recruit: "173'6\"", walkon: "163'6\"" },
+      "Javelin": { target: "170'0\"", recruit: "158'6\"", walkon: "148'6\"" },
       "Decathlon": { target: "6800", recruit: "5920", walkon: "5220" }
     },
     femaleStandards: {
@@ -34339,7 +34339,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'3\"", walkon: "40'3\"" },
       "Discus": { target: "135'0\"", recruit: "123'6\"", walkon: "113'6\"" },
       "Hammer": { target: "135'0\"", recruit: "123'6\"", walkon: "113'6\"" },
-      "Javelin": { target: "130'0\"", recruit: "118'6\"", walkon: "108'6\"" },
+      "Javelin": { target: "118'0\"", recruit: "106'6\"", walkon: "92'6\"" },
       "Heptathlon": { target: "4200", recruit: "3600", walkon: "3180" }
     }
   },
@@ -34369,7 +34369,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'2\"", walkon: "47'2\"" },
       "Discus": { target: "170'0\"", recruit: "158'4\"", walkon: "143'4\"" },
       "Hammer": { target: "170'0\"", recruit: "158'4\"", walkon: "148'4\"" },
-      "Javelin": { target: "185'0\"", recruit: "173'4\"", walkon: "163'4\"" },
+      "Javelin": { target: "170'0\"", recruit: "158'4\"", walkon: "148'4\"" },
       "Decathlon": { target: "6800", recruit: "5900", walkon: "5200" }
     },
     femaleStandards: {
@@ -34392,7 +34392,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'2\"", walkon: "40'2\"" },
       "Discus": { target: "135'0\"", recruit: "123'4\"", walkon: "113'4\"" },
       "Hammer": { target: "135'0\"", recruit: "123'4\"", walkon: "113'4\"" },
-      "Javelin": { target: "130'0\"", recruit: "118'4\"", walkon: "108'4\"" },
+      "Javelin": { target: "118'0\"", recruit: "106'4\"", walkon: "92'4\"" },
       "Heptathlon": { target: "4200", recruit: "3580", walkon: "3160" }
     }
   },
@@ -34422,7 +34422,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "56'0\"", recruit: "51'1\"", walkon: "47'1\"" },
       "Discus": { target: "170'0\"", recruit: "158'2\"", walkon: "143'2\"" },
       "Hammer": { target: "170'0\"", recruit: "158'2\"", walkon: "148'2\"" },
-      "Javelin": { target: "185'0\"", recruit: "173'2\"", walkon: "163'2\"" },
+      "Javelin": { target: "170'0\"", recruit: "158'2\"", walkon: "148'2\"" },
       "Decathlon": { target: "6800", recruit: "5880", walkon: "5180" }
     },
     femaleStandards: {
@@ -34445,7 +34445,7 @@ const sunyacSchools: SchoolStandards[] = [
       "Shot Put": { target: "47'0\"", recruit: "43'1\"", walkon: "40'1\"" },
       "Discus": { target: "135'0\"", recruit: "123'2\"", walkon: "113'2\"" },
       "Hammer": { target: "135'0\"", recruit: "123'2\"", walkon: "113'2\"" },
-      "Javelin": { target: "130'0\"", recruit: "118'2\"", walkon: "108'2\"" },
+      "Javelin": { target: "118'0\"", recruit: "106'2\"", walkon: "92'2\"" },
       "Heptathlon": { target: "4200", recruit: "3560", walkon: "3140" }
     }
   }
