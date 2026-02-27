@@ -108,7 +108,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center gap-4 md:gap-6">
             <a 
-              href="https://app.thepreferredrecruit.com/quiz/" 
+              href="https://app.thepreferredrecruit.com/quiz/?utm_source=website&utm_medium=standards&utm_campaign=standardsPR" 
               target="_blank" 
               rel="noopener noreferrer"
             >
