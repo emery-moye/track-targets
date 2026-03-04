@@ -35109,7 +35109,7 @@ const macSchools: SchoolStandards[] = [
       "110m Hurdles": { target: "14.34", recruit: "14.99", walkon: "15.66" },
       "300m Hurdles": { target: "38.21", recruit: "39.68", walkon: "41.13" },
       "400m Hurdles": { target: "53.34", recruit: "54.84", walkon: "56.30" },
-      "High Jump": { target: "6'3\"", recruit: "6'0\"", walkon: "5'9\"" },
+      "High Jump": { target: "6'5\"", recruit: "6'2\"", walkon: "5'11\"" },
       "Pole Vault": { target: "14'10\"", recruit: "14'0\"", walkon: "13'0\"" },
       "Long Jump": { target: "22'6\"", recruit: "21'4\"", walkon: "20'6\"" },
       "Triple Jump": { target: "46'0\"", recruit: "43'6\"", walkon: "41'6\"" },
