@@ -34581,11 +34581,17 @@ export const searchSchools = (query: string): SchoolStandards[] => {
       score = 100;
     }
     
-    return { school, score };
+    const power4 = ['SEC', 'Big Ten', 'ACC', 'Big 12'];
+    const tierBonus = power4.includes(school.conference) ? 50
+      : school.division === 'D1' ? 30
+      : school.division === 'D2' ? 10
+      : 0;
+
+    return { school, score, tierBonus };
   });
   
   return results
     .filter(r => r.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score || b.tierBonus - a.tierBonus)
     .map(r => r.school);
 };
