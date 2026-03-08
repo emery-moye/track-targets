@@ -34480,7 +34480,7 @@ const macSchools: SchoolStandards[] = [
       "Shot Put": { target: "55'0\"", recruit: "50'0\"", walkon: "46'0\"" },
       "Discus": { target: "164'0\"", recruit: "151'0\"", walkon: "141'0\"" },
       "Hammer": { target: "164'0\"", recruit: "151'0\"", walkon: "141'0\"" },
-      "Javelin": { target: "188'0\"", recruit: "169'0\"", walkon: "154'0\"" },
+      "Javelin": { target: "188'0\"", recruit: "169'0\"", walkon: "150'0\"" },
       "Decathlon": { target: "6350", recruit: "5800", walkon: "5300" }
     },
     femaleStandards: {
