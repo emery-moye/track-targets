@@ -35315,6 +35315,35 @@ const stateMap: Record<string, { fullName: string; aliases: string[] }> = {
   "WI": { fullName: "wisconsin", aliases: ["wisc"] },
   "WY": { fullName: "wyoming", aliases: [] }
 };
+// D1 Men's Shot Put +3' adjustment for schools with target < 55'0" (skip hasOfficialStandards)
+(() => {
+  const parseFeet = (val: string): number | null => {
+    const m = val.match(/^(\d+)'(\d+)?/);
+    if (!m) return null;
+    return parseInt(m[1]) + (m[2] ? parseInt(m[2]) / 12 : 0);
+  };
+  const addFeet = (val: string, add: number): string => {
+    const m = val.match(/^(\d+)'(\d+)?(.*)/);
+    if (!m) return val;
+    let feet = parseInt(m[1]);
+    const inches = m[2] ? parseInt(m[2]) : 0;
+    const suffix = m[3] || '';
+    feet += add;
+    return inches > 0 ? `${feet}'${inches}${suffix}` : `${feet}'0${suffix}`;
+  };
+
+  schoolStandards.forEach((s) => {
+    if (s.division !== "D1") return;
+    if (s.hasOfficialStandards) return;
+    if (!s.maleStandards || !s.maleStandards["Shot Put"]) return;
+    const sp = s.maleStandards["Shot Put"];
+    const targetFeet = parseFeet(sp.target);
+    if (targetFeet === null || targetFeet >= 55) return;
+    sp.target = addFeet(sp.target, 3);
+    sp.recruit = addFeet(sp.recruit, 3);
+    if (sp.walkon) sp.walkon = addFeet(sp.walkon, 3);
+  });
+})();
 
 export const searchSchools = (query: string): SchoolStandards[] => {
   if (!query.trim()) return [];
