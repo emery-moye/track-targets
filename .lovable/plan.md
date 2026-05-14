@@ -1,14 +1,21 @@
-## Plan: Bump A10 men's Discus toward ~175-180' targets
+## Plan: Raise D1 men's Shot Put walk-on floor to 50'0"
 
-Same 11 non-official A10 schools, **men's Discus only**.
+**Scope:** All D1 schools, men's Shot Put only, where current walk-on is below 50'0". 
 
-**Approach:** add **+12'0"** to all three tiers (target / recruit / walkon), but **skip schools whose target is already ≥ 180'** so we don't push elite throwers to unrealistic 200'+ marks.
+**Skip:** Schools with `hasOfficialStandards: true` (Fordham, Kent State, Brown, etc.) — verified standards stay as-is, per project convention.
 
-Current state (men's Discus targets):
-- Already ≥ 180' (skip): Saint Louis 180', St. Bonaventure 190', George Mason 190', George Washington 180'
-- Will be bumped (+12'): Duquesne 165→177, Saint Joseph's 163→175, Davidson 164→176, Loyola Chicago 164'6→176'6, La Salle 162'6→174'6
-- No men's Discus data: Dayton, Richmond (untouched)
+**Affected:** ~91 D1 schools (94 matched, minus 3 official).
 
-After this change every adjusted school's target lands in the 174-177' range, with the existing higher-bar schools left as-is.
+**Method (per school):**
+1. Compute `delta = 50'0" − current walk-on` (in inches).
+2. Add `delta` to **walkon, recruit, and target** so the existing tier spacing is preserved.
 
-**Implementation:** rerun the throws script with Shot Put disabled, Discus delta = 144 inches, and a guard that skips the school's Discus line when the existing target ≥ 180'0".
+**Examples:**
+- UNH (was 48 / 44 / 40) → **52'0" / 46'0" / 50'0"**
+- VMI (was 50'6" / 46'6" / 42'6") → **58'0" / 54'0" / 50'0"**
+- Wofford (was 52'0" / 48'0" / 44'0") → **58'0" / 54'0" / 50'0"**
+- Saint Joseph's (was 59'6" / 54'6" / 49'6") → **60'0" / 55'0" / 50'0"** (only +6")
+
+Walk-on becomes a hard floor of 50'0" across all D1 men's Shot Put. Schools already ≥ 50'0" walk-on are untouched. Women, other events, and other divisions are not affected.
+
+**Implementation:** Single Node script over `src/data/schoolStandards.ts`, gated by division, gender, event, and the official-standards flag.
