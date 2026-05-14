@@ -1,5 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { Header } from "@/components/Header";
 import { SearchForm } from "@/components/SearchForm";
 import { SchoolMatch } from "@/components/ResultsTable";
