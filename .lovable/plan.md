@@ -1,16 +1,13 @@
-## Plan: Make A10 men's Discus & Shot Put harder
+## Plan: Bump A10 men's Shot Put target to ~60'
 
-Same scope as last change — **men's standards only**, **A10 conference**, **excluding** the 3 schools with `hasOfficialStandards: true` (Rhode Island, VCU, Fordham). 11 schools affected.
+Same 11 non-official A10 schools, **men's Shot Put only**.
 
-**Note:** My previous run reported "modifying" Discus but a regex bug (escaped quotes in source) meant Discus values were never actually changed. So Discus is currently still at the original numbers — this run will fix that and tighten further.
+**Adjustment:** add **+3'0"** to all three tiers (target / recruit / walkon).
 
-**Adjustments (men only, all tiers — target / recruit / walkon):**
+Result for Duquesne (representative):
+- Before: target 57'0", recruit 52'0", walkon 47'0"
+- After:  target **60'0"**, recruit 55'0", walkon 50'0"
 
-| Event | Adjustment |
-|---|---|
-| Discus | **+10'0"** farther (harder) |
-| Shot Put | **+5'0"** farther (a lot harder) |
+All other schools shift by the same +3'0" so the tier spacing stays consistent. Discus and previously tightened events are untouched.
 
-Throws marks are minimums, so a farther mark = harder standard.
-
-**Implementation:** Reuse the previous Node script with a fixed regex that correctly handles the `\"` escaped quotes inside the TS source, applied only to `Discus` and `Shot Put` lines inside `maleStandards` of A10 schools without official standards. No other events, conferences, or women's standards touched.
+**Implementation:** rerun the throws script with Discus disabled and Shot Put delta = 36 inches.
