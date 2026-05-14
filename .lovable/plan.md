@@ -1,24 +1,16 @@
-## Plan: Tighten select men's standards for A10 schools (no official standards)
+## Plan: Make A10 men's Discus & Shot Put harder
 
-**Scope:** Men's standards only, A10 conference, **excluding** the 3 schools with `hasOfficialStandards: true` (Rhode Island, VCU, Fordham).
+Same scope as last change — **men's standards only**, **A10 conference**, **excluding** the 3 schools with `hasOfficialStandards: true` (Rhode Island, VCU, Fordham). 11 schools affected.
 
-**Affected schools (11):** Saint Louis, Duquesne, Saint Joseph's, Davidson, Loyola Chicago, La Salle, St. Bonaventure, George Mason, Dayton, Richmond, George Washington.
+**Note:** My previous run reported "modifying" Discus but a regex bug (escaped quotes in source) meant Discus values were never actually changed. So Discus is currently still at the original numbers — this run will fix that and tighten further.
 
-**Events to tighten (men only):**
+**Adjustments (men only, all tiers — target / recruit / walkon):**
 
-| Event | Tier(s) tightened | Adjustment |
-|---|---|---|
-| 400m | walk-on only | −0.50s faster |
-| 110m Hurdles | target / recruit / walkon | −0.20s faster each |
-| 300m Hurdles | target / recruit / walkon | −0.30s faster each |
-| Discus | target / recruit / walkon | +5'0" farther each |
+| Event | Adjustment |
+|---|---|
+| Discus | **+10'0"** farther (harder) |
+| Shot Put | **+5'0"** farther (a lot harder) |
 
-Times round to 2 decimals; discus stays in `FT'IN"` format.
+Throws marks are minimums, so a farther mark = harder standard.
 
-**Implementation:** A small Node script that:
-1. Walks `src/data/schoolStandards.ts` line-by-line.
-2. Tracks current school + `hasOfficialStandards` flag.
-3. Inside `maleStandards` of A10 schools without official standards, applies the deltas above to those four events.
-4. Writes the file back. Skips invalid values (`TBD`/`N/A`/missing).
-
-No UI changes, no other conferences, no women's standards touched.
+**Implementation:** Reuse the previous Node script with a fixed regex that correctly handles the `\"` escaped quotes inside the TS source, applied only to `Discus` and `Shot Put` lines inside `maleStandards` of A10 schools without official standards. No other events, conferences, or women's standards touched.
