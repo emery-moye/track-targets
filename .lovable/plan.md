@@ -1,21 +1,24 @@
-## Plan: Connect Google Search Console
+## Plan: Tighten select men's standards for A10 schools (no official standards)
 
-Link your existing Google Search Console account to this project so the agent can read your verified sites, search analytics, and (if needed) verify new domains on your behalf.
+**Scope:** Men's standards only, A10 conference, **excluding** the 3 schools with `hasOfficialStandards: true` (Rhode Island, VCU, Fordham).
 
-### What happens on approval
+**Affected schools (11):** Saint Louis, Duquesne, Saint Joseph's, Davidson, Loyola Chicago, La Salle, St. Bonaventure, George Mason, Dayton, Richmond, George Washington.
 
-1. Trigger the connection picker for **Google Search Console**. You'll choose your existing Google account (or add one) and approve the requested scopes in a Google OAuth popup.
-2. Once linked, the connection's secrets (`LOVABLE_API_KEY`, `GOOGLE_SEARCH_CONSOLE_API_KEY`) become available to the project automatically — nothing for you to copy or paste.
-3. I'll verify the connection by listing your Search Console sites via the connector gateway, so we can confirm it works and see which properties are already set up.
+**Events to tighten (men only):**
 
-### What this does NOT do
+| Event | Tier(s) tightened | Adjustment |
+|---|---|---|
+| 400m | walk-on only | −0.50s faster |
+| 110m Hurdles | target / recruit / walkon | −0.20s faster each |
+| 300m Hurdles | target / recruit / walkon | −0.30s faster each |
+| Discus | target / recruit / walkon | +5'0" farther each |
 
-- No code changes, no UI, no edge functions. This is purely linking the connector so the agent can query Search Console on your behalf during chats.
-- If you later want in-app features (e.g. a dashboard showing search analytics for your site), that's a follow-up build — just ask.
+Times round to 2 decimals; discus stays in `FT'IN"` format.
 
-### After it's connected
+**Implementation:** A small Node script that:
+1. Walks `src/data/schoolStandards.ts` line-by-line.
+2. Tracks current school + `hasOfficialStandards` flag.
+3. Inside `maleStandards` of A10 schools without official standards, applies the deltas above to those four events.
+4. Writes the file back. Skips invalid values (`TBD`/`N/A`/missing).
 
-Tell me what you'd like to do next. Common options:
-- Verify and add `https://preferred-recruit-track-standards.lovable.app/` (or `track-targets.com` / `trackandfieldstandards.com`) as a Search Console property
-- Pull top queries / pages / impressions for one of your existing properties
-- Submit your `sitemap.xml` to a verified property
+No UI changes, no other conferences, no women's standards touched.
