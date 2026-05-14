@@ -1,5 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { Header } from "@/components/Header";
 import { SearchForm } from "@/components/SearchForm";
 import { SchoolMatch } from "@/components/ResultsTable";
@@ -56,6 +57,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen gradient-bg pb-28">
+      <Helmet>
+        <title>Track Targets — College Track & Field Recruiting Standards</title>
+        <meta name="description" content="Match your personal bests to college track and field recruiting standards. Compare PRs against target, recruit, and walk-on standards from hundreds of NCAA programs." />
+        <link rel="canonical" href="https://preferred-recruit-track-standards.lovable.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://preferred-recruit-track-standards.lovable.app/" />
+        <meta property="og:title" content="Track Targets — College Track & Field Recruiting Standards" />
+        <meta property="og:description" content="Match your personal bests to college track and field recruiting standards across NCAA D1, D2, and D3 programs." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Track Targets — College Track & Field Recruiting Standards" />
+        <meta name="twitter:description" content="Match your personal bests to college track and field recruiting standards across NCAA D1, D2, and D3 programs." />
+      </Helmet>
       <Header onReset={handleReset} />
       
       <main className="container mx-auto px-4 md:px-6 py-6 md:py-10">
