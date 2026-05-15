@@ -1,21 +1,25 @@
-## Plan: Raise D1 men's Shot Put walk-on floor to 50'0"
+## Plan: Raise D1 men's Discus walk-on floor to 156'0"
 
-**Scope:** All D1 schools, men's Shot Put only, where current walk-on is below 50'0". 
+**Scope:** All D1 schools, men's Discus only, where current walk-on is below 156'0".
 
-**Skip:** Schools with `hasOfficialStandards: true` (Fordham, Kent State, Brown, etc.) — verified standards stay as-is, per project convention.
-
-**Affected:** ~91 D1 schools (94 matched, minus 3 official).
+**Skip:** Schools with `hasOfficialStandards: true` (verified standards stay as-is).
 
 **Method (per school):**
-1. Compute `delta = 50'0" − current walk-on` (in inches).
-2. Add `delta` to **walkon, recruit, and target** so the existing tier spacing is preserved.
+1. Compute `delta = 156'0" − current walk-on` (in inches).
+2. Add `delta` to **walkon, recruit, and target** so existing tier spacing is preserved.
 
 **Examples:**
-- UNH (was 48 / 44 / 40) → **52'0" / 46'0" / 50'0"**
-- VMI (was 50'6" / 46'6" / 42'6") → **58'0" / 54'0" / 50'0"**
-- Wofford (was 52'0" / 48'0" / 44'0") → **58'0" / 54'0" / 50'0"**
-- Saint Joseph's (was 59'6" / 54'6" / 49'6") → **60'0" / 55'0" / 50'0"** (only +6")
+- School with 150 / 145 / 140 → **166'0" / 161'0" / 156'0"** (+6'0")
+- School with 155'0 / 150'0 / 145'0 → **156'0" / 151'0" / 146'0"**... wait that lowers recruit. Correct: add delta of 11" to all → **155'11" / 150'11" / 145'11"**... 
 
-Walk-on becomes a hard floor of 50'0" across all D1 men's Shot Put. Schools already ≥ 50'0" walk-on are untouched. Women, other events, and other divisions are not affected.
+Re-stating clearly: delta is added uniformly to all three tiers, so target stays highest, recruit middle, walk-on at the new 156'0" floor.
 
-**Implementation:** Single Node script over `src/data/schoolStandards.ts`, gated by division, gender, event, and the official-standards flag.
+- 150'0" / 145'0" / 140'0" (delta = 16') → **166'0" / 161'0" / 156'0"**
+- 154'0" / 149'0" / 144'0" (delta = 12') → **166'0" / 161'0" / 156'0"**
+- 155'6" / 150'6" / 145'6" (delta = 10'6") → **165'6"... 
+
+Let me recompute: walk-on 145'6" → delta to 156'0" is 10'6". Add to all: target 155'6"+10'6" = 166'0", recruit 150'6"+10'6" = 161'0", walkon 156'0". ✓
+
+**Affected:** Only D1 men's Discus rows where walk-on < 156'0" and `hasOfficialStandards: false`. Women, other events, and other divisions untouched.
+
+**Implementation:** Single Node script over `src/data/schoolStandards.ts`, gated by division (D1), gender (male section only), event (Discus), and the official-standards flag. Mirrors the shot put floor script pattern, with careful `maleStandards:` / `femaleStandards:` boundary tracking to avoid touching female rows.
