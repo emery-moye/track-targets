@@ -43,7 +43,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "23'6\"", recruit: "22'6\"", walkon: "21'6\"" },
       "Triple Jump": { target: "48'6\"", recruit: "46'6\"", walkon: "44'6\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "155'0\"", recruit: "145'0\"", walkon: "135'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "165'0\"", recruit: "155'0\"", walkon: "145'0\"" },
       "Javelin": { target: "190'0\"", recruit: "175'0\"", walkon: "160'0\"" },
       "Decathlon": { target: "6400", recruit: "6000", walkon: "5600" }
@@ -96,7 +96,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "23'9\"", recruit: "22'9\"", walkon: "21'9\"" },
       "Triple Jump": { target: "49'0\"", recruit: "47'0\"", walkon: "45'0\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "157'0\"", recruit: "147'0\"", walkon: "137'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "167'0\"", recruit: "157'0\"", walkon: "147'0\"" },
       "Javelin": { target: "192'0\"", recruit: "177'0\"", walkon: "162'0\"" },
       "Decathlon": { target: "6450", recruit: "6050", walkon: "5650" }
@@ -149,7 +149,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "23'3\"", recruit: "22'3\"", walkon: "21'3\"" },
       "Triple Jump": { target: "48'0\"", recruit: "46'0\"", walkon: "44'0\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "153'0\"", recruit: "143'0\"", walkon: "133'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "163'0\"", recruit: "153'0\"", walkon: "143'0\"" },
       "Javelin": { target: "188'0\"", recruit: "173'0\"", walkon: "158'0\"" },
       "Decathlon": { target: "6350", recruit: "5950", walkon: "5550" }
@@ -202,7 +202,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "24'0\"", recruit: "23'0\"", walkon: "22'0\"" },
       "Triple Jump": { target: "49'6\"", recruit: "47'6\"", walkon: "45'6\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "159'0\"", recruit: "149'0\"", walkon: "139'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "169'0\"", recruit: "159'0\"", walkon: "149'0\"" },
       "Javelin": { target: "194'0\"", recruit: "179'0\"", walkon: "164'0\"" },
       "Decathlon": { target: "6500", recruit: "6100", walkon: "5700" }
@@ -255,7 +255,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "23'0\"", recruit: "22'0\"", walkon: "21'0\"" },
       "Triple Jump": { target: "47'6\"", recruit: "45'6\"", walkon: "43'6\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "151'0\"", recruit: "141'0\"", walkon: "131'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "161'0\"", recruit: "151'0\"", walkon: "141'0\"" },
       "Javelin": { target: "186'0\"", recruit: "171'0\"", walkon: "156'0\"" },
       "Decathlon": { target: "6300", recruit: "5900", walkon: "5500" }
@@ -308,7 +308,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "22'9\"", recruit: "21'9\"", walkon: "20'9\"" },
       "Triple Jump": { target: "47'0\"", recruit: "45'0\"", walkon: "43'0\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "149'0\"", recruit: "139'0\"", walkon: "129'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "159'0\"", recruit: "149'0\"", walkon: "139'0\"" },
       "Javelin": { target: "184'0\"", recruit: "169'0\"", walkon: "154'0\"" },
       "Decathlon": { target: "6250", recruit: "5850", walkon: "5450" }
@@ -361,7 +361,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "23'9\"", recruit: "22'9\"", walkon: "21'9\"" },
       "Triple Jump": { target: "48'9\"", recruit: "46'9\"", walkon: "44'9\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "156'0\"", recruit: "146'0\"", walkon: "136'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "166'0\"", recruit: "156'0\"", walkon: "146'0\"" },
       "Javelin": { target: "191'0\"", recruit: "176'0\"", walkon: "161'0\"" },
       "Decathlon": { target: "6425", recruit: "6025", walkon: "5625" }
@@ -414,7 +414,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "23'4\"", recruit: "22'9\"", walkon: "22'1\"" },
       "Triple Jump": { target: "47'3\"", recruit: "45'3\"", walkon: "43'3\"" },
       "Shot Put": { target: "58'0\"", recruit: "54'0\"", walkon: "50'0\"" },
-      "Discus": { target: "150'0\"", recruit: "140'0\"", walkon: "130'0\"" },
+      "Discus": { target: "176'0\"", recruit: "166'0\"", walkon: "156'0\"" },
       "Hammer": { target: "160'0\"", recruit: "150'0\"", walkon: "140'0\"" },
       "Javelin": { target: "185'0\"", recruit: "170'0\"", walkon: "155'0\"" },
       "Decathlon": { target: "6275", recruit: "5875", walkon: "5475" }
@@ -519,7 +519,7 @@ export const schoolStandards: SchoolStandards[] = [
       "Long Jump": { target: "24'0\"", recruit: "23'0\"", walkon: "22'0\"" },
       "Triple Jump": { target: "50'0\"", recruit: "48'0\"", walkon: "46'0\"" },
       "Shot Put": { target: "60'0\"", recruit: "55'0\"", walkon: "50'0\"" },
-      "Discus": { target: "165'0\"", recruit: "150'0\"", walkon: "135'0\"" },
+      "Discus": { target: "186'0\"", recruit: "171'0\"", walkon: "156'0\"" },
       "Hammer": { target: "180'0\"", recruit: "160'0\"", walkon: "140'0\"" },
       "Javelin": { target: "200'0\"", recruit: "180'0\"", walkon: "160'0\"" }
     },
