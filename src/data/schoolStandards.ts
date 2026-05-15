@@ -28021,7 +28021,7 @@ const scacSchools: SchoolStandards[] = [
       "Long Jump": { target: "24'0\"", recruit: "23'6\"", walkon: "22'6\"" },
       "Triple Jump": { target: "48'9\"", recruit: "48'", walkon: "45'6\"" },
       "Shot Put": { target: "57'6\"", recruit: "56'", walkon: "50'" },
-      "Discus": { target: "165'0\"", recruit: "160'", walkon: "140'" },
+      "Discus": { target: "181'0\"", recruit: "176'0\"", walkon: "156'0\"" },
       "Javelin": { target: "195'0\"", recruit: "190'", walkon: "175'" },
       "Decathlon": { target: "6500", recruit: "6300", walkon: "6000" }
     },
